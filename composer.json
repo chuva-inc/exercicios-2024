@@ -1,0 +1,13 @@
+{
+    "name": "galoa/exercicios-php-2022",
+    "description": "Exercícios de PHP para o processo seletivo da Chuva Inc.",
+    "type": "project",
+    "license": "None",
+    "autoload": {
+        "psr-4": {
+            "Galoa\\ExerciciosPhp2022\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
