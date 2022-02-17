@@ -9,5 +9,7 @@
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "scripts": {
+        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\War\\GameManager\\Main::run();\""
+    }
 }
