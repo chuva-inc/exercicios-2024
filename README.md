@@ -92,3 +92,12 @@ Duas ferramentas vão ser especialmente úteis para você resolver este exercíc
 
 * DOM, para ler o HTML - https://www.php.net/manual/pt_BR/class.domdocument.php
 * Spout, para escrever a planilha - https://opensource.box.com/spout/
+
+## Como entregar os exercícios
+
+Para entregar os exercícios:
+
+1. Crie um fork deste repositório.
+2. Programe o código de cada exercício.
+3. Commite suas mudanças e suba para o repositório.
+4. Deixe o repositório público e nos envie o link.
