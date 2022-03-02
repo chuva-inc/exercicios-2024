@@ -10,6 +10,10 @@
     },
     "minimum-stability": "dev",
     "scripts": {
-        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\War\\GameManager\\Main::run();\""
+        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\War\\GameManager\\Main::run();\"",
+        "webscrapping": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\WebScrapping\\Main::run();\""
+    },
+    "require": {
+        "box/spout": "^3.3"
     }
 }
