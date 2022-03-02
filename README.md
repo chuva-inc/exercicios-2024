@@ -4,7 +4,7 @@ Olá! Este repositório contém dois exercícios, ambos devem ser executados par
 
 ## War
 
-O primeiro é uma variação do jogo "War".
+O primeiro exercício é uma variação do jogo "War".
 
 ### Regras do jogo
 
@@ -28,6 +28,14 @@ O primeiro é uma variação do jogo "War".
 * A cada rodada, cada país ainda no jogo ganha 3 tropas, e um extra de 1 tropa para cada país conquistado.
 * O jogo acaba quando sobrar apenas um país.
 
+### O exercício
+
+Neste repositório você vai encontrar o esqueleto do código para o jogo. Existe uma arquitetura a ser seguida, existem Interfaces PHP e você deverá criar classes implementando essas Interfaces.
+
+Existe também uma interface de usuário pronta. O jogo é jogado por linha de comando, você _não_ deve implementar uma interface web para o jogo. O jogo contém apenas jogadores de máquina, não existem jogadores humanos.
+
+O objetivo do exercício é: faça o código necessário para o jogo funcionar, de acordo com todas as regras acima.
+
 ### Como rodar
 
 Dependências:
@@ -41,14 +49,46 @@ Para rodar o jogo, você deve rodar o seguinte comando:
 composer war
 ```
 
-O jogo contém apenas jogadores de máquina, não existem jogadores
+Ao rodar o comando pela primeira vez, você vai receber um erro fatal:
 
-### O exercício
+```
+PHP Fatal error:  Class Galoa\ExerciciosPhp2022\War\GamePlay\Battlefield contains 2 abstract
+methods and must therefore be declared abstract or implement the remaining methods (Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface::rollDice,
+Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface::computeBattle) in
+/home/ze/git/experimentos/exercicios-php-2022/src/War/GamePlay/Battlefield.php on line 10
+```
 
-Neste repositório você vai encontrar o esqueleto do código para o jogo. Existe uma arquitetura a ser seguida, existem Interfaces PHP e você deverá criar classes implementando essas Interfaces.
+Isso vai ocorrer porque você não implementou o jogo ainda. Quando o exercício estiver pronto, você vai ver a progressão do jogo.
 
-Existe também uma interface de usuário pronta. O jogo é jogado por linha de comando, você _não_ deve implementar uma interface web para o jogo.
+## Web Scrapping
 
-O objetivo do exercício é: faça o código necessário para o jogo funcionar.
+Neste segundo exercício você deve capturar os dados de uma página HTML e converter em uma planilha. O arquivo a ser lido é `webscrapping/origin.html`, ele é uma página (com algumas adaptações) de um Proceedings do Galoá. O seu objetivo é extrair as informações sobre trabalhos e montar uma planilha similar a `webscrapping/model.xlsx`.
 
-### PHPUnit
+Para a resolução do exercício, você pode alterar qualquer arquivo dentro da pasta `src/WebScrapping`.
+
+### Como rodar
+
+Dependências:
+
+* PHP - linha de comando
+* Extensões do PHP: ZIP, DOM, XML
+* [Composer](https://getcomposer.org/)
+
+Rode o seguinte comando para instalar o ambiente:
+
+```
+composer install
+```
+
+Para rodar o scrapping, rode o seguinte comando:
+
+```
+composer webscrapping
+```
+
+### Dicas de resolução
+
+Duas ferramentas vão ser especialmente úteis para você resolver este exercício.
+
+* DOM, para ler o HTML - https://www.php.net/manual/pt_BR/class.domdocument.php
+* Spout, para escrever a planilha - https://opensource.box.com/spout/
