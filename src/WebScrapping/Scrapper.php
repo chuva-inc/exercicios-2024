@@ -8,7 +8,7 @@ namespace Galoa\ExerciciosPhp2022\WebScrapping;
 class Scrapper {
 
   /**
-   * Loads paper information from the
+   * Loads paper information from the HTML and creates a XLSX file.
    */
   public function scrap(\DOMDocument $dom): void {
     print $dom->saveHTML();
