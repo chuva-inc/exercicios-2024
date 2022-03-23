@@ -41,7 +41,7 @@ O objetivo do exercício é: faça o código necessário para o jogo funcionar, 
 Dependências:
 
 * PHP - linha de comando
-* [Composer](https://getcomposer.org/)
+* [Composer](https://getcomposer.org/download/)
 
 Para rodar o jogo, você deve rodar o seguinte comando:
 
