@@ -8,7 +8,7 @@ O primeiro exercício é uma variação do jogo "War", chamado [ChuWAR, veja os 
 
 ## Web Scrapping
 
-No segundo exercício você deve fazer o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/War).
+No segundo exercício você deve fazer o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/WebScrapping).
 
 ## Como entregar os exercícios
 
