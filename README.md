@@ -8,7 +8,7 @@ Só serão considerados para correção testes em que as verificações do Githu
 # Tecnologias
 ## PHP
 
-Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/WebScrapping).
+Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
 
 # Como entregar os exercícios
 
