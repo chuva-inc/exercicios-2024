@@ -4,9 +4,6 @@ on:
   push:
     paths:
       - 'php/**'
-      - 'composer.json'
-      - 'composer.lock'
-      - 'psalm.xml'
 
 jobs:
   Psalm:
@@ -15,10 +12,14 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Installs composer
-      run: composer install -n --prefer-dist
+      run: |
+        cd php;
+        composer install -n --prefer-dist
 
     - name: Run Psalm
-      run: vendor/bin/psalm.phar --threads=2 --no-cache
+      run: |
+        cd php;
+        vendor/bin/psalm.phar --threads=2 --no-cache
 
   PHPlint:
     runs-on: ubuntu-latest
@@ -26,10 +27,16 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Installs composer
-      run: composer install -n --prefer-dist
+      run: |
+        cd php;
+        composer install -n --prefer-dist
 
     - name: Configure PHPCS
-      run: ./vendor/bin/phpcs --config-set installed_paths `$PWD`vendor/drupal/coder/coder_sniffer,vendor/sirbrillig/phpcs-variable-analysis,vendor/slevomat/coding-standard/
+      run: |
+        cd php;
+        ./vendor/bin/phpcs --config-set installed_paths `$PWD`vendor/drupal/coder/coder_sniffer,vendor/sirbrillig/phpcs-variable-analysis,vendor/slevomat/coding-standard/
 
     - name: Run PHPCS
-      run: vendor/bin/phpcs --standard=Drupal --ignore='*.md' --extensions=php,profile,inc,install php/
+      run: |
+        cd php;
+        vendor/bin/phpcs --standard=Drupal --ignore='*.md' --extensions=php,profile,inc,install src/

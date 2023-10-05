@@ -5,7 +5,7 @@
     "license": "None",
     "autoload": {
         "psr-4": {
-            "Chuva\\Php\\": "php/src/"
+            "Chuva\\Php\\": "src/"
         }
     },
     "minimum-stability": "dev",
