@@ -2,9 +2,11 @@ name: PHP
 
 on:
   push:
-    paths-ignore:
-      - 'js/**'
-      - 'flutter/**'
+    paths:
+      - 'php/**'
+      - 'composer.json'
+      - 'composer.lock'
+      - 'psalm.xml'
 
 jobs:
   Psalm:
