@@ -10,7 +10,11 @@ Só serão considerados para correção testes em que as verificações do Githu
 
 Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
 
-# Como entregar os exercícios
+
+# FAQ
+Ficou com alguma dúvida? Crie uma issue nesse repo com a sua dúvida :)
+
+## Como entregar os exercícios
 
 Para entregar os exercícios:
 
