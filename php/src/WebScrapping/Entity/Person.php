@@ -3,12 +3,18 @@
 namespace Chuva\Php\WebScrapping\Entity;
 
 /**
- * Person.
+ * Paper Author personal information.
  */
 class Person {
 
+  /**
+   * Person name.
+   */
   public string $name;
 
+  /**
+   * Person institution.
+   */
   public string $institution;
 
   /**
