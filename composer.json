@@ -1,19 +1,18 @@
 {
-    "name": "galoa/exercicios-php-2022",
-    "description": "Exercícios de PHP para o processo seletivo da Chuva Inc.",
+    "name": "chuva-inc/exercicios-2023",
+    "description": "Exercícios do processo seletivo da Chuva Inc.",
     "type": "project",
     "license": "None",
     "autoload": {
         "psr-4": {
-            "Galoa\\ExerciciosPhp2022\\": "src/"
+            "Chuva\\Php\\": "php/"
         }
     },
     "minimum-stability": "dev",
     "scripts": {
-        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\War\\GameManager\\Main::run();\"",
-        "webscrapping": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\WebScrapping\\Main::run();\""
+        "webscrapping": "php -r \"require 'vendor/autoload.php'; Chuva\\Php\\WebScrapping\\Main::run();\""
     },
     "require": {
-        "box/spout": "^3.3"
+      "openspout/openspout": "^3.4"
     }
 }
