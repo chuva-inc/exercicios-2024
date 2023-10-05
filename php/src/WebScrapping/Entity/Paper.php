@@ -3,9 +3,9 @@
 namespace Chuva\Php\WebScrapping\Entity;
 
 /**
- * Paper interface.
+ * Paper.
  */
-class PaperInterface {
+class Paper {
 
   /**
    * Id.
@@ -19,20 +19,26 @@ class PaperInterface {
    *
    * @var string
    */
-  public string $title;
+  public $title;
 
   /**
    * Type.
    *
    * @var string
    */
-  public string $type;
+  public $type;
 
   /**
    * Id.
    *
-   * @var Chuva\Php\WebScrapping\Entity\AuthorInterface[]
+   * @var \Chuva\Php\WebScrapping\Entity\Person[]
    */
-  public array $authors;
+  public $authors;
+
+  /**
+   * Builder.
+   */
+  public function __construct($id, $title, $type, $authors = []) {
+  }
 
 }
