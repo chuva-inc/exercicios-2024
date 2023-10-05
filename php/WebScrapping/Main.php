@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\WebScrapping;
+namespace Chuva\Php\WebScrapping;
 
 use DOMDocument;
 
@@ -14,7 +14,7 @@ class Main {
    */
   public static function run(): void {
     $dom = new DOMDocument('1.0', 'utf-8');
-    $dom->loadHTMLFile(__DIR__ . '/../../webscrapping/origin.html');
+    $dom->loadHTMLFile(__DIR__ . '/files/webscrapping/origin.html');
     (new Scrapper())->scrap($dom);
   }
 
