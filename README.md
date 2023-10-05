@@ -10,7 +10,7 @@ Só serão considerados para correção testes em que as verificações do Githu
 Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
 
 ## Typescript + HTML + SCSS
-Nesse caso você deve implementar uma [página de trabalho](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping). Pra facilitar sua vida, Nosso repositório já vem com pronto pra consumo, e mesmo que você não for familiar com o Angular ou Typescript, dá pra só colocar o html e o scss nos arquivos corretos, e vai funcionar (inclusive os testes automatizados vão passar).
+Nesse caso você deve implementar uma [página de trabalho](https://github.com/chuva-inc/exercicios-2023/tree/master/ts). Pra facilitar sua vida, nosso repositório já vem com pronto pra consumo, e mesmo que você não for familiar com o Angular ou Typescript, dá pra só colocar o html e o scss nos arquivos corretos, e vai funcionar (inclusive os testes automatizados vão passar).
 
 # FAQ
 Ficou com alguma dúvida? Crie uma issue nesse repo com a sua dúvida :)
