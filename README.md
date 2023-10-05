@@ -1,20 +1,19 @@
-# Exercícios de PHP
+# Exercícios
 
-Olá! Este repositório contém dois exercícios, ambos devem ser executados para o teste da vaga de Desenvolvedor Web na Chuva.
+Olá! Este repositório contém os exercícios de desenvolvimento da Chuva, você **deve** implementar pelo menos uma das tecnologias disponíveis, conforme sua preferência pessoal e aptidão.
 
-## War
+Só serão considerados para correção testes em que as verificações do Github Actions estejam passando (verdinhas).
 
-O primeiro exercício é uma variação do jogo "War", chamado [ChuWAR, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/War).
 
-## Web Scrapping
+# Tecnologias
+## PHP
 
-No segundo exercício você deve fazer o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/WebScrapping).
+Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-php-2022/tree/master/src/WebScrapping).
 
-## Como entregar os exercícios
+# Como entregar os exercícios
 
 Para entregar os exercícios:
 
-1. Crie um fork deste repositório.
-2. Programe o código de cada exercício.
-3. Commite suas mudanças e suba para o repositório.
-4. Deixe o repositório público e nos envie o link.
+1. Crie um fork **público** deste repositório.
+2. Enquanto programa sua solução, faça [commits atômicos](https://en.wikipedia.org/wiki/Atomic_commit).
+3. Quando estiver tudo passando nos testes, nos envie o link do seu repositório.
