@@ -15,7 +15,10 @@ Nesse caso você deve implementar uma [página de trabalho](https://github.com/c
 # FAQ
 Ficou com alguma dúvida? Crie uma issue nesse repo com a sua dúvida :)
 
-## Como entregar os exercícios
+## Posso resolver mais de um exercício?
+Sim, pode resolver em todos se quiser, e vamos levar todas as resoluções em consideração!
+
+## Como entregar os exercícios?
 
 Para entregar os exercícios:
 
