@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { WorkComponent } from './components/pages/work/work.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    WorkComponent
+    WorkComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule

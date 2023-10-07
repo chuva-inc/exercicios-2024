@@ -1,0 +1,56 @@
+.container {
+  width: 88vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fdf1eb;
+}
+
+.header-txt p,
+h3 {
+  color: #725c5c;
+  font-weight: 400;
+}
+
+.header-txt h3 {
+  font-weight: 500;
+}
+
+.language label {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.language select {
+  text-align: end;
+  font-size: 0.8rem;
+  height: 2rem;
+  width: 5.3rem;
+  border: 1.5px solid #cccccc;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+select,
+.user-info p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  text-align: end;
+}
+
+.img img {
+  border-radius: 50%;
+}
+
+.img img:first-child {
+  position: relative;
+  top: -22px;
+  right: -33px;
+}

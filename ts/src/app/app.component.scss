@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+}
+
 .side-bar {
   height: 100vh;
   width: 12%;
@@ -5,6 +9,7 @@
   flex-direction: column;
   padding-bottom: 1.4rem;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  z-index: 1;
 }
 
 .side-bar h1 {
@@ -30,12 +35,23 @@
   border-bottom: 2px solid #e7e7e7;
 }
 
+.side-bar ul li:nth-child(5) {
+  background: #fdf1eb;
+  border-left: 4px solid #ed7839;
+}
+
 .side-bar ul li a {
   display: block;
   padding: 0.5rem 0;
   margin-left: 1.6rem;
+
+  font-size: 0.8rem;
   color: #725c5c;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
+}
+
+.side-bar ul li a:hover {
+  color: #fcaa50;
 }
