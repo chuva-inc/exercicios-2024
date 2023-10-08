@@ -1,1 +1,145 @@
+.work {
+  padding: 1.5rem 2.5rem;
+}
 
+// Video section
+
+.video-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  max-width: 90%;
+  color: #ed7839;
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.video {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.video img {
+  width: 93%;
+}
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  color: #fff;
+  background-color: #ed7839;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.download-btn {
+  padding: 6px 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.save-btn {
+  padding: 4px 12px;
+}
+
+.doi-btn {
+  padding: 3px 10px;
+}
+
+.save-btn,
+.doi-btn {
+  display: flex;
+  align-items: center;
+}
+
+.more-info h4 {
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ed7839;
+}
+
+.details {
+  border: 1px solid #ececec;
+  border-radius: 3px;
+}
+
+.details h3 {
+  color: #4e4e4e;
+  background-color: #fdf1eb;
+  border-bottom: 1px solid #ececec;
+  padding: 1rem;
+}
+
+.container-details {
+  margin: 1rem;
+  font-size: 0.9rem;
+  font-family: "Quicksand", sans-serif;
+  color: #5c5c5c;
+  font-weight: 300;
+
+  border-right: 3px solid transparent;
+  border-image: linear-gradient(#bfbfbf, #e7e7e7) 1;
+  border-image-slice: 1;
+}
+
+.light-bold {
+  font-weight: 400;
+}
+
+.container-details p {
+  margin-bottom: 0.3rem;
+}
+
+.authors,
+.universities {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.authors span {
+  margin-bottom: 0.5rem;
+}
+
+.universities span {
+  font-size: 0.8rem;
+  color: #ada0a0;
+  margin-bottom: 0.2rem;
+}
+
+// Summary Section
+
+.summary {
+  border: 1px solid #ececec;
+  border-radius: 3px;
+}
+
+.summary h3 {
+  background-color: #fdf1eb;
+  border-bottom: 1px solid #ececec;
+  color: #4e4e4e;
+}
+
+.summary h3,
+.summary p {
+  padding: 1rem;
+}
+
+.summary p {
+  font-family: "Quicksand", sans-serif;
+  color: #5c5c5c;
+}

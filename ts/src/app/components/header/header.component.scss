@@ -1,9 +1,12 @@
-.container {
-  width: 88vw;
+.container .align {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background-color: #fdf1eb;
+}
+
+.align {
+  padding: 0.6rem 2rem;
+  justify-content: space-between;
 }
 
 .header-txt p,

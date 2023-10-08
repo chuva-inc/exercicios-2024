@@ -3,20 +3,20 @@
 }
 
 .side-bar {
-  height: 100vh;
-  width: 12%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1.4rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  width: 200px;
+  position: sticky;
+  box-shadow: 3px 0 5px 1px #e7e7e7;
   z-index: 1;
+  flex: 0 0 200px;
 }
 
 .side-bar h1 {
   width: 100%;
   padding: 0.7rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #fff;
   background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
 }
