@@ -1,0 +1,45 @@
+.card {
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0px 0px 8px 0px #0000001f;
+  margin-bottom: 1.3rem;
+}
+
+.ops-topic-subject,
+p {
+  font-family: "Quicksand", sans-serif;
+}
+
+p {
+  margin-bottom: 0.6rem;
+}
+
+.ops-topic-subject {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ed7839;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: #5c5c5c;
+  font-weight: 600;
+}
+
+.phrase {
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  color: #757575;
+}
