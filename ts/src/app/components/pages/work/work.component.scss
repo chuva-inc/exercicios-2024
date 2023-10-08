@@ -121,21 +121,25 @@
   margin-bottom: 0.2rem;
 }
 
-// Summary Section
+// Summary and Discussion Section
 
-.summary {
+.summary,
+.discussions {
   border: 1px solid #ececec;
   border-radius: 3px;
+  margin-bottom: 2rem;
 }
 
-.summary h3 {
+.summary h3,
+.discussions h3 {
   background-color: #fdf1eb;
   border-bottom: 1px solid #ececec;
   color: #4e4e4e;
 }
 
 .summary h3,
-.summary p {
+.summary p,
+.discussions h3 {
   padding: 1rem;
 }
 
@@ -160,4 +164,56 @@
 
 .hidden {
   display: none;
+}
+
+// Discussion Section
+
+.create-topic {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-topic h4 {
+  color: #ed7839;
+  margin-bottom: 2rem;
+}
+
+.create-topic .icons {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.create-topic p {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #595959;
+  text-align: center;
+  border-bottom: 1px solid rgba(231, 231, 231, 1);
+  padding-bottom: 3.3rem;
+}
+
+.btn-create-topic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  top: -1.2rem;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
+
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0 #0000003d;
+
+  cursor: pointer;
 }
