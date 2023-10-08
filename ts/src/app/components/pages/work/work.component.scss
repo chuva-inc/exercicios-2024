@@ -139,7 +139,25 @@
   padding: 1rem;
 }
 
-.summary p {
+.summary p,
+.dots,
+.show-more {
   font-family: "Quicksand", sans-serif;
   color: #5c5c5c;
+}
+
+.btn-show-more {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  color: #ed7839;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.show {
+  display: inline;
+}
+
+.hidden {
+  display: none;
 }
