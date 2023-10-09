@@ -28,8 +28,6 @@ class Scrapper {
 
     /**
      * Iterating elements and return data
-     *
-     * @var  $data
      */
     $data = [];
 
@@ -42,8 +40,6 @@ class Scrapper {
 
       /**
        * Iterating spans and assign authors
-       *
-       * @var  $authors
        */
       $authors = [];
       foreach ($authorSpans as $authorSpan) {

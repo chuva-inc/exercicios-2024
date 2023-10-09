@@ -46,20 +46,29 @@ class Paper {
   }
 
   /**
-   * Methods.
+   * Methods for return id
    */
   public function getId() {
     return $this->id;
   }
 
+  /**
+   * Methods for return title
+   */
   public function getTitle() {
     return $this->title;
   }
 
+  /**
+   * Methods for return type
+   */
   public function getType() {
     return $this->type;
   }
 
+  /**
+   * Methods for return authors
+   */
   public function getAuthors() {
     return $this->authors;
   }
