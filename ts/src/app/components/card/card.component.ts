@@ -54,4 +54,8 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  showComments() {
+    this.isExpanded = true;
+  }
 }

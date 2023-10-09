@@ -37,6 +37,10 @@ p {
   gap: 1rem;
 }
 
+.info img {
+  cursor: pointer;
+}
+
 span {
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
@@ -44,6 +48,11 @@ span {
 }
 
 // Comments
+
+.hidden {
+  display: none;
+}
+
 .comment-section {
   box-shadow: 0px 1px 8px 0px #0000001f;
 }

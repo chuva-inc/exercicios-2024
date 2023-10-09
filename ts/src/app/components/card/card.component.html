@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" (click)="showComments()">
      <div class="topic">
           <h4 class="ops-topic-subject">{{topic.subject}}</h4>
           <p class="author">{{topic.author}}</p>
@@ -12,7 +12,7 @@
      </div>
 </div>
 
-<section class="comment-section" *ngIf="topic.answers > 1">
+<section class="comment-section" *ngIf="topic.answers > 1" [ngClass]="{'show': isExpanded, 'hidden': !isExpanded }">
      <div class="comments-container" *ngFor="let comment of comments"
           [ngClass]="{'show': !commentsOn, 'hidden': commentsOn, 'comment-bg': comment.isAuthor || comment.isCoAuthor}">
           <div class="comment">
