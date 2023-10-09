@@ -15,7 +15,9 @@
     "require": {
         "openspout/openspout": "^3.4",
         "psalm/phar": "^4.7",
-        "drupal/coder": "8.3.x-dev"
+        "drupal/coder": "8.3.x-dev",
+        "box/spout": "^3.3",
+      "ext-dom": "*"
     },
     "config": {
         "allow-plugins": {
