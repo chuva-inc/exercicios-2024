@@ -2,12 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Ts</title>
+  <title>Interface de trabalho</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <app-root></app-root>
+<body >
+  <app-root class="box-border ">
+
+
+    <header class="bg-orange-50  flex ">
+
+      <div class="  bg-gradient-to-b from-orange-300 to-orange-400 w-1/4 p-4">
+        <p class="text-center text-white text-3xl font-bold font-['Roboto']">SLACA 2019</p>
+      </div>
+
+
+
+
+        <div class="flex w-3/4">
+
+          <div class="w-2/3 p-2">
+            <p class="text-stone-500 text-xs font-normal font-['Roboto']">Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+            <p class="text-stone-500 text-[12px]">Anais do 13º Simpósio Latino Americano de Ciência de Alimentos </p>
+            <p class="text-stone-500 text-[8px] font-normal font-['Roboto']">ISSN: 1234-5678</p>
+          </div>
+
+          <button class="w-24 h-8 rounded border border-stone-300 flex items-center space-x-2 p-2 my-4 hover:bg-gradient-to-b from-orange-300 to-orange-400">
+
+
+            <img src="./assets/imagens/globo-removebg-preview.png" alt="Globo" class="w-3 h-3" fill="current">
+
+
+            <span class=" text-zinc-800 text-[10px] font-normal font-['Quicksand']">PT_BR</span>
+
+            <img src="./assets/imagens/dropdown.svg" alt="seta para baixo" class="w-2 h-2" fill="current">
+
+          </button>
+
+
+
+          <div class="p-4">
+            <p class="text-right text-zinc-800 text-sm font-normal font-['Quicksand']">Bem vindo!</p>
+            <p class="text-right text-zinc-800 text-xs font-normal font-['Quicksand']">alguem12@galoascience.com</p>
+
+
+          </div>
+
+          <div class="p-4 relative">
+            <img src="./assets/imagens/image.svg" alt="" class="rounded-full w-10 h-10 object-cover">
+            <div class="w-3 h-3  bg-rose-500 rounded-full w-4 h-4 object-cover absolute  top-3 right-2">
+              <p class="text-white text-[10px] font-bold font-['Roboto'] text-center ">2</p>
+            </div>
+          </div>
+         </div>
+
+
+
+    </header>
+
+    <div class="flex ">
+        <aside class="w-1/4 bg-white  h-screen  bg-white shadow" >
+
+          <img src="./assets/imagens/dewey 4.svg" alt="" class="w-full">
+
+          <ul class="space-y-2">
+            <li class="bg-white shadow py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand']   ">Apresentação</a>
+            </li>
+            <li class="bg-white shadow py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand']">Comitês</a>
+            </li>
+            <li class="bg-white shadow py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand'] ">Autores</a>
+            </li>
+            <li class="bg-white shadow py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand'] ">Eixos temáticos</a>
+            </li>
+
+            <li class=" py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand'] ">Trabalhos</a>
+            </li>
+            <li class="bg-white shadow py-2 px-4 hover:bg-orange-50 cursor-pointer">
+              <a href="#" class="text-stone-500 text-[15px] font-medium font-['Quicksand']  ">Contato</a>
+            </li>
+          </ul>
+
+
+        </aside>
+
+        <main class="w-3/4 ">
+            <!-- Conteúdo da Seção Principal -->
+        </main>
+    </div>
+
+
+  </app-root>
 </body>
 </html>
