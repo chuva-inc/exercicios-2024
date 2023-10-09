@@ -140,7 +140,7 @@
 .summary h3,
 .summary p,
 .discussions h3 {
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .summary p,
@@ -168,6 +168,7 @@
 
 // Discussion Section
 // Create Topic
+
 .create-topic {
   padding: 1.5rem 2rem 0.2rem 2rem;
   display: flex;
@@ -218,7 +219,77 @@
   cursor: pointer;
 }
 
+.hiddenCreateTopic {
+  display: none;
+}
+
 // Creating Topic
+
+.creating-topic {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.creating-topic p,
+.creating-topic input,
+.div-btn button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.creating-topic p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #5c5c5c;
+}
+
+.div-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2px;
+  margin-bottom: 0.5rem;
+}
+
+.div-form label {
+  font-weight: 700;
+  color: #ed7839;
+}
+
+.div-form input,
+.div-form textarea {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.9rem;
+  border: 1.5px solid #cccccc;
+  border-radius: 3px;
+}
+
+.line-bottom {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(231, 231, 231, 1);
+}
+
+.div-btn {
+  display: flex;
+  justify-content: end;
+  background-color: #eaf1f2;
+  width: 100%;
+  border: 1.3px solid #cccccc;
+  border-top: none;
+}
+
+.div-btn button {
+  width: 18%;
+  padding: 0.3rem 1rem;
+  text-align: center;
+
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+  border: none;
+}
 
 // Topics Container
 .topics {

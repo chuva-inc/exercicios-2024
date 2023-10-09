@@ -102,7 +102,7 @@
      <section class="discussions">
           <h3>Discussões</h3>
 
-          <section class="create-topic">
+          <section class="create-topic" [ngClass]="{'hiddenCreateTopic': true}">
                <h4>Compartilhe suas ideias ou dúvidas com os autores!</h4>
                <div class="icons">
                     <img src="../../../../assets/icons/discussions_icon1.svg">
@@ -112,11 +112,29 @@
                <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus <br>
                     questionamentos ou sugestões para o autor!</p>
 
-               <button class="btn-create-topic"><img src="../../../../assets/icons/icon_criar.svg"
-                         alt="Criar Topico Imagem"> criar tópico</button>
+               <button (click)="createTopic()" class="btn-create-topic"><img
+                         src="../../../../assets/icons/icon_criar.svg" alt="Criar Topico Imagem"> criar tópico</button>
           </section>
 
-          <section class="creating-topic"></section>
+          <section class="creating-topic" [ngClass]="{'show': !creatingTopic, 'hidden': creatingTopic}">
+               <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+
+               <form>
+                    <div class="div-form">
+                         <label for="subject">Assunto</label>
+                         <input type="text" placeholder="Defina um tópico sucinto para notificar os autores...">
+                    </div>
+                    <div class="div-form">
+                         <label for="content">Conteúdo</label>
+                         <textarea name="content" cols="5" rows="3"></textarea>
+                         <div class="line-bottom">
+                              <div class="div-btn">
+                                   <button>Enviar</button>
+                              </div>
+                         </div>
+                    </div>
+               </form>
+          </section>
 
           <section class="topics">
                <app-card></app-card>
