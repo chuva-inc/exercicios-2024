@@ -1,259 +1,148 @@
-:host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat%3Awght%40400%3B500&family=Poppins%3Awght%40300%3B400%3B500&family=Roboto%3Awght%40400%3B500&display=swap%27%29%3B');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Mono:wght@100;400;500;700&display=swap');
+
+
+.header-section{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
 }
 
-h1,
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+.sidebar img{
+ max-width: 100%;
+justify-self: center;
 }
 
-h2 {
-  margin-top: 50px;
+.sidebar ul li a{
+    font-family: 'Quicksand';
+    font-weight: 500;
+    color: rgba(114, 92, 92, 1);
+    margin-left: 24px;
+    text-align: start;
+    font-size: 15px;
 }
 
-p {
-  margin: 0;
+.sidebar ul span{
+    width: 220px;
+    height: 2px;
+    background-color: rgba(231, 231, 231, 1);
+    display: block;
+    margin: 7px;
 }
 
-.spacer {
-  flex: 1;
+.sidebar h1{
+    background: linear-gradient(to bottom, rgba(255, 179, 84, 1), rgba(238, 122, 58, 1));
+    padding: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px; 
 }
 
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #04345d;
-  color: white;
-  font-weight: 600;
+header{
+    margin-left: 250px;
+    width: 100vw;
+    background-color: rgba(253, 241, 235, 1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 68px;
 }
 
-.toolbar img {
-  margin: 0 16px;
+header div{
+    padding-top: 5px;
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
+header div h1{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(114, 92, 92, 1);
+    margin-bottom: 5px;
 }
 
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
+header div h2{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(114, 92, 92, 1);
+    margin-bottom: 5px;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
+
+header div p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(114, 92, 92, 1);
+    margin-bottom: 5px;
 }
 
-.content {
-  display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
-  flex-direction: column;
-  align-items: center;
+.dropdown{
+    margin-left: 110px;
+    margin-right: 22px;
 }
 
-svg.material-icons {
-  height: 24px;
-  width: auto;
+.dropdown .drop-btn{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 4px;
+    padding: 8px;
+    background: none;
+    border: 1px solid rgba(204, 204, 204, 1);
 }
 
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
+.drop-btn i {
+    color: rgb(49, 49, 49);
 }
 
-.card svg.material-icons path {
-  fill: #888;
+.drop-btn p{
+    color: rgba(51, 51, 51, 1);
+    size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 400;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 16px;
+.header_user_infos{
+    display: flex;
+    gap: 6px;
 }
 
-.card {
-  all: unset;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
+.header_user_infos h2{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
 }
 
-.card-container .card:not(:last-child) {
-  margin-right: 0;
+.header_user_infos p{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 12px;
 }
 
-.card.card-small {
-  height: 16px;
-  width: 168px;
+header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.card-container .card:not(.highlight-card) {
-  cursor: pointer;
-}
-
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
-
-.card-container .card:not(.highlight-card):hover .material-icons path {
-  fill: rgb(105, 103, 103);
-}
-
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
-}
-
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
-
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
-
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
-
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #125699;
-}
-
-.terminal {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 6px;
-  padding-top: 45px;
-  margin-top: 8px;
-  overflow: hidden;
-  background-color: rgb(15, 15, 16);
-}
-
-.terminal::before {
-  content: "\2022 \2022 \2022";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: rgb(58, 58, 58);
-  color: #c2c3c4;
-  width: 100%;
-  font-size: 2rem;
-  line-height: 0;
-  padding: 14px 0;
-  text-indent: 4px;
-}
-
-.terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  color: white;
-  padding: 0 1rem 1rem;
-  margin: 0;
+main{
+    margin-left: 250px;
 }
 
 footer {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  line-height: 20px;
+    margin-left: 250px;
 }
 
-footer a {
-  display: flex;
-  align-items: center;
-}
 
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
-}
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link) ,
-  .terminal {
-    width: 100%;
-  }
-
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
-  }
-
-  .card.highlight-card span {
-    margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
-}
-
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-#required-elements {
-  h3 {
-    margin-top: 15px;
-  }
-  h2, a {
-    font-size: 12px;
-  }
-}
