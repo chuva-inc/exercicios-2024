@@ -25,9 +25,8 @@ class Main {
 
     $outputFilePath = "GaloScrapper_MarcosTulio.xlsx";
 
-    /**
-     * Writer XLSX using Spout.
-     */
+
+    // Writer XLSX using Spout.
     $writer = WriterEntityFactory::createXLSXWriter();
     $writer->openToFile($outputFilePath);
 
@@ -59,9 +58,7 @@ class Main {
       $header[] = "Author $i Institution";
     }
 
-    /**
-     * Creates a header row for the file.
-     */
+    // Creates a header row for the file.
     $headerRow = WriterEntityFactory::createRowFromArray($header);
     $writer->addRow($headerRow);
 
@@ -91,9 +88,7 @@ class Main {
         $rowData[] = $institution;
       }
 
-      /**
-       * Creating the rows from array $rowData.
-       */
+      // Creating the rows from array $rowData.
       $dataRow = WriterEntityFactory::createRowFromArray($rowData);
       $writer->addRow($dataRow);
     }

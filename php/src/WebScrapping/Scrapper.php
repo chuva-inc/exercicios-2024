@@ -26,9 +26,7 @@ class Scrapper {
     $all_types = $xpath->query('//div[@class="tags mr-sm"]');
     $all_div_authors = $xpath->query('//div[@class="authors"]');
 
-    /**
-     * Iterating elements and return data.
-     */
+    // Iterating elements and return data.
     $data = [];
 
     for ($i = 0; $i < $all_ids->length; $i++) {
@@ -38,9 +36,8 @@ class Scrapper {
       $type = $all_types->item($i)->textContent;
       $authorSpans = $xpath->query('.//span', $all_div_authors->item($i));
 
-      /**
-       * Iterating spans and assign authors
-       */
+
+      // Iterating spans and assign authors
       $authors = [];
       foreach ($authorSpans as $authorSpan) {
         $authorName = $authorSpan->textContent;
