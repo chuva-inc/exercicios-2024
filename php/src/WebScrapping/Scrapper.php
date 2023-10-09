@@ -36,8 +36,7 @@ class Scrapper {
       $type = $all_types->item($i)->textContent;
       $authorSpans = $xpath->query('.//span', $all_div_authors->item($i));
 
-
-      // Iterating spans and assign authors
+      // Iterating spans and assign authors.
       $authors = [];
       foreach ($authorSpans as $authorSpan) {
         $authorName = $authorSpan->textContent;

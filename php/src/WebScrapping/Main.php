@@ -25,7 +25,6 @@ class Main {
 
     $outputFilePath = "GaloScrapper_MarcosTulio.xlsx";
 
-
     // Writer XLSX using Spout.
     $writer = WriterEntityFactory::createXLSXWriter();
     $writer->openToFile($outputFilePath);
