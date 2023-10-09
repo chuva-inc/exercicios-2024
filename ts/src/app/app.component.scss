@@ -199,9 +199,70 @@ main{
   gap: 30px;
 }
 
-.body-component img{
-  max-width: 90%;
+.image-container{
+  position: relative;
 }
+
+.body-component img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.image-container .overlay{
+  display: grid;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(141, 53, 6, 0.5);
+}
+
+
+.overlay .video-content{
+  position: relative; 
+  display: flex;
+  align-items: center;
+  padding-left: 31px;
+}
+.overlay div:nth-child(1){
+  margin-left: 32px;
+}
+
+.overlay h2{
+  text-align: start;
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 1);
+
+}
+
+.video-content img{
+  border-radius: 50px;
+  border: 1px solid rgba(237, 120, 57, 1);
+  padding: 3px;
+  margin-right: 17px;
+}
+
+.video-content h3{
+ font-family: 'Roboto';
+ color: #fff;
+ font-weight: 900;
+ font-size: 34px;
+}
+
+.video-content h4{
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 5px;
+ }
+
 
 .body-component h1{
   font-family: 'Roboto';
@@ -252,7 +313,6 @@ main{
   font-size: 12px;
   font-weight: 400;
 
- 
 }
 
 footer {
