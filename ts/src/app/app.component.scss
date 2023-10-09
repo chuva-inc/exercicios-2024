@@ -51,8 +51,8 @@ header{
     width: 100vw;
     background-color: rgba(253, 241, 235, 1);
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
     height: 68px;
 }
 
@@ -138,6 +138,54 @@ header img{
 
 main{
     margin-left: 250px;
+    background-color: #fff;
+}
+
+.top-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.top-content h1{
+  padding: 20px;
+  color: rgba(237, 120, 57, 1);
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  max-width: 700px;
+}
+
+.top-content .action-buttons{
+  display: flex;
+  gap: 5px;
+}
+
+.action-buttons button:nth-child(1){
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(237, 120, 57, 1);
+}
+
+.action-buttons button i:nth-child(1){
+  font-size: 16px;
+  color: #fff;
+}
+
+.action-buttons button i a:nth-child(1){
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 5px;
+}
+
+.action-buttons button{
+  background-color: rgba(237, 120, 57, 1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
 }
 
 footer {
