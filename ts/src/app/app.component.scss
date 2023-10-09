@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Mono:wght@100;400;500;700&display=swap');
 
-
+// SIDEBAR SECTION
 .header-section{
     background-color: rgba(255, 255, 255, 1);
     display: flex;
@@ -45,6 +45,8 @@ justify-self: center;
     text-align: center;
     font-size: 30px; 
 }
+
+// TOP HEADER
 
 header{
     margin-left: 250px;
@@ -136,6 +138,7 @@ header img{
     border-radius: 50%;
 }
 
+// MAIN SECTCION
 main{
     margin-left: 250px;
     background-color: #fff;
@@ -143,12 +146,12 @@ main{
 
 .top-content{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: baseline;
 }
 
 .top-content h1{
-  padding: 20px;
+  padding-top: 20px;
   color: rgba(237, 120, 57, 1);
   font-size: 20px;
   font-family: 'Roboto';
@@ -186,6 +189,70 @@ main{
   padding: 6px 12px;
   border-radius: 4px;
   border: none;
+}
+
+.body-component{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 784px 242px;
+  gap: 30px;
+}
+
+.body-component img{
+  max-width: 90%;
+}
+
+.body-component h1{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 0;
+  text-align: end;
+  color: rgba(237, 120, 57, 1);
+}
+.body-component .title-background{
+
+  background-color: rgba(253, 241, 235, 1);
+  padding: 11px 15px;
+  border-radius: 4px 4px 0 0;
+}
+
+.body-component .title-background h2{
+  color: rgba(78, 78, 78, 1);
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.body-component .details-content{
+  padding: 11px 15px;
+  height: 439px;
+  border: 1px solid rgba(236, 236, 236, 1);
+  overflow-y: scroll;
+  border-radius: 4px;
+}
+
+
+.details-content p{
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(173, 160, 160, 1);
+}
+.details-content span{
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(92, 92, 92, 1);
+}
+
+.details-content span:last-child{
+  font-family: 'Quicksand';
+  font-size: 12px;
+  font-weight: 400;
+
+ 
 }
 
 footer {
