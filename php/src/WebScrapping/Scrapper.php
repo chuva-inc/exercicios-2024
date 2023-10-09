@@ -47,7 +47,6 @@ class Scrapper {
              */
             $authors = [];
             foreach ($authorSpans as $authorSpan) {
-
                 $authorName = $authorSpan->textContent;
                 $authorInstitution = $authorSpan->getAttribute("title");
                 $authors[] = new Person($authorName, $authorInstitution);
