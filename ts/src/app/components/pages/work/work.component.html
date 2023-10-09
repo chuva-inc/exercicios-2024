@@ -120,7 +120,10 @@
 
           <section class="topics">
                <app-card></app-card>
-               <app-card></app-card>
+               <app-card class="answered-topic"
+                    [topic]="{ subject: 'Assunto da pergunta aparece aqui', author: 'Carlos Henrique Santos', phrase: 'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...', likes: 4, answers: 4 }"
+                    (click)="showComments()">
+               </app-card>
           </section>
      </section>
 </div>

@@ -222,5 +222,17 @@
 
 // Topics Container
 .topics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
   padding: 0 1rem 1rem 1rem;
+}
+
+.topics p,
+.topics span {
+  font-family: "Quicksand", sans-serif;
+}
+
+.answered-topic {
+  margin-bottom: 0;
 }

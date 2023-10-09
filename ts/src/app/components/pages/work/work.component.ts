@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
   isExpanded: boolean = false;
+  commentsOn: boolean = false;
 
   constructor() {}
 
@@ -14,5 +15,9 @@ export class WorkComponent implements OnInit {
 
   showMore() {
     this.isExpanded = true;
+  }
+
+  showComments() {
+    this.commentsOn = true;
   }
 }

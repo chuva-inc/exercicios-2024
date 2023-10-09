@@ -3,7 +3,6 @@
   border-radius: 4px;
   padding: 1rem;
   box-shadow: 0px 0px 8px 0px #0000001f;
-  margin-bottom: 1.3rem;
 }
 
 .ops-topic-subject,
@@ -42,4 +41,51 @@ span {
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   color: #757575;
+}
+
+// Comments
+.comment-section {
+  box-shadow: 0px 1px 8px 0px #0000001f;
+}
+
+.comment-section .comments-container {
+  border: 1px solid #e7e7e7;
+}
+
+.comment-section div:first-child {
+  border-top: none;
+}
+
+.comment {
+  padding: 1rem;
+}
+
+.comment-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #5c5c5c;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.author-comment {
+  display: flex;
+  gap: 2rem;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #ed7839;
+  margin-right: 1rem;
+}
+
+.comment p:nth-child(2) {
+  width: 96%;
+  color: #4d4d4d;
+  font-size: 1rem;
+}
+
+.comment-bg {
+  background-color: #f8f8f8;
 }
