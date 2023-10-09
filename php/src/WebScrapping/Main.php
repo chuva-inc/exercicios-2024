@@ -17,7 +17,7 @@ class Main {
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
     /**
-     * data call the method scrap of Scrapper class
+     * data call the method scrap of Scrapper class.
      *
      * @var array $data
      */
@@ -27,8 +27,6 @@ class Main {
 
     /**
      * Writer XLSX using Spout.
-     *
-     * @var Writer $writer
      */
     $writer = WriterEntityFactory::createXLSXWriter();
     $writer->openToFile($outputFilePath);
@@ -42,7 +40,7 @@ class Main {
     $maxAuthors = 0;
 
     /**
-     * Iterating in all objects and counting just authors number
+     * Iterating in all objects and counting just authors number.
      *
      * @var mixed $paper
      */
@@ -55,16 +53,14 @@ class Main {
 
     for ($i = 1; $i <= $maxAuthors; $i++) {
 
-      //Loop to create headers for authors and institutions.
-      //Each iteration generates a pair of headers.
+      // Loop to create headers for authors and institutions.
+      // Each iteration generates a pair of headers.
       $header[] = "Author $i";
       $header[] = "Author $i Institution";
     }
 
     /**
      * Creates a header row for the file.
-     *
-     * @var Row $headerRow
      */
     $headerRow = WriterEntityFactory::createRowFromArray($header);
     $writer->addRow($headerRow);
@@ -77,28 +73,26 @@ class Main {
       ];
 
       /**
-       * Iterating all objects and return authors and institutions
+       * Iterating all objects and return authors and institutions.
        *
        * @var array $author
        */
       foreach ($paper->getAuthors() as $author) {
         /**
-         * The method returns the name of the author
+         * The method returns the name of the author.
          *
-         * @var String $authorName
+         * @var string $authorName
          */
         $authorName = $author->getName();
         $institution = $author->getInstitution();
 
-        // Making assignments to the array
+        // Making assignments to the array.
         $rowData[] = $authorName;
         $rowData[] = $institution;
       }
 
       /**
-       * Creating the rows from array $rowData
-       *
-       * @var Row $dataRow
+       * Creating the rows from array $rowData.
        */
       $dataRow = WriterEntityFactory::createRowFromArray($rowData);
       $writer->addRow($dataRow);

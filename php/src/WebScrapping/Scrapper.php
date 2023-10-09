@@ -16,7 +16,7 @@ class Scrapper {
   public function scrap(\DOMDocument $dom): array {
 
     /**
-     * Query and extract text content with XPath
+     * Query and extract text content with XPath.
      *
      * @var / $xpath
      */
@@ -27,7 +27,7 @@ class Scrapper {
     $all_div_authors = $xpath->query('//div[@class="authors"]');
 
     /**
-     * Iterating elements and return data
+     * Iterating elements and return data.
      */
     $data = [];
 
