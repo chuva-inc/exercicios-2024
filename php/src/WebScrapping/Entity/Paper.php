@@ -43,7 +43,6 @@ class Paper {
         $this->title = $title;
         $this->type = $type;
         $this->authors = $authors;
-
     }
 
     /**
@@ -51,7 +50,6 @@ class Paper {
      */
     public function getId() {
         return $this->id;
-
     }
 
     public function getTitle() {
