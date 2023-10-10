@@ -1,0 +1,10 @@
+{
+  "editorconfig": true,
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "semi": true,
+  "endOfLine": "lf"
+}

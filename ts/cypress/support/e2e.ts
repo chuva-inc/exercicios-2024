@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -22,5 +22,5 @@ import './commands'
 import compareSnapshotCommand from 'cypress-visual-regression/dist/command';
 
 compareSnapshotCommand({
-  errorThreshold: 0.05,
+  errorThreshold: 0.05
 });
