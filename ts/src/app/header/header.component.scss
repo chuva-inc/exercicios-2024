@@ -1,0 +1,80 @@
+header{
+    display: flex;
+    height: 68px;
+    background-color: #FDF1EB;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-item{
+    color: #725C5C;
+    margin-left: 40px;
+    min-width: 540px;
+}
+
+.anais-info, .anais-issn{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+.anais-info-2{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.user-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    gap: 5px;
+}
+
+.language-item{
+    margin-right: 40px;
+}
+
+.language-item button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    width: 97px;
+    gap: 3px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+
+.language-item button span {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 3px;
+}
+
+.user-profile-img{
+    height: 33px;
+    border-radius: 50px;
+}
+
+.user-welcome{
+    text-align: end;
+}
+.user-info{
+    font-family: 'Quicksand', sans-serif;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.user-welcome{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.user-email{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
