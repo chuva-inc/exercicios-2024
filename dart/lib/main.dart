@@ -29,7 +29,7 @@ class Calendar extends StatefulWidget {
 }
 
 class _CalendarState extends State<Calendar> {
-  DateTime _currentDate = DateTime(2023, 11, 8);
+  DateTime _currentDate = DateTime(2023, 11, 26);
   bool _clicked = false;
 
   void _changeDate(DateTime newDate) {
@@ -76,6 +76,14 @@ class _CalendarState extends State<Calendar> {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
+            if (_currentDate.day == 26)
+              OutlinedButton(
+                  onPressed: () {
+                    setState(() {
+                      _clicked = true;
+                    });
+                  },
+                  child: const Text('Mesa redonda de 07:00 até 08:00')),
             if (_currentDate.day == 28)
               OutlinedButton(
                   onPressed: () {
@@ -83,8 +91,8 @@ class _CalendarState extends State<Calendar> {
                       _clicked = true;
                     });
                   },
-                  child: const Text('Mesa redonda de 16:30 até 17:30')),
-            if (_clicked) const Activity(),
+                  child: const Text('Palestra de 09:30 até 10:00')),
+            if (_currentDate.day == 26 && _clicked) const Activity(),
           ],
         ),
       ),
@@ -111,8 +119,12 @@ class _ActivityState extends State<Activity> {
           'Activity title',
           style: Theme.of(context).textTheme.bodySmall,
         ),
+        const Text('A Física dos Buracos Negros Supermassivos'),
         const Text('Mesa redonda'),
-        const Text('Segunda-feira 16:30h - 17:30h'),
+        const Text('Domingo 07:00h - 08:00h'),
+        const Text('Sthepen William Hawking'),
+        const Text('Maputo'),
+        const Text('Astrofísica e Cosmologia'),
         ElevatedButton.icon(
           onPressed: () {
             setState(() {
