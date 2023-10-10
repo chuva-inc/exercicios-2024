@@ -4,41 +4,49 @@ on:
   push:
     paths:
       - 'dart/**'
+      - '.github/workflows/dart.yml'
 
 jobs:
   integration_test:
-    runs-on: ubuntu-latest
-    container:
-      image: reactnativecommunity/android:latest
-
+    runs-on: macos-latest
+    env:
+      IOS_DEVICE: 'iPhone 14 Pro Simulator (16.2)'
     steps:
+      # - name: List all simulators
+      #   run: xcrun xctrace list devices
+
+      - name: Start Simulator
+        run: |
+          DEVICE=$(xcrun xctrace list devices | grep "^$IOS_DEVICE" | awk '{gsub(/[()]/,""); print $NF; exit}')
+          echo $DEVICE
+          xcrun simctl boot "${DEVICE:?No Simulator with this name found}"
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v1
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ${{ runner.os }}-flutter
+
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Start AVD
-        run: |
-          sdkmanager "system-images;android-29;google_apis;x86"
-          echo "no" | avdmanager create avd --force --name "Pixel_API_29_AOSP" --package "system-images;android-29;google_apis;x86" --sdcard 512M
-          emulator -avd Pixel_API_29_AOSP -no-window -no-audio -debug-init -debug-kernel -show-kernel -no-snapshot -no-boot-anim -camera-back none -camera-front none -verbose -qemu -cpu-delay 0 -no-snapshot-save -gpu swiftshader_indirect &
-          adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d \r) ]]; do sleep 1; done; input keyevent 82'
-
       - name: Setup Flutter
-        run: |
-          git clone https://github.com/flutter/flutter.git --depth 1 -b stable
-          echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
       - name: Install dependencies
         run: cd dart; flutter pub get
 
+      - run: cd dart; flutter doctor
+
       - name: Run tests
         run: |
-          cd dart;
-          open -a Simulator;
-          flutter test --update-goldens integration_test/app_test.dart;
+          cd dart
+          flutter test --update-goldens integration_test/
 
       - name: Archive screenshots
         uses: actions/upload-artifact@v2
         with:
           name: screenshots
-          path: |
-            dart/screenshots/*.png
+          path: dart/screenshots/
