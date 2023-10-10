@@ -1,0 +1,13 @@
+@import '../base/colors';
+
+.section--header {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 3px 3px 0px 0px;
+  border: 1px solid $border-dark;
+  background-color: $bg-primary-light;
+}
+
+.section--content {
+  padding: 15px;
+}

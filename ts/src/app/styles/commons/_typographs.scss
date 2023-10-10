@@ -1,0 +1,10 @@
+@import '../base/functions';
+@import '../base/colors';
+
+.section--title {
+  color: $text-04;
+  font-family: 'Roboto', sans-serif;
+  font-size: px-to-rem(20px);
+  font-weight: 500;
+  line-height: px-to-rem(25px);
+}

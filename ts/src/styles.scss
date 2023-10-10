@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+@import 'app/styles/vendor/reset';
+
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+@import 'app/styles/base/colors';
+@import 'app/styles/base/breakpoints';
+@import 'app/styles/base/placeholders';
+@import 'app/styles/base/functions';
+@import 'app/styles/base/mixins';
+
+/* MODULES - Re-usable site elements.
+========================================================================== */
+@import 'app/styles/commons/typographs';
+@import 'app/styles/commons/blocks';

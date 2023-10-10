@@ -1,0 +1,40 @@
+@import 'breakpoints';
+@import 'placeholders';
+
+@mixin media-querie($width, $type: min) {
+  @if map-has-key($map: $breakpoints, $key: width) {
+    $width: map-get(
+      $map: $breakpoints,
+      $key: $width
+    );
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin truncate($truncation-boundary) {
+  @extend %base-truncate;
+  max-width: $truncation-boundary;
+}

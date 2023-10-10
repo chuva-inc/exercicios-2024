@@ -1,0 +1,29 @@
+%bg-img {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%pseudo-absolute {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+%base-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

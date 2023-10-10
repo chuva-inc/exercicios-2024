@@ -1,0 +1,64 @@
+/* BASE COLORS
+========================================================================== */
+
+$orange-01: #fdf1eb;
+$orange-02: #f0a880;
+$orange-03: #ffb354;
+$orange-04: #ee7a3a;
+$orange-05: #ed7839;
+$orange-06: #fe630b;
+
+$red: #f85959;
+
+$brown-01: #725c5c;
+$brown-02: rgba(141, 53, 6, 0.5);
+
+$white: #fff;
+$black: #000;
+
+$gray-01: #f4f4f4;
+$gray-02: #ececec;
+$gray-03: #e7e7e7;
+$gray-04: #d9d9d9;
+$gray-05: #cccccc;
+$gray-06: #bfbfbf;
+$gray-07: #adada0;
+$gray-08: #757575;
+$gray-09: #5c5c5c;
+$gray-10: #595959;
+$gray-11: #4e4e4e;
+$gray-12: #4d4d4d;
+$gray-13: #333333;
+
+/* GRADIENT VARS
+========================================================================== */
+$orange-gradient-01: linear-gradient(
+  180deg,
+  rgba($orange-03, 100%),
+  rgba($orange-04, 100%)
+);
+
+/* COMPONENT COLORS VARS
+========================================================================== */
+$side-bar-header-bg: $orange-gradient-01;
+$navlink-border: $orange-gradient-01;
+$button-gradient: $orange-gradient-01;
+
+$title-primary: $orange-05;
+$title-secondary: $brown-01;
+$title-dark: $gray-11;
+$title-light: $white;
+
+$text-01: $gray-08;
+$text-02: $gray-09;
+$text-03: $gray-10;
+$text-04: $gray-12;
+$text-05: $gray-13;
+
+$legend: $gray-07;
+$border-dark: $gray-02;
+$divider: $gray-03;
+
+$bg-primary-light: $orange-01;
+$bg-primary-dark: $orange-05;
+$bg-light: #fff;
