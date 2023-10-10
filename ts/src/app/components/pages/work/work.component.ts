@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WorkComponent implements OnInit {
   isExpanded: boolean = false;
   creatingTopic: boolean = false;
+  topicSubmitted: boolean = false;
 
   constructor() {}
 
@@ -18,6 +19,13 @@ export class WorkComponent implements OnInit {
   }
 
   createTopic() {
+    this.topicSubmitted = false;
     this.creatingTopic = true;
+  }
+
+  submitTopic(event: any) {
+    event.preventDefault();
+    this.creatingTopic = false;
+    this.topicSubmitted = true;
   }
 }

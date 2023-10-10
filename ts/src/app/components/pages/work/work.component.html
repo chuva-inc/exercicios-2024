@@ -102,7 +102,8 @@
      <section class="discussions">
           <h3>Discussões</h3>
 
-          <section class="create-topic" [ngClass]="{'hiddenCreateTopic': true}">
+          <section class="create-topic"
+               [ngClass]="{'showCreateTopic': !creatingTopic ,'hiddenCreateTopic': creatingTopic}">
                <h4>Compartilhe suas ideias ou dúvidas com os autores!</h4>
                <div class="icons">
                     <img src="../../../../assets/icons/discussions_icon1.svg">
@@ -116,7 +117,7 @@
                          src="../../../../assets/icons/icon_criar.svg" alt="Criar Topico Imagem"> criar tópico</button>
           </section>
 
-          <section class="creating-topic" [ngClass]="{'show': !creatingTopic, 'hidden': creatingTopic}">
+          <section class="creating-topic" [ngClass]="{'show': creatingTopic, 'hiddenCreateTopic': !creatingTopic}">
                <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
 
                <form>
@@ -129,11 +130,28 @@
                          <textarea name="content" cols="5" rows="3"></textarea>
                          <div class="line-bottom">
                               <div class="div-btn">
-                                   <button>Enviar</button>
+                                   <button (click)="submitTopic($event)">Enviar</button>
                               </div>
                          </div>
                     </div>
                </form>
+          </section>
+
+          <section class="topics-submitted" [ngClass]="{'show': topicSubmitted, 'hiddenCreateTopic': !topicSubmitted}">
+               <div class="card-message">
+                    <div class="topic">
+                         <h4 class="ops-topic-subject">Assunto da pergunta aparece aqui</h4>
+                         <p class="author">Carlos Henrique Santos</p>
+                         <p class="phrase">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da
+                              análise da dimensão e impacto de processo formativo situado impacto de processo formativo
+                              processo...</p>
+                         <div class="message">
+                              <img width="22px" src="../../../../assets/icons/submitted.svg">
+                              <p>Aguardando feedback dos autores</p>
+                              <a href="#">Editar tópico</a>
+                         </div>
+                    </div>
+               </div>
           </section>
 
           <section class="topics">
