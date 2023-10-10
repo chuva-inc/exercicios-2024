@@ -5,9 +5,7 @@ import 'package:integration_test/integration_test.dart';
 // Open activity page.
 Future<void> loadActivityPage(WidgetTester tester) async {
   await tester.pumpWidget(const ChuvaDart());
-  await tester.tap(find.text('28'));
-  await tester.pumpAndSettle();
-  await tester.tap(find.text('Mesa redonda de 16:30 até 17:30'));
+  await tester.tap(find.text('Mesa redonda de 07:00 até 08:00'));
   await tester.pumpAndSettle();
 }
 
@@ -22,10 +20,11 @@ void main() {
         matchesGoldenFile('../screenshots/ActivityPage-Unfavorited.png'),
       );
 
-      expect(find.text('Programação'), findsOneWidget);
-      expect(find.text('Mesa redonda'), findsOneWidget);
-      expect(find.text('Segunda-feira 16:30h - 17:30h'), findsOneWidget);
+      expect(find.text('Astrofísica e Cosmologia'), findsOneWidget);
+      expect(find.text('Maputo'), findsOneWidget);
+      expect(find.text('Domingo 07:00h - 08:00h'), findsOneWidget);
       expect(find.text('Adicionar à sua agenda'), findsOneWidget);
+      expect(find.text('Sthepen William Hawking'), findsOneWidget);
     });
 
     testWidgets('Verifica se favoritar funciona', (WidgetTester tester) async {
