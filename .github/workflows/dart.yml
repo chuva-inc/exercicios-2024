@@ -1,0 +1,32 @@
+name: dart
+
+on:
+  push:
+    paths:
+      - 'dart/**'
+
+jobs:
+  integration_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: cd dart; flutter pub get
+
+      - name: Run tests
+        run: cd dart; flutter test --update-goldens integration_test/app_test.dart
+
+      - name: Archive screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: |
+            dart/screenshots/*.png
