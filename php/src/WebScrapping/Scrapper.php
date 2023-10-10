@@ -2,29 +2,30 @@
 
 namespace Chuva\Php\WebScrapping;
 
-use Chuva\Php\WebScrapping\Entity\Paper;
-use Chuva\Php\WebScrapping\Entity\Person;
-
-/**
- * Does the scrapping of a webpage.
- */
 class Scrapper {
-
-  /**
-   * Loads paper information from the HTML and returns the array with the data.
-   */
   public function scrap(\DOMDocument $dom): array {
-    return [
-      new Paper(
-        123,
-        'The Nobel Prize in Physiology or Medicine 2023',
-        'Nobel Prize',
-        [
-          new Person('Katalin Karikó', 'Szeged University'),
-          new Person('Drew Weissman', 'University of Pennsylvania'),
-        ]
-      ),
-    ];
-  }
+    $xpath = new \DOMXPath($dom);
 
+    // Usando o XPath para encontrar os elementos na página HTML
+    $title = $xpath->query("//h4[@class='my-xs paper-title']");
+    $type = $xpath->query("//div[@class='tags mr-sm']");
+    $authors = $xpath->query("//div[@class='authors']");
+    $id = $xpath->query("//div[@class='volume-info']");
+
+    $data = [];
+
+    // Usando o for pelos elementos encontrados e criando um array
+    for ($i = 0; $i < $title->length; $i++) {
+      $rowData = [
+        'Title' => $title->item($i)->textContent,
+        'Type' => $type->item($i)->textContent,
+        'Authors' => $authors->item($i)->textContent,
+        'ID' => $id->item($i)->textContent,
+      ];
+
+      $data[] = $rowData;
+    }
+
+    return $data;
+  }
 }
