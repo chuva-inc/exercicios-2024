@@ -23,7 +23,6 @@ Além disso, falando em dependências é recomendado que utilize:
 
 
 ### Como rodar os testes
-
 ```
 flutter test --update-goldens integration_test/
 ```
