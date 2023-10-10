@@ -4,11 +4,7 @@
 
 /* BASE - Base Variable file along with starting point Mixins and Placeholders.
 ========================================================================== */
-@import 'app/styles/base/colors';
-@import 'app/styles/base/breakpoints';
-@import 'app/styles/base/placeholders';
-@import 'app/styles/base/functions';
-@import 'app/styles/base/mixins';
+@import 'app/styles/base/index';
 
 /* MODULES - Re-usable site elements.
 ========================================================================== */
