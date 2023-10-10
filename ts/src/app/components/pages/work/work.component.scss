@@ -18,12 +18,58 @@
 }
 
 .video {
+  position: relative;
   width: 100%;
   border-radius: 2px;
 }
 
 .video img {
   width: 93%;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 93%;
+  height: 99%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(141, 53, 6, 0.5);
+}
+
+.overlay .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(237, 120, 57, 1);
+  border-radius: 50%;
+}
+
+.overlay-container {
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.img img {
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+
+.overlay h2,
+.overlay h3,
+.overlay h4 {
+  color: #fff;
+}
+
+.overlay h2 {
+  max-width: 90%;
 }
 
 .more-info {
