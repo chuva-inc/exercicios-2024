@@ -114,21 +114,37 @@
      </section>
 
      <section class="discussions">
-          <h3>Discussões</h3>
+          <h3 class="discussions-h3">Discussões</h3>
 
-          <section class="create-topic"
-               [ngClass]="{'showCreateTopic': !creatingTopic ,'hiddenCreateTopic': creatingTopic}">
-               <h4>Compartilhe suas ideias ou dúvidas com os autores!</h4>
-               <div class="icons">
-                    <img src="../../../../assets/icons/discussions_icon1.svg">
-                    <img src="../../../../assets/icons/discussions_icon2.svg">
-                    <img src="../../../../assets/icons/discussions_icon3.svg">
+          <section class="create-topic">
+               <div class="create-topic"
+                    [ngClass]="{'showCreateTopic': !creatingTopic  ,'hiddenCreateTopic': creatingTopic || message}">
+                    <h4>Compartilhe suas ideias ou dúvidas com os autores!</h4>
+                    <div class="icons">
+                         <img src="../../../../assets/icons/discussions_icon1.svg">
+                         <img src="../../../../assets/icons/discussions_icon2.svg">
+                         <img src="../../../../assets/icons/discussions_icon3.svg">
+                    </div>
+                    <p class="create-topic-p">Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+                         curiosidade? Deixe seus
+                         <br>
+                         questionamentos ou sugestões para o autor!
+                    </p>
+                    <button (click)="createTopic()" class="btn-create-topic"><img
+                              src="../../../../assets/icons/icon_criar.svg" alt="Criar Topico Imagem"> criar
+                         tópico</button>
                </div>
-               <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus <br>
-                    questionamentos ou sugestões para o autor!</p>
+               <div class="success-message"
+                    [ngClass]="{'show': message, 'hiddenCreateTopic': !message || creatingTopic}">
+                    <h3>Seu tópico foi enviado com sucesso! :D</h3>
+                    <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico
+                         for
+                         respondido!</p>
+                    <a href="#">Descubra outros trabalhos!</a>
+                    <button (click)="createTopic()" class="btn-create-topic btn-create-topic2 ">criar novo
+                         tópico</button>
+               </div>
 
-               <button (click)="createTopic()" class="btn-create-topic"><img
-                         src="../../../../assets/icons/icon_criar.svg" alt="Criar Topico Imagem"> criar tópico</button>
           </section>
 
           <section class="creating-topic" [ngClass]="{'show': creatingTopic, 'hiddenCreateTopic': !creatingTopic}">

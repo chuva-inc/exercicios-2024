@@ -177,7 +177,7 @@
 }
 
 .summary h3,
-.discussions h3 {
+.discussions .discussions-h3 {
   background-color: #fdf1eb;
   border-bottom: 1px solid #ececec;
   color: #4e4e4e;
@@ -216,13 +216,15 @@
 // Create Topic
 
 .create-topic {
+  width: 100%;
   padding: 1.5rem 2rem 0.2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.create-topic h4 {
+.create-topic h4,
+.success-message h3 {
   color: #ed7839;
   margin-bottom: 2rem;
 }
@@ -233,7 +235,7 @@
   margin-bottom: 2rem;
 }
 
-.create-topic p {
+.create-topic-p {
   width: 100%;
   font-family: "Quicksand", sans-serif;
   font-size: 0.9rem;
@@ -263,6 +265,12 @@
   box-shadow: 0px 2px 4px 0 #0000003d;
 
   cursor: pointer;
+}
+
+.btn-create-topic2 {
+  top: -2rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 3rem;
 }
 
 // Creating Topic
@@ -332,6 +340,43 @@
 .line-bottom {
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(231, 231, 231, 1);
+}
+
+// Success message
+
+.success-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-message h3 {
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #595959;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-message a {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(244, 143, 68, 1);
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(231, 231, 231, 1);
+  padding-bottom: 3.3rem;
 }
 
 // Topic Submitted

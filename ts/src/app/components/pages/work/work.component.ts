@@ -9,6 +9,7 @@ export class WorkComponent implements OnInit {
   isExpanded: boolean = false;
   creatingTopic: boolean = false;
   topicSubmitted: boolean = false;
+  message: boolean = false;
 
   constructor() {}
 
@@ -26,6 +27,7 @@ export class WorkComponent implements OnInit {
   submitTopic(event: any) {
     event.preventDefault();
     this.creatingTopic = false;
+    this.message = true;
     this.topicSubmitted = true;
   }
 }
