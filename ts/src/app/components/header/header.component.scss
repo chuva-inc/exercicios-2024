@@ -1,0 +1,70 @@
+@import '/src/app/styles/base/index.scss';
+
+.header {
+  background-color: $bg-primary-light;
+  padding: 5px 15px;
+  min-height: 68px;
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: 97px auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 22px;
+}
+
+.header--infos {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+%common-font-styles {
+  text-align: center;
+  color: $title-secondary;
+  font-family: $roboto-font;
+  font-weight: 400;
+}
+
+.header--title {
+  @extend %common-font-styles;
+  font-size: px-to-rem(22px);
+  margin-top: 2px;
+}
+
+.header--subtitle,
+.header--issn {
+  @extend %common-font-styles;
+  font-size: px-to-rem(14px);
+}
+
+.header--language {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.header--profile {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+@media (min-width: map-get($breakpoints, 'tablet-wide')) {
+  .header {
+    padding: 5px 36px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .header--infos {
+    flex: 2;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
