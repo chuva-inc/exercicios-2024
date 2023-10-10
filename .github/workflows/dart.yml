@@ -8,21 +8,33 @@ on:
 jobs:
   integration_test:
     runs-on: ubuntu-latest
+    container:
+      image: reactnativecommunity/android:latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Start AVD
+        run: |
+          sdkmanager "system-images;android-29;google_apis;x86"
+          echo "no" | avdmanager create avd --force --name "Pixel_API_29_AOSP" --package "system-images;android-29;google_apis;x86" --sdcard 512M
+          emulator -avd Pixel_API_29_AOSP -no-window -no-audio -debug-init -debug-kernel -show-kernel -no-snapshot -no-boot-anim -camera-back none -camera-front none -verbose -qemu -cpu-delay 0 -no-snapshot-save -gpu swiftshader_indirect &
+          adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d \r) ]]; do sleep 1; done; input keyevent 82'
+
       - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: stable
+        run: |
+          git clone https://github.com/flutter/flutter.git --depth 1 -b stable
+          echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: cd dart; flutter pub get
 
       - name: Run tests
-        run: cd dart; flutter test --update-goldens integration_test/app_test.dart
+        run: |
+          cd dart;
+          open -a Simulator;
+          flutter test --update-goldens integration_test/app_test.dart;
 
       - name: Archive screenshots
         uses: actions/upload-artifact@v2
