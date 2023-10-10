@@ -1,0 +1,52 @@
+@import '/src/app/styles/base/index.scss';
+
+.language {
+  @extend %flex-center;
+  width: 97px;
+  height: 34px;
+  border-radius: 3px;
+  border: 1px solid $gray-05;
+  position: relative;
+  cursor: pointer;
+  * {
+    cursor: pointer;
+  }
+}
+
+.language--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  &__global {
+    width: 15px;
+    height: 15px;
+    left: 13px;
+  }
+
+  &__arrow-down {
+    width: 6px;
+    height: 6px;
+    right: 13px;
+  }
+}
+
+.language--select {
+  width: fit-content;
+  height: 100%;
+  appearance: none;
+  border: none;
+  padding-left: calc(13px + 15px + 3px);
+  padding-right: calc(13px + 6px + 5px);
+  background: transparent;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  color: $text-05;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  font-weight: 400;
+}
