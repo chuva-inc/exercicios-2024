@@ -1,0 +1,62 @@
+@import '/src/app/styles/base/index.scss';
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 30px;
+  grid-template-rows: auto auto;
+  align-items: flex-start;
+  row-gap: 1px;
+  column-gap: 6.85px;
+
+  position: relative;
+}
+
+%common-font-styles {
+  color: $text-05;
+  text-align: right;
+  font-family: $quicksand-font;
+  font-weight: 400;
+}
+
+.profile--welcome {
+  @extend %common-font-styles;
+  grid-row: 1;
+  grid-column: 1;
+  font-size: px-to-rem(14px);
+}
+
+.profile--email {
+  @extend %common-font-styles;
+  grid-row: 2;
+  grid-column: 1;
+  font-size: px-to-rem(12px);
+}
+
+.profile--photo {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile--notifications {
+  @extend %flex-center;
+
+  width: 12px;
+  height: 12px;
+  background-color: $red;
+  border-radius: 50%;
+
+  color: $white;
+  font-family: $roboto-font;
+  font-size: px-to-rem(10px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: px-to-rem(-0.2px);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
