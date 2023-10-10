@@ -1,1 +1,23 @@
+@import 'styles/base/index';
 
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.side-menu {
+  display: none;
+}
+
+@media (min-width: map-get($breakpoints, 'tablet-wide')) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+  }
+
+  .side-menu {
+    display: block;
+    grid-column: 1;
+  }
+}
