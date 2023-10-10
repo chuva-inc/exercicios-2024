@@ -205,7 +205,7 @@ main{
 
 .body-component img{
   max-width: 100%;
-  height: auto;
+  max-height: 439px;
   border-radius: 4px;
   display: block;
 }
@@ -242,7 +242,7 @@ main{
 }
 
 .video-content img{
-  border-radius: 50px;
+  border-radius: 50%;
   border: 1px solid rgba(237, 120, 57, 1);
   padding: 3px;
   margin-right: 17px;
@@ -314,6 +314,60 @@ main{
   font-weight: 400;
 
 }
+
+section{
+  margin-left: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-section{
+  max-width: 1058px;
+  margin-top: 30px;
+  border: 1px solid rgba(236, 236, 236, 1);
+}
+
+.resume-section div:first-child{
+  background-color: rgba(253, 241, 235, 1);
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.resume-section h2{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 20px;
+}
+
+ .btn-show-more{
+  background-color: transparent;
+  border: none;
+  color: rgba(237, 120, 57, 1);
+  font-family: 'Quicksand';
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.text-content{
+  max-height: 110px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+
+.text-content p{
+  padding: 0 15px;
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(92, 92, 92, 1);  
+}
+
+
+
 
 footer {
     margin-left: 250px;
