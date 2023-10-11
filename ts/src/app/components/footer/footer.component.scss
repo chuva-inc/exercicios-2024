@@ -1,0 +1,45 @@
+@import '/src/app/styles/base/index.scss';
+
+.footer {
+  width: 100%;
+}
+
+.footer--content {
+  border-top: 1px solid $border-dark;
+  padding: 25px 90px 50px 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  row-gap: 16px;
+  column-gap: 27px;
+  max-width: 1086px;
+  margin: 40px auto 0 auto;
+}
+
+.footer--img {
+  width: 210px;
+  height: 123px;
+  object-fit: contain;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.footer--text {
+  color: $text-02;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(16px);
+  font-weight: 500;
+  grid-column: 2;
+
+  > strong {
+    font-weight: 700;
+  }
+
+  &:first-child {
+    grid-row: 1;
+  }
+
+  &:last-child {
+    grid-row: 2;
+  }
+}
