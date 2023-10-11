@@ -495,3 +495,69 @@
 .hiddenCreateTopic {
   display: none;
 }
+
+// more-info Responsive
+
+@media screen and (max-width: 1500px) {
+  .container-details p {
+    margin-bottom: 0.1rem;
+  }
+
+  .authors,
+  .universities {
+    padding: 0.5rem 0;
+  }
+
+  .more-info h4 {
+    font-size: 0.7rem;
+  }
+
+  .details h3 {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .container-details p {
+    font-size: 0.7rem;
+  }
+
+  .authors span {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .universities span {
+    margin-bottom: 0.2rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .authors,
+  .universities {
+    padding: 0.2rem 0;
+  }
+
+  .more-info h4 {
+    font-size: 0.5rem;
+  }
+
+  .details h3 {
+    padding: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  .container-details p {
+    font-size: 0.5rem;
+  }
+
+  .authors span {
+    font-size: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .universities span {
+    margin-bottom: 0.2rem;
+    font-size: 0.4rem;
+  }
+}
