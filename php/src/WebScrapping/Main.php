@@ -15,28 +15,24 @@ class Main {
    * Main runner, instantiates a Scrapper and runs.
    */
   public static function run() {
-    libxml_use_internal_errors(true);
-    $content = file_get_contents('http://localhost/php/assets/origin.html');
+    libxml_use_internal_errors(TRUE);
     $dom = new \DOMDocument('1.0', 'utf-8');
-    $dom->loadHTML($content);
+    $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
+   
+    $data = (new Scrapper())->scrap($dom);
+
     $xpath = new \DOMXPath($dom);
-    $domNodeList = $xpath->query(".//*[@class='paper-card']");
-    getValue($domNodeList);
+    $domNodeList = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
 
-    /* $data = (new Scrapper())->scrap($els); */
-
+    print_r($domNodeList);
     // Write your logic to save the output file bellow.    
-    function getValue($els=null){
-      /**  @var DOMNode $el */
-      if(is_null($els))
-        return 0;
-      foreach ($elementos as $elemento) {
-        print_r($elemento);
-      }
+    foreach ($domNodeList as $elemento) {
+      
+      print_r($elemento);
     }
 
-    /* 
-    $filePath = 'exemplo.xlsx';
+    
+    /* $filePath = 'exemplo.xlsx';
       $writer = WriterEntityFactory::createXLSXWriter();
       $writer->openToFile($filePath);
 
@@ -44,7 +40,7 @@ class Main {
           ->setFontBold()
           ->build();
 
-     $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',	'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3','Author 3','Author 3 Institution'], $style);
+      $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',	'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3','Author 3','Author 3 Institution'], $style);
       $writer->addRow($headerRow); 
 
 
@@ -54,8 +50,8 @@ class Main {
 
       $writer->close();
 
-      echo "Tabela criada com sucesso em $filePath \n" ; */
-      /* print_r($data);  */  
+      echo "Tabela criada com sucesso em $filePath \n" ;  */
+    print_r($data);   
   }
 
 }
