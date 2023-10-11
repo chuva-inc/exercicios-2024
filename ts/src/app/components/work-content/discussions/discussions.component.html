@@ -1,0 +1,91 @@
+<section class="section">
+  <header class="section--header">
+    <h2 class="section--title">Discussões</h2>
+  </header>
+  <div class="section--content discussions--content">
+    <ng-container *ngIf="!formIsVisible && !formBeenSubmitted">
+      <section class="discussions--main">
+        <h3 class="discussions--subtitle">
+          Compartilhe suas ideias ou dúvidas com os autores!
+        </h3>
+        <div class="discussions--icons">
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+        <p class="discussions--text">
+          Sabia que o maior estímulo no desenvolvimento científico e cultural é
+          a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+        </p>
+      </section>
+
+      <section class="discussions--create-topic">
+        <hr class="discussions--divider" />
+        <button class="discussions--btn" (click)="createTopic()">
+          <i class="fa-solid fa-plus"></i>
+          criar tópico
+        </button>
+        <hr class="discussions--divider" />
+      </section>
+    </ng-container>
+    <form
+      [formGroup]="form"
+      (submit)="onSubmit()"
+      class="discussions--form"
+      *ngIf="formIsVisible && !formBeenSubmitted"
+    >
+      <h3 class="discussions--form-text">
+        Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+      </h3>
+      <label class="discussions--form-label" for="subject">Assunto</label>
+      <input
+        class="discussions--form-input"
+        type="text"
+        placeholder="Defina um tópico sucinto para notificar os autores."
+        id="subject"
+        name="subject"
+        required
+        minlength="3"
+        maxlength="75"
+        formControlName="subject"
+      />
+      <label class="discussions--form-label" for="content">Conteúdo</label>
+      <textarea
+        class="discussions--form-input"
+        name="content"
+        id="content"
+        required
+        minlength="3"
+        maxlength="255"
+        formControlName="content"
+      ></textarea>
+      <div class="discussions--form-btn-container">
+        <div></div>
+        <button type="submit" class="discussions--form-btn">Enviar</button>
+      </div>
+    </form>
+    <ng-container *ngIf="!formIsVisible && formBeenSubmitted">
+      <section class="discussions--submitted">
+        <h3 class="discussions--subtitle">
+          Seu tópico foi enviado com sucesso! :D
+        </h3>
+        <p class="discussions--text">
+          Agradecemos por sua contribuição, uma notificação será enviada ao seu
+          email assim que seu tópico for respondido!
+        </p>
+        <a class="discussions--link" href="#">Descubra outros trabalhos!</a>
+      </section>
+      <section class="discussions--create-topic">
+        <hr class="discussions--divider" />
+        <button class="discussions--btn" (click)="createTopic()">
+          criar novo tópico
+        </button>
+        <hr class="discussions--divider" />
+      </section>
+    </ng-container>
+
+    <section class="discussions--topics">
+      <app-topics [topics]="topics"></app-topics>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,198 @@
+@import '/src/app/styles/base/index.scss';
+
+%flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discussions--content {
+  @extend %flex-col-center;
+  gap: 14px;
+}
+
+.discussions--main {
+  @extend %flex-col-center;
+  gap: 27px;
+}
+
+.discussions--subtitle {
+  color: $title-primary;
+  font-family: $roboto-font;
+  font-size: px-to-rem(18px);
+  font-weight: 700;
+}
+
+.discussions--icons {
+  display: flex;
+  align-items: center;
+  gap: 51.74px;
+
+  > i {
+    width: 50px;
+    height: 50px;
+  }
+
+  > i:nth-child(1) {
+    background-image: url('/assets/icons/discussions-icon-1.svg');
+  }
+
+  > i:nth-child(2) {
+    background-image: url('/assets/icons/discussions-icon-2.svg');
+  }
+
+  > i:nth-child(3) {
+    background-image: url('/assets/icons/discussions-icon-3.svg');
+  }
+}
+
+.discussions--text {
+  margin-top: calc(35px - 27px); // real distância - gap
+  color: $text-03;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  line-height: 137.5%;
+  max-width: 626px;
+}
+
+.discussions--create-topic {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.discussions--divider {
+  flex: 2;
+  height: 1px;
+  background-color: $divider;
+}
+
+.discussions--btn {
+  padding: 7px 14px;
+  background: $button-gradient;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24))
+    drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.12));
+
+  color: $white;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(15px);
+  font-weight: 700;
+  line-height: px-to-rem(16px);
+
+  &:hover {
+    filter: brightness(0.75);
+  }
+
+  > i {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.discussions--submitted {
+  @extend %flex-col-center;
+}
+
+.discussions--text {
+  color: $text-03;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  line-height: 137.5%;
+  margin: 18px 0 29px;
+}
+
+.discussions--link {
+  color: $link-primary;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  font-weight: 500;
+  line-height: 137.5%;
+  text-decoration-line: underline;
+  margin-bottom: 33px;
+}
+
+.discussions--submitted .discussions--btn {
+  padding: 7px 56.53px;
+}
+
+.discussions--form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.discussions--form-text {
+  color: $text-02;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  margin-bottom: 22px;
+}
+.discussions--form-label {
+  color: $title-primary;
+  font-family: $roboto-font;
+  font-size: px-to-rem(16px);
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+.discussions--form-input {
+  width: 100%;
+
+  padding: 10px 23.13px;
+  border: 1px solid $border-input;
+  background: $white;
+
+  color: $text-04;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+}
+
+textarea.discussions--form-input {
+  border-radius: 3px 3px 0 0;
+  height: 82px;
+  resize: none;
+}
+
+input.discussions--form-input {
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.discussions--form-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  > div {
+    flex: 2;
+    height: 31px;
+    border: 1px solid $border-input;
+    border-top: 0;
+    border-right: 0;
+    background-color: $gray-02;
+    border-radius: 0 0 0 4px;
+  }
+}
+
+.discussions--form-btn {
+  border: none;
+  padding: 7px 66.31px;
+  border-radius: 0 0 4px 0;
+  background: $form-btn-gradient;
+  color: $white;
+  text-align: center;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(15px);
+  font-weight: 700;
+  line-height: 16px;
+}
