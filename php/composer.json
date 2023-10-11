@@ -16,7 +16,9 @@
         "openspout/openspout": "^3.4",
         "psalm/phar": "^4.7",
         "drupal/coder": "8.3.x-dev",
-        "box/spout": "^3.3"
+        "box/spout": "^3.3",
+        "sunra/php-simple-html-dom-parser": "dev-master",
+        "simplehtmldom/simplehtmldom": "dev-master"
     },
     "config": {
         "allow-plugins": {

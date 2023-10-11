@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8a79bba81f14d1fb1c36a0edb3f32c4",
+    "content-hash": "663c9df634f4399a84f7ff055d625056",
     "packages": [
         {
             "name": "box/spout",
@@ -383,6 +383,84 @@
             "time": "2022-11-06T20:41:58+00:00"
         },
         {
+            "name": "simplehtmldom/simplehtmldom",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplehtmldom/simplehtmldom.git",
+                "reference": "b8d048e46b7f1964c28ea041d39ccb1d05f9a0ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplehtmldom/simplehtmldom/zipball/b8d048e46b7f1964c28ea041d39ccb1d05f9a0ed",
+                "reference": "b8d048e46b7f1964c28ea041d39ccb1d05f9a0ed",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "phpcompatibility/php-compatibility": "^9",
+                "phpunit/phpunit": "^6 || ^7",
+                "squizlabs/php_codesniffer": "^2"
+            },
+            "suggest": {
+                "ext-curl": "Needed to support cURL downloads in class HtmlWeb",
+                "ext-mbstring": "Allows better decoding for multi-byte documents",
+                "ext-openssl": "Allows loading HTTPS pages when using cURL"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ],
+                "exclude-from-classmap": [
+                    "/example/",
+                    "/docs/",
+                    "/tests/",
+                    "simple_html_dom.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "S.C. Chen",
+                    "role": "Developer"
+                },
+                {
+                    "name": "John Schlick",
+                    "role": "Developer"
+                },
+                {
+                    "name": "logmanoriginal",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fast, simple and reliable HTML document parser for PHP.",
+            "homepage": "https://simplehtmldom.sourceforge.io/",
+            "keywords": [
+                "Simple",
+                "dom",
+                "html",
+                "parser",
+                "php",
+                "simplehtmldom"
+            ],
+            "support": {
+                "issues": "https://sourceforge.net/p/simplehtmldom/bugs/",
+                "rss": "https://sourceforge.net/p/simplehtmldom/news/feed.rss",
+                "source": "https://sourceforge.net/p/simplehtmldom/repository/",
+                "wiki": "https://simplehtmldom.sourceforge.io/docs/"
+            },
+            "time": "2022-04-25T19:21:05+00:00"
+        },
+        {
             "name": "sirbrillig/phpcs-variable-analysis",
             "version": "2.x-dev",
             "source": {
@@ -564,6 +642,59 @@
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
             "time": "2023-09-11T11:08:03+00:00"
+        },
+        {
+            "name": "sunra/php-simple-html-dom-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
+                "reference": "fa1052a00729e14bcd7de1d969d12809d0536b5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/fa1052a00729e14bcd7de1d969d12809d0536b5a",
+                "reference": "fa1052a00729e14bcd7de1d969d12809d0536b5a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "S.C. Chen",
+                    "homepage": "http://sourceforge.net/projects/simplehtmldom/"
+                },
+                {
+                    "name": "Sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "https://github.com/sunra"
+                }
+            ],
+            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
+            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/sunra/php-simple-html-dom-parser/issues",
+                "source": "https://github.com/sunra/php-simple-html-dom-parser/tree/master"
+            },
+            "time": "2017-09-30T16:50:01+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -793,7 +924,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/coder": 20
+        "drupal/coder": 20,
+        "sunra/php-simple-html-dom-parser": 20,
+        "simplehtmldom/simplehtmldom": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
