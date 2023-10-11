@@ -10,6 +10,13 @@
   display: none;
 }
 
+.work-content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
 @media (min-width: map-get($breakpoints, 'tablet-wide')) {
   .wrapper {
     display: grid;
@@ -19,5 +26,13 @@
   .side-menu {
     display: block;
     grid-column: 1;
+  }
+
+  .work-content {
+    grid-column: 2;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-height: 100vh;
   }
 }

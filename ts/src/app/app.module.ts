@@ -3,11 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {
+  DetailsComponent,
+  DiscussionsComponent,
+  FooterComponent,
   HeaderComponent,
   HeaderLanguageComponent,
   HeaderProfileComponent,
-  SideMenuComponent
+  IntroductionComponent,
+  SideMenuComponent,
+  SummaryComponent,
+  TopicsComponent,
+  WorkContentComponent
 } from './components';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,9 +23,16 @@ import {
     SideMenuComponent,
     HeaderComponent,
     HeaderLanguageComponent,
-    HeaderProfileComponent
+    HeaderProfileComponent,
+    WorkContentComponent,
+    IntroductionComponent,
+    DetailsComponent,
+    DiscussionsComponent,
+    SummaryComponent,
+    TopicsComponent,
+    FooterComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

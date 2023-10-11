@@ -1,0 +1,15 @@
+<app-header class="header" [annals]="work.annals"></app-header>
+<main class="main">
+  <div class="main--content">
+    <app-introduction
+      class="introduction"
+      [workIntroduction]="workIntroduction"
+    ></app-introduction>
+    <app-summary class="summary" [summary]="work.summary"></app-summary>
+    <app-discussions
+      class="discussions"
+      [topics]="work.topics"
+    ></app-discussions>
+  </div>
+</main>
+<app-footer class="footer"></app-footer>
