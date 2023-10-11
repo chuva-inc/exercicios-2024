@@ -1,0 +1,150 @@
+@import '/src/app/styles/base/index.scss';
+
+.topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+
+.topic {
+  cursor: pointer;
+  width: 100%;
+}
+
+.topic--main {
+  cursor: pointer;
+  width: 100%;
+  padding: 17px 24.17px;
+  border-radius: 4px;
+  border: 1px solid $border-dark;
+  background: $white;
+  box-shadow: 0px 0px 8px 0px rgba($black, 0.12);
+
+  &[data-repliesExpanded='true'] {
+    border-bottom: none;
+  }
+}
+
+.topic--subject {
+  color: $title-primary;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(16px);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.topic--author {
+  color: $text-02;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(12px);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.topic--content {
+  color: $text-04;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  margin-bottom: 11px;
+}
+
+.topic--more {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topic--more-options > i {
+  width: 4px;
+  height: 18px;
+  font-size: px-to-rem(18px);
+  color: $bg-primary-dark;
+}
+
+.topic--like {
+  width: 27px;
+  height: 19px;
+  @extend %flex-center;
+
+  background-color: $bg-primary-dark;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24))
+    drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.12));
+  border-radius: 2px;
+
+  > i {
+    font-size: px-to-rem(14px);
+    color: $white;
+
+    &[data-liked='true'] {
+      filter: opacity(0.5);
+    }
+  }
+}
+
+.topic--count {
+  color: $text-01;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: px-to-rem(14px);
+  font-weight: 350;
+}
+
+.topic--replies {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic--reply {
+  width: 100%;
+  padding: 17px 24.17px 35px;
+  border: 1px solid $border-dark;
+  border-bottom: none;
+  background-color: $white;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid $border-dark;
+  }
+
+  &[data-role='true'] {
+    background-color: $reply-bg;
+  }
+}
+
+.topic--reply-author {
+  color: $text-02;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(12px);
+  font-weight: 700;
+  flex: 2;
+}
+
+.topic--reply-role {
+  color: $title-primary;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 13.31px;
+  
+  > i {
+    font-size: px-to-rem(24px);
+  }
+}
+
+.topic--reply-content {
+  margin-top: 10px;
+  color: $text-04;
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+}
+
+.topic__empty {
+}
