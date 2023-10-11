@@ -1,10 +1,10 @@
-<div class="card" (click)="showComments()">
+<div class="card">
      <div class="topic">
           <h4 class="ops-topic-subject">{{topic.subject}}</h4>
           <p class="author">{{topic.author}}</p>
           <p class="phrase">{{topic.phrase}}</p>
           <div class="info">
-               <img src="../../../assets/icons/more_info.svg" alt="Icone Mais Informações">
+               <img (click)="showComments()" src="../../../assets/icons/more_info.svg" alt="Icone expandir topico">
                <img src="../../../assets/icons/favorite.svg" alt="Icone Favoritar">
                <span>{{topic.likes}} like<span *ngIf="topic.likes > 1">s</span></span>
                <span>{{topic.answers}} resposta<span *ngIf="topic.answers > 1">s</span></span>

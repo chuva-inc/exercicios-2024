@@ -20,14 +20,13 @@ export class WorkComponent implements OnInit {
   }
 
   createTopic() {
-    this.topicSubmitted = false;
     this.creatingTopic = true;
   }
 
   submitTopic(event: any) {
     event.preventDefault();
-    this.creatingTopic = false;
     this.message = true;
     this.topicSubmitted = true;
+    this.creatingTopic = false;
   }
 }

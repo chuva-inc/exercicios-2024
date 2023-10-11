@@ -6,7 +6,6 @@
 
 .video-section {
   display: flex;
-  gap: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -19,12 +18,11 @@
 
 .video {
   position: relative;
-  width: 100%;
   border-radius: 2px;
 }
 
 .video img {
-  width: 93%;
+  width: 97%;
 }
 
 .overlay {
@@ -33,7 +31,7 @@
   bottom: 0;
   right: 0;
   position: absolute;
-  width: 93%;
+  width: 97%;
   height: 99%;
 
   display: flex;
@@ -267,10 +265,25 @@
   cursor: pointer;
 }
 
-.btn-create-topic2 {
+.btn-create-new-topic {
   top: -2rem;
-  font-size: 0.9rem;
+  position: relative;
+  display: flex;
+  align-items: center;
   padding: 0.4rem 3rem;
+  gap: 0.4rem;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
+
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0 #0000003d;
+
+  cursor: pointer;
 }
 
 // Creating Topic
