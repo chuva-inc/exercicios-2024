@@ -1,0 +1,26 @@
+<section class="section">
+  <header class="section--header">
+    <h2 class="section--title">Resumo</h2>
+  </header>
+  <article class="section--content summary--content">
+    <ng-container *ngIf="isExpanded; else firstParagraph">
+      <p class="summary--text" *ngFor="let item of summary">
+        {{ item }}
+      </p>
+    </ng-container>
+    <ng-template #firstParagraph>
+      <p class="summary--text">
+        {{ summary[0].slice(0, -1) + '...' }}
+        <span class="summary--show-more" (click)="toggleExpanded()"
+          >ver mais</span
+        >
+      </p>
+    </ng-template>
+    <span
+      class="summary--show-more"
+      (click)="toggleExpanded()"
+      *ngIf="isExpanded"
+      >ver menos</span
+    >
+  </article>
+</section>

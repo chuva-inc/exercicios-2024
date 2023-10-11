@@ -1,0 +1,30 @@
+@import '/src/app/styles/base/index.scss';
+
+.summary--content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+%common-font-styles {
+  font-family: $quicksand-font;
+  font-size: px-to-rem(14px);
+  letter-spacing: px-to-rem(0.28px);
+  line-height: 152.344%;
+}
+
+.summary--text {
+  @extend %common-font-styles;
+  color: $text-02;
+}
+
+.summary--show-more {
+  @extend %common-font-styles;
+  cursor: pointer;
+  color: $title-primary;
+  font-weight: 700;
+
+  &:hover {
+    filter: brightness(0.5);
+  }
+}
