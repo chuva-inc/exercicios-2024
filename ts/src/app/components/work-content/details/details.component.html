@@ -1,0 +1,38 @@
+<section class="section">
+  <header class="section--header">
+    <h2 class="section--title">Detalhes</h2>
+  </header>
+  <div class="section--content details--content">
+    <section class="details--main">
+      <ul class="details--list">
+        <li class="details--item">
+          Tipo de Apresentação:
+          <strong>{{ details.typeOfPresentation }}</strong>
+        </li>
+        <li class="details--item">
+          Eixo temático:
+          <strong>{{ details.thematicAxis }}</strong>
+        </li>
+        <li class="details--item">
+          Palavras-chaves:
+          <strong>{{ details.keywords.join(', ') }}</strong>
+        </li>
+      </ul>
+    </section>
+    <section class="details--authors">
+      <h3 class="details--name">Autores</h3>
+      <ul class="details--list">
+        <li class="details--item" *ngFor="let author of details.authors">
+          {{ author }}
+        </li>
+      </ul>
+    </section>
+    <section class="details--legend">
+      <ul class="details--list">
+        <li class="details--item" *ngFor="let legend of details.legends">
+          {{ legend }}
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>
