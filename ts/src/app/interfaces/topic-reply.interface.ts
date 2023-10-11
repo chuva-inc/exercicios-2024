@@ -1,8 +1,6 @@
-import { IUser } from './user.interface';
-
 export interface ITopicReply {
   id: string;
-  author: IUser;
+  author: string;
   type: 'Autor' | 'Coautor' | null;
   content: string;
 }

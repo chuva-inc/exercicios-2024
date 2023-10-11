@@ -8,14 +8,17 @@ export interface IWorkDetails {
   legends: string[];
 }
 
-export interface IWork {
-  id: string;
-  annals: { title: string; subtitle: string; issn: string };
+export interface IWorkIntroduction {
   title: string;
   author: string;
   imageUrl: string;
   institution: string;
   details: IWorkDetails;
+}
+
+export interface IWork extends IWorkIntroduction {
+  id: string;
+  annals: { title: string; subtitle: string; issn: string };
   summary: string[];
   topics: ITopic[];
 }
