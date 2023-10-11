@@ -21,7 +21,10 @@
 
       <section class="discussions--create-topic">
         <hr class="discussions--divider" />
-        <button class="discussions--btn" (click)="createTopic()">
+        <button
+          class="btn-create-topic discussions--btn"
+          (click)="createTopic()"
+        >
           <i class="fa-solid fa-plus"></i>
           criar tópico
         </button>
@@ -39,9 +42,9 @@
       </h3>
       <label class="discussions--form-label" for="subject">Assunto</label>
       <input
-        class="discussions--form-input"
+        class="subject discussions--form-input"
         type="text"
-        placeholder="Defina um tópico sucinto para notificar os autores."
+        placeholder="Defina um tópico sucinto para notificar os autores..."
         id="subject"
         name="subject"
         required
@@ -51,7 +54,7 @@
       />
       <label class="discussions--form-label" for="content">Conteúdo</label>
       <textarea
-        class="discussions--form-input"
+        class="content discussions--form-input"
         name="content"
         id="content"
         required

@@ -1,12 +1,12 @@
 <ul class="topics">
   <ng-container *ngIf="topics.length > 0; else empty">
     <li
-      class="topic"
+      class="answered-topic topic"
       (click)="toggleShowReplies()"
       *ngFor="let topic of topics"
     >
       <div class="topic--main" [attr.data-repliesExpanded]="showReplies">
-        <h2 class="topic--subject">{{ topic.subject }}</h2>
+        <h2 class="ops-topic-subject topic--subject">{{ topic.subject }}</h2>
         <h3 class="topic--author">{{ topic.author }}</h3>
         <p class="topic--content">{{ topic.content }}</p>
         <div class="topic--more">
@@ -28,7 +28,7 @@
           >
         </div>
       </div>
-      <ul class="topic--replies" *ngIf="showReplies">
+      <ul class="comments-container topic--replies" *ngIf="showReplies">
         <li
           class="topic--reply"
           *ngFor="let reply of topic.replies"

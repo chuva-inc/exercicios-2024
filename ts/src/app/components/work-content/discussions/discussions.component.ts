@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class DiscussionsComponent implements OnInit {
   @Input() topics!: ITopic[];
-  formIsVisible: boolean = true;
+  formIsVisible: boolean = false;
   formBeenSubmitted: boolean = false;
   form = new FormGroup({
     subject: new FormControl(''),
