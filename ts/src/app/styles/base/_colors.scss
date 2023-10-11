@@ -4,9 +4,10 @@
 $orange-01: #fdf1eb;
 $orange-02: #f0a880;
 $orange-03: #ffb354;
-$orange-04: #ee7a3a;
-$orange-05: #ed7839;
-$orange-06: #fe630b;
+$orange-04: #f48f44;
+$orange-05: #ee7a3a;
+$orange-06: #ed7839;
+$orange-07: #fe630b;
 
 $red: #f85959;
 
@@ -35,8 +36,9 @@ $gray-13: #333333;
 $orange-gradient-01: linear-gradient(
   180deg,
   rgba($orange-03, 100%),
-  rgba($orange-04, 100%)
+  rgba($orange-05, 100%)
 );
+$form-btn-gradient: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
 
 /* COMPONENT COLORS VARS
 ========================================================================== */
@@ -44,7 +46,7 @@ $side-bar-header-bg: $orange-gradient-01;
 $navlink-border: $orange-gradient-01;
 $button-gradient: $orange-gradient-01;
 
-$title-primary: $orange-05;
+$title-primary: $orange-06;
 $title-secondary: $brown-01;
 $title-dark: $gray-11;
 $title-light: $white;
@@ -58,7 +60,11 @@ $text-05: $gray-13;
 $legend: $gray-07;
 $border-dark: $gray-02;
 $divider: $gray-03;
+$link-primary: $orange-04;
 
 $bg-primary-light: $orange-01;
-$bg-primary-dark: $orange-05;
+$bg-primary-dark: $orange-06;
 $bg-light: #fff;
+$border-input: $gray-05;
+
+$reply-bg: #f8f8f8;
