@@ -1,0 +1,38 @@
+<section class="introduction">
+  <h2 class="introduction--title">{{ workIntroduction.title }}</h2>
+  <div class="introduction--actions">
+    <a href="#" class="introduction--btn">
+      <i class="introduction--download fa-solid fa-download"></i>
+      Download
+    </a>
+    <button href="#" class="introduction--btn">
+      <i class="introduction--star fa-solid fa-star"></i>
+    </button>
+    <button href="#" class="introduction--btn">
+      <i class="introduction--doi"></i>
+    </button>
+    <h4 class="introduction--how-to-cite">Como citar esse trabalho?</h4>
+  </div>
+  <div class="introduction--video">
+    <div class="introduction--video-overlay">
+      <h3 class="introduction--video-title">{{ workIntroduction.title }}</h3>
+      <div class="introduction--video--author">
+        <img
+          src="{{ workIntroduction.imageUrl }}"
+          alt="{{ workIntroduction.author }}"
+          class="introduction--video--author-img"
+        />
+        <h4 class="introduction--video--author-name">
+          {{ workIntroduction.author }}
+        </h4>
+        <h5 class="introduction--video--author-institution">
+          {{ workIntroduction.institution }}
+        </h5>
+      </div>
+    </div>
+  </div>
+  <app-details
+    class="introduction--details"
+    [details]="workIntroduction.details"
+  ></app-details>
+</section>
