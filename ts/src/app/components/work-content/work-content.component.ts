@@ -70,6 +70,20 @@ export class WorkContentComponent implements OnInit {
               'Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo. Obrigada pela resposta, muito interessante o seu trabalho!',
             type: null,
             id: '2'
+          },
+          {
+            author: 'Carmilla Ferreira Andrade',
+            content:
+              'Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo. Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+            type: 'Coautor',
+            id: '3'
+          },
+          {
+            author: 'Ana Carolina',
+            content:
+              'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+            type: 'Coautor',
+            id: '4'
           }
         ]
       },
