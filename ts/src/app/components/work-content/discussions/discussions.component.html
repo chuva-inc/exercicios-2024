@@ -88,7 +88,12 @@
     </ng-container>
 
     <section class="discussions--topics">
-      <app-topics [topics]="topics"></app-topics>
+      <app-topics
+        [topics]="topics"
+        (editTopicClicked)="
+          enableTopicEditing($event.id, $event.subject, $event.content)
+        "
+      ></app-topics>
     </section>
   </div>
 </section>

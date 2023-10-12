@@ -22,7 +22,10 @@
       >
     </div>
   </div>
-  <ul class="comments-container topic--replies" *ngIf="showReplies">
+  <ul
+    class="comments-container topic--replies"
+    *ngIf="showReplies && topic.status === 'approved'"
+  >
     <li
       class="topic--reply"
       *ngFor="let reply of topic.replies"
@@ -36,4 +39,16 @@
       <p class="topic--reply-content">{{ reply.content }}</p>
     </li>
   </ul>
+  <div class="topic--pending" *ngIf="topic.status === 'pending'">
+    <i class="fa-solid fa-check-double"></i>
+    <h4>Aguardando feedback dos autores</h4>
+    <button
+      class="topic--edit-btn"
+      title="Editar tópico"
+      aria-label="Editar tópico"
+      (click)="onEditTopicClick(topic.id, topic.subject, topic.content)"
+    >
+      Editar tópico
+    </button>
+  </div>
 </li>

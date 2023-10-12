@@ -15,6 +15,7 @@ export class DiscussionsComponent implements OnInit {
     subject: new FormControl(''),
     content: new FormControl('')
   });
+  formTopicId: string | null = null;
 
   constructor() {}
 
@@ -25,24 +26,50 @@ export class DiscussionsComponent implements OnInit {
     this.formBeenSubmitted = false;
   }
 
+  enableTopicEditing(id: string, subject: string, content: string) {
+    console.log('enableTopicEditing called');
+    this.formIsVisible = true;
+    this.formBeenSubmitted = false;
+    console.log(this.formIsVisible, this.formBeenSubmitted);
+
+    this.formTopicId = id;
+    this.form.controls.subject.setValue(subject);
+    this.form.controls.content.setValue(content);
+  }
+
   onSubmit(): void {
     const { content, subject } = this.form.value;
-    console.log({ content, subject });
-    if (!content || !subject) return;
+    if (content === undefined || subject === undefined) return;
+    if (content === null || subject === null) return;
 
-    this.addTopic({ content, subject });
+    this.addOrUpdateTopic({ content, subject }, this.formTopicId);
     this.formIsVisible = false;
+    this.formTopicId = null;
     this.formBeenSubmitted = true;
   }
 
-  addTopic({ content, subject }: { subject: string; content: string }): void {
-    this.topics.push({
-      subject,
-      content,
-      id: Math.random().toString(),
-      author: 'Alguém',
-      likes: [],
-      replies: []
-    });
+  addOrUpdateTopic(
+    { content, subject }: { subject: string; content: string },
+    id: string | null
+  ): void {
+    if (id) {
+      const updatedTopics = this.topics.map((topic) => {
+        if (topic.id === id) {
+          (topic.content = content), (topic.subject = subject);
+        }
+        return topic;
+      });
+      this.topics = [...updatedTopics];
+    } else {
+      this.topics.unshift({
+        subject,
+        content,
+        id: Math.random().toString(),
+        author: 'Alguém',
+        likes: [],
+        replies: [],
+        status: 'pending'
+      });
+    }
   }
 }

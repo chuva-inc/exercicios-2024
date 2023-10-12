@@ -3,6 +3,14 @@
     <app-topic-card
       *ngFor="let topic of topics"
       [topic]="topic"
+      (editTopicClicked)="
+        editTopic({
+          id: topic.id,
+          subject: topic.subject,
+          content: topic.content
+        })
+      "
+      class="topic"
     ></app-topic-card>
   </ng-container>
   <ng-template #empty>

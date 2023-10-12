@@ -54,6 +54,7 @@ export class WorkContentComponent implements OnInit {
         content:
           'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
         subject: 'Assunto da pergunta aparece aqui',
+        status: 'approved',
         likes: [{ by: 'Adriano da Silva' }],
         replies: [
           {
@@ -78,6 +79,7 @@ export class WorkContentComponent implements OnInit {
         content:
           'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
         subject: 'Assunto da pergunta aparece aqui',
+        status: 'approved',
         likes: [{ by: 'Adriano da Silva' }],
         replies: [
           {
