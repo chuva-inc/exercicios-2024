@@ -1,0 +1,599 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(assets/Roboto-Regular.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/Quicksand-Regular.ttf) format(truetype);
+}
+
+body {
+  margin-top: 4px;
+  min-width: 1330px;
+}
+#side-menu {
+  background: f5f5f5;
+  width: 220px;
+  height: 1700px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  float: left;
+}
+
+#topo-evento {
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+  height: 68px;
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  line-height: 68px;
+}
+
+#menu-evento li {
+  border-bottom: 2px solid rgb(216, 214, 214);
+}
+
+#menu-evento li a {
+  display: block;
+  color: #725C5C;
+  height: 33px;
+  font-size: 15px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+  line-height: 33px;
+  text-indent: 24px;
+  text-decoration: none;
+}
+
+#menu-evento a:hover {
+  background: #FDF1EB url(assets/Rectangle.png) no-repeat;
+}
+
+#menu-evento a#selected {
+  background: #FDF1EB url(assets/Rectangle.png) no-repeat;
+}
+
+header {
+  background-color: #FDF1EB;
+  width: auto;
+  height: 65px;
+  font-family: sans-serif;
+  padding-top: 3px;
+  display: flex;
+}
+
+header h1 {
+  margin-top: 4px;
+}
+
+header button {
+  background-color: #FDF1EB;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  color: #725C5C;
+  width: 100px;
+  height: 34px;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 70px;
+  margin-right: 30px;
+}
+
+header button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header button img {
+  padding: 8px;
+}
+
+header .p-header {
+  color: #725C5C;
+  font-size: 14px;
+  text-indent: 36px;
+}
+
+header h1 {
+  color: #725C5C;
+  font-size: 22px;
+  text-indent: 36px;
+  font-weight: 400;
+}
+
+#login {
+  height: 34px;
+  margin-top: 12px;
+  font-family: Quicksand;
+  text-align: right;
+}
+
+#logintxt {
+  font-size: 14px;
+}
+
+#loginemail {
+  font-size: 12px;
+}
+
+#loginimg {
+  height: 43px;
+  width: 43px;
+}
+
+#loginimg img {
+  margin-left: 10px;
+  margin-top: 8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 80%;
+}
+
+#content {
+  float: left;
+  width: 1059px;
+  margin-left: 43px;
+  margin-top: 20px;
+}
+
+#apresentacao {
+  width: 740px;
+  height: 411px;
+  float: left;
+}
+
+#content .titulo {
+  color: #ED7839;
+  font-size: 20px;
+  font-family: Roboto;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+#content .video {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+#detalhes {
+  width: 280px;
+  height: 487px;
+  float: right;
+  text-align: right;
+}
+
+#buttons {
+  display: inline-flex;
+  text-align: right;
+}
+
+#detalhes button {
+  background: #ED7839;
+  display: inline-flex;
+  cursor: pointer;
+  height: 30px;
+  margin-left: 5px;
+  color: white;
+  font-family: Roboto;
+  font-weight: 500;
+  padding: 6px 12px;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.00);
+  border-radius: 5px;
+}
+
+#detalhes p {
+  color: #ED7839;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  margin-top: 12px;
+  margin-bottom: 9px;
+}
+
+.alinha {
+  padding-right: 8px;
+}
+
+#painel {
+  border: 2px solid #ECECEC;
+  border-radius: 3px;
+  height: 408px;
+  text-align: left;
+}
+
+#painel-titulo {
+  background-color: #FDF1EB;
+  width: 100%;
+  height: 45px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600px;
+  text-indent: 20px;
+  line-height: 45px;
+}
+
+#painel-conteudo {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+#painel-conteudo p {
+  color: #5C5C5C;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.24px;
+  margin: 0;
+}
+
+#autores p{
+  font-size: 16px;
+  letter-spacing: 0.28px;
+}
+
+#painel-conteudo #universidades {
+  color: #ADA0A0;
+}
+
+#resumo {
+  margin-top: 30px;
+  border: 2px solid #ECECEC;
+  border-radius: 3px;
+}
+
+#titulo-resumo {
+  background: #FDF1EB;
+  border-bottom: 2px solid #ECECEC;
+  border-radius: 3px;
+  height: 45px;
+  text-indent: 15px;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+#conteudo-resumo {
+  margin: 15px;
+  font-family: Quicksand;
+  font-size: 14px;
+  align-self: stretch;
+  letter-spacing: 0.28px;
+}
+
+#vermais {
+  display: none;
+}
+
+.btn-show-more {
+  cursor: pointer;
+  color: #ED7839;
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.28px;
+}
+
+#discussoes {
+  margin-top: 30px;
+  border: 2px solid #ECECEC;
+  border-radius: 3px;
+}
+
+#titulo-discussoes {
+  background: #FDF1EB;
+  border-bottom: 2px solid #ECECEC;
+  border-radius: 3px;
+  height: 45px;
+  text-indent: 15px;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+#conteudo-discussoes {
+  margin: 15px;
+  font-family: Quicksand;
+  font-size: 14px;
+  align-self: stretch;
+  letter-spacing: 0.28px;
+  text-align: center;
+}
+
+#conteudo-discussoes .titulo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#caixa-topico button, #form-topico button, #novo-topico button {
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 133px;
+  height: 32px;
+  color: white;
+  font-family: Quicksand;
+  text-decoration: none;
+  line-height: 32px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+#icones-discussoes {
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+#icones-discussoes .icones {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#caixa-topico #cta {
+  margin: auto;
+  width: 610px;
+}
+
+#caixa-topico #topico {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+#conteudo-discussoes #topico img {
+  padding: 8px;
+}
+
+#form-topico {
+  font-style: Quicksand;
+  display: none;
+}
+
+#form-topico p {
+  margin-bottom: 22px;
+}
+
+#form-topico #form {
+  text-align: left;
+}
+
+#form-topico label {
+  color: #ED7839;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#form-topico #assuntotxt, #form-topico #conteudotxt {
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  width: 981px;
+  height: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  font-family: Roboto;
+}
+
+#form-topico #assuntotxt {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#form-topico #conteudotxt {
+  height: 82px;
+  padding-top: 10px;
+}
+
+#form-topico #enviararea {
+  display: block;
+  background: #EAF1F2;;
+  border: 1px solid #CCC;
+  border-radius: 0px 0px 4px 4px;
+  width: 1023px;
+  height: 31px;
+  text-align: right;
+}
+
+#form-topico #enviararea button {
+  display: inline;
+  background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+  border-radius: 0px 0px 4px 0px;
+  cursor: pointer;
+  border: none;
+  width: 205px;
+  height: 100%;
+  color: white;
+  font-size: 15px;
+  font-family: Quicksand;
+  font-weight: 700;
+}
+
+#form-hr {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #E7E7E7;
+}
+
+#novo-topico {
+  display: none;
+}
+
+#novo-topico p {
+  margin-bottom: 29px;
+}
+
+#novo-topico a {
+  color: #F48F44;
+}
+
+#novo-topico button {
+  display: inline;
+  width: 235px;
+  margin-bottom: 14px;
+}
+
+.caixa-discussoes {
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
+  width: 980px;
+  height: 148px;
+  font-family: Quicksand;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.caixa-discussoes .ops-topic-subject {
+  cursor: pointer;
+}
+
+.comments-container {
+  display: none;
+}
+
+.autor {
+  background: #F8F8F8;
+  border: 1px solid #E7E7E7;
+}
+
+.resposta {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  padding-bottom: 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.resposta h3 {
+  color: #5C5C5C;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.resposta .check {
+  float: right;
+  margin-top: 18px;
+  color: #ED7839;
+}
+
+.resposta .nome {
+  float: left;
+}
+
+.resposta p {
+  color: #4D4D4D;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.primeiro {
+margin-top: -15px;
+}
+
+.caixa-discussoes#hidden {
+  background-color: #DDD;
+  background-image: url(assets/Screenshot_4.png);
+  display: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.caixa-discussoes#hidden img {
+  margin-top: 35px;
+}
+
+.caixa-discussoes#hidden h2 {
+  color: #707070;
+  font-size: 16px;
+  font-family: Quicksand;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.caixa-discussoes#hidden a {
+  color: #ED7839;
+}
+
+.caixa-discussoes h2 {
+  color: #ED7839;
+  font-size: 16px;
+  margin-top: 17px;
+  font-weight: 600;
+}
+
+.caixa-discussoes .autor-caixa {
+  color: #5C5C5C;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.caixa-discussoes p {
+  font-size: 14px;
+}
+
+.mais {
+  display: flex;
+  margin-top: 12px;
+}
+
+.mais button {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.mais .like {
+  background-color: #ED7839;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
+  width: 27px;
+  height: 22px;
+}
+
+.mais span {
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+}
+
+span.contadorlikes {
+  margin-right: 3px;
+}
+
+footer {
+  margin-top: 50px;
+}

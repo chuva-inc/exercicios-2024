@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
     <!--Inicio menu lateral-->
     <div id="side-menu">
-
       <div id="topo-evento">
         <p>SLACA 2019</p>
       </div>
-  
       <div id="menu-evento">
         <img src="assets/dewey4.png" alt="Logo">
         <ul>
@@ -22,7 +21,7 @@
           <li><a href="#">Comitês</a></li>
           <li><a href="#">Autores</a></li>
           <li><a href="#">Eixos Temáticos</a></li>
-          <li><a href="#">Trabalhos</a></li>
+          <li><a id="selected" href="#">Trabalhos</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
       </div>
@@ -31,17 +30,17 @@
     <!--Inicio do header-->
     <header>
       <div id="text-header">
-        <p class="p-header">Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+        <h2 class="p-header">Anais do Simpósio Latino Americano de Ciências de Alimentos</h2>
         <h1>Anais do Simpósio Latino Americano de Ciências de Alimentos</h1>
         <p class="p-header">ISSN: 1234-5678</p>
       </div>
-  
-      <a id="button-header" href="">
+
+      <button>
         <p><img src="assets/language.png">
         Pt BR
         <img src="assets/dropdown.svg"></p>
-      </a>
-  
+      </button>
+
       <div id="login">
         <p id="logintxt">Bem vindo!</p>
         <p id="loginemail">alguem12@galoascience.com</p>
@@ -54,8 +53,8 @@
     <!--Inicio do content-->
     <div id="content">
       <div id="apresentacao">
-        <h1 class="titulo">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
-        <img class="video" src="assets/praia.avif" alt="">
+        <h2 class="titulo">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h2>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2avT63Pjljg?si=6kwB5m8h-fYud_Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <!--Inicio detalhes-->
       <div id="detalhes">
@@ -65,7 +64,6 @@
           <button><img src="assets/doi.png" alt="doi"></button>
         </div>
         <p>COMO CITAR ESSE TRABALHO?</p>
-        
         <div id="painel">
           <div id="painel-titulo">
             Detalhes
@@ -93,7 +91,7 @@
       <!--Fim detalhes-->
       <div style="clear: both;"></div>
       <!--Inicio resumo-->
-      <div id="resumo"> 
+      <div id="resumo">
         <div id="titulo-resumo">
           Resumo
         </div>
@@ -127,9 +125,9 @@
             Numquam quas itaque quaerat inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
             cupiditate reiciendis error tempora similique recusandae voluptatem, rerum laboriosam quidem illum iste,
             asperiores necessitatibus ullam dolorum itaque eum aliquam, quia assumenda.</span></p>
-          <button onclick="mais()" id="btnmais">Ver mais</button>
+          <button class="btn-show-more" onclick="mais()">ver mais</button>
         </div>
-      </div> 
+      </div>
       <!--Fim resumo-->
       <!--Inicio discussoes-->
       <div id="discussoes">
@@ -138,32 +136,33 @@
         </div>
         <!--Inicio conteudo-discussoes-->
         <div id="conteudo-discussoes">
-          <h1 class="titulo">Compartilhe suas ideias ou dúvidas com os autores!</h1>
-          <div id="icones-discussoes">
-            <img class="icones" src="assets/icone1.png" alt="icone1">
-            <img class="icones" src="assets/icone2.png" alt="icone2">
-            <img class="icones" src="assets/icone3.png" alt="icone3">
-          </div>
-          <p id="cta">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
-          <div id="topico">
-            <a href="#">
-              <img src="assets/icon - criar.svg" alt="criar topico">
-              criar tópico
+          <div id="caixa-topico">
+            <h1 class="titulo">Compartilhe suas ideias ou dúvidas com os autores!</h1>
+            <div id="icones-discussoes">
+              <img class="icones" src="assets/icone1.png" alt="icone1">
+              <img class="icones" src="assets/icone2.png" alt="icone2">
+              <img class="icones" src="assets/icone3.png" alt="icone3">
+            </div>
+            <p id="cta">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+            <div id="topico">
+              <button class="btn-create-topic" onclick="abreform()">
+                <img src="assets/icon - criar.svg" alt="criar topico">
+                criar tópico
               </button>
             </div>
           </div>
 
           <div id="form-topico">
             <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-            <div id="form"> <!--Inicio form-->
+            <form> <!--Inicio form-->
               <label for="assuntotxt">Assunto</label>
-              <input type="text" name="assuntotxt" id="assuntotxt" placeholder="Defina um tópico sucinto para notificar os autores...">
+              <input type="text" name="assuntotxt" id="assuntotxt" class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
               <label for="conteudotxt">Conteúdo</label>
               <textarea type="text" name="conteudotxt" id="conteudotxt"></textarea>
               <div id="enviararea">
-                <button onclick="novotopico()">Enviar</button>
+                <button onclick="novotopico(); return false">Enviar</button>
               </div>
-            </div> <!--Fim form-->
+            </form> <!--Fim form-->
             <hr id="form-hr">
           </div>
 
@@ -192,8 +191,9 @@
               </button>
               <span>1 like</span>
               <span class="ops-topic-subject">0 resposta</span>
+            </div>
           </div>
-          <div class="caixa-discussoes">
+          <div class="caixa-discussoes answered-topic">
             <h2>Assunto da pergunta aparece aqui</h2>
             <p class="autor-caixa">Carlos Henrique Santos</p>
             <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
@@ -254,10 +254,10 @@
           </div>
         </div> <!--Fim conteudo-discussoes-->
       </div> <!--Fim discussoes-->
-    </div> 
-    <!--Fim do content-->
       <footer>
         <img src="assets/imagem - footer.png" alt="rodape">
       </footer>
+    </div>
+    <!--Fim do content-->
 </body>
 </html>
