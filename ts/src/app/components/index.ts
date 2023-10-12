@@ -9,3 +9,4 @@ export * from './work-content/introduction/introduction.component';
 export * from './work-content/summary/summary.component';
 export * from './work-content/topics/topics.component';
 export * from './footer/footer.component';
+export * from './work-content/topic-card/topic-card.component';

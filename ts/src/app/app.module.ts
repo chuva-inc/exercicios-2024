@@ -12,6 +12,7 @@ import {
   IntroductionComponent,
   SideMenuComponent,
   SummaryComponent,
+  TopicCardComponent,
   TopicsComponent,
   WorkContentComponent
 } from './components';
@@ -30,7 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DiscussionsComponent,
     SummaryComponent,
     TopicsComponent,
-    FooterComponent
+    FooterComponent,
+    TopicCardComponent
   ],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
