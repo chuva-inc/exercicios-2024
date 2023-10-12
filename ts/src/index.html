@@ -149,7 +149,35 @@
             <a href="#">
               <img src="assets/icon - criar.svg" alt="criar topico">
               criar tópico
-            </a>
+              </button>
+            </div>
+          </div>
+
+          <div id="form-topico">
+            <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+            <div id="form"> <!--Inicio form-->
+              <label for="assuntotxt">Assunto</label>
+              <input type="text" name="assuntotxt" id="assuntotxt" placeholder="Defina um tópico sucinto para notificar os autores...">
+              <label for="conteudotxt">Conteúdo</label>
+              <textarea type="text" name="conteudotxt" id="conteudotxt"></textarea>
+              <div id="enviararea">
+                <button onclick="novotopico()">Enviar</button>
+              </div>
+            </div> <!--Fim form-->
+            <hr id="form-hr">
+          </div>
+
+          <div id="novo-topico">
+            <h1 class="titulo">Seu tópico foi enviado com sucesso! :D</h1>
+            <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+            <p><a href="#">Descubra outros trabalhos!</a></p>
+            <button onclick="voltartopico()">criar novo tópico</button>
+          </div>
+
+          <div class="caixa-discussoes" id="hidden">
+            <img src="assets/check.png" alt="check">
+            <h2>Aguardando feedback dos autores</h2>
+            <a href="#">Editar tópico</a>
           </div>
           <div class="caixa-discussoes">
             <h2>Assunto da pergunta aparece aqui</h2>
