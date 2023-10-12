@@ -71,6 +71,30 @@ export class WorkContentComponent implements OnInit {
             id: '2'
           }
         ]
+      },
+      {
+        id: 'topic-2',
+        author: 'Carlos Henrique Santos',
+        content:
+          'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
+        subject: 'Assunto da pergunta aparece aqui',
+        likes: [{ by: 'Adriano da Silva' }],
+        replies: [
+          {
+            author: 'Adriano da Silva',
+            content:
+              'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+            type: 'Autor',
+            id: '1'
+          },
+          {
+            author: 'Carlos Henrique Santos',
+            content:
+              'Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo. Obrigada pela resposta, muito interessante o seu trabalho!',
+            type: null,
+            id: '2'
+          }
+        ]
       }
     ]
   };
