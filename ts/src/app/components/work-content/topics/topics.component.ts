@@ -8,13 +8,8 @@ import { ITopic } from 'src/app/interfaces';
 })
 export class TopicsComponent implements OnInit {
   @Input() topics!: ITopic[];
-  showReplies: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggleShowReplies(): void {
-    this.showReplies = !this.showReplies;
-  }
 }

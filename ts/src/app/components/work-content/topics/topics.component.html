@@ -1,48 +1,9 @@
 <ul class="topics">
   <ng-container *ngIf="topics.length > 0; else empty">
-    <li
-      class="answered-topic topic"
-      (click)="toggleShowReplies()"
+    <app-topic-card
       *ngFor="let topic of topics"
-    >
-      <div class="topic--main" [attr.data-repliesExpanded]="showReplies">
-        <h2 class="ops-topic-subject topic--subject">{{ topic.subject }}</h2>
-        <h3 class="topic--author">{{ topic.author }}</h3>
-        <p class="topic--content">{{ topic.content }}</p>
-        <div class="topic--more">
-          <button class="topic--more-options">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </button>
-          <button class="topic--like">
-            <i class="fa-solid fa-heart" [attr.data-liked]="false"></i>
-          </button>
-          <span class="topic--count"
-            >{{ topic.likes.length }} like{{
-              topic.likes.length > 1 ? 's' : ''
-            }}</span
-          >
-          <span class="topic--count"
-            >{{ topic.replies.length }} resposta{{
-              topic.replies.length > 1 ? 's' : ''
-            }}</span
-          >
-        </div>
-      </div>
-      <ul class="comments-container topic--replies" *ngIf="showReplies">
-        <li
-          class="topic--reply"
-          *ngFor="let reply of topic.replies"
-          [attr.data-role]="reply.type !== null"
-        >
-          <h3 class="topic--reply-author">{{ reply.author }}</h3>
-          <div class="topic--reply-role" *ngIf="reply.type !== null">
-            {{ reply.type }}
-            <i class="fa-solid fa-check-double"></i>
-          </div>
-          <p class="topic--reply-content">{{ reply.content }}</p>
-        </li>
-      </ul>
-    </li>
+      [topic]="topic"
+    ></app-topic-card>
   </ng-container>
   <ng-template #empty>
     <li class="topic topic__empty">
