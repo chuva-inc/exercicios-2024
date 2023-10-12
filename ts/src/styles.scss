@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 2fr;
+    grid-template-rows: 68px 2fr 181px;
+    grid-template-areas: "lateral bar"
+                         "lateral topic"
+                        "lateral foot";
+}
