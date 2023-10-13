@@ -2,6 +2,8 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use Chuva\Php\WebScrapping\Entity\Paper;
+use Chuva\Php\WebScrapping\Entity\Person;
 use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Box\Spout\Common\Entity\Row;
@@ -18,20 +20,38 @@ class Main {
     libxml_use_internal_errors(TRUE);
     $dom = new \DOMDocument('1.0', 'utf-8');
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
-   
-    $data = (new Scrapper())->scrap($dom);
-
+    
+    
+    // Write your logic to save the output file bellow. 
+    /* Exemplo de captura funcionando
+     * $domNodeList = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
+     */
     $xpath = new \DOMXPath($dom);
-    $domNodeList = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
 
-    print_r($domNodeList);
-    // Write your logic to save the output file bellow.    
-    foreach ($domNodeList as $elemento) {
-      
-      print_r($elemento);
+
+    $paper_card = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
+
+    $author = $xpath->query('.//div[@class="authors"]');
+    
+    foreach ($paper_card as $elemento) { 
+      foreach ($elemento->childNodes as $node) {
+        if (isset($node->tagName)) {
+          if(($node->tagName) == 'h4'){
+            $title = $node->nodeValue;
+            print_r("Titulo: $title \n");
+          }  
+        } 
+      }
+    }
+    foreach ($author as $elemento) { 
+      foreach ($elemento->childNodes as $node) {
+            print_r($node->prefix);
+            $authors = $node->nodeValue;
+            print_r("autores: $authors \n");
+      }
     }
 
-    
+
     /* $filePath = 'exemplo.xlsx';
       $writer = WriterEntityFactory::createXLSXWriter();
       $writer->openToFile($filePath);
@@ -51,7 +71,7 @@ class Main {
       $writer->close();
 
       echo "Tabela criada com sucesso em $filePath \n" ;  */
-    print_r($data);   
+    /* print_r($data);   */ 
   }
 
 }
