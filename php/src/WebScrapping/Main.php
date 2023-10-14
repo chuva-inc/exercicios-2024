@@ -2,12 +2,13 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use Box\Spout\Common\Entity\Row;
+use Box\Spout\Common\Exception\IOException;
+use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
+use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
-use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
-use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
-use Box\Spout\Common\Entity\Row;
-use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 /**
  * Runner for the Webscrapping exercice.
  */
@@ -21,38 +22,72 @@ class Main {
     $dom = new \DOMDocument('1.0', 'utf-8');
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
     
-    
-    // Write your logic to save the output file bellow. 
-    /* Exemplo de captura funcionando
-     * $domNodeList = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
-     */
+    $id[]="";
+    $title[]="";
+    $type[]="";
+    $autores="";
+    $instituicao="";
+    // Write your logic to save the output file bellow.   
     $xpath = new \DOMXPath($dom);
 
 
     $paper_card = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
+    $ID = $xpath->query('.//div[@class="volume-info"]');
+    $TYPE =$xpath->query('.//div[@class="tags mr-sm"]');
+           
 
-    $author = $xpath->query('.//div[@class="authors"]');
+                
     
+    
+    foreach ($TYPE as $currentType) {
+      $type[] = $currentType->textContent;
+      print_r("Tipo: " . $type[1] . "\n");
+    }
+    foreach ($ID as $currentId) {
+      $id[] = $currentId->textContent;
+      print_r("ID:" . $id[1] . "\n");
+    } 
     foreach ($paper_card as $elemento) { 
       foreach ($elemento->childNodes as $node) {
-        if (isset($node->tagName)) {
-          if(($node->tagName) == 'h4'){
+        $node_tagname = $node->tagName; 
+          if($node_tagname == 'h4'){
+            print_r($node);
             $title = $node->nodeValue;
             print_r("Titulo: $title \n");
-          }  
-        } 
-      }
-    }
-    foreach ($author as $elemento) { 
-      foreach ($elemento->childNodes as $node) {
-            print_r($node->prefix);
-            $authors = $node->nodeValue;
-            print_r("autores: $authors \n");
-      }
-    }
+          } 
+          else if($node_tagname == 'div'){          
+            $filhoNo = $node->childNodes;
+            foreach ($filhoNo as $no){
+              print_r($no);
+              $no_tagname = $no->tagName;
+              if($no_tagname=='span'){
+                if(($no->tagName)!=null) $instituicao = $no->getAttribute('title');
+                print_r($instituicao . "\n");    
+                $autores = $no->textContent;
+                print_r("Autores: $autores \n");
+                $person = new Person($autores, $instituicao);
+              }else if($no_tagname==null){
+                continue;
+              }
+            }
+            
+          }
+          
+      } 
+      /* $paper = new Paper($id,$title,$type,)  */
+    } 
+    
+  }  
+}
+    
 
 
-    /* $filePath = 'exemplo.xlsx';
+         
+      
+  
+    
+
+      $filePath = 'exemplo.xlsx';
       $writer = WriterEntityFactory::createXLSXWriter();
       $writer->openToFile($filePath);
 
@@ -70,9 +105,7 @@ class Main {
 
       $writer->close();
 
-      echo "Tabela criada com sucesso em $filePath \n" ;  */
-    /* print_r($data);   */ 
-  }
-
-}
+      echo "Tabela criada com sucesso em $filePath \n" ;
+    /* print_r($data);  */ 
+ 
 ?>
