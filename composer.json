@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Chuva\\Php\\WebScrapping\\": "Entity/",
+            "Chuva\\Php\\": "tests/Unit/WebScrapping/Entity/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
+}
