@@ -22,44 +22,55 @@ class Main {
     $dom = new \DOMDocument('1.0', 'utf-8');
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
     
-    $id[]="";
-    $title[]="";
-    $type[]="";
-    $autores="";
-    $instituicao="";
+     # Create empty lists to store the data
+     $id = [];
+     $title = [];
+     $type = [];
+     $autores = "";
+     $instituicao = "";
     // Write your logic to save the output file bellow.   
+    # Create an XPath object
     $xpath = new \DOMXPath($dom);
 
-
+    # Query the HTML for the paper cards
     $paper_card = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
+    # Query the HTML for the paper IDs
     $ID = $xpath->query('.//div[@class="volume-info"]');
+    # Query the HTML for the paper types
     $TYPE =$xpath->query('.//div[@class="tags mr-sm"]');
            
 
                 
     
-    
+    # Iterate over the paper types
     foreach ($TYPE as $currentType) {
       $type[] = $currentType->textContent;
       print_r("Tipo: " . $type[1] . "\n");
     }
+    # Iterate over the paper IDs
     foreach ($ID as $currentId) {
       $id[] = $currentId->textContent;
       print_r("ID:" . $id[1] . "\n");
     } 
-    foreach ($paper_card as $elemento) { 
+    # Iterate over the paper cards
+    foreach ($paper_card as $elemento) {
+      # Iterate over the child nodes of the paper card 
       foreach ($elemento->childNodes as $node) {
+        # Get the tag name of the child node
         $node_tagname = $node->tagName; 
+          # If the tag name is 'h4', then it is the title of the paper
           if($node_tagname == 'h4'){
-            print_r($node);
+            # Print the title of the paper
             $title = $node->nodeValue;
             print_r("Titulo: $title \n");
           } 
+          # If the tag name is 'div', then it is the title of the paper
           else if($node_tagname == 'div'){          
             $filhoNo = $node->childNodes;
             foreach ($filhoNo as $no){
               print_r($no);
               $no_tagname = $no->tagName;
+              # If the tag name is 'div', then it is the title of the paper
               if($no_tagname=='span'){
                 if(($no->tagName)!=NULL) $instituicao = $no->getAttribute('title');
                 print_r($instituicao . "\n");    
