@@ -61,12 +61,12 @@ class Main {
               print_r($no);
               $no_tagname = $no->tagName;
               if($no_tagname=='span'){
-                if(($no->tagName)!=null) $instituicao = $no->getAttribute('title');
+                if(($no->tagName)!=NULL) $instituicao = $no->getAttribute('title');
                 print_r($instituicao . "\n");    
                 $autores = $no->textContent;
                 print_r("Autores: $autores \n");
                 $person = new Person($autores, $instituicao);
-              }else if($no_tagname==null){
+              }else if($no_tagname==NULL){
                 continue;
               }
             }
@@ -74,7 +74,7 @@ class Main {
           }
           
       } 
-      /* $paper = new Paper($id,$title,$type,)  */
+      /* Função teste $paper = new Paper($id,$title,$type,)  */
     } 
     
   }  
