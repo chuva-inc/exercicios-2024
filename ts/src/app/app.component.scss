@@ -1,11 +1,65 @@
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
+  --text-color: rgb(51, 51, 51);
+  --text-title: #ED7839;
+  --hover-background: #fdf1eb;
+  --color-gradient: linear-gradient(180deg, #ffb354, #ee7a3a);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+#side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  Height: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 68px;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35.16px;
+  background: var(--color-gradient);
+}
+
+.links-navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  height: 35px;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.75px;
+  padding: 7px 24px;
+  border-bottom: 2px solid #E7E7E7;
+}
+
+.link a {
+  text-decoration: none;
+  color: #725c5c;
+}
+
+.link:hover,
+.link.active {
+  background: var(--hover-background);
+  border-left: 5px solid #ff5e00e5;
+
+}
+
 
 h1,
 h3,
@@ -35,7 +89,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #04345d;
+  background-color: var(--text-color);
   color: white;
   font-weight: 600;
 }
