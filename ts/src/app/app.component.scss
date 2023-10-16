@@ -14,7 +14,6 @@ body {
   margin-left: 8px;
 }
 
-
 .event-info {
   display: flex;
   flex-direction: column;
@@ -334,4 +333,18 @@ body {
   vertical-align: super;
   background: #E7E7E7;
 
+}
+
+
+.card-components {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-components-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
 }

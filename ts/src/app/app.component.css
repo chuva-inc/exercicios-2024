@@ -332,4 +332,17 @@ body {
   background: #E7E7E7;
 }
 
+.card-components {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-components-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
 /*# sourceMappingURL=app.component.css.map */
