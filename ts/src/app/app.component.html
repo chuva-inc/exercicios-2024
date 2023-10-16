@@ -4,14 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SLACA 2019</title>
+  <link rel="stylesheet" href="app.component.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="menu-principal">
+  <div class="header-container">
     <div class="slaca-banner">
-        <span>SLACA 2019</span>
+      <div class="header-division">
+        <span class="slaca-text">SLACA 2019</span>
+        <div class="slaca-header">
+          <div class="header-info">
+            <h3>Anais do Simpósio Latino Americano de Ciências de Alimentos</h3>
+            <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
+            <p>ISSN: 1234-5678</p>
+          </div>
+          <div class="language-switch">
+            <button>
+              <img src="../assets/language image.svg" alt="Idioma">
+              PT,BR
+              <img src="../assets/dropdown.svg" alt="Abrir Menu de idiomas">
+            </button>
+          </div>
+          <div class="user-info">
+            <div>
+              <p style="text-align: end;">Bem Vindo!</p>
+              <p style="font-size: 12px;">alguem12@galoascience.com</p>
+            </div>
+            <img src="../assets/profile-picture.svg" alt="Foto de Perfil">
+          </div>
+        </div>
+      </div>
     </div>
-    <img src="../assets/slaca-logo.svg" alt="Logo SLACA">
-    <div class="navigation-menu">
+    <div class="menu-container">
+      <img src="../assets/slaca-logo.svg" alt="Logo SLACA" class="slaca-logo">
       <button>Apresentação</button>
       <button>Comitês</button>
       <button>Autores</button>
@@ -20,24 +47,5 @@
       <button>Contato</button>
     </div>
   </div>
-  <header>
-    <div class="slaca-header">
-      <h3>Anais do Simpósio Latino Americano de Ciências de Alimentos</h3>
-      <br /><h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
-      <br /><p>ISSN: 1234-5678</p>
-      <div class="language-switch">
-        <button>
-          <img src="../assets/language image.svg" alt="Idioma">
-          PT,BR
-          <img src="../assets/dropdown.svg" alt="Abrir Menu de idiomas">
-        </button>
-      </div>
-      <div class="user-space">
-        <p>Bem Vindo!</p>
-        <p>alguem12@galoascience.com</p>
-        <img src="../assets/profile-picture.svg" alt="Foto de Perfil">
-      </div>
-    </div>
-  </header>
 </body>
 </html>
