@@ -6,16 +6,16 @@
   <title>SLACA 2019</title>
   <link rel="stylesheet" href="app.component.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="header-container">
-    <div class="slaca-banner">
-      <div class="header-division">
+  <div class="page-container">
+    <div class="header-container">
+      <div class="slaca-header">
         <span class="slaca-text">SLACA 2019</span>
-        <div class="slaca-header">
-          <div class="header-info">
+        <div class="event-info-container">
+          <div class="event-info">
             <h3>Anais do Simpósio Latino Americano de Ciências de Alimentos</h3>
             <h2>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h2>
             <p>ISSN: 1234-5678</p>
@@ -29,7 +29,7 @@
           </div>
           <div class="user-info">
             <div>
-              <p style="text-align: end;">Bem Vindo!</p>
+              <p>Bem Vindo!</p>
               <p style="font-size: 12px;">alguem12@galoascience.com</p>
             </div>
             <img src="../assets/profile-picture.svg" alt="Foto de Perfil">
@@ -37,14 +37,63 @@
         </div>
       </div>
     </div>
-    <div class="menu-container">
-      <img src="../assets/slaca-logo.svg" alt="Logo SLACA" class="slaca-logo">
-      <button>Apresentação</button>
-      <button>Comitês</button>
-      <button>Autores</button>
-      <button>Eixos temáticos</button>
-      <button>Trabalhos</button>
-      <button>Contato</button>
+    <div class="page-content">
+      <div class="menu-container">
+        <img src="../assets/slaca-logo.svg" alt="Logo SLACA" class="slaca-logo">
+        <button>Apresentação</button>
+        <button>Comitês</button>
+        <button>Autores</button>
+        <button>Eixos temáticos</button>
+        <button id="trabalhos-button">Trabalhos</button>
+        <button>Contato</button>
+      </div>
+      <div class="blog-content">
+        <div class="blog-title">
+          <div class="blog-title-image-container">
+            <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h2>
+            <div id="video-presentation">
+              <img src="../assets/video-apresentacao.svg">
+            </div>
+          </div>
+          <div class="blog-buttons-container">
+            <div class="blog-buttons">
+              <button id="download-button">Download</button>
+              <button id="star-button">
+                <img src="../assets/star.svg">
+              </button>
+              <button id="doi-button">
+                <img src="../assets/doi.svg">
+              </button>
+            </div>
+            <p id="citation-info">COMO CITAR ESTE TRABALHO?</p>
+            <div class="blog-details">
+              <div class="blog-details-title-container">
+                <p id="blog-details-title">Detalhes</p>
+              </div>
+              <div class="blog-details-textbox-container">
+                <p>Tipo de apresentação: <span>Pôster</span></p>
+                <p>Eixo Temático: <span>Alimentação e Saúde (AS)</span></p>
+                <p>Palavras-chaves: <span>Alimentos funcionais, alimentação escolar</span></p>
+                <p>Autores:</p>
+                <p>Galileo Galilei</p>
+                <p>Berta Lange de Marretes</p>
+                <p>Isaac Newton</p>
+                <p>Stephen Hawking</p>
+                <p>Universidade Estadual de Campinas</p>
+                <p>Universidade de São Paulo</p>
+                <p>Instituto Nacional de Pesquisas Espaciais</p>
+                <p>Universidade Federal do Rio de Janeiro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="resume-section">
+          <div class="section-titles">
+            <p>RESUMO</p>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... ver mais</p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

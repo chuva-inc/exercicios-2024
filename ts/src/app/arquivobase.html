@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .flex-master {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: 100%;
+            overflow: auto;
+        }
+        .page-header {
+            flex: none; /* fixed size */
+            padding: 15px;
+            font-size: 3em;
+            font-weight: bold;
+            background: #535353;
+            color: white;
+        }
+        .page-content {
+            flex: 1; /* resize in container */
+            overflow: auto; /* IMPORTANT for Firefox */
+            /* new flex container for content */
+            display: flex;
+            flex-direction: row;
+        }
+        .sidebar-left {
+            flex: none;
+            background: #838383;
+            padding: 20px;
+            width: 200px;
+            overflow: auto;
+            color: white;
+        }
+        .splitter {
+            flex: none;
+            width: 17px;
+            cursor: col-resize;
+            background: #535353;
+        }
+        .content-container {
+            flex: 1 1 auto;
+            background: #eee;
+            padding: 20px;
+            width: 100%;
+            overflow-y: auto;
+            display: flex; /* new flex for content/ads */
+            flex-direction: row;
+        }
+        .main-content {
+            flex: 1 1 auto;
+            width: 100%;
+            padding: 10px;
+        }
+        .page-ads {
+            flex: 0 0 auto;
+            width: 180px;
+            overflow: hidden;
+            display: flex; /* new flex for ads */
+            flex-direction: column;
+        }
+        .ad {
+            flex: none;
+            align-self: center;
+            padding: 5px;
+            margin: 15px;
+            width: 150px;
+            height: 150px;
+            background: lightblue;
+            overflow: hidden;
+            /* center ad text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            flex: 0 0 auto;
+            background: #535353;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-master">
+        <header class="page-header">
+            This is a header
+        </header>
+        <div class="page-content">
+            <nav class="sidebar-left">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+            </nav>
+            <div class="splitter"></div>
+            <div class="content-container">
+                <article class="main-content">
+                    This is my main content!
+                    <hr />
+                    This is my main content!
+                    <hr />  ...
+                </article>
+                <aside class="page-ads">
+                    <div class="ad">
+                        Ad
+                    </div>
+                    <div class="ad">
+                        Ad
+                    </div>  ...
+                </aside>
+            </div>
+        </div>
+        <footer>
+            <small>&copy; West Wind Technologies, 2016</small>
+        </footer>
+    </div>
+</body>
+</html>
