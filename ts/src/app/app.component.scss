@@ -6,6 +6,7 @@
 body {
   display: flex;
   padding: 0;
+  height: 2000px;
   width: 100%;
 }
 .header-container {
@@ -113,7 +114,7 @@ body {
 }
 .page-content {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .blog-title {
@@ -221,9 +222,116 @@ body {
   flex-direction: column;
 }
 
-#resume-section p {
-  width: 1028px; 
+#resume-section {
+  max-width: 1058px;
+  max-height: 560px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border: 1px solid #ECECEC;
+  gap: 20px;
+}
+
+#resume-id {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  font-weight: 500;
+  width: 1058px;
+  height: 45px;
   background-color: #FDF1EB;
-  margin-top: 30px;
-  padding: 0;
+  border: 1px solid #ECECEC;
+  border-radius: 3px 3px 0px 0px;
+  padding-left: 15px;
+}
+
+#resume-description {
+  padding-left: 20px;
+  padding-bottom: 15px;
+  width: 1028px; 
+}
+
+#discussion-section {
+  max-width: 1058px;
+  height: 621px;
+  max-height: 1234px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border: 1px solid #ECECEC;
+  gap: 20px;
+}
+#discussion-description {
+  color: #ED7839;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.discussion-description-image-container {
+  display: flex;
+  gap: 50px;
+}
+.description-container img {
+  width: 50px;
+  height: 50px;
+}
+
+#discussion-call {
+  font-family: 'Quicksand',sans-serif;
+  font-weight: 400;
+  text-align: center;
+  width: 626px;
+}
+
+
+.btn-create-topic {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  width: 135px;
+  height: 32px;
+  border-right: 123px solid #000;
+  background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  box-shadow: 0px 2px 2px 0px #0000003D;
+  box-shadow: 0px 0px 2px 0px #0000001F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.create-topic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.create-topic:before {
+  content:" ";
+  height: 2px;
+  vertical-align: super;
+  background: #E7E7E7;
+  width: 450px;
+  border: none;
+}
+
+.create-topic:after {
+  content:" ";
+  width: 450px;
+  height: 2px;
+  vertical-align: super;
+  background: #E7E7E7;
+
 }
