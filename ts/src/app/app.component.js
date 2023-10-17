@@ -1,7 +1,7 @@
 const btnShowMore = document.querySelectorAll('.btn-show-more');
 const hiddenText = document.querySelectorAll('.aditional-content');
 
-const btnCreateTopic = document.querySelectorAll('.btn-create-topic')
+const btnCreateTopic = document.querySelectorAll('.btn-create-topic');
 
 btnShowMore.forEach(function (btn, index) {
   btn.addEventListener('click', function () {
@@ -17,6 +17,18 @@ btnShowMore.forEach(function (btn, index) {
 
 btnCreateTopic.forEach(function (btn, index) {
     btn.addEventListener('click', function () {
+        const discussionHeader = document.querySelectorAll('#discussion-description');
+        const imagesContainer = document.querySelectorAll('.discussion-description-image-container');
+        const textCall = document.querySelectorAll('#discussion-call');
+
+        const descriptionTopicHeader = document.querySelectorAll('#description-topic-header');
+        const descriptionTopicContainer = document.querySelectorAll('#description-topic-container');
+
+        discussionHeader[index].style.display = 'none';
+        imagesContainer[index].style.display = 'none';
+        textCall[index].style.display = 'none';
         
-    })
-})
+        descriptionTopicHeader[index].style.display = 'block';
+        descriptionTopicContainer[index].style.display = 'flex';
+    });
+});

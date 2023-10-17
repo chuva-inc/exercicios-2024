@@ -263,7 +263,6 @@ body {
 }
 
 #discussion-description {
-  display: none;
   color: #ED7839;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -279,7 +278,6 @@ body {
 
 .discussion-description-image-container {
   display: flex;
-  display: none;
   gap: 50px;
 }
 
@@ -289,7 +287,6 @@ body {
 }
 
 #discussion-call {
-  display: none;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -427,6 +424,7 @@ body {
 }
 
 #description-topic-header {
+  display: none;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -436,7 +434,7 @@ body {
 }
 
 #description-topic-container {
-  display: flex;
+  display: none;
   width: 95%;
   gap: 8px;
   flex-direction: column;
