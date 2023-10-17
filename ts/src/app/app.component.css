@@ -244,9 +244,12 @@ body {
 }
 
 #resume-description {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   padding-left: 20px;
-  padding-bottom: 15px;
-  width: 1028px;
+  padding-bottom: 5px;
+  max-width: 1028px;
 }
 
 #discussion-section {
@@ -414,10 +417,6 @@ body {
 
 .aditional-content {
   display: none;
-}
-
-#show-more-button.clicked + .aditional-content {
-  display: block;
 }
 
 #footer {
