@@ -24,9 +24,17 @@ btnCreateTopic.forEach(function (btn, index) {
         const descriptionTopicHeader = document.querySelectorAll('#description-topic-header');
         const descriptionTopicContainer = document.querySelectorAll('#description-topic-container');
 
+        const sendTopicHeader = document.querySelectorAll('.send-topic-header');
+        const sendTopicDescription = document.querySelectorAll('.send-topic-description');
+        const sendTopicLookahead = document.querySelectorAll('.send-topic-lookahead');
+
         discussionHeader[index].style.display = 'none';
         imagesContainer[index].style.display = 'none';
         textCall[index].style.display = 'none';
+
+        sendTopicHeader[index].style.display = 'none';
+        sendTopicDescription[index].style.display = 'none';
+        sendTopicLookahead[index].style.display = 'none';
         
         descriptionTopicHeader[index].style.display = 'block';
         descriptionTopicContainer[index].style.display = 'flex';

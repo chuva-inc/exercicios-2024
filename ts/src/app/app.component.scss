@@ -266,6 +266,7 @@ body {
   gap: 20px;
 }
 #discussion-description {
+  display: none;
   color: #ED7839;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -280,7 +281,7 @@ body {
 }
 
 .discussion-description-image-container {
-  display: flex;
+  display: none;
   gap: 50px;
 }
 .description-container img {
@@ -289,6 +290,7 @@ body {
 }
 
 #discussion-call {
+  display: none;
   font-family: 'Quicksand',sans-serif;
   font-weight: 400;
   text-align: center;
@@ -494,4 +496,31 @@ body {
   height: 31px;
   border: none;
   border-radius: 0px, 0px, 4px, 0px;
+}
+
+.send-topic-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  color:#ED7839;
+
+}
+
+.send-topic-description {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+}
+
+.send-topic-lookahead {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center;
+
 }
