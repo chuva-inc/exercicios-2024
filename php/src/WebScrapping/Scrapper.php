@@ -21,13 +21,23 @@ class Scrapper {
   /**
    * Loads paper information from the HTML and returns the array with the data.
    */
-  public function scrap(\DOMDocument $dom): array {
+  public function scrap(\DOMDocument $dom){
     $xpath = new \DOMXPath($dom);
 
     # Query the HTML for the paper cards
     $paper_card = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
-           
+    
+    /* $filePath = 'exemplo.xlsx';
+      $writer = WriterEntityFactory::createXLSXWriter();
+      $writer->openToFile($filePath);
 
+      $style = (new StyleBuilder())
+        ->setFontBold()
+        ->build();
+
+      $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',	'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3','Author 3','Author 3 Institution'], $style);
+      $writer->addRow($headerRow); 
+        $writer->openToBrowser($filePath); */
                 
    
     try{
@@ -48,13 +58,13 @@ class Scrapper {
               $filhoNo = $node->childNodes;
               foreach ($filhoNo as $no){
                 # If the tag name is 'div', then it is the title of the paper     
-                if($no->tagName=='span'){
-                  $instituicao = $no->getAttribute('title');
-                  print_r("Instituição: $instituicao \n");    
+                if($no->nodeName == 'span'){
+                  $instituicao = $no->getAttribute('title');   
                   $autor = $no->textContent;
                   print_r("Autores: $autor \n");
-                  $person[] = new Person($autor, $instituicao);
-                }else if($no->tagName=='div'){
+                  print_r("Instituição: $instituicao \n"); 
+                  
+                }else if($no->nodeName=='div'){
                   if($no->getAttribute('class')=='tags mr-sm'){
                     $type = $no->nodeValue;
                     print_r($type . "\n");
@@ -71,84 +81,24 @@ class Scrapper {
         
          
         } 
-        $paper = new Paper($id,$title,$type,[$person]);
-        print_r($paper);
         
+        /* $writer->addRow($id, $title, $type, $autor);
+
+        $writer->close();
+
+        echo "Tabela criada com sucesso em $filePath \n" ; */
       } 
     
 
-    }catch(\DOMException){
-      print("Erro");
+    }catch(\DOMException $e){
+      print_r($e->getMessage());
     }
     
   }
-  /**
-   * Summary of printTable
-   * @param mixed $id
-   * @param mixed $title
-   * @param mixed $type
-   * @param mixed $autor
-   * @param mixed $instituicao
-   * @return void
-   */
-  function printTable($id,$title,$type,$autor,$instituicao){
-        $filePath = 'exemplo.xlsx';
-        $reader = ReaderFactory::create(ReaderFactory::TYPE_XLSX);
-        $reader->open($filePath);
-        $writer = WriterEntityFactory::createXLSXWriter();
-        $writer->openToFile($filePath);
+  
 
-        $style = (new StyleBuilder())
-          ->setFontBold()
-          ->build();
-
-        $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',	'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3','Author 3','Author 3 Institution'], $style);
-        $writer->addRow($headerRow); 
         
-
-        $reader->each(function($row) use ($writer) {
-
-          $guid = $row[4]; // Assuma que o GUID está na coluna 5 (índice 4)
-      
-          if ($guid !== '') {
-      
-              // O GUID já existe, a cédula já foi escrita antes
-      
-              echo "Cédula já escrita.\n";
-      
-          } else {
-      
-              // Gere um novo GUID e escreva na cédula
-      
-              $newGuid = uniqid();
-      
-              $writer->addRow([
-      
-                  $row[0],
-      
-                  $row[1],
-      
-                  $row[2],
-      
-                  $row[3],
-      
-                  $newGuid,
-      
-              ]);
-      
-          }
-      
-      });
-      
-      
-      // Feche o leitor e o escritor
-      
-      $reader->close();
-        $teste = WriterEntityFactory::createRowFromArray([$id,$title,$type,$autor,$instituicao], $style);
-        $writer->addRow($teste);
-        $writer->close();
-
-        echo "Tabela criada com sucesso em $filePath \n" ;
-  }
+        
+  
 
 }
