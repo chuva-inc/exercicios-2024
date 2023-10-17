@@ -6,7 +6,7 @@
 body {
   display: flex;
   padding: 0;
-  height: 2000px;
+  height: 100vh;
   width: 100%;
 }
 
@@ -251,8 +251,7 @@ body {
 
 #discussion-section {
   max-width: 1058px;
-  height: 621px;
-  max-height: 1234px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -334,7 +333,12 @@ body {
 
 .card-components {
   display: flex;
+  width: 1028px;
+  max-height: 240px;
+  border: 1px solid #E7E7E7;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1215686275);
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -343,6 +347,81 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+}
+
+.card-subject {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 20px;
+}
+
+#card-subject-question {
+  width: 980px;
+  padding-left: 20px;
+}
+
+.card-components-info {
+  padding-left: 20px;
+}
+
+#subject {
+  color: #ED7839;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#subject-author {
+  color: #5C5C5C;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#card-subject-question {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card-components-info p {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 350;
+  font-size: 14px;
+  color: #757575;
+}
+
+.card-components-info span {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 350;
+  font-size: 14px;
+  color: #ED7839;
+}
+
+.btn-dp {
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.btn-show-more {
+  background: none;
+  border: none;
+  color: #ED7839;
+  cursor: pointer;
+  user-select: none;
+}
+
+.aditional-content {
+  display: none;
+}
+
+#show-more-button.clicked + .aditional-content {
+  display: block;
+}
+
+#footer {
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=app.component.css.map */
