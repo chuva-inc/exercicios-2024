@@ -22,8 +22,8 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         ),
         'C' => 
         array (
-            'Chuva\\Php\\WebScrapping\\' => 23,
-            'Chuva\\Php\\' => 10,
+            'Chuva\\Tests\\Unit\\WebScrapping\\' => 30,
+            'Chuva\\Php\\WebScrapping\\Entity\\' => 30,
         ),
     );
 
@@ -36,13 +36,13 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
-        'Chuva\\Php\\WebScrapping\\' => 
+        'Chuva\\Tests\\Unit\\WebScrapping\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Entity',
         ),
-        'Chuva\\Php\\' => 
+        'Chuva\\Php\\WebScrapping\\Entity\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/tests/Unit/WebScrapping/Entity',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
