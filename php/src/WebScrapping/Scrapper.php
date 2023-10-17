@@ -48,17 +48,17 @@ class Scrapper {
               $filhoNo = $node->childNodes;
               foreach ($filhoNo as $no){
                 # If the tag name is 'div', then it is the title of the paper     
-                if($no->tagName=='span'){
+                if($no->tagName == 'span'){
                   $instituicao = $no->getAttribute('title');
                   print_r("Instituição: $instituicao \n");    
                   $autor = $no->textContent;
                   print_r("Autores: $autor \n");
                   $person[] = new Person($autor, $instituicao);
-                }else if($no->tagName=='div'){
-                  if($no->getAttribute('class')=='tags mr-sm'){
+                }else if($no->tagName == 'div'){
+                  if($no->getAttribute('class') == 'tags mr-sm'){
                     $type = $no->nodeValue;
                     print_r($type . "\n");
-                  }else {
+                  }else{
                     $id = $no->nodeValue;
                     print_r($id . "\n");
                   }
@@ -82,15 +82,6 @@ class Scrapper {
     }
     
   }
-  /**
-   * Summary of printTable
-   * @param mixed $id
-   * @param mixed $title
-   * @param mixed $type
-   * @param mixed $autor
-   * @param mixed $instituicao
-   * @return void
-   */
   function printTable($id,$title,$type,$autor,$instituicao){
         $filePath = 'exemplo.xlsx';
         $reader = ReaderFactory::create(ReaderFactory::TYPE_XLSX);
