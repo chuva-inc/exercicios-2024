@@ -263,6 +263,7 @@ body {
 }
 
 #discussion-description {
+  display: none;
   color: #ED7839;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -278,6 +279,7 @@ body {
 
 .discussion-description-image-container {
   display: flex;
+  display: none;
   gap: 50px;
 }
 
@@ -287,6 +289,7 @@ body {
 }
 
 #discussion-call {
+  display: none;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -369,7 +372,7 @@ body {
   padding-left: 20px;
 }
 
-#subject {
+#subject-question {
   color: #ED7839;
   font-weight: 700;
   font-size: 16px;
@@ -421,6 +424,73 @@ body {
 
 #footer {
   margin-top: 50px;
+}
+
+#description-topic-header {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+#description-topic-container {
+  display: flex;
+  width: 95%;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.description-topic-container-subject {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #ED7839;
+}
+
+.subject {
+  width: 95%;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+}
+
+.subject1 {
+  width: 95%;
+  height: 112px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+
+.textarea-content-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.btn-send {
+  position: absolute;
+  top: 1;
+  right: 4.4%;
+  align-self: flex-end;
+  color: #FFFFFF;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+  width: 200px;
+  height: 31px;
+  border: none;
+  border-radius: 0px, 0px, 4px, 0px;
 }
 
 /*# sourceMappingURL=app.component.css.map */
