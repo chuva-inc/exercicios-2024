@@ -3,12 +3,12 @@ const hiddenText = document.querySelectorAll('.aditional-content');
 const btnSend = document.querySelectorAll('.btn-send')
 const btnCreateTopic = document.querySelectorAll('.btn-create-topic');
 
-//Propriedades de texto de envio
+
 const sendTopicHeader = document.querySelectorAll('.send-topic-header');
 const sendTopicDescription = document.querySelectorAll('.send-topic-description');
 const sendTopicLookahead = document.querySelectorAll('.send-topic-lookahead');
 
-//Forms de Envio
+
 const descriptionTopicHeader = document.querySelectorAll('#description-topic-header');
 const descriptionTopicContainer = document.querySelectorAll('#description-topic-container');
 
