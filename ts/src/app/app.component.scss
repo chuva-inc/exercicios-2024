@@ -533,28 +533,80 @@ textarea {
   gap: 10px;
   top: 0;
   left: 0;
-  height: 4px;
-  background: rgb(58, 58, 58);
-  color: #c2c3c4;
-  width: 100%;
-  font-size: 2rem;
-  line-height: 0;
-  padding: 14px 0;
-  text-indent: 4px;
+  border-radius: 3px;
+  background: rgb(221, 221, 221, 0.8);
+  height: 148px;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  margin: 20px;
 }
 
-.terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  color: white;
-  padding: 0 1rem 1rem;
-  margin: 0;
+.card-check-text {
+  color: #707070;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-footer {
-  margin-top: 8px;
+.card-check-edit {
+  color: var(--text-title);
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.card {
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+  margin: 20px;
+}
+
+.subject-container {
+  padding: 17px 24px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.card-subject-title {
+  color: var(--text-title);
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-author {
+  color: #5c5c5c;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card-subject-text {
+  color: #4d4d4d;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0;
+}
+
+.card-btn-group {
   display: flex;
-  align-items: center;
-  line-height: 20px;
+  gap: 15px;
 }
 
 footer a {
