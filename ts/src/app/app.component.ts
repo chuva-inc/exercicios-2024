@@ -17,4 +17,24 @@ export class AppComponent {
   toggleExpand() {
     this.isExpanded = !this.isExpanded;
   }
+
+  toggleExpandAnswered() {
+    this.isExpandedAnswered = !this.isExpandedAnswered;
+    this.showComments = !this.showComments;
+  }
+
+  toggleForm() {
+    this.showForm = !this.showForm;
+    this.showIdeas = !this.showIdeas;
+  }
+ 
+  submitForm(event: Event): void {
+    event.preventDefault();
+      this.toggleFeedback();
+  }
+
+  toggleFeedback() {
+    this.showForm = !this.showForm;
+    this.showFeedback = !this.showFeedback;
+  }
 }
