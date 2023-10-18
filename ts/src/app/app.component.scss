@@ -640,10 +640,12 @@ textarea {
   transition: opacity 0.5s ease-in-out 3s;
 }
 
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
-  }
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 3s;
+  cursor: pointer;
+}
 
   .card.highlight-card span {
     margin-left: 72px;
