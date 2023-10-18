@@ -196,24 +196,74 @@
           </div>
         </div>
 
-    <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a>
+        <!-- Discussoes -->
 
-    <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
-    </div>
-    <div class="comments-container">
-      Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
-    </div>
+        <div class="discuss">
+          <div class="header-discuss">
+            <h3 class="title-discuss">Discussões</h3>
+          </div>
 
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
+          <div class="ideas" [ngClass]="{ hidden: !showIdeas }">
+            <div class="group-ideas">
+              <p class="ideas-text">
+                Compartilhe suas ideias ou dúvidas com os autores!
+              </p>
+
+              <div class="ideas-icons">
+                <img src="../assets/icone1.png" alt="icone 1" />
+                <img src="../assets/icone2.png" alt="icone 2" />
+                <img src="../assets/icone3.png" alt="icone 3" />
+              </div>
+
+              <p class="ideas-p">
+                Sabia que o maior estímulo no desenvolvimento científico e
+                cultural é a curiosidade? Deixe seus questionamentos ou
+                sugestões para o autor!
+              </p>
+            </div>
+
+            <div class="create-topic">
+              <img
+                src="../assets/divisória.png"
+                alt="divisória"
+                class="line-create"
+              />
+              <button class="btn-create-topic" (click)="toggleForm()">
+                <img
+                  src="../assets/icon - criar.png"
+                  alt="create topic"
+                  class="create-icon"
+                />
+                criar tópico
+              </button>
+            </div>
+          </div>
+
+          <div class="topic-card" [ngClass]="{ hidden: !showForm }">
+            <p class="topic-title">
+              Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+              autores!
+            </p>
+            <form class="form">
+              <div class="form-topic">
+                <label for="assunto" class="form-subject-text">Assunto</label>
+                <input
+                  type="text"
+                  name="assunto"
+                  class="subject"
+                  placeholder="Defina um tópico sucinto para notificar os autores..."
+                />
+                <label for="conteudo" class="form-subject-text">Conteúdo</label>
+                <textarea name="conteudo" class="form-textarea"></textarea>
+                <div class="submit-topic">
+                  <div class="line-topic"></div>
+                  <button class="submit" (click)="submitForm($event)">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
 
     <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
   </div>
