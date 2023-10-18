@@ -1,15 +1,10 @@
 * {
   margin: 0;
-  overflow-x: hidden;
 }
 
 body {
-  display: flex;
-  padding: 0;
   height: 100vh;
-  width: 100%;
 }
-
 
 .event-info {
   display: flex;
@@ -95,12 +90,10 @@ body {
 }
 
 .slaca-header {
-  height: 68px;
+  height: fit-content;
   background: #FDF1EB;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 
@@ -123,7 +116,7 @@ body {
 
 .event-info-container {
   display: flex;
-  width: calc(100vw - 220px); 
+  width: calc(100vw - 280px); 
   align-items: center;
   justify-content: space-around;
 }
@@ -263,7 +256,7 @@ body {
 
 #resume-section {
   max-width: 1058px;
-  max-height: 560px;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -279,7 +272,7 @@ body {
   font-size: 20px;
   position: relative;
   font-weight: 500;
-  width: 1058px;
+  width: 1042px;
   height: 45px;
   background-color: #FDF1EB;
   border: 1px solid #ECECEC;
@@ -298,8 +291,7 @@ body {
 
 #discussion-section {
   width: 1058px;
-  max-height: 100%;
-  height: 1640px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -321,6 +313,7 @@ body {
 }
 
 .discussion-description-image-container {
+  display: flex;
   gap: 50px;
 }
 .description-container img {
@@ -480,6 +473,7 @@ body {
 }
 
 #description-topic-container {
+  display: none;
   width: 95%;
   gap: 8px;
   flex-direction: column;
