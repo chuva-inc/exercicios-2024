@@ -22,11 +22,11 @@
             <p>ISSN: 1234-5678</p>
           </div>
           <div class="language-switch">
-            <button>
+            <a>
               <img src="../assets/language image.svg" alt="Idioma">
               PT,BR
               <img src="../assets/dropdown.svg" alt="Abrir Menu de idiomas">
-            </button>
+            </a>
           </div>
           <div class="user-info">
             <div>
@@ -41,12 +41,32 @@
     <div class="page-content">
       <div class="menu-container">
         <img src="../assets/slaca-logo.svg" alt="Logo SLACA" class="slaca-logo">
-        <button>Apresentação</button>
-        <button>Comitês</button>
-        <button>Autores</button>
-        <button>Eixos temáticos</button>
-        <button id="trabalhos-button">Trabalhos</button>
-        <button>Contato</button>
+        <div class="nav-page">
+          <div>
+            <a>Apresentação</a>
+            <hr class="nav-page-rectangle">
+          </div>
+          <div>
+            <a>Comitês</a>
+            <hr class="nav-page-rectangle">
+          </div>
+          <div>
+            <a>Autores</a>
+            <hr class="nav-page-rectangle">
+          </div>
+          <div>
+            <a>Eixos temáticos</a>
+            <hr class="nav-page-rectangle">
+          </div>
+          <div>
+            <a id="trabalhos-button">Trabalhos</a>
+            <hr class="nav-page-rectangle">
+          </div>
+          <div>
+            <a>Contato</a>
+            <hr class="nav-page-rectangle">
+          </div>
+        </div>
       </div>
       <div class="blog-content">
         <div class="blog-title">
@@ -58,13 +78,13 @@
           </div>
           <div class="blog-buttons-container">
             <div class="blog-buttons">
-              <button id="download-button">Download</button>
-              <button id="star-button">
+              <a id="download-button">Download</a>
+              <a id="star-button">
                 <img src="../assets/star.svg">
-              </button>
-              <button id="doi-button">
+              </a>
+              <a id="doi-button">
                 <img src="../assets/doi.svg">
-              </button>
+              </a>
             </div>
             <p id="citation-info">COMO CITAR ESTE TRABALHO?</p>
             <div class="blog-details">
@@ -75,11 +95,13 @@
                 <p>Tipo de apresentação: <span>Pôster</span></p>
                 <p>Eixo Temático: <span>Alimentação e Saúde (AS)</span></p>
                 <p>Palavras-chaves: <span>Alimentos funcionais, alimentação escolar</span></p>
-                <p>Autores:</p>
+                <br>
+                <p style="color: #000000">Autores:</p>
                 <p>Galileo Galilei</p>
                 <p>Berta Lange de Marretes</p>
                 <p>Isaac Newton</p>
                 <p>Stephen Hawking</p>
+                <br>
                 <p>Universidade Estadual de Campinas</p>
                 <p>Universidade de São Paulo</p>
                 <p>Instituto Nacional de Pesquisas Espaciais</p>
@@ -94,7 +116,7 @@
               <p id="resume-id">Resumo</p>
             </div>
             <p id="resume-description" class="expandable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...
-               <button class="btn-show-more">ver mais</button>
+               <a class="btn-show-more">ver mais</a>
                <span class="aditional-content"><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
 
                 Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. <br>Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
@@ -112,15 +134,17 @@
               <p class="send-topic-description">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
               <a class="send-topic-lookahead" href="">Descubra outros trabalhos!</a>
               <p id="description-topic-header">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
-              <div id="description-topic-container" >
-                <p class="description-topic-container-subject">Assunto</p>
-                <input type="text" placeholder="Defina um tópico sucinto para notificar os autores..." class="subject">
-                <p class="description-topic-container-subject">Conteúdo</p>
-                <div class="textarea-content-container">
-                    <textarea class="subject1"></textarea>
-                    <button class="btn-send">Enviar</button>
-                  </div>
-              </div>
+              <form>
+                <div id="description-topic-container" >
+                  <p class="description-topic-container-subject">Assunto</p>
+                  <input type="text" placeholder="Defina um tópico sucinto para notificar os autores..." class="subject">
+                  <p class="description-topic-container-subject">Conteúdo</p>
+                  <div class="textarea-content-container">
+                      <textarea class="subject1"></textarea>
+                      <button type="button" class="btn-send">Enviar</button>
+                    </div>
+                </div>
+              </form>
               <p id="discussion-description">Compartilhe suas ideias ou dúvidas com os autores!</p>
               <div class="discussion-description-image-container">
                 <img src="../assets/discussion-icon1.svg">
@@ -129,7 +153,7 @@
               </div>
               <p id="discussion-call">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
               <div class="create-topic">
-                <button class="btn-create-topic">+ criar tópico</button>
+                <a class="btn-create-topic">+ criar tópico</a>
               </div>
               <div class="card-components" id="card-components-id">
                 <div class="card-subject" id="card-subject-id">
@@ -169,62 +193,62 @@
                 </div>
               </div>
               <div class="upper-card-component">                
-                <div class="card-components" id="card-component-thread">
+                <div class="answered-topic">
                   <div class="card-subject">
-                    <p id="subject-question">Assunto da pergunta aparece aqui</p>
+                    <p class="ops-topic-subject">Assunto da pergunta aparece aqui</p>
                     <p id="subject-author">Carlos Henrique Santos</p>
                   </div>
                   <div>
-                    <p class="card-subject-question">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto
+                    <p class="comments-container">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto
                        de processo formativo situado impacto de processo formativo processo...</p>
                   </div>
                   <div class="card-components-info">
-                    <button class="btn-dp" id="btn-thread"><span>&#10247;</span></button>
+                    <a class="btn-dp" id="btn-thread"><span>&#10247;</span></a>
                     <img src="../assets/favoritar.svg">
                     <p>4 likes</p>
                     <p>4 respostas</p>
                   </div>
                 </div>
-                <div class="quote-answer-container">
+                <div class="subtopic-comments-container">
                   <div class="author-header">
-                    <p>Adriano da Silva</p>
+                    <p class="post-author-name">Adriano da Silva</p>
                     <div class="author-container">
                       <p>Autor</p>
                       <img src="../assets/author-mark.svg">
                     </div>
                   </div>
-                  <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo
+                  <p class="topic-comments">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo
                   formativo situado impacto de processo formativo processo.</p>
                 </div>
-                <div class="quote-answer-container" id="quote-answer-guest">
+                <div class="subtopic-comments-container" id="quote-answer-guest">
                   <div class="author-header">
-                    <p>Carlos Henrique Santos</p>
+                    <p class="post-author-name">Carlos Henrique Santos</p>
                   </div>
-                  <p>Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
+                  <p class="topic-comments">Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
 
                     Obrigada pela resposta, muito interessante o seu trabalho! </p>
                 </div>
-                <div class="quote-answer-container">
+                <div class="subtopic-comments-container">
                   <div class="author-header">
-                    <p>Carmila Ferreira Andrade</p>
+                    <p class="post-author-name">Carmila Ferreira Andrade</p>
                     <div class="author-container">
                       <p>Coautor</p>
                       <img src="../assets/author-mark.svg">
                     </div>
                   </div>
-                  <p>Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                  <p class="topic-comments">Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
 
                     Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
                 </div>
-                <div class="quote-answer-container">
+                <div class="subtopic-comments-container">
                   <div class="author-header">
-                    <p>Ana Carolina</p>
+                    <p class="post-author-name">Ana Carolina</p>
                     <div class="author-container">
-                      <p>Coautor</p>
+                      <p class="post-author-name">Coautor</p>
                       <img src="../assets/author-mark.svg">
                     </div>
                   </div>
-                  <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                  <p class="topic-comments">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
                 </div>
               </div>
             </div>

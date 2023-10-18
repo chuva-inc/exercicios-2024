@@ -12,19 +12,36 @@ const sendTopicLookahead = document.querySelectorAll('.send-topic-lookahead');
 const descriptionTopicHeader = document.querySelectorAll('#description-topic-header');
 const descriptionTopicContainer = document.querySelectorAll('#description-topic-container');
 
-const sendCard = document.querySelectorAll('#card-components-id')
+const sendCard = document.querySelectorAll('#card-components-id');
+
+const btnOpenThread = document.querySelectorAll('#btn-thread');
+const answerContainers = document.querySelectorAll('.subtopic-comments-container')
+
+function openComponent(index) {
+  descriptionTopicContainer[index].style.display = 'none';
+  sendTopicDescription[index].style.display = 'block';
+  sendTopicLookahead[index].style.display = 'block';
+  sendCard[index].style.display = 'flex';
+}
+
+function handleButtonClick(index) {
+  descriptionTopicContainer[index].style.display = 'none';
+  sendTopicDescription[index].style.display = 'block';
+  sendTopicLookahead[index].style.display = 'block';
+  sendCard[index].style.display = 'flex';
+}
 
 btnShowMore.forEach(function (btn, index) {
   btn.addEventListener('click', function () {
     if (hiddenText[index].style.display === 'none' || hiddenText[index].style.display === '') {
       hiddenText[index].style.display = 'block';
-      btnShowMore[index].style.display = 'none'
+      btnShowMore[index].style.display = 'none';
     } else {
       hiddenText[index].style.display = 'none';
-      btn.textContent = 'Ver Mais'; 
     }
   });
 });
+
 
 btnCreateTopic.forEach(function (btn, index) {
     btn.addEventListener('click', function () {
@@ -57,5 +74,14 @@ btnSend.forEach(function (btn, index) {
     sendTopicLookahead[index].style.display = 'block';
 
     sendCard[index].style.display = 'flex'
+  });
+});
+btnOpenThread.forEach(function (btn, index) {
+  btn.addEventListener('click', function() {
+    answerContainers.forEach(function (container, containerIndex) {
+      setTimeout(function() {
+        container.style.display = 'flex';
+      }, containerIndex * 100); 
+    });
   });
 });
