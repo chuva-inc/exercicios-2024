@@ -427,9 +427,15 @@
   width: 235.15px;
 }
 
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+.topic-title {
+  color: #5c5c5c;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
 }
 
 .card-container .card:not(.highlight-card):hover .material-icons path {
