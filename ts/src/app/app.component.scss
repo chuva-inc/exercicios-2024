@@ -647,27 +647,53 @@ textarea {
   cursor: pointer;
 }
 
-  .card.highlight-card span {
-    margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 17px 24px;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
-  }
+.answers:nth-child(odd) {
+  background: #f8f8f8;
 }
 
-#required-elements {
-  h3 {
-    margin-top: 15px;
-  }
+.card-answer-author {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer-author {
+  color: #5c5c5c;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.answer-text {
+  color: #4d4d4d;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.signature-card {
+  display: flex;
+  gap: 14px;
+}
+
+.signature {
+  color: var(--text-title);
+  text-align: right;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
   h2, a {
     font-size: 12px;
   }
