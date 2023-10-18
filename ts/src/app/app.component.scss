@@ -116,26 +116,46 @@
   width: 97px;
 }
 
-.toolbar img {
-  margin: 0 16px;
+.global {
+  margin-top: -5px;
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
+.login {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
+.login-text {
+  color: #333;
+  text-align: right;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
+.login-email {
+  color: #333;
+  text-align: right;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.content {
+.login-picture {
+  border-radius: 50%;
+}
+
+.container-main {
+  padding: 20px 43px;
+}
+
+.space-primary,
+.space-secudary {
   display: flex;
   margin: 82px auto 32px;
   padding: 0 16px;
