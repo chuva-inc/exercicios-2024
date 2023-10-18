@@ -47,11 +47,15 @@ body {
 
 .nav-page {
   display: flex;
-  padding-left: 24px;
   background: #FFFFFF;
   flex-direction: column;
-  align-items: flex-start;
+  padding-left: 5px;
   gap: 2px;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
 }
 
 .nav-page-rectangle {
@@ -109,9 +113,9 @@ body {
 }
 
 #trabalhos-button {
-  background-color: #FDF1EB;
+  width: 100%;
   border: none;
-  border-left: 14px solid transparent; 
+  border-left: 8px solid transparent; 
   border-image: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
   border-image-slice: 1;
 }
@@ -146,6 +150,9 @@ body {
 }
 
 #download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   width: 120px;
   height: 32px;
@@ -157,6 +164,9 @@ body {
 }
 
 #star-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ED7839;
   border: none;
   border-radius: 4px;
@@ -165,11 +175,14 @@ body {
 }
 
 #doi-button {
-  background-color: #ED7839;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 43px;
   height: 31px;
   border-radius: 4px;
   border: none;
+  background-color: #ED7839;
 }
 
 .blog-buttons-container {
@@ -286,7 +299,7 @@ body {
 #discussion-section {
   width: 1058px;
   max-height: 100%;
-  height: fit-content;
+  height: 1640px;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -324,9 +337,12 @@ body {
 
 
 .btn-create-topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   width: 135px;
   height: 32px;
   border-right: 123px solid #000;
@@ -336,7 +352,6 @@ body {
   color: #FFFFFF;
   border: none;
   border-radius: 4px;
-  padding: 5px 15px;
   cursor: pointer;
 }
 .create-topic {
@@ -367,14 +382,15 @@ body {
 
 .card-components {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 1028px;
-  width: 97%;
+  width: 95%;
+  padding: 10px;
+  gap: 20px;
   max-height: 240px;
   border: 1px solid #E7E7E7;
   box-shadow: 0px 0px 8px 0px #0000001F;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
   margin-bottom: 0;
 }
 
@@ -596,6 +612,14 @@ body {
   opacity: 0.2;
 }
 
+.card-subject-question {
+  padding-left: 20px;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
 #card-subject-question-id {
   opacity: 0.2;
 }
@@ -612,7 +636,7 @@ body {
   font-size: 14px;
   width: 1028px;
   width: 99%;
-  height: 150px;
+  height: 160px;
   max-height: fit-content;
   gap: 10px;
   flex-direction: column;
@@ -665,6 +689,9 @@ body {
 }
 
 .post-author-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Quicksand',sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -683,6 +710,22 @@ form {
   box-shadow: 0px 0px 8px 0px #0000001F;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   gap: 20px;
   margin-bottom: 0;
+}
+
+.ops-topic-subject {
+  color: #ED7839;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.comments-container {
+  font-family: 'Quicksand',sans-serif;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
 }

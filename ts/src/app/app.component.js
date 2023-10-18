@@ -79,9 +79,7 @@ btnSend.forEach(function (btn, index) {
 btnOpenThread.forEach(function (btn, index) {
   btn.addEventListener('click', function() {
     answerContainers.forEach(function (container, containerIndex) {
-      setTimeout(function() {
         container.style.display = 'flex';
-      }, containerIndex * 100); 
     });
   });
 });
