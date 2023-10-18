@@ -634,12 +634,11 @@ textarea {
   cursor: pointer;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link) ,
-  .terminal {
-    width: 100%;
-  }
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 3s;
+}
 
   .card:not(.highlight-card) {
     height: 16px;
