@@ -438,59 +438,62 @@
   margin-top: 15px;
 }
 
-.card-container .card:not(.highlight-card):hover .material-icons path {
-  fill: rgb(105, 103, 103);
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
+.form-topic {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 10px;
 }
 
-.card.card.highlight-card span {
-  margin-left: 60px;
+.form-subject-text {
+  color: var(--text-title);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
+.subject,
+.form-textarea {
+  padding: 10px 20px;
+  height: 39px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #4d4d4d;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
 }
 
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
+.form-textarea {
+  height: 80px;
+  border-bottom: none;
 }
 
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
+textarea {
+  resize: none;
 }
 
-a:hover {
-  color: #125699;
+.form-Topic,
+.submit-topic {
+  display: flex;
 }
 
-.terminal {
-  position: relative;
+.line-topic {
   width: 80%;
-  max-width: 600px;
-  border-radius: 6px;
-  padding-top: 45px;
-  margin-top: 8px;
-  overflow: hidden;
-  background-color: rgb(15, 15, 16);
+  border-radius: 0px 0px 4px 4px;
+  border: 1px solid #ccc;
+  background: #eaf1f2;
 }
 
 .terminal::before {
