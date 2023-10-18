@@ -265,8 +265,126 @@
             </form>
           </div>
 
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
-  </div>
+          <div class="feedback" [ngClass]="{ hidden: !showFeedback }">
+            <div class="topic-add">
+              <p class="topic-add-title">
+                Seu tópico foi enviado com sucesso! :D
+              </p>
+              <p class="topic-add-p">
+                Agradecemos por sua contribuição, uma notificação será enviada
+                ao seu email assim que seu tópico for respondido!
+              </p>
+              <a class="topic-link" href="#">Descubra outros trabalhos!</a>
+              <div class="create-topic">
+                <img
+                  src="../assets/divisória.png"
+                  alt="divisória"
+                  class="line-create"
+                />
+                <button class="new-topic-btn" (click)="toggleFeedback()">
+                  <div>criar novo tópico</div>
+                </button>
+              </div>
+            </div>
+
+            <div class="card-check">
+              <img
+                class="card-topic-check"
+                src="../assets/check cinza.png"
+                alt="check"
+              />
+              <p class="card-check-text">Aguardando feedback dos autores</p>
+              <a href="#" class="card-check-edit">Editar tópico</a>
+            </div>
+          </div>
+          <!-- Cards com perguntas -->
+          <div class="cards-container">
+            <div class="card">
+              <div class="subject-container">
+                <h3 class="card-subject-title">
+                  Assunto da pergunta aparece aqui
+                </h3>
+                <p class="card-author">Carlos Henrique Santos</p>
+                <p class="card-subject-text">
+                  Comecinho da pergunta aparece aqui resente relato inscreve-se
+                  no campo da análise da dimensão e impacto de processo
+                  formativo situado impacto de processo formativo processo...
+                </p>
+                <div class="card-btn-group">
+                  <img
+                    class="info"
+                    src="../assets/mais informações.png"
+                    alt=""
+                  />
+                  <div class="like">
+                    <img src="../assets/favoritar.png" alt="" />
+                  </div>
+                  <div class="likes-count">1 like</div>
+                  <div class="answers-count">1 resposta</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="subject-container click"
+                (click)="toggleExpandAnswered()"
+                [ngClass]="{ hidden: showComments, visible: !showComments }"
+              >
+                <h3 class="card-subject-title">
+                  Assunto da pergunta aparece aqui
+                </h3>
+                <p class="card-author">Carlos Henrique Santos</p>
+                <p class="card-subject-text">
+                  Comecinho da pergunta aparece aqui resente relato inscreve-se
+                  no campo da análise da dimensão e impacto de processo
+                  formativo situado impacto de processo formativo processo...
+                </p>
+                <div class="card-btn-group">
+                  <img
+                    class="info"
+                    src="../assets/mais informações.png"
+                    alt="informações"
+                  />
+                  <div class="like">
+                    <img src="../assets/favoritar.png" alt="favorito" />
+                  </div>
+                  <div class="likes-count">1 like</div>
+                  <div class="answers-count">1 resposta</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card answered-topic ops-topic-subject"
+              *ngIf="isExpandedAnswered"
+              (click)="toggleExpandAnswered()"
+              [ngClass]="{ visible: showComments, hidden: !showComments }"
+            >
+              <div class="subject-container">
+                <h3 class="card-subject-title answered-topic ops-topic-subject">
+                  Assunto da pergunta aparece aqui
+                </h3>
+                <p class="card-author">Carlos Henrique Santos</p>
+                <p class="card-subject-text">
+                  Comecinho da pergunta aparece aqui resente relato inscreve-se
+                  no campo da análise da dimensão e impacto de processo
+                  formativo situado impacto de processo formativo processo
+                  resente relato inscreve-se no campo da análise da dimensão e
+                  impacto de processo formativo situado impacto de processo
+                  formativo processo?
+                </p>
+                <div class="card-btn-group">
+                  <img
+                    class="info"
+                    src="../assets/mais informações.png"
+                    alt="info"
+                  />
+                  <div class="like">
+                    <img src="../assets/favoritar.png" alt="favorito" />
+                  </div>
+                  <div class="likes-count">4 likes</div>
+                  <div class="answers-count">4 respostas</div>
+                </div>
+              </div>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>
