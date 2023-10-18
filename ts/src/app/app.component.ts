@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DevChuva';
+  isExpanded: boolean = false;
+
+  toggleExpand() {
+    this.isExpanded = !this.isExpanded;
+  }
 }
