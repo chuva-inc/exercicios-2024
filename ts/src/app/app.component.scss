@@ -236,9 +236,74 @@
   text-align: right;
 }
 
-.video {
-  width: 784px;
-  height: 439px;
+.video-space {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  position: relative; 
+
+}
+
+.video-space img {
+  width: 100%;
+}
+
+.overlay {
+  padding: 35px 30px 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background: rgba(141, 53, 6, 0.5);
+  width: 100%;
+  height: 100%; 
+}
+
+.overlay-text,
+.name-student,
+.university-student {
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 25px; 
+}
+
+.overlay-text {
+  font-size: 24px;
+  letter-spacing: 1.2px;
+}
+
+.overlay-student {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.img-student {
+  display: flex;
+  border-radius: 50%;
+  padding: 3px;
+  border: 1px solid #ed7839;
+}
+
+.img-student img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.name-student {
+  font-size: 34px;
+  letter-spacing: 1.7px;
+  margin-bottom: 10px;
+}
+
+.university-student {
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .detail-div {
