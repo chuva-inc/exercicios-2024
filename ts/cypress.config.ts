@@ -12,8 +12,8 @@ export default defineConfig({
     runMode: 0,
     openMode: 0,
   },
-  viewportWidth: 1280,
-  viewportHeight: 800,
+  viewportWidth: 1440,
+  viewportHeight: 900,
   e2e: {
     setupNodeEvents(on, config) {
       getCompareSnapshotsPlugin(on, config);

@@ -41,29 +41,31 @@ body {
 }
 
 .nav-page {
+  font-family: 'Quicksand',sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 40px;
+  line-height: 19px;
   display: flex;
   background: #FFFFFF;
   flex-direction: column;
   padding-left: 5px;
   gap: 2px;
-  font-family: 'Quicksand',sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 19px;
   text-align: left;
 }
 
 .nav-page-rectangle {
-  width: 220px;
+  width: 215px;
   padding-left: -20px;
-  background-color: #E7E7E7;
+  opacity: 0.5;
+  color: #E7E7E7;
 }
 
 .menu-container {
   display: flex;
   flex-direction: column;
   width: 220px;
-  height: 100vh;
+  height: auto;
   gap: 1px;
   box-shadow: 0px 0px 10px 0px #00000040;
 }
@@ -78,14 +80,15 @@ body {
   padding-left: 20px;
 }
 
-.language-switch button {
-  gap: 3px;
-  background: #FDF1EB;
+.language-switch a {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   width: 97px;
   height: 34px;
+  gap: 3px;
+  background: #FDF1EB;
   border: 1px solid #CCCCCC;
 }
 
@@ -104,6 +107,7 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
+
 
 #trabalhos-button {
   width: 100%;
@@ -154,6 +158,10 @@ body {
   color: white;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(0deg, #ED7839, #ED7839);
   
+}
+
+#download-button img {
+  padding-right: 8px;
 }
 
 #star-button {
