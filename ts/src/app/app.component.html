@@ -7,6 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<div class="bodyAll">
   <!-- Navbar -->
   <nav id="side-bar">
     <div class="logo">SLACA 2019</div>
@@ -81,11 +82,7 @@
                 Download
               </button>
               <button class="btn-star">
-                <img
-                  class="star"
-                  src="../assets/star-solid.svg"
-                  alt="star"
-                />
+                <img class="star" src="../assets/star-solid.svg" alt="star" />
               </button>
 
               <button class="btn-doi">
@@ -139,7 +136,7 @@
         </div>
 
         <!-- Resumo -->
-        
+
         <div class="resume">
           <div class="header-resume">
             <h3 class="title-resume">Resumo</h3>
@@ -326,13 +323,13 @@
             </div>
             <div class="card">
               <div
-                class="subject-container click"
+                class="answered-topic subject-container click"
                 (click)="toggleExpandAnswered()"
                 [ngClass]="{ hidden: showComments, visible: !showComments }"
               >
-                <h3 class="card-subject-title">
+                <h4 class="ops-topic-subject card-subject-title">
                   Assunto da pergunta aparece aqui
-                </h3>
+                </h4>
                 <p class="card-author">Carlos Henrique Santos</p>
                 <p class="card-subject-text">
                   Comecinho da pergunta aparece aqui resente relato inscreve-se
@@ -354,15 +351,14 @@
               </div>
             </div>
             <div
-              class="card answered-topic ops-topic-subject"
-              *ngIf="isExpandedAnswered"
+              class="card"
               (click)="toggleExpandAnswered()"
-              [ngClass]="{ visible: showComments, hidden: !showComments }"
+              *ngIf="isExpandedAnswered"
             >
-              <div class="subject-container">
-                <h3 class="card-subject-title answered-topic ops-topic-subject">
+              <div class="answered-topic subject-container">
+                <h4 class="ops-topic-subject card-subject-title">
                   Assunto da pergunta aparece aqui
-                </h3>
+                </h4>
                 <p class="card-author">Carlos Henrique Santos</p>
                 <p class="card-subject-text">
                   Comecinho da pergunta aparece aqui resente relato inscreve-se

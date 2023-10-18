@@ -27,10 +27,10 @@ export class AppComponent {
     this.showForm = !this.showForm;
     this.showIdeas = !this.showIdeas;
   }
- 
+
   submitForm(event: Event): void {
     event.preventDefault();
-      this.toggleFeedback();
+    this.toggleFeedback();
   }
 
   toggleFeedback() {

@@ -368,7 +368,6 @@
 
 .ideas-icons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
@@ -703,4 +702,50 @@ textarea {
 
 .footer {
   width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  #side-bar {
+    width: 160px;
+  }
+
+  #side-bar img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 24px;
+    height: 48px;
+  }
+
+
+  .link {
+    font-size: 14px;
+  }
+
+  .btn-details {
+    flex-direction: row;
+  }
+
+  .btn-icons {
+    width: 100%;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .detail-div {
+    width: 100%;
+  }
+
+  .hidden-on-small-screens {
+    display: none;
+  }
+
+  .visible-on-small-screens {
+    display: block;
+  }
 }
