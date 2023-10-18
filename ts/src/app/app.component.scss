@@ -98,17 +98,22 @@
   width: 105px;
 }
 
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
+.language {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  background-color: var(--text-color);
-  color: white;
-  font-weight: 600;
+  background: transparent;
+  border: none;
+  border: 1px solid #cccccc;
+  color: #333333;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 7.5px;
+  gap: 3px;
+  height: 34px;
+  width: 97px;
 }
 
 .toolbar img {
