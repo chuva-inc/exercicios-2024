@@ -496,9 +496,41 @@ textarea {
   background: #eaf1f2;
 }
 
-.terminal::before {
-  content: "\2022 \2022 \2022";
-  position: absolute;
+.submit {
+  border: none;
+  width: 20%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 4px 0px;
+  background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24))
+    drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.12));
+  color: #fff;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.topic-link {
+  color: var(--text-title);
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.25px;
+  text-decoration-line: underline;
+  margin: 25px 0;
+}
+
+.card-check {
+  gap: 10px;
   top: 0;
   left: 0;
   height: 4px;
