@@ -89,9 +89,6 @@ class Scrapper {
                 }elseif($count == 4){
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-                }elseif($count == 4){
-                  $cells[] = WriterEntityFactory::createCell($autor);
-                  $cells[] = WriterEntityFactory::createCell($instituicao);
                 }elseif($count == 5){
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
