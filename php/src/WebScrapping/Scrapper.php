@@ -2,10 +2,8 @@
 
 namespace Chuva\Php\WebScrapping;
 
-use Box\Spout\Common\Entity\Row;
 use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
-use Spout\Table;
 
 /**
  * Does the scrapping of a webpage.
@@ -17,43 +15,40 @@ class Scrapper {
    */
   public function scrap(\DOMDocument $dom){
     $xpath = new \DOMXPath($dom);
-
-    # Query the HTML for the paper cards
+    // Query the HTML for the paper cards
     $paper_card = $xpath->query('.//a[@class="paper-card p-lg bd-gradient-left"]');
     
     $filePath = 'exemplo.xlsx';
-      $writer = WriterEntityFactory::createXLSXWriter();
-      $writer->openToFile($filePath);
-      $style = (new StyleBuilder())
-        ->setFontBold()
-        ->build();
+    $writer = WriterEntityFactory::createXLSXWriter();
+    $writer->openToFile($filePath);
+    $style = (new StyleBuilder())
+      ->setFontBold()
+      ->build();
 
-      $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',
-      	'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3',
-        'Author 3 Institution','Author 4','Author 4 Institution'], $style);
-      $writer->addRow($headerRow); 
-   
-                
+    $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',
+      'Author 1 Institution',	'Author 2'	,'Author 2 Institution', 'Author 3',
+      'Author 3 Institution','Author 4','Author 4 Institution'], $style);
+    $writer->addRow($headerRow); 
    
     try{
-      # Iterate over the paper cards
+      // Iterate over the paper cards
       foreach ($paper_card as $elemento) {
-        # Iterate over the child nodes of the paper card 
+        // Iterate over the child nodes of the paper card 
         foreach ($elemento->childNodes as $node) {
-          # Get the tag name of the child node
+          // Get the tag name of the child node
           $node_tagname = $node->tagName; 
-          # If the tag name is 'h4', then it is the title of the paper
+          // If the tag name is 'h4', then it is the title of the paper
           if($node_tagname == 'h4'){
-            # Print the title of the paper
+            // Print the title of the paper
             $title = $node->nodeValue;
             print_r("Titulo: $title \n");
           } 
-          # If the tag name is 'div', then it is the title of the paper
+          // If the tag name is 'div', then it is the title of the paper
           else if($node_tagname == 'div'){          
             $filhoNo = $node->childNodes;
             $count = 1;
             foreach ($filhoNo as $no){
-              # If the tag name is 'div', then it is the title of the paper     
+              // If the tag name is 'div', then it is the title of the paper     
               if($no->nodeName == 'span'){
                 $instituicao = $no->getAttribute('title');
                 print_r("Instituição: $instituicao \n");    
@@ -98,11 +93,5 @@ class Scrapper {
      }
      $writer->close();
   }
-  
-
-     
-        
-        
+    
 }
-
-
