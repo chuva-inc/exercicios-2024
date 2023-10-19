@@ -18,9 +18,10 @@ class Main {
     // Write your logic to save the output file bellow.   
     $data = (new Scrapper())->scrap($dom);
     
+    print_r($data);
   }  
 }
      
-print_r($data);
+
  
 ?>
