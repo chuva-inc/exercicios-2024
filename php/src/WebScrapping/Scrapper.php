@@ -60,7 +60,7 @@ class Scrapper {
                 $autor = $no->textContent;
                 print_r("Autores: $autor \n");
                 if($count == 1){
-                  $row = WriterEntityFactory::createRow(['','','',$autor,$instituicao]);
+                  $row = WriterEntityFactory::createRowFromArray(['','','',$autor,$instituicao]);
                 }elseif($count == 2){
                   $row = WriterEntityFactory::createRowFromArray(['','','','','',$autor,$instituicao]);
                 }elseif($count == 3){
@@ -91,9 +91,7 @@ class Scrapper {
         } 
         
       } 
-      /* 
-
-      echo "Tabela criada com sucesso em $filePath \n" ; */
+      echo "Tabela criada com sucesso em $filePath \n" ;
 
     }catch(\DOMException $e){
       print_r($e->getMessage());
