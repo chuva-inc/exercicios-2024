@@ -154,6 +154,31 @@
 
 .login-picture {
   border-radius: 50%;
+  max-width: 100px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ntf {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #f85959;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .container-main {
@@ -240,8 +265,7 @@
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
-  position: relative; 
-
+  position: relative;
 }
 
 .video-space img {
@@ -259,7 +283,7 @@
   border-radius: 3px;
   background: rgba(141, 53, 6, 0.5);
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 .overlay-text,
@@ -269,7 +293,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  line-height: 25px; 
+  line-height: 25px;
 }
 
 .overlay-text {
