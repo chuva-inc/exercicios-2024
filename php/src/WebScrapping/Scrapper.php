@@ -32,27 +32,30 @@ class Scrapper {
       'Author 8 Institution', 'Author 9', 'Author 9 Institution', 
     ], $style);
     $writer->addRow($headerRow); 
-    $cells = [ ];
+    $cells = [];
     $title = '';
     try {
       // Iterate over the paper cards.
       foreach ($paper_card as $elemento) {
-        // Iterate over the child nodes of the paper card. 
+        // Iterate over the child nodes of the paper card.
         foreach ($elemento->childNodes as $node) {
           // Get the tag name of the child node.
-          $node_tagname = $node->tagName; 
+          $node_tagname = $node->tagName;
           // If the tag name is 'h4', then it is the title of the paper.
           if ($node_tagname == 'h4') {
             // Print the title of the paper.
             $title = $node->nodeValue;
             print_r("Titulo: $title \n");
-          } 
+          }
           // If the tag name is 'div', then it is the title of the paper.
-          elseif ($node_tagname == 'div') {          
+          elseif ($node_tagname == 'div') {
             $filhoNo = $node->childNodes;
             $count = 1;
-            foreach ($filhoNo as $no){
-              // If the tag name is 'div', then it is the title of the paper.    
+            foreach ($filhoNo as $no) {
+              /* 
+               * If the tag name is 'div', 
+               * then it is the title of the paper. 
+               */
               if ($no->nodeName == 'div') {
                 if ($no->getAttribute('class') == 'tags mr-sm') {
                   $type = $no->nodeValue;
