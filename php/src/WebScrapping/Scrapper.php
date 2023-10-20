@@ -25,13 +25,13 @@ class Scrapper {
       ->build();
     $lineStyle = (new StyleBuilder())
       ->setShouldWrapText(TRUE)
-      ->build();  
-      $headerRow = WriterEntityFactory::createRowFromArray(['ID','Title',	'Type',	'Author 1',
-      'Author 1 Institution',	'Author 2', 'Author 2 Institution', 'Author 3',
-        'Author 3 Institution', 'Author 4', 'Author 4 Institution', 'Author 5',
-        'Author 5 Institution', 'Author 6', 'Author 6 Institution', 'Author 7',
-        'Author 7 Institution', 'Author 8', 'Author 8 Institution', 'Author 9',
-        'Author 9 Institution'], $style);
+      ->build();
+    $headerRow = WriterEntityFactory::createRowFromArray(['ID', 'Title',	'Type',	'Author 1', 
+    'Author 1 Institution',	'Author 2', 'Author 2 Institution', 'Author 3', 
+    'Author 3 Institution', 'Author 4', 'Author 4 Institution', 'Author 5', 
+    'Author 5 Institution', 'Author 6', 'Author 6 Institution', 'Author 7', 
+    'Author 7 Institution', 'Author 8', 'Author 8 Institution', 'Author 9', 
+    'Author 9 Institution'], $style);
     $writer->addRow($headerRow); 
     $cells = [
       
