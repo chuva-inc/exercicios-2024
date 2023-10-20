@@ -52,15 +52,16 @@ class Scrapper {
             $filhoNo = $node->childNodes;
             $count = 1;
             foreach ($filhoNo as $no) {
-              /* 
-               * If the tag name is 'div', 
-               * then it is the title of the paper. 
-               */
+              /*
+              * If the tag name is 'div', 
+              * then it is the title of the paper. 
+              */
               if ($no->nodeName == 'div') {
                 if ($no->getAttribute('class') == 'tags mr-sm') {
                   $type = $no->nodeValue;
                   print_r($type . "\n");
-                }else {
+                }
+                else {
                   $id = $no->nodeValue;
                   print_r($id . "\n");
                 }
