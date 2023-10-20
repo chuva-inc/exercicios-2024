@@ -37,9 +37,7 @@ class Scrapper {
     try {
       // Iterate over the paper cards.
       foreach ($paper_card as $elemento) {
-        global $id;
         $title = '';
-        global $type;
         // Iterate over the child nodes of the paper card.
         foreach ($elemento->childNodes as $node) {
           // Get the tag name of the child node.
