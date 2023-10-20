@@ -27,16 +27,19 @@ class Scrapper {
       ->setShouldWrapText(TRUE)
       ->build();
     $headerRow = WriterEntityFactory::createRowFromArray([
+      'ID', 'Title', 'Type', 'Author 1', 'Author 1 Institution',	'Author 2', 
       'Author 2 Institution', 'Author 3', 'Author 3 Institution', 'Author 4', 'Author 4 Institution', 
       'Author 5', 'Author 5 Institution', 'Author 6', 'Author 6 Institution', 'Author 7', 'Author 7 Institution', 'Author 8', 
       'Author 8 Institution', 'Author 9', 'Author 9 Institution', 
     ], $style);
     $writer->addRow($headerRow); 
     $cells = [];
-    $title = '';
     try {
       // Iterate over the paper cards.
       foreach ($paper_card as $elemento) {
+        global $id;
+        $title = '';
+        global $type;
         // Iterate over the child nodes of the paper card.
         foreach ($elemento->childNodes as $node) {
           // Get the tag name of the child node.
@@ -51,6 +54,7 @@ class Scrapper {
           elseif ($node_tagname == 'div') {
             $filhoNo = $node->childNodes;
             $count = 1;
+            
             foreach ($filhoNo as $no) {
               /*
               * If the tag name is 'div', 
@@ -79,39 +83,39 @@ class Scrapper {
                     WriterEntityFactory::createCell($autor),
                     WriterEntityFactory::createCell($instituicao),
                   ];
-
+  
                 }elseif ($count == 2) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 3) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 4) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 5) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 6) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 7) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 8) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }elseif ($count == 9) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-
+  
                 }
                 $count++;
               }
