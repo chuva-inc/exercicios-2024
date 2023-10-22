@@ -15,15 +15,15 @@ class PaperTest extends TestCase {
    * Tests construct().
    */
   public function testConstruct() {
-    $paper = new Paper(123, 'Paper title', 'Oral presentation', [
-      new Person('Evariste Galois', 'Lycée Louis-le-Grand'),
+    $paper = new Paper(12345, 'jonathan Luis', 'rr', [
+      new Person('ss', 'vv'),
     ]);
 
-    $this->assertEquals(123, $paper->id);
-    $this->assertEquals('Paper title', $paper->title);
-    $this->assertEquals('Oral presentation', $paper->type);
-    $this->assertEquals('Evariste Galois', $paper->authors[0]->name);
-    $this->assertEquals('Lycée Louis-le-Grand', $paper->authors[0]->institution);
+    $this->assertEquals(12345, $paper->id);
+    $this->assertEquals('jonathan Luis', $paper->title);
+    $this->assertEquals('rr', $paper->type);
+    $this->assertEquals('ss', $paper->authors[0]->name);
+    $this->assertEquals('vv', $paper->authors[0]->institution);
   }
 
 }
