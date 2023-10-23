@@ -68,9 +68,9 @@ class Scrapper {
                   print_r($id . "\n");
                 }
 
-              }elseif ($no->nodeName == 'span') {
+              } elseif ($no->nodeName == 'span') {
                 $instituicao = $no->getAttribute('title');
-                print_r("Instituição: $instituicao \n");    
+                print_r("Instituição: $instituicao \n");
                 $autor = $no->textContent;
                 print_r("Autores: $autor \n");
                 if ($count == 1) {
@@ -81,7 +81,6 @@ class Scrapper {
                     WriterEntityFactory::createCell($autor),
                     WriterEntityFactory::createCell($instituicao),
                   ];
-  
                 }elseif ($count == 2) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
