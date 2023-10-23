@@ -55,9 +55,9 @@ class Scrapper {
             
             foreach ($filhoNo as $no) {
               /*
-              * If the tag name is 'div', 
-              * then it is the title of the paper. 
-              */
+               * If the tag name is 'div', 
+               * then it is the title of the paper. 
+               */
               if ($no->nodeName == 'div') {
                 if ($no->getAttribute('class') == 'tags mr-sm') {
                   $type = $no->nodeValue;
@@ -68,7 +68,8 @@ class Scrapper {
                   print_r($id . "\n");
                 }
 
-              } elseif ($no->nodeName == 'span') {
+              } 
+              elseif ($no->nodeName == 'span') {
                 $instituicao = $no->getAttribute('title');
                 print_r("Instituição: $instituicao \n");
                 $autor = $no->textContent;
@@ -81,35 +82,43 @@ class Scrapper {
                     WriterEntityFactory::createCell($autor),
                     WriterEntityFactory::createCell($instituicao),
                   ];
-                }elseif ($count == 2) {
+                } 
+                elseif ($count == 2) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 3) {
+                } 
+                elseif ($count == 3) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 4) {
+                } 
+                elseif ($count == 4) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 5) {
+                } 
+                elseif ($count == 5) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 6) {
+                } 
+                elseif ($count == 6) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 7) {
+                } 
+                elseif ($count == 7) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 8) {
+                } 
+                elseif ($count == 8) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
-                }elseif ($count == 9) {
+                } 
+                elseif ($count == 9) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
   
