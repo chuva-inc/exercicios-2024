@@ -82,46 +82,39 @@ class Scrapper {
                     WriterEntityFactory::createCell($autor),
                     WriterEntityFactory::createCell($instituicao),
                   ];
+
                 } 
                 elseif ($count == 2) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 3) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 4) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 5) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 6) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 7) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 8) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 } 
                 elseif ($count == 9) {
                   $cells[] = WriterEntityFactory::createCell($autor);
                   $cells[] = WriterEntityFactory::createCell($instituicao);
-  
                 }
                 $count++;
               }
