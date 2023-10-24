@@ -32,4 +32,3 @@ Para entregar os exercícios:
 2. Enquanto programa sua solução, faça [commits atômicos](https://en.wikipedia.org/wiki/Atomic_commit).
 3. Quando estiver tudo passando nos testes, grave o vídeo explicando sua resolução.
 4. Nos envie o link do seu repositório pelo formulário que te enviamos.
-
