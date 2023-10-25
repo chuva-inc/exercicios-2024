@@ -5,7 +5,6 @@ namespace Chuva\Tests\Unit\WebScrapping\WebScrapping\Entity;
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 use PHPUnit\Framework\TestCase;
-
 // require_once 'php/vendor/autoload.php';
 
 /**
