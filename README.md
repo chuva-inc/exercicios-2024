@@ -6,6 +6,9 @@ Só serão considerados para correção testes em que as verificações do Githu
 
 
 # Tecnologias
+## Dart
+Nesse caso você deve implementar um protótipo de alta fidelidade no figma de uma tela para você implementar em Flutter, [veja detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/dart/).
+
 ## PHP
 Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
 

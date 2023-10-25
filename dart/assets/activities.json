@@ -1,0 +1,2308 @@
+{
+  "count": 71,
+  "links": {
+    "self": "https://raw.githubusercontent.com/chuva-inc/exercicios-2023/master/dart/assets/activities.json",
+    "next": "https://raw.githubusercontent.com/chuva-inc/exercicios-2023/master/dart/assets/activities-1.json"
+  },
+  "data": [
+    {
+      "id": 8921,
+      "changed": 1696954105,
+      "start": "2023-11-26T07:00:00-03:00",
+      "end": "2023-11-26T08:00:00-03:00",
+      "title": {
+        "pt-br": "A F\u00edsica dos Buracos Negros Supermassivos"
+      },
+      "description": {
+        "pt-br": "\u003Cdiv class=\u0022flex flex-grow flex-col gap-3 max-w-full\u0022\u003E\r\n\u003Cdiv class=\u0022min-h-[20px] flex flex-col items-start gap-3 whitespace-pre-wrap break-words overflow-x-auto\u0022\u003E\r\n\u003Cdiv class=\u0022markdown prose w-full break-words dark:prose-invert dark\u0022\u003E\r\n\u003Cp\u003EA f\u00edsica dos buracos negros supermassivos explora fen\u00f4menos intensos e enigm\u00e1ticos no universo. Esses objetos astron\u00f4micos, com milh\u00f5es a bilh\u00f5es de vezes a massa do Sol, influenciam fortemente sua vizinhan\u00e7a c\u00f3smica, afetando a evolu\u00e7\u00e3o das gal\u00e1xias, e desafiando nosso entendimento sobre gravidade e a natureza do espa\u00e7o-tempo.\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n"
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [
+        {
+          "id": 340849,
+          "title": "prof_dr",
+          "name": "Stephen William Hawking",
+          "institution": "Universidade de Cambridge",
+          "bio": {
+            "pt-br": "\u003Cp\u003EDoutor em cosmologia, foi professor lucasiano em\u00e9rito na Universidade de Cambridge, um posto que foi ocupado por Isaac Newton, Paul Dirac e Charles Babbage. Foi, pouco antes de falecer, diretor de pesquisa do Departamento de Matem\u00e1tica Aplicada e F\u00edsica Te\u00f3rica (DAMTP) e fundador do Centro de Cosmologia Te\u00f3rica (CTC) da Universidade de Cambridge\u003C\/p\u003E\r\n"
+          },
+          "picture": "https:\/\/static.galoa.com.br\/file\/Eventmanager-Private\/styles\/large\/s3\/eventmanager_person\/Screenshot%202023-10-10%20at%2013.06.35.png?VersionId=4_z9e083e414507696175f50716_f10473fd681469d07_d20231010_m160744_c003_v0312007_t0020_u01696954064581\u0026itok=XSqu4FiW",
+          "weight": 0,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "293d8e1924c5de3ab475d46002e0193f0b6100d305d38c89a5b91ce7eb6c8d75"
+        }
+      ],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8924,
+      "changed": 1696954331,
+      "start": "2023-11-26T08:00:00-03:00",
+      "end": "2023-11-26T09:00:00-03:00",
+      "title": {
+        "pt-br": "Astrof\u00edsica Relativista: Explorando as Previs\u00f5es de Einstein"
+      },
+      "description": {
+        "pt-br": "\u003Cdiv class=\u0022flex flex-grow flex-col gap-3 max-w-full\u0022\u003E\r\n\u003Cdiv class=\u0022min-h-[20px] flex flex-col items-start gap-3 whitespace-pre-wrap break-words overflow-x-auto\u0022\u003E\r\n\u003Cdiv class=\u0022markdown prose w-full break-words dark:prose-invert dark\u0022\u003E\r\n\u003Cp\u003EA Astrof\u00edsica Relativista dedica-se ao estudo dos fen\u00f4menos c\u00f3smicos onde a teoria da relatividade geral de Einstein \u00e9 crucial para entender os processos f\u00edsicos envolvidos. Esta teoria prev\u00ea a exist\u00eancia de buracos negros, ondas gravitacionais e a curvatura do espa\u00e7o-tempo em presen\u00e7a de massa.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EOs astrof\u00edsicos exploram objetos como buracos negros e estrelas de n\u00eautrons para testar as previs\u00f5es da relatividade em ambientes extremos, tais como fortes campos gravitacionais. A observa\u00e7\u00e3o de ondas gravitacionais, em particular, abriu uma nova janela para o universo, permitindo estudos acerca da colis\u00e3o de objetos compactos e din\u00e2micas gravitacionais intensas.\u003C\/p\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n"
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pret\u00f3ria"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [
+        {
+          "id": 340850,
+          "title": "phd",
+          "name": " Neil deGrasse Tyson",
+          "institution": "Princeton University",
+          "bio": {
+            "pt-br": "\u003Cp\u003ENeil deGrasse Tyson \u00e9 um astrof\u00edsico, escritor e divulgador cient\u00edfico americano. Tyson \u00e9 o diretor do Planet\u00e1rio Hayden no Centro Rose para a Terra e o Espa\u00e7o e investigador associado do departamento de astrof\u00edsica no Museu Americano de Hist\u00f3ria Natural.\u003C\/p\u003E\r\n"
+          },
+          "picture": "https:\/\/static.galoa.com.br\/file\/Eventmanager-Private\/styles\/large\/s3\/eventmanager_person\/Screenshot%202023-10-10%20at%2013.09.19.png?VersionId=4_z9e083e414507696175f50716_f1134b5152092b0a5_d20231010_m161710_c003_v0312008_t0017_u01696954630373\u0026itok=Hf54SmlF",
+          "weight": 0,
+          "role": {
+            "id": 440,
+            "label": {
+              "pt-br": "Moderador"
+            }
+          },
+          "hash": "318a69841d1efcc48211f3ca6d779c8ef0529877a2aa3090204575db3602f62d"
+        },
+        {
+          "id": 340849,
+          "title": "prof_dr",
+          "name": "Stephen William Hawking",
+          "institution": "Universidade de Cambridge",
+          "bio": {
+            "pt-br": "\u003Cp\u003EDoutor em cosmologia, foi professor lucasiano em\u00e9rito na Universidade de Cambridge, um posto que foi ocupado por Isaac Newton, Paul Dirac e Charles Babbage. Foi, pouco antes de falecer, diretor de pesquisa do Departamento de Matem\u00e1tica Aplicada e F\u00edsica Te\u00f3rica (DAMTP) e fundador do Centro de Cosmologia Te\u00f3rica (CTC) da Universidade de Cambridge\u003C\/p\u003E\r\n"
+          },
+          "picture": "https:\/\/static.galoa.com.br\/file\/Eventmanager-Private\/styles\/large\/s3\/eventmanager_person\/Screenshot%202023-10-10%20at%2013.06.35.png?VersionId=4_z9e083e414507696175f50716_f10473fd681469d07_d20231010_m160744_c003_v0312007_t0020_u01696954064581\u0026itok=XSqu4FiW",
+          "weight": 1,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "293d8e1924c5de3ab475d46002e0193f0b6100d305d38c89a5b91ce7eb6c8d75"
+        }
+      ],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8991,
+      "changed": 1696954568,
+      "start": "2023-11-26T08:00:00-03:00",
+      "end": "2023-11-26T08:30:00-03:00",
+      "title": {
+        "pt-br": "Vida nas Estrelas: Investigando a Exist\u00eancia e Adaptabilidade de Organismos em Exoplanetas atrav\u00e9s da Astrobiologia"
+      },
+      "description": {
+        "pt-br": "\u003Cp\u003EVida nas Estrelas: Investigando a Exist\u00eancia e Adaptabilidade de Organismos em Exoplanetas atrav\u00e9s da Astrobiologia\u0022 explora a viabilidade de vida em ambientes extraterrestres, utilizando princ\u00edpios astrobiol\u00f3gicos. O estudo analisa exoplanetas, investigando suas condi\u00e7\u00f5es atmosf\u00e9ricas e zonas habit\u00e1veis, e busca entender como organismos podem se adaptar a ambientes extremos, comparando com extrem\u00f3filos terrestres. O trabalho enfatiza a busca por biomarcadores e explora as implica\u00e7\u00f5es da descoberta de vida extraterrestre.\u003C\/p\u003E\r\n"
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [
+        {
+          "id": 340849,
+          "title": "prof_dr",
+          "name": "Stephen William Hawking",
+          "institution": "Universidade de Cambridge",
+          "bio": {
+            "pt-br": "\u003Cp\u003EDoutor em cosmologia, foi professor lucasiano em\u00e9rito na Universidade de Cambridge, um posto que foi ocupado por Isaac Newton, Paul Dirac e Charles Babbage. Foi, pouco antes de falecer, diretor de pesquisa do Departamento de Matem\u00e1tica Aplicada e F\u00edsica Te\u00f3rica (DAMTP) e fundador do Centro de Cosmologia Te\u00f3rica (CTC) da Universidade de Cambridge\u003C\/p\u003E\r\n"
+          },
+          "picture": "https:\/\/static.galoa.com.br\/file\/Eventmanager-Private\/styles\/large\/s3\/eventmanager_person\/Screenshot%202023-10-10%20at%2013.06.35.png?VersionId=4_z9e083e414507696175f50716_f10473fd681469d07_d20231010_m160744_c003_v0312007_t0020_u01696954064581\u0026itok=XSqu4FiW",
+          "weight": 0,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "293d8e1924c5de3ab475d46002e0193f0b6100d305d38c89a5b91ce7eb6c8d75"
+        },
+        {
+          "id": 340848,
+          "title": null,
+          "name": "Fabiano Sant\u0027Ana",
+          "institution": null,
+          "bio": {
+            "pt-br": null
+          },
+          "picture": null,
+          "weight": 1,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "2b01f5a5c2f4420c152e2b06a553e5875ee2b5d76b8a2da2a069339cfb0e1fb8"
+        }
+      ],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": 8922,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8922,
+      "changed": 1696953390,
+      "start": "2023-11-26T08:00:00-03:00",
+      "end": "2023-11-26T09:00:00-03:00",
+      "title": {
+        "pt-br": "Vida Al\u00e9m da Terra: Uma Perspectiva Astrobiol\u00f3gica"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8923,
+      "changed": 1696953390,
+      "start": "2023-11-26T08:00:00-03:00",
+      "end": "2023-11-26T09:00:00-03:00",
+      "title": {
+        "pt-br": "M\u00e9todos Avan\u00e7ados na Busca por Intelig\u00eancia Extraterrestre"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8990,
+      "changed": 1696954579,
+      "start": "2023-11-26T08:30:00-03:00",
+      "end": "2023-11-26T09:00:00-03:00",
+      "title": {
+        "pt-br": "Explorando o Inexplorado: Buscando Sinais de Vida Al\u00e9m do Nosso Planeta Atrav\u00e9s da Lente da Astrobiologia"
+      },
+      "description": {
+        "pt-br": "\u003Cp\u003E\u0022Explorando o Inexplorado: Buscando Sinais de Vida Al\u00e9m do Nosso Planeta Atrav\u00e9s da Lente da Astrobiologia\u0022 mergulha na intrigante busca cient\u00edfica por vida extraterrestre, utilizando m\u00e9todos e conhecimentos da astrobiologia. Esta disciplina interdisciplinar, situada na interse\u00e7\u00e3o entre astronomia, biologia, geologia e f\u00edsica, investiga as condi\u00e7\u00f5es e possibilidades de vida fora da Terra.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EO trabalho visa explorar a diversidade de ambientes extremos na Terra, como fontes hidrotermais e lagos subglaciais, para compreender como a vida pode se manifestar em condi\u00e7\u00f5es astrof\u00edsicas semelhantes. Analisa-se a composi\u00e7\u00e3o atmosf\u00e9rica de exoplanetas e suas zonas habit\u00e1veis, utilizando telesc\u00f3pios e sondas espaciais para identificar indicadores de vida, como biomarcadores qu\u00edmicos.\u003C\/p\u003E\r\n\r\n\u003Cp\u003EO trabalho tamb\u00e9m aborda os desafios \u00e9ticos e t\u00e9cnicos da explora\u00e7\u00e3o espacial e a import\u00e2ncia da contamina\u00e7\u00e3o cruzada entre planetas. A busca por vida extraterrestre potencializa nossa compreens\u00e3o sobre a origem, evolu\u00e7\u00e3o e distribui\u00e7\u00e3o da vida no universo.\u003C\/p\u003E\r\n"
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [
+        {
+          "id": 340850,
+          "title": "phd",
+          "name": " Neil deGrasse Tyson",
+          "institution": "Princeton University",
+          "bio": {
+            "pt-br": "\u003Cp\u003ENeil deGrasse Tyson \u00e9 um astrof\u00edsico, escritor e divulgador cient\u00edfico americano. Tyson \u00e9 o diretor do Planet\u00e1rio Hayden no Centro Rose para a Terra e o Espa\u00e7o e investigador associado do departamento de astrof\u00edsica no Museu Americano de Hist\u00f3ria Natural.\u003C\/p\u003E\r\n"
+          },
+          "picture": "https:\/\/static.galoa.com.br\/file\/Eventmanager-Private\/styles\/large\/s3\/eventmanager_person\/Screenshot%202023-10-10%20at%2013.09.19.png?VersionId=4_z9e083e414507696175f50716_f1134b5152092b0a5_d20231010_m161710_c003_v0312008_t0017_u01696954630373\u0026itok=Hf54SmlF",
+          "weight": 0,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "318a69841d1efcc48211f3ca6d779c8ef0529877a2aa3090204575db3602f62d"
+        },
+        {
+          "id": 340848,
+          "title": null,
+          "name": "Fabiano Sant\u0027Ana",
+          "institution": null,
+          "bio": {
+            "pt-br": null
+          },
+          "picture": null,
+          "weight": 1,
+          "role": {
+            "id": 441,
+            "label": {
+              "pt-br": "Palestrante"
+            }
+          },
+          "hash": "2b01f5a5c2f4420c152e2b06a553e5875ee2b5d76b8a2da2a069339cfb0e1fb8"
+        }
+      ],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": 8922,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8925,
+      "changed": 1696954533,
+      "start": "2023-11-26T09:00:00-03:00",
+      "end": "2023-11-26T10:00:00-03:00",
+      "title": {
+        "pt-br": "Biossinais em Mundos Oce\u00e2nicos: Europa e Enc\u00e9lado"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [
+        {
+          "id": 340848,
+          "title": null,
+          "name": "Fabiano Sant\u0027Ana",
+          "institution": null,
+          "bio": {
+            "pt-br": null
+          },
+          "picture": null,
+          "weight": 0,
+          "role": {
+            "id": 442,
+            "label": {
+              "pt-br": "Coordenador"
+            }
+          },
+          "hash": "2b01f5a5c2f4420c152e2b06a553e5875ee2b5d76b8a2da2a069339cfb0e1fb8"
+        }
+      ],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8926,
+      "changed": 1696953390,
+      "start": "2023-11-26T09:00:00-03:00",
+      "end": "2023-11-26T11:00:00-03:00",
+      "title": {
+        "pt-br": "Bioassinaturas em Rochas Espaciais"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8927,
+      "changed": 1696953390,
+      "start": "2023-11-26T10:00:00-03:00",
+      "end": "2023-11-26T11:00:00-03:00",
+      "title": {
+        "pt-br": "Ouvindo as Estrelas: Astro-sismologia e Estrutura Estelar"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8928,
+      "changed": 1696953390,
+      "start": "2023-11-26T10:00:00-03:00",
+      "end": "2023-11-26T11:00:00-03:00",
+      "title": {
+        "pt-br": "Exolua: Busca e Estudo de Luas Fora do Sistema Solar"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8929,
+      "changed": 1696953390,
+      "start": "2023-11-26T11:00:00-03:00",
+      "end": "2023-11-26T12:00:00-03:00",
+      "title": {
+        "pt-br": "An\u00e3s Marrons: Um Link entre Estrelas e Planetas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8930,
+      "changed": 1696953390,
+      "start": "2023-11-26T13:00:00-03:00",
+      "end": "2023-11-26T14:00:00-03:00",
+      "title": {
+        "pt-br": "Neutrinos C\u00f3smicos: Mensageiros de Universos Distantes"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8932,
+      "changed": 1696953390,
+      "start": "2023-11-26T14:00:00-03:00",
+      "end": "2023-11-26T16:00:00-03:00",
+      "title": {
+        "pt-br": "Civiliza\u00e7\u00f5es Tipo III: Manipulando Gal\u00e1xias"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pret\u00f3ria"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8931,
+      "changed": 1696953390,
+      "start": "2023-11-26T14:00:00-03:00",
+      "end": "2023-11-26T16:00:00-03:00",
+      "title": {
+        "pt-br": "Panspermia C\u00f3smica: A Vida Viajando entre Estrelas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8933,
+      "changed": 1696953390,
+      "start": "2023-11-26T16:00:00-03:00",
+      "end": "2023-11-26T18:00:00-03:00",
+      "title": {
+        "pt-br": "Lentes Gravitacionais: A Lupa do Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pret\u00f3ria"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8934,
+      "changed": 1696953390,
+      "start": "2023-11-26T16:00:00-03:00",
+      "end": "2023-11-26T18:00:00-03:00",
+      "title": {
+        "pt-br": "O C\u00f3digo C\u00f3smico: A Linguagem da Natureza"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8935,
+      "changed": 1696953390,
+      "start": "2023-11-27T08:00:00-03:00",
+      "end": "2023-11-27T09:00:00-03:00",
+      "title": {
+        "pt-br": "O Cen\u00e1rio Multiverso: Uma Explora\u00e7\u00e3o Cosmol\u00f3gica e Filos\u00f3fica"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8937,
+      "changed": 1696953390,
+      "start": "2023-11-27T09:00:00-03:00",
+      "end": "2023-11-27T11:00:00-03:00",
+      "title": {
+        "pt-br": "Astrobiologia e \u00c9tica: Desafios nas Buscas e Contatos Alien\u00edgenas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8938,
+      "changed": 1696953390,
+      "start": "2023-11-27T09:00:00-03:00",
+      "end": "2023-11-27T10:00:00-03:00",
+      "title": {
+        "pt-br": "O Cintur\u00e3o de Kuiper e a Fronteira do Sistema Solar"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8936,
+      "changed": 1696953390,
+      "start": "2023-11-27T09:00:00-03:00",
+      "end": "2023-11-27T10:00:00-03:00",
+      "title": {
+        "pt-br": "T\u00e9cnicas de Detec\u00e7\u00e3o de Atmosferas em Exoplanetas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8939,
+      "changed": 1696953390,
+      "start": "2023-11-27T09:30:00-03:00",
+      "end": "2023-11-27T12:00:00-03:00",
+      "title": {
+        "pt-br": "Astrof\u00edsica de Part\u00edculas: O Micro no Macro"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8940,
+      "changed": 1696953390,
+      "start": "2023-11-27T10:00:00-03:00",
+      "end": "2023-11-27T11:00:00-03:00",
+      "title": {
+        "pt-br": "Sinais de Vida em Exoplanetas: Novas Descobertas e Desafios Futuros"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8941,
+      "changed": 1696953390,
+      "start": "2023-11-27T10:00:00-03:00",
+      "end": "2023-11-27T11:00:00-03:00",
+      "title": {
+        "pt-br": "Astrof\u00edsica Nuclear: O Cora\u00e7\u00e3o das Estrelas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8942,
+      "changed": 1696953390,
+      "start": "2023-11-27T10:00:00-03:00",
+      "end": "2023-11-27T11:00:00-03:00",
+      "title": {
+        "pt-br": "Habitabilidade de Planetas An\u00f5es: Ceres e Plut\u00e3o"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8943,
+      "changed": 1696953390,
+      "start": "2023-11-27T11:00:00-03:00",
+      "end": "2023-11-27T12:00:00-03:00",
+      "title": {
+        "pt-br": "Estrelas de N\u00eautrons: Laborat\u00f3rios C\u00f3smicos Extremos"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8944,
+      "changed": 1696953390,
+      "start": "2023-11-27T11:00:00-03:00",
+      "end": "2023-11-27T12:00:00-03:00",
+      "title": {
+        "pt-br": "A Busca por Vida em Tit\u00e3: Ambientes Ex\u00f3ticos e Astrobiologia"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8945,
+      "changed": 1696953390,
+      "start": "2023-11-27T13:00:00-03:00",
+      "end": "2023-11-27T14:00:00-03:00",
+      "title": {
+        "pt-br": "Anatomia de Buracos Negros: Compreendendo Singularidades e Horizontes de Eventos"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8946,
+      "changed": 1696953390,
+      "start": "2023-11-27T15:00:00-03:00",
+      "end": "2023-11-27T17:00:00-03:00",
+      "title": {
+        "pt-br": "Vidas Extrem\u00f3filas: Da Terra aos Exoplanetas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8948,
+      "changed": 1696953390,
+      "start": "2023-11-27T16:00:00-03:00",
+      "end": "2023-11-27T18:00:00-03:00",
+      "title": {
+        "pt-br": "O Enigma da Energia Escura: A Expans\u00e3o do Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8947,
+      "changed": 1696953390,
+      "start": "2023-11-27T16:00:00-03:00",
+      "end": "2023-11-27T18:00:00-03:00",
+      "title": {
+        "pt-br": "Miss\u00e3o James Webb: Um Novo Olhar para os Exoplanetas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pret\u00f3ria"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8949,
+      "changed": 1696953390,
+      "start": "2023-11-28T08:00:00-03:00",
+      "end": "2023-11-28T09:00:00-03:00",
+      "title": {
+        "pt-br": "Analisando Estruturas Alien\u00edgenas: Uma Vis\u00e3o Te\u00f3rica"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8952,
+      "changed": 1696953390,
+      "start": "2023-11-28T08:00:00-03:00",
+      "end": "2023-11-28T09:00:00-03:00",
+      "title": {
+        "pt-br": "Estrelas de Baixa Massa e a Longevidade Estelar"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8950,
+      "changed": 1696953390,
+      "start": "2023-11-28T08:00:00-03:00",
+      "end": "2023-11-28T09:00:00-03:00",
+      "title": {
+        "pt-br": "Meteoritos: Mensageiros de Hist\u00f3rias C\u00f3smicas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8953,
+      "changed": 1696953390,
+      "start": "2023-11-28T09:00:00-03:00",
+      "end": "2023-11-28T11:00:00-03:00",
+      "title": {
+        "pt-br": "Vida em Marte: Evid\u00eancias, Desafios e Perspectivas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8951,
+      "changed": 1696953390,
+      "start": "2023-11-28T09:00:00-03:00",
+      "end": "2023-11-28T10:00:00-03:00",
+      "title": {
+        "pt-br": "Impacto de Flares Estelares na Atmosfera de Exoplanetas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8954,
+      "changed": 1696953390,
+      "start": "2023-11-28T09:30:00-03:00",
+      "end": "2023-11-28T12:00:00-03:00",
+      "title": {
+        "pt-br": "Desvendando Mist\u00e9rios de Pulsares e Magnetares"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8956,
+      "changed": 1696953390,
+      "start": "2023-11-28T10:00:00-03:00",
+      "end": "2023-11-28T11:00:00-03:00",
+      "title": {
+        "pt-br": "Impacto de Eventos de Extin\u00e7\u00e3o na Evolu\u00e7\u00e3o da Vida"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8955,
+      "changed": 1696953390,
+      "start": "2023-11-28T10:00:00-03:00",
+      "end": "2023-11-28T11:00:00-03:00",
+      "title": {
+        "pt-br": "Astroqu\u00edmica: Da Forma\u00e7\u00e3o de Mol\u00e9culas Pr\u00e9-bi\u00f3ticas ao Potencial Habit\u00e1vel"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8957,
+      "changed": 1696953390,
+      "start": "2023-11-28T11:00:00-03:00",
+      "end": "2023-11-28T12:00:00-03:00",
+      "title": {
+        "pt-br": "Topologia do Universo: Geometria, Curvatura e Destino"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8958,
+      "changed": 1696953390,
+      "start": "2023-11-28T11:00:00-03:00",
+      "end": "2023-11-28T12:00:00-03:00",
+      "title": {
+        "pt-br": "Civiliza\u00e7\u00f5es Gal\u00e1cticas: Modelos e Predi\u00e7\u00f5es do Princ\u00edpio Copernicano"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8959,
+      "changed": 1696953390,
+      "start": "2023-11-28T13:00:00-03:00",
+      "end": "2023-11-28T14:00:00-03:00",
+      "title": {
+        "pt-br": "Paradoxo de Fermi: Onde Est\u00e3o Todos os Extraterrestres?"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8960,
+      "changed": 1696953390,
+      "start": "2023-11-28T13:00:00-03:00",
+      "end": "2023-11-28T14:00:00-03:00",
+      "title": {
+        "pt-br": "Biosferas Sint\u00e9ticas: Criando Habitabilidade em Mundos Hostis"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8961,
+      "changed": 1696953390,
+      "start": "2023-11-28T14:00:00-03:00",
+      "end": "2023-11-28T16:00:00-03:00",
+      "title": {
+        "pt-br": "F\u00edsica Estelar e o Destino dos Sistemas Planet\u00e1rios"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8962,
+      "changed": 1696953390,
+      "start": "2023-11-28T15:00:00-03:00",
+      "end": "2023-11-28T17:00:00-03:00",
+      "title": {
+        "pt-br": "Coloniza\u00e7\u00e3o Espacial: Desafios, \u00c9tica e Tecnologia"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pret\u00f3ria"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8964,
+      "changed": 1696953390,
+      "start": "2023-11-29T08:00:00-03:00",
+      "end": "2023-11-29T09:00:00-03:00",
+      "title": {
+        "pt-br": "F\u00edsica de Plasmas Espaciais e Ambientes Estelares"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Explora\u00e7\u00e3o e Coloniza\u00e7\u00e3o Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8963,
+      "changed": 1696953390,
+      "start": "2023-11-29T08:00:00-03:00",
+      "end": "2023-11-29T09:00:00-03:00",
+      "title": {
+        "pt-br": "Abiog\u00eanese em Mundos Distantes: Limites e Possibilidades"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunica\u00e7\u00e3o e \u00c9tica Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8965,
+      "changed": 1696953390,
+      "start": "2023-11-29T09:00:00-03:00",
+      "end": "2023-11-29T11:00:00-03:00",
+      "title": {
+        "pt-br": "Hip\u00f3tese da Floresta Negra: Uma Explora\u00e7\u00e3o da Interfer\u00eancia de Civiliza\u00e7\u00f5es Avan\u00e7adas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planet\u00e1rios"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaound\u00e9"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8966,
+      "changed": 1696953390,
+      "start": "2023-11-29T09:00:00-03:00",
+      "end": "2023-11-29T10:00:00-03:00",
+      "title": {
+        "pt-br": "Transmiss\u00f5es Interestelares: Comunicando com Extraterrestres"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrof\u00edsica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresenta\u00e7\u00e3o de P\u00f4ster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8968,
+      "changed": 1696953390,
+      "start": "2023-11-29T09:30:00-03:00",
+      "end": "2023-11-29T10:00:00-03:00",
+      "title": {
+        "pt-br": "Quasares e AGNs: Compreendendo os N\u00facleos Ativos de Gal\u00e1xias"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8969,
+      "changed": 1696953390,
+      "start": "2023-11-29T10:00:00-03:00",
+      "end": "2023-11-29T11:00:00-03:00",
+      "title": {
+        "pt-br": "Cosmologia em Evolu\u00e7\u00e3o: Compreendendo o Futuro do Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astron\u00f4mica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    }
+  ]
+}
