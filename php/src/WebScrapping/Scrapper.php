@@ -16,7 +16,7 @@ class Scrapper {
 
     $xPath = new \DOMXPath($dom);
     $containerArticles = $xPath->query("//a[@class='paper-card p-lg bd-gradient-left']");
-    $results = array();
+    $results = [];
     foreach ($containerArticles as $article) {
       $id = $xPath->query(".//div[@class='tags flex-row mr-sm']/div[@class='volume-info']", $article)->item(0)->nodeValue;
       $title = $xPath->query(".//h4[@class='my-xs paper-title']", $article)->item(0)->nodeValue;
@@ -27,8 +27,9 @@ class Scrapper {
     }
     return $results;
   }
+
   private function getAuthors(\DOMNodeList $nodes): array {
-    $authors = array();
+    $authors = [];
     foreach ($nodes as $node) {
       $name = $node->nodeValue;
       $title = $node->getAttribute('title');
