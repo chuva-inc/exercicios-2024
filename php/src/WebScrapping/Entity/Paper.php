@@ -12,33 +12,57 @@ class Paper {
    *
    * @var int
    */
-  public $id;
+  public int $id;
 
   /**
    * Paper Title.
    *
    * @var string
    */
-  public $title;
+  public string $title;
 
   /**
    * The paper type (e.g. Poster, Nobel Prize, etc).
    *
    * @var string
    */
-  public $type;
+  public string $type;
 
   /**
    * Paper authors.
    *
-   * @var \Chuva\Php\WebScrapping\Entity\Person[]
+   * @var Person[]
    */
-  public $authors;
+  public array $authors;
 
   /**
    * Builder.
    */
   public function __construct($id, $title, $type, $authors = []) {
+      $this->id = $id;
+      $this->title = $title;
+      $this->type = $type;
+      $this->authors = $authors;
   }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    public function getAuthors(): array
+    {
+        return $this->authors;
+    }
 
 }

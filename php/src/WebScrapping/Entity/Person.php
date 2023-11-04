@@ -25,4 +25,15 @@ class Person {
     $this->institution = $institution;
   }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+
 }
