@@ -12,6 +12,7 @@ class Scrapper {
   /**
    * Loads paper information from the HTML and returns the array with the data.
    */
+
   public function scrap(\DOMDocument $dom): array {
 
     $xPath = new \DOMXPath($dom);
@@ -28,6 +29,10 @@ class Scrapper {
     return $results;
   }
 
+  /**
+   * @param \DOMNodeList $nodes
+   * @return array
+   */
   private function getAuthors(\DOMNodeList $nodes): array {
     $authors = [];
     foreach ($nodes as $node) {
