@@ -30,7 +30,7 @@ class Scrapper {
   }
 
   /**
-   * Function that handles authors for the scrap function
+   * Function that handles authors for the scrap function.
    */
   private function getAuthors(\DOMNodeList $nodes): array {
     $authors = [];
