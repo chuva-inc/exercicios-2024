@@ -1,6 +1,7 @@
 <?php
 
 namespace Chuva\Php\WebScrapping\Entity;
+
 /**
  * The Paper class represents the row of the parsed data.
  */

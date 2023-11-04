@@ -37,9 +37,5 @@ class Scrapper {
     }
     return $authors;
   }
+
 }
-
-
-
-
-
