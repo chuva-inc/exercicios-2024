@@ -12,17 +12,14 @@ use DOMXPath;
 /**
  * Does the scrapping of a webpage.
  */
-class Scrapper
-{
+class Scrapper {
   /**
    * Loads paper information from the HTML and returns the array with the data.
    */
-  public function scrap(DOMDocument $dom): array
-  {
+  public function scrap(DOMDocument $dom): array {
     $xPath = new DOMXPath($dom);
 
     $containerArticles = $xPath->query("//a[@class='paper-card p-lg bd-gradient-left']");
-
     $results = array();
 
     foreach ($containerArticles as $article) {
@@ -35,9 +32,7 @@ class Scrapper
     }
     return $results;
   }
-
-  private function getAuthors(DOMNodeList $nodes): array
-  {
+  private function getAuthors(DOMNodeList $nodes): array {
     $authors = array();
 
     foreach ($nodes as $node) {
