@@ -1,4 +1,5 @@
 <?php
+
 namespace Chuva\Php\WebScrapping\Entity;
 /**
  * The Paper class represents the row of the parsed data.
@@ -41,4 +42,5 @@ class Paper {
     $this->type = $type;
     $this->authors = $authors;
   }
+
 }
