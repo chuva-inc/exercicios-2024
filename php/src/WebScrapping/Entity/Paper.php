@@ -11,21 +11,21 @@ class Paper {
      *
      * @var int
      */
-    public $id;
+    public int $id;
 
     /**
      * Paper Title.
      *
      * @var string
      */
-    public $title;
+    public string $title;
 
     /**
      * The paper type (e.g. Poster, Nobel Prize, etc).
      *
      * @var string
      */
-    public $type;
+    public string $type;
 
     /**
      * Paper authors.
@@ -43,5 +43,4 @@ class Paper {
         $this->type = $type;
         $this->authors = $authors;
     }
-
 }
