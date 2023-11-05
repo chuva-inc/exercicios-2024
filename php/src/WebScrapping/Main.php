@@ -63,6 +63,7 @@ class Main {
         } else {
           // Fill in blank values if there is no corresponding author.
           $rowData[] = '';
+
           $rowData[] = '';
         }
       }
