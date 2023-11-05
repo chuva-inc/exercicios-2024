@@ -20,7 +20,7 @@ class Main {
 
     $data = (new Scrapper())->scrap($dom);
 
-    $csvPath = (__DIR__. '/../../assets/teste.xlsx');
+    $csvPath = (__DIR__. '/../../assets/teste.csv');
 
     $writer = WriterEntityFactory::createCSVWriter();
     $writer->openToFile($csvPath);
