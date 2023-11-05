@@ -9,14 +9,12 @@ use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
 /**
  * Main class to run the exercise.
  */
-class Main
-{
+class Main {
 
   /**
    * Runner for the Webscrapping exercice.
    */
-  public static function run(): void
-  {
+  public static function run(): void {
     $dom = new \DOMDocument('1.0', 'utf-8');
     @$dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
@@ -40,7 +38,7 @@ class Main
 
     foreach ($data as $paper) {
 
-      $rowData = [$paper->id, $paper->title, $paper->type,];
+      $rowData = [$paper->id, $paper->title, $paper->type];
 
       $authors = array_slice($paper->authors, 0, 17);
 
