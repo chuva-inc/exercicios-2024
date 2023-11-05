@@ -20,7 +20,7 @@ class Main {
 
     $data = (new Scrapper())->scrap($dom);
 
-    $csvPath = (__DIR__.'/../../assets/teste.xlsx');
+    $csvPath = (__DIR__. '/../../assets/teste.xlsx');
 
     $writer = WriterEntityFactory::createCSVWriter();
     $writer->openToFile($csvPath);
@@ -41,7 +41,7 @@ class Main {
     $rowFromHeaders = WriterEntityFactory::createRowFromArray($headers);
     $writer->addRow($rowFromHeaders);
 
-    foreach ($data as $paper){
+    foreach ($data as $paper) {
 
       $rowData = [
         $paper->id,
@@ -59,6 +59,7 @@ class Main {
           $rowData[] = $author->name;
 
           $rowData[] = $author->institution;
+
         } else {
           // Fill in blank values if there is no corresponding author.
           $rowData[] = '';
