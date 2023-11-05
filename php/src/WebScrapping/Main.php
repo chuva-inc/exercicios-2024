@@ -51,7 +51,7 @@ class Main {
 
           $rowData[] = $author->institution;
 
-        } else {
+        }else{
 
           // Fill in blank values if there is no corresponding author.
           $rowData[] = '';
