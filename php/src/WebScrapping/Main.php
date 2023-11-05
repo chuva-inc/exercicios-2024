@@ -21,6 +21,7 @@ class Main {
     $data = (new Scrapper())->scrap($dom);
 
     $csvPath = __DIR__.'/../../assets/teste.xlsx';
+
     $writer = WriterEntityFactory::createCSVWriter();
     $writer->openToFile($csvPath);
 
@@ -51,13 +52,15 @@ class Main {
 
       for ($i = 0; $i < 17; ++$i) {
         if (isset($authors[$i])) {
+
           $author = $authors[$i];
+
           $rowData[] = $author->name;
 
           $rowData[] = $author->institution;
 
         } else {
-          // Fill in blank values if there is no corresponding author
+          // Fill in blank values if there is no corresponding author.
           $rowData[] = '';
           $rowData[] = '';
         }
