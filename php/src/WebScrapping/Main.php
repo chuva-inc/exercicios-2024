@@ -7,13 +7,17 @@ use OpenSpout\Writer\Common\Creator\Style\StyleBuilder;
 use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
 
 /**
- * Runner for the Webscrapping exercice.
+ * Main class to run the exercise.
  */
 class Main {
 
+  /**
+   * Runner for the Webscrapping exercice.
+   */
   public static function run(): void {
     $dom = new \DOMDocument('1.0', 'utf-8');
     @$dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
+
     $data = (new Scrapper())->scrap($dom);
 
     $csvPath = __DIR__.'/../../assets/teste.xlsx';
@@ -32,6 +36,7 @@ class Main {
       $headers[] = "Author $i";
       $headers[] = "Author $i Institution";
     }
+
     $rowFromHeaders = WriterEntityFactory::createRowFromArray($headers);
     $writer->addRow($rowFromHeaders);
 
@@ -48,7 +53,9 @@ class Main {
         if (isset($authors[$i])) {
           $author = $authors[$i];
           $rowData[] = $author->name;
+
           $rowData[] = $author->institution;
+
         } else {
           // Fill in blank values if there is no corresponding author
           $rowData[] = '';
