@@ -11,37 +11,40 @@ use DOMXPath;
  */
 class Scrapper {
 
+  /**
+   * Get information from a card
+   */
   private function collectPaperCardData(\DOMXPath $xpath, \DOMElement $paperCard): Paper {
     $id = "";
     $title = "";
     $type = "";
     $authors = [];
 
-    // Busque o título do "paper-card"
+    // Busca o título do "paper-card".
     $titleElement = $xpath->query(".//h4[contains(@class, 'paper-title')]", $paperCard)->item(0);
     if ($titleElement) {
-        $title = $titleElement->textContent;
+      $title = $titleElement->textContent;
     }
 
-    // Busque a div com a classe "authors"
+    // Busca a div com a classe "authors".
     $authorsDiv = $xpath->query(".//div[contains(@class, 'authors')]", $paperCard)->item(0);
 
-    // Verifique se a div de autores foi encontrada
+    // Verifica se a div de autores foi encontrada.
     if ($authorsDiv) {
-        // Percorra os filhos da div de autores (os spans) para obter os autores e suas instituições
-        foreach ($authorsDiv->childNodes as $authorElement) {
-            // Verifique se o nó é um elemento do tipo "element" (ignorando texto e outros nós)
-            if ($authorElement->nodeType === XML_ELEMENT_NODE) {
-                $institution = $authorElement->getAttribute("title");
-                $author = $authorElement->textContent;
+      // Percorrr os filhos da div de autores (os spans) para obter os autores e suas instituições.
+      foreach ($authorsDiv->childNodes as $authorElement) {
+        // Verifica se o nó é um elemento do tipo "element" (ignorando texto e outros nós).
+        if ($authorElement->nodeType === XML_ELEMENT_NODE) {
+          $institution = $authorElement->getAttribute("title");
+          $author = $authorElement->textContent;
 
-                $person = new Person($author, $institution);
-                $authors[] = $person;
-            }
+          $person = new Person($author, $institution);
+          $authors[] = $person;
         }
+      }
     }
 
-    // Busque a div com a classe "volume-info"
+    // Busca a div com a classe "volume-info".
     $volumeInfoDiv = $xpath->query(".//div[contains(@class, 'volume-info')]", $paperCard)->item(0);
     $id = $volumeInfoDiv->textContent;
 
@@ -53,15 +56,18 @@ class Scrapper {
     return $paper;
   }
 
+  /**
+   * Take all the cards with the information and return them
+   */
   private function collectPaperData(\DOMDocument $dom): array {
     $xpath = new DOMXPath($dom);
     $paperCards = $xpath->query("//a[contains(@class, 'paper-card')]");
-    
+
     $result = [];
 
     foreach ($paperCards as $paperCard) {
-        $paperData = $this->collectPaperCardData($xpath, $paperCard);
-        $result[] = $paperData;
+      $paperData = $this->collectPaperCardData($xpath, $paperCard);
+      $result[] = $paperData;
     }
 
     return $result;
