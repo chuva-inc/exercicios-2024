@@ -34,3 +34,44 @@ Thumbs.db
 
 # Screenshots
 ts/cypress/screenshots
+
+# Miscellaneous
+dart/**/*.class
+dart/**/*.log
+dart/**/*.pyc
+dart/**/*.swp
+dart/**/.DS_Store
+dart/**/.atom/
+dart/**/.buildlog/
+dart/**/.history
+dart/**/.svn/
+dart/**/migrate_working_dir/
+
+# IntelliJ related
+dart/**/*.iml
+dart/**/*.ipr
+dart/**/*.iws
+dart/**/.idea/
+dart/**/.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+dart/.dart_tool/
+dart/.flutter-plugins
+dart/.flutter-plugins-dependencies
+dart/.packages
+dart/.pub-cache/
+dart/.pub/
+dart/build/
+
+# Symbolication related
+dart/**/app.*.symbols
+
+# Obfuscation related
+dart/**/app.*.map.json
+
+# Android Studio will place build artifacts here
+dart/android/app/debug
+dart/android/app/profile
+dart/android/app/release

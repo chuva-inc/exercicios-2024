@@ -1,0 +1,912 @@
+{
+  "count": 71,
+  "links": {
+    "self": "https://raw.githubusercontent.com/chuva-inc/exercicios-2023/master/dart/assets/activities-1.json",
+    "next": null
+  },
+  "data": [
+    {
+      "id": 8969,
+      "changed": 1696953390,
+      "start": "2023-11-29T10:00:00-03:00",
+      "end": "2023-11-29T11:00:00-03:00",
+      "title": {
+        "pt-br": "Cosmologia em Evolução: Compreendendo o Futuro do Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astronômica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8970,
+      "changed": 1696953390,
+      "start": "2023-11-29T10:00:00-03:00",
+      "end": "2023-11-29T11:00:00-03:00",
+      "title": {
+        "pt-br": "Astronomia Óptica e Infravermelha: Revelando o Invisível"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astronômica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8972,
+      "changed": 1696953394,
+      "start": "2023-11-29T11:00:00-03:00",
+      "end": "2023-11-29T12:00:00-03:00",
+      "title": {
+        "pt-br": "A Influência de Supernovas na Emergência da Vida"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planetários"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8967,
+      "changed": 1696953390,
+      "start": "2023-11-29T11:00:00-03:00",
+      "end": "2023-11-29T12:00:00-03:00",
+      "title": {
+        "pt-br": "Simulações Computacionais de Formação de Galáxias"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunicação e Ética Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8974,
+      "changed": 1696953394,
+      "start": "2023-11-29T14:00:00-03:00",
+      "end": "2023-11-29T16:00:00-03:00",
+      "title": {
+        "pt-br": "O Problema da Constante Cosmológica: Mistério Energético do Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planetários"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaoundé"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8975,
+      "changed": 1696953394,
+      "start": "2023-11-29T15:00:00-03:00",
+      "end": "2023-11-29T17:00:00-03:00",
+      "title": {
+        "pt-br": "Os Enigmas da Matéria Escura: Novas Perspectivas e Modelos"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrofísica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pretória"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8976,
+      "changed": 1696953394,
+      "start": "2023-11-29T18:00:00-03:00",
+      "end": "2023-11-29T19:00:00-03:00",
+      "title": {
+        "pt-br": "Ecos de Ondas Gravitacionais: Escutando o Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pretória"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8973,
+      "changed": 1696953394,
+      "start": "2023-11-29T19:00:00-03:00",
+      "end": "2023-11-29T20:00:00-03:00",
+      "title": {
+        "pt-br": "Sincronização Planetária: Rotação, Órbita e Clima"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Exploração e Colonização Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8977,
+      "changed": 1696953394,
+      "start": "2023-11-30T08:00:00-03:00",
+      "end": "2023-11-30T09:00:00-03:00",
+      "title": {
+        "pt-br": "Origem da Vida na Terra: Implicações para a Exobiologia"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planetários"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8978,
+      "changed": 1696953394,
+      "start": "2023-11-30T08:00:00-03:00",
+      "end": "2023-11-30T09:00:00-03:00",
+      "title": {
+        "pt-br": "Cometas e Asteroides: Arquivos da Formação Planetária"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astronômica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8980,
+      "changed": 1696953394,
+      "start": "2023-11-30T09:00:00-03:00",
+      "end": "2023-11-30T10:00:00-03:00",
+      "title": {
+        "pt-br": "O Desafio da Viagem Interestelar: Propulsão, Duração e Destinos"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunicação e Ética Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12143,
+          "title": {
+            "pt-br": "Luanda"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8982,
+      "changed": 1696953394,
+      "start": "2023-11-30T09:30:00-03:00",
+      "end": "2023-11-30T12:00:00-03:00",
+      "title": {
+        "pt-br": "Inflação Cósmica e o Big Bang: Um Início Quente para o Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11376,
+        "title": {
+          "pt-br": "Comunicação e Ética Extraterrestre"
+        },
+        "color": null,
+        "background-color": null
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaoundé"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8981,
+      "changed": 1696953394,
+      "start": "2023-11-30T09:30:00-03:00",
+      "end": "2023-11-30T12:00:00-03:00",
+      "title": {
+        "pt-br": "Astronomia Gravitacional: Explorando o Invisível no Universo"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Exploração e Colonização Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8983,
+      "changed": 1696953394,
+      "start": "2023-11-30T10:00:00-03:00",
+      "end": "2023-11-30T11:00:00-03:00",
+      "title": {
+        "pt-br": "Galáxias Canibais: Fusões e Interações Gravitacionais"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12138,
+          "title": {
+            "pt-br": "Ouagadougou"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8984,
+      "changed": 1696953394,
+      "start": "2023-11-30T10:00:00-03:00",
+      "end": "2023-11-30T11:00:00-03:00",
+      "title": {
+        "pt-br": "Evolução de Estrelas Binárias e Seus Destinos Violentos"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11373,
+        "title": {
+          "pt-br": "Tecnologia e Metodologia Astronômica"
+        },
+        "color": "#29CFC9",
+        "background-color": "#E4FFFE"
+      },
+      "locations": [
+        {
+          "id": 12137,
+          "title": {
+            "pt-br": "Gaborone"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8985,
+      "changed": 1696953394,
+      "start": "2023-11-30T13:00:00-03:00",
+      "end": "2023-11-30T14:00:00-03:00",
+      "title": {
+        "pt-br": "Exploração Robótica vs. Humana: O Futuro das Missões Espaciais"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11374,
+        "title": {
+          "pt-br": "Exoplanetas e Sistemas Planetários"
+        },
+        "color": "#C7B884",
+        "background-color": "#F5F3E5"
+      },
+      "locations": [
+        {
+          "id": 12139,
+          "title": {
+            "pt-br": "Gitega"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8986,
+      "changed": 1696953394,
+      "start": "2023-11-30T14:00:00-03:00",
+      "end": "2023-11-30T16:00:00-03:00",
+      "title": {
+        "pt-br": "A Astronomia dos Telescópios: Avanços Tecnológicos e Descobertas"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrofísica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaoundé"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8987,
+      "changed": 1696953394,
+      "start": "2023-11-30T15:00:00-03:00",
+      "end": "2023-11-30T17:00:00-03:00",
+      "title": {
+        "pt-br": "A Evolução Estelar e seus Impactos na Habitabilidade Planetária"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Exploração e Colonização Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pretória"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11191,
+        "title": {
+          "pt-br": "Mesa redonda"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8988,
+      "changed": 1696953394,
+      "start": "2023-11-30T18:00:00-03:00",
+      "end": "2023-11-30T20:00:00-03:00",
+      "title": {
+        "pt-br": "Raios Cósmicos: Aceleração, Origem e Impacto"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11371,
+        "title": {
+          "pt-br": "Astrobiologia e Vida Extraterrestre"
+        },
+        "color": "#FB8C2C",
+        "background-color": "#FEEFE4"
+      },
+      "locations": [
+        {
+          "id": 12140,
+          "title": {
+            "pt-br": "Yaoundé"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11192,
+        "title": {
+          "pt-br": "Palestra"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8979,
+      "changed": 1696953394,
+      "start": "2023-11-30T19:00:00-03:00",
+      "end": "2023-11-30T20:00:00-03:00",
+      "title": {
+        "pt-br": "Os Desafios de Viver em Ambientes de Microgravidade"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11372,
+        "title": {
+          "pt-br": "Astrofísica e Cosmologia"
+        },
+        "color": "#C24FFE",
+        "background-color": "#F7F0FB"
+      },
+      "locations": [
+        {
+          "id": 12142,
+          "title": {
+            "pt-br": "Maputo"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    },
+    {
+      "id": 8989,
+      "changed": 1696953394,
+      "start": "2023-11-30T19:00:00-03:00",
+      "end": "2023-11-30T20:00:00-03:00",
+      "title": {
+        "pt-br": "A Arquitetura de Sistemas Planetários na Via Láctea"
+      },
+      "description": {
+        "pt-br": null
+      },
+      "category": {
+        "id": 11375,
+        "title": {
+          "pt-br": "Exploração e Colonização Espacial"
+        },
+        "color": "#F0DB06",
+        "background-color": "#FEFCE7"
+      },
+      "locations": [
+        {
+          "id": 12141,
+          "title": {
+            "pt-br": "Pretória"
+          },
+          "parent": 0,
+          "map": null
+        }
+      ],
+      "type": {
+        "id": 11190,
+        "title": {
+          "pt-br": "Apresentação de Pôster"
+        }
+      },
+      "papers": [],
+      "people": [],
+      "status": 1,
+      "weight": 0,
+      "addons": null,
+      "parent": null,
+      "event": "teste-exercicio"
+    }
+  ]
+}
