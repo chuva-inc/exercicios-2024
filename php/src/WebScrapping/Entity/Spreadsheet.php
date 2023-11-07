@@ -72,7 +72,7 @@ class Spreadsheet {
 
     $authors = $data->authors;
     for ($i = 0; $i < 9; $i++) {
-      $author = isset($authors[$i]) ? $authors[$i] : NULL;
+      $author = $authors[$i] ?? NULL;
 
       if ($author) {
         $row->addCell(WriterEntityFactory::createCell($author->name));
@@ -97,7 +97,7 @@ class Spreadsheet {
   }
 
   /**
-   * Save changes
+   * Save changes.
    */
   public function save() {
     $this->writer->close();

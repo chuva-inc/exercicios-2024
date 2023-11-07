@@ -32,7 +32,7 @@ class Scrapper {
     if ($authorsDiv) {
       // Percorre os filhos da div de autores (os spans)
       foreach ($authorsDiv->childNodes as $authorElement) {
-        // Verifica se o nó é um elemento do tipo "element"
+        // Verifica se o nó é um elemento do tipo "element".
         if ($authorElement->nodeType === XML_ELEMENT_NODE) {
           $institution = $authorElement->getAttribute("title");
           $author = $authorElement->textContent;
