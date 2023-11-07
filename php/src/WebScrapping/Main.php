@@ -2,6 +2,8 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use Chuva\Php\WebScrapping\Entity\Spreadsheet;
+
 /**
  * Runner for the Webscrapping exercice.
  */
@@ -17,7 +19,18 @@ class Main {
     $data = (new Scrapper())->scrap($dom);
 
     // Write your logic to save the output file bellow.
-    print_r($data);
+    $spreadsheetFile = __DIR__ . "/../../output/output.xlsx";
+
+    if (!file_exists(dirname($spreadsheetFile))) {
+      mkdir(dirname($spreadsheetFile), 0777, TRUE);
+    }
+
+    $spreadsheet = new Spreadsheet($spreadsheetFile);
+    foreach ($data as $item) {
+      $spreadsheet->addData($item);
+    }
+
+    $spreadsheet->save();
   }
 
 }

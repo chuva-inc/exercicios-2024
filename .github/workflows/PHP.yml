@@ -40,3 +40,18 @@ jobs:
       run: |
         cd php;
         vendor/bin/phpcs --standard=Drupal --ignore='*.md' --extensions=php,profile,inc,install src/
+
+  PHPUnit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Installs composer
+      run: |
+        cd php;
+        composer install -n --prefer-dist
+
+    - name: Configure PHPCS
+      run: |
+        cd php;
+        ./vendor/bin/phpunit --fail-on-warning --fail-on-notice  tests/Unit
