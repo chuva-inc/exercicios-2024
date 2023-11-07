@@ -4,7 +4,6 @@ namespace Chuva\Php\WebScrapping;
 
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
-use DOMXPath;
 
 /**
  * Does the scrapping of a webpage.
@@ -12,7 +11,7 @@ use DOMXPath;
 class Scrapper {
 
   /**
-   * Get information from a card
+   * Get information from a card.
    */
   private function collectPaperCardData(\DOMXPath $xpath, \DOMElement $paperCard): Paper {
     $id = "";
@@ -31,9 +30,9 @@ class Scrapper {
 
     // Verifica se a div de autores foi encontrada.
     if ($authorsDiv) {
-      // Percorrr os filhos da div de autores (os spans) para obter os autores e suas instituições.
+      // Percorre os filhos da div de autores (os spans)
       foreach ($authorsDiv->childNodes as $authorElement) {
-        // Verifica se o nó é um elemento do tipo "element" (ignorando texto e outros nós).
+        // Verifica se o nó é um elemento do tipo "element"
         if ($authorElement->nodeType === XML_ELEMENT_NODE) {
           $institution = $authorElement->getAttribute("title");
           $author = $authorElement->textContent;
@@ -57,10 +56,10 @@ class Scrapper {
   }
 
   /**
-   * Take all the cards with the information and return them
+   * Take all the cards with the information and return them.
    */
   private function collectPaperData(\DOMDocument $dom): array {
-    $xpath = new DOMXPath($dom);
+    $xpath = new \DOMXPath($dom);
     $paperCards = $xpath->query("//a[contains(@class, 'paper-card')]");
 
     $result = [];

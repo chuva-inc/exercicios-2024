@@ -6,7 +6,7 @@ use Box\Spout\Writer\Common\Creator\Style\StyleBuilder;
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 
 /**
- * The Spreadsheet class represents the Excel spreadsheet
+ * The Spreadsheet class represents the Excel spreadsheet.
  */
 class Spreadsheet {
 
@@ -24,7 +24,7 @@ class Spreadsheet {
     $this->writer = WriterEntityFactory::createXLSXWriter();
     $this->writer->openToFile($spreadsheetFile);
 
-    // Defina um estilo personalizado para o cabeçalho
+    // Defina um estilo personalizado para o cabeçalho.
     $headerFontStyle = (new StyleBuilder())
       ->setFontBold()
       ->setFontName('Arial')
@@ -60,6 +60,9 @@ class Spreadsheet {
     $this->writer->addRow($headerRow);
   }
 
+  /**
+   * Add a row of information to the spreadsheet.
+   */
   public function addData($data) {
     $row = WriterEntityFactory::createRow([
       WriterEntityFactory::createCell($data->id),
@@ -69,31 +72,35 @@ class Spreadsheet {
 
     $authors = $data->authors;
     for ($i = 0; $i < 9; $i++) {
-      $author = isset($authors[$i]) ? $authors[$i] : null;
+      $author = isset($authors[$i]) ? $authors[$i] : NULL;
 
       if ($author) {
         $row->addCell(WriterEntityFactory::createCell($author->name));
         $row->addCell(WriterEntityFactory::createCell($author->institution));
       }
       else {
-        // Se não houver autor, adicione células em branco
+        // Se não houver autor, adicione células em branco.
         $row->addCell(WriterEntityFactory::createCell(''));
         $row->addCell(WriterEntityFactory::createCell(''));
       }
     }
 
-    // Defina um estilo de fonte padrão para toda a planilha
+    // Defina um estilo de fonte padrão para toda a planilha.
     $defaultFontStyle = (new StyleBuilder())
       ->setFontName('Arial')
       ->setFontSize(12)
       ->build();
-    // Aplica o estilo de fonte padrão às células de dados
+    // Aplica o estilo de fonte padrão às células de dados.
     $row->setStyle($defaultFontStyle);
 
     $this->writer->addRow($row);
   }
 
+  /**
+   * Save changes
+   */
   public function save() {
     $this->writer->close();
   }
+
 }
