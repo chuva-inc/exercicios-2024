@@ -3,3 +3,27 @@
     height: 106.31rem;
     box-shadow: 0rem 0rem 1.2rem #ccc;
 }
+
+nav {
+    ul {
+        font-family: 'Quicksand', sans-serif;
+
+        .trabalhos {
+            background-color: #FDF1EB;
+            border-left: 0.31rem solid #ED7839;
+        }
+    
+        li {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #725C5C;
+            list-style: none;
+            border-bottom: 1px solid #ccc;
+            height: 2.06rem;
+            padding-left: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
