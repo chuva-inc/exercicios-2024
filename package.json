@@ -1,0 +1,19 @@
+{
+  "name": "exercicios-2024",
+  "version": "1.0.0",
+  "description": "Olá! Este repositório contém os exercícios de desenvolvimento da Chuva, você **deve** implementar pelo menos uma das tecnologias disponíveis, conforme sua preferência pessoal e aptidão.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuva-inc/exercicios-2024.git"
+  },
+  "author": "savio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chuva-inc/exercicios-2024/issues"
+  },
+  "homepage": "https://github.com/chuva-inc/exercicios-2024#readme"
+}
