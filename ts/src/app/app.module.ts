@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { LeftSideNavMenuComponent } from './components/left-side-nav-menu/left-side-nav-menu.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LeftSideNavMenuComponent
+    LeftSideNavMenuComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule

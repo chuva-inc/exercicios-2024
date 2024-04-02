@@ -1,0 +1,42 @@
+.page-header {
+    width: calc(99vw - 13.72rem);
+    height: 4.2rem;
+    background-color: #FDF1EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        color: #725C5C;
+        font-weight: 400;
+        font-size: 0.87rem;
+    }
+
+    span {
+        font-family: 'Roboto', sans-serif;
+        color: #725C5C;
+        font-size: 1.37rem;
+        margin-left: 2.25rem;
+    }
+
+    #issn-code {
+    margin-left: 2.25rem;
+    }   
+
+    #page-header-first-text {
+        margin: 0.31rem 0rem 0.12rem 2.25rem;
+    }
+
+    .language-button {
+        width: 6.06rem;
+        height: 2.12rem;
+        margin-right: -14rem;
+        cursor: pointer;
+    }
+
+    .welcome-image-and-greetings {
+        margin-right: 2.25rem;
+        cursor: pointer;
+    }
+}
