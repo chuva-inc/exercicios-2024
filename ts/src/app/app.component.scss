@@ -1,20 +1,3 @@
-:host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
-}
-
 h2 {
   margin-top: 50px;
 }
@@ -156,17 +139,6 @@ svg#rocket-smoke {
   z-index: -10;
 }
 
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #125699;
-}
-
 .terminal {
   position: relative;
   width: 80%;
@@ -194,7 +166,7 @@ a:hover {
 }
 
 .terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   color: white;
   padding: 0 1rem 1rem;
   margin: 0;
@@ -222,7 +194,8 @@ svg#clouds {
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link) ,
+
+  .card-container>*:not(.circle-link),
   .terminal {
     width: 100%;
   }
@@ -253,7 +226,9 @@ svg#clouds {
   h3 {
     margin-top: 15px;
   }
-  h2, a {
+
+  h2,
+  a {
     font-size: 12px;
   }
 }
