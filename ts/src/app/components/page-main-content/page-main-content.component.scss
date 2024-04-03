@@ -1,9 +1,38 @@
 main {
-    border: 1px solid purple;
     background-color: transparent;
     height: 86.3rem;
     width: calc(99vw - 13.75rem);
     position: absolute;
     top: 4.2rem;
     margin-left: 13.8rem;
+
+    display: flex;
+    justify-content: center;
+
+    .main-content-wrapper {
+        border: 1px solid coral;
+        width: 66.1rem;
+        height: 86.3rem;
+        margin-top: 1.25rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 1.25em;
+            line-height: 1.5em;
+            color: #ED7839;
+        }
+
+        .image-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 13.5rem;
+        }
+    }
 }
