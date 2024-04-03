@@ -1,0 +1,65 @@
+.aside-menu {
+    width: 16.3%;
+    height: 100vh;
+}
+
+.header-aside-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 4.25rem;
+
+    font-family: Roboto;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.198rem;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+}
+
+.aside-menu>img {
+    width: 100%;
+}
+
+.aside-menu nav li {
+    height: 2.188rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+
+    border-bottom: 2px solid #E7E7E7;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+
+    color: #725C5C;
+}
+
+.aside-menu nav li:hover {
+    background: #FDF1EB;
+    cursor: pointer;
+}
+
+.aside-menu nav li:active {
+    background: #fae7de;
+    cursor: pointer;
+}
+
+
+.aside-menu nav ul .activated::before {
+    content: " ";
+    position: absolute;
+    left: 0.6rem;
+    margin-top: -0.625rem;
+    margin-left: -0.6rem;
+
+    height: 2.188rem;
+    width: 0.313rem;
+    background: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+}
+
+.aside-menu nav ul .activated {
+    background: #FDF1EB;
+}
