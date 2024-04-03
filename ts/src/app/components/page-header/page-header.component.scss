@@ -1,6 +1,9 @@
 .page-header {
     width: calc(99vw - 13.72rem);
+    margin-left: 13.72rem;
+    top: 0;
     height: 4.2rem;
+    position: absolute;
     background-color: #FDF1EB;
     display: flex;
     align-items: center;
