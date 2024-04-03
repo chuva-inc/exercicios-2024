@@ -27,18 +27,18 @@ p {
   flex: 1;
 }
 
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #04345d;
-  color: white;
-  font-weight: 600;
-}
+// .toolbar {
+//   position:relative;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 60px;
+//   display: flex;
+//   align-items: center;
+//   background-color: #04345d;
+//   color: white;
+//   font-weight: 600;
+// }
 
 .toolbar img {
   margin: 0 16px;
@@ -257,3 +257,20 @@ svg#clouds {
     font-size: 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
