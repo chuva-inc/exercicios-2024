@@ -66,8 +66,8 @@
     .project-details {
         width: 15.1rem;
         height: 27.4rem;
-        padding-right: .1rem;
         border: 1px solid #ECECEC;
+        border-radius: .5rem;
 
         header {
             background-color: #FDF1EB;
@@ -155,9 +155,9 @@
     width: 66.12rem;
     height: 11.81rem;
     margin-top: 1.87rem;
-}
+    border: 1px solid #ECECEC;
+    border-radius: .5rem;
 
-#resume {
     header {
         background-color: #FDF1EB;
         height: 2.8rem;
@@ -171,6 +171,97 @@
             font-size: 1.2rem;
             color: #4E4E4E;
             padding-left: .93em;
+        }
+    }
+
+    .btn-show-more {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 0.87rem;
+        color: #ED7839;
+    }
+
+    .btn-show-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .expanded-text {
+        display: none;
+    }
+
+    .colapsed-text {
+        display: block;
+        padding: 0.93rem;
+
+        p {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 0.87rem;
+            color: #5C5C5C;
+            line-height: 1.42em;
+        }
+    }
+}
+
+
+// A estilização abaixo é relacionada à área de discussão
+#discuss {
+    width: 66.12rem;
+    height: 38.81rem;
+    margin-top: 1.87rem;
+    border: 1px solid #ECECEC;
+    border-radius: .5rem;
+
+    header {
+        background-color: #FDF1EB;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.93rem;
+
+        .discuss-title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #4E4E4E;
+            padding-left: .93em;
+        }
+    }
+
+    aside {
+        height: 13.62rem;
+        width: inherit;
+        border-bottom: 1px solid #E7E7E7;
+        text-align: center;
+
+        .discuss-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1.12rem;
+            color: #ED7839;
+        }
+
+        .images-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        span {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 0.87rem;
+            color: #595959;
+        }
+
+        .new-topic-button {
+            position: absolute;
+            top: 65.2rem;
+            left: 39.6rem;
+            cursor: pointer;
         }
     }
 }
