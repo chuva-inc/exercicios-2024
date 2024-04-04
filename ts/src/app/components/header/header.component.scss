@@ -1,0 +1,141 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0 2.25rem;
+    height: 4.25rem;
+    width: 100%;
+
+    background: #FDF1EB;
+    font-family: "Roboto";
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+
+    width: 40rem;
+}
+
+.container-text h3,
+.container-text h2,
+.container-text span {
+    color: #725C5C;
+    font-weight: 400;
+    text-wrap: nowrap;
+}
+
+.container-text h3 {
+    margin-bottom: 0.125rem;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.container-text h2 {
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+}
+
+.container-text span {
+    font-size: 0.875rem;
+    line-height: 1.026rem;
+}
+
+.container-select-language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.56rem;
+
+    width: 6.25rem;
+    height: 2.125rem;
+
+    border-radius: 3px;
+    border: 1px solid #CCCCCC
+}
+
+.container-select-language:hover {
+    cursor: pointer;
+    background-color: #CCCCCC;
+}
+
+.container-select-language:active {
+    cursor: pointer;
+    background-color: #b3b2b2;
+}
+
+.container-select-language>img {
+    width: 1rem;
+    margin: 0.25rem;
+}
+
+.container-select-language>span {
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1rem;
+    text-wrap: nowrap;
+}
+
+.container-info-user {
+    display: flex;
+}
+
+.info-user-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-family: "Quicksand";
+    color: #333333;
+}
+
+.info-user-text:first-child {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.info-user-text:last-child {
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+}
+
+.info-user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-user-icon>div {
+    position: relative;
+    bottom: 0.8rem;
+    left: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 0.75rem;
+    width: 0.75rem;
+
+    border-radius: 50%;
+    padding: 0.4rem;
+
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 0.625rem;
+
+    color: white;
+    background: #F85959;
+}
+
+.info-user-icon>img {
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 50%;
+}
