@@ -208,7 +208,7 @@
 // A estilização abaixo é relacionada à área de discussão
 #discuss {
     width: 66.12rem;
-    height: 38.81rem;
+    height: 39.7rem;
     margin-top: 1.87rem;
     border: 1px solid #ECECEC;
     border-radius: .5rem;
@@ -278,7 +278,7 @@
 
         .first-one {
             margin-top: 1.8rem;
-            margin-bottom: 1.06rem;
+            margin-bottom: 1rem;
         }
 
         .topic-subject-wrapper {
@@ -309,6 +309,26 @@
             font-weight: 400;
             font-size: 0.75rem;
             color: #4D4D4D;
+        }
+
+        .images-and-like-wrapper {
+            width: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: -.2rem;
+            margin-top: 0.6rem;
+            
+            img {
+                cursor: pointer;
+            }
+
+            p {
+                font-family: 'Segoe UI', sans-serif;
+                font-weight: 350;
+                font-size: 0.87rem;
+                color: #757575;
+            }
         }
     }
 }
