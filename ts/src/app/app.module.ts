@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AsideMenuComponent } from './components/aside-menu/aside-menu.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AsideMenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule
