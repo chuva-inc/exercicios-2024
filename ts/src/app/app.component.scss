@@ -4,5 +4,9 @@
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
     padding: 1.25rem 2.75rem;
 }
