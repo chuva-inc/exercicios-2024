@@ -159,13 +159,25 @@ svg#rocket-smoke {
 a,
 a:visited,
 a:hover {
-  color: #1976d2;
   text-decoration: none;
 }
-
-a:hover {
-  color: #125699;
+li,
+li:visited,
+li:hover{
+  border-bottom: 2px solid #3333332f;
 }
+
+li:hover{
+  border-left: 5px solid #db5e0bc4;
+
+}
+select{
+  
+}
+
+// a:hover {
+//   color: #125699;
+// }
 
 .terminal {
   position: relative;
