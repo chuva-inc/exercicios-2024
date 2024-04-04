@@ -1,0 +1,38 @@
+@import "../../../dist/scss/variables";
+
+.sidebar {
+  width: 22rem;
+  height: 100vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+  .event-name {
+    width: 22rem;
+    height: 6.8rem;
+    background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+    text-align: center;
+    line-height: 6.8rem;
+
+    p {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #ffffff;
+    }
+  }
+
+  .menu {
+    ul {
+      li {
+        padding: 0.7rem 2.4rem;
+        border-bottom: 0.2rem solid $secondary-color;
+        font-family: $text-menu-family;
+        font-weight: 500;
+        color: $secondary-text-color;
+
+        &:hover, &.active {
+          background-color: $tertiary-color;
+          border-left: 0.3rem solid $primary-color;
+        }
+      }
+    }
+  }
+}
