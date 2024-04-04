@@ -18,15 +18,15 @@ header {
     width: 40rem;
 }
 
+.container-text h4,
 .container-text h3,
-.container-text h2,
 .container-text span {
     color: #725C5C;
     font-weight: 400;
     text-wrap: nowrap;
 }
 
-.container-text h3 {
+.container-text h4 {
     margin-bottom: 0.125rem;
 
     font-size: 0.875rem;
@@ -34,7 +34,7 @@ header {
     line-height: 1rem;
 }
 
-.container-text h2 {
+.container-text h3 {
     font-size: 1.375rem;
     line-height: 1.5rem;
 }
