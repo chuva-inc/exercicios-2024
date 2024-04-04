@@ -264,4 +264,51 @@
             cursor: pointer;
         }
     }
+
+    article {
+        .answered-topic {
+            border: 1px solid #E7E7E7;
+            width: 64.25rem;
+            height: 9.25rem;
+            margin-left: 0.93rem;
+            padding-left: 1.5rem;
+            padding-top: 1.06rem;
+            border-radius: 0.25rem;
+        }
+
+        .first-one {
+            margin-top: 1.8rem;
+            margin-bottom: 1.06rem;
+        }
+
+        .topic-subject-wrapper {
+            width: 33.8rem;
+            height: 2.5rem;
+            margin-bottom: 0.62rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3 {
+                color: #ED7839;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+
+            p {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 500;
+                font-size: 0.75rem;
+                color: #5C5C5C;
+            }
+        }
+
+        .comments-container {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #4D4D4D;
+        }
+    }
 }
