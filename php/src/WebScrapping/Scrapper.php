@@ -6,25 +6,46 @@ use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 
 /**
- * Does the scrapping of a webpage.
+ * Class responsible for scraping webpage data.
  */
 class Scrapper {
 
   /**
-   * Loads paper information from the HTML and returns the array with the data.
+   * Extracts paper information from the HTML and returns an array with the data.
    */
   public function scrap(\DOMDocument $dom): array {
-    return [
-      new Paper(
-        123,
-        'The Nobel Prize in Physiology or Medicine 2023',
-        'Nobel Prize',
-        [
-          new Person('Katalin Karikó', 'Szeged University'),
-          new Person('Drew Weissman', 'University of Pennsylvania'),
-        ]
-      ),
-    ];
+    $papers = [];
+    $xpath = new \DOMXPath($dom);
+    $nodes = $xpath->query('//a[@class="paper-card p-lg bd-gradient-left"]');
+
+    foreach ($nodes as $node) {
+      $idNode = $xpath->query('.//div[@class="volume-info"]', $node)->item(0);
+      $titleNode = $xpath->query('.//h4', $node)->item(0);
+      $typeNode = $xpath->query('.//div[@class="tags mr-sm"]', $node)->item(0);
+      $authorsNodes = $xpath->query('.//div[@class="authors"]/span', $node);
+      $authors = $this->getAuthors($authorsNodes);
+
+      $papers[] = new Paper(
+        $idNode->nodeValue,
+        $titleNode->nodeValue,
+        $typeNode->nodeValue,
+        $authors
+      );
+    }
+    return $papers;
+  }
+
+  /**
+   * Extracts author information from the HTML nodes and returns an array of Person objects.
+   */
+  private function getAuthors(\DOMNodeList $nodes): array {
+    $authors = [];
+    foreach ($nodes as $node) {
+      $name = trim($node->nodeValue, ';'); // Remove the semicolon from the end of the name
+      $title = $node->getAttribute('title');
+      $authors[] = new Person($name, $title);
+    }
+    return $authors;
   }
 
 }

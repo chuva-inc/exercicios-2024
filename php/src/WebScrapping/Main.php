@@ -3,7 +3,7 @@
 namespace Chuva\Php\WebScrapping;
 
 /**
- * Runner for the Webscrapping exercice.
+ * Runner for the Webscrapping exercise.
  */
 class Main {
 
@@ -17,7 +17,9 @@ class Main {
     $data = (new Scrapper())->scrap($dom);
 
     // Write your logic to save the output file bellow.
-    print_r($data);
+    $filePath = XlsxCreator::create($data);
+
+    echo "File created at: $filePath\n";
   }
 
 }
