@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+@mixin header-card {
+  padding: 10px 15px;
+  height: 45px;
+  background: $tertiary-color;
+}
+
+@mixin card-title {
+  font-family: $font-family-foreground;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  color: $card-primary;
+}
+
+@mixin card-text($size, $weight) {
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 120%;
+  letter-spacing: 0.24px;
+  color: $card-primary;
+}
+
+@mixin card-text-accent {
+  font-family: $font-family;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  color: $card-accent;
+}

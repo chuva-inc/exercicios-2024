@@ -7,13 +7,20 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
-  declarations: [AppComponent, SideNavComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    SideNavComponent,
+    HeaderComponent,
+    HeroComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -22,6 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

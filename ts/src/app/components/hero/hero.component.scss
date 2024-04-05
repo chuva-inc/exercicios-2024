@@ -1,0 +1,114 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.container-hero-analisis {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 3;
+
+  img {
+    width: 100%;
+    min-width: 783px;
+    height: 100%;
+    min-height: 439px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+}
+
+.subtitle-analisis {
+  font-family: $font-family-foreground;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: $tertiary-color-foreground;
+}
+
+.container-hero-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex: 1;
+}
+
+.hero-box-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.hero-details-btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 31px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: $tertiary-color-foreground;
+  font-family: $font-family-foreground;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: $primary-color;
+}
+
+.hero-details-subtitle {
+  font-family: $font-family-foreground;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.7px;
+  color: $tertiary-color-foreground;
+}
+
+.hero-card-details {
+  width: 242px;
+  height: 439px;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.hero-card-details-header {
+  @include header-card;
+}
+
+.hero-card-title {
+  @include card-title;
+}
+
+.hero-card-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 15px;
+}
+
+.hero-card-detail-item {
+  @include card-text(12px, 400);
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.hero-card-author-title {
+  @include card-text(14px, 700);
+}
+
+.hero-card-author {
+  @include card-text(14px, 400);
+}
+
+.hero-card-university {
+  @include card-text(12px, 400);
+}
