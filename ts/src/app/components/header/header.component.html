@@ -1,0 +1,35 @@
+<header class="header">
+    <section>
+        <h2 class="header-subtitle">Anais do Simpósio Latino Americano de Ciências de Alimentos</h2>
+        <h3 class="header-subtitle-tertiary">Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h3>
+        <h4 class="header-subtitle">ISSN: 1234-5678</h4>
+    </section>
+
+    <section class="container-login">
+        <div>
+            <button mat-stroked-button [matMenuTriggerFor]="menu" class="menu">
+                <mat-icon aria-label="Example home icon" class="icon">language</mat-icon>
+                PT,BR
+                <mat-icon aria-label="Example home icon" class="icon">
+                    keyboard_arrow_down
+                </mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>English</button>
+                <button mat-menu-item>Español</button>
+            </mat-menu>
+        </div>
+
+        <div class="login-info">
+            <span>
+                <p class="login-welcome">Bem-vindo!</p>
+                <p class="login-email">alguem12&#64;galoascience.com</p>
+            </span>
+
+            <figure>
+                <img src="/assets/img/people.svg" class="login-user-avatar" alt="People">
+            </figure>
+        </div>
+
+    </section>
+</header>

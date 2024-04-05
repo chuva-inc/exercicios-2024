@@ -40,11 +40,7 @@ $ts-theme: mat.define-light-theme(
 @include mat.all-component-themes($ts-theme);
 
 * {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
+  box-sizing: border-box;
 }
