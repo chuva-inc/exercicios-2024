@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-page-main-content',
@@ -18,5 +19,15 @@ export class PageMainContentComponent implements OnInit {
 
     shareIdeas.style.display = 'block' ? 'none' : 'block';
     newForm.style.display = 'none' ? 'block' : 'none';
-  } 
+  }
+
+  submitForm(event:any) {
+    if(event) event.preventDefault();
+    
+    let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
+    let submitedForm = document.querySelector(".submited-subject") as HTMLElement;
+
+    newForm.style.display = 'block' ? 'none' : 'block';
+    submitedForm.style.display = 'none' ? 'block' : 'none';
+  }
 }

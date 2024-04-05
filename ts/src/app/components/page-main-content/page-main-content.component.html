@@ -162,11 +162,16 @@
                 
                         <div class="submit-subject-button-wrapper">
                             <div class="subject-submit-button">
-                                <button class="btn-create-topic">Enviar</button>
+                                <button class="btn-create-topic" (click)="submitForm($event)">Enviar</button>
                             </div>
                         </div>
                     </div>
                 </form>
+
+
+                <section class="submited-subject">
+                    <h1>Funcionou!</h1>
+                </section>
             </aside>
 
             <article>
