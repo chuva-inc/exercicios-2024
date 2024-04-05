@@ -1,0 +1,92 @@
+@import "../../../../dist/scss/variables";
+
+aside {
+  text-align: end;
+
+  .btn-group {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+
+    button {
+      background-color: $primary-color;
+      border: none;
+      font-size: 1.6rem;
+      color: #fff;
+      display: flex;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.4rem;
+    }
+  }
+  a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  .card {
+    border: 1px solid #ececec;
+    border-radius: 0.3rem 0.3rem 0 0;
+    text-align: start;
+    margin-top: 0.7rem;
+    .card-header {
+      height: 4.5rem;
+      background-color: $tertiary-color;
+      border-bottom: 1px solid #ececec;
+      line-height: 4.5rem;
+      padding-left: 1.5rem;
+      p {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+
+    .card-body {
+      height: 39.4rem;
+      max-height: 39.4rem;
+      overflow: auto;
+      padding: 1.5rem;
+
+      p {
+        font-family: $text-family-secondary;
+        font-size: 1.2rem;
+        line-height: 120%;
+        span {
+          font-family: $text-family-secondary;
+          font-weight: 700;
+        }
+      }
+
+      .authors {
+        margin-top: 2rem;
+        line-height: 120%;
+        :nth-child(1) {
+          font-weight: 700;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      .reference {
+        margin-top: 2.6rem;
+        font-weight: 100;
+      }
+      &::-webkit-scrollbar {
+        margin: 0.6rem 1rem 1.7rem 0.6rem;
+        width: 0.3rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $secondary-color;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #bfbfbf;
+        border-radius: 20px;
+        border: none;
+      }
+    }
+  }
+}
