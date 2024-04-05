@@ -1,0 +1,62 @@
+@import "../../../dist/scss/variables";
+
+header {
+  background-color: $tertiary-color;
+  display: flex;
+  // width: 100%;
+  justify-content: space-between;
+  height: 6.8rem;
+  padding: 0.5rem 3.6rem;
+  color: $secondary-text-color;
+
+  h6 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  .language-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .btn {
+      display: flex;
+      width: 9.7rem;
+      height: 3.4rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: transparent;
+
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+
+      span {
+        font-family: $text-family-secondary;
+      }
+    }
+
+    .login {
+      display: flex;
+      text-align: end;
+      gap: 0.7rem;
+      align-items: center;
+
+      .login-info {
+        font-size: 1.4rem;
+        :nth-last-child(1) {
+          font-size: 1.2rem;
+        }
+        p {
+          font-family: $text-family-secondary;
+          color: #000;
+        }
+      }
+    }
+  }
+}
