@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.summary {
+  padding: 0;
+}
+
+.header-summary {
+  @include header-card;
+}
+
+.summary-title {
+  @include card-title;
+}
+
+.summary-details {
+  padding: 15px;
+}
+
+.summary-item {
+  @include card-text(14px, 400);
+
+  strong {
+    font-weight: 700;
+    color: $tertiary-color-foreground;
+  }
+}

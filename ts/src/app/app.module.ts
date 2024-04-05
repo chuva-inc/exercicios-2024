@@ -13,6 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HeroComponent } from './components/hero/hero.component';
     SideNavComponent,
     HeaderComponent,
     HeroComponent,
+    SummaryComponent,
   ],
   imports: [
     BrowserModule,
