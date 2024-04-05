@@ -3,5 +3,9 @@
   main {
     flex: 1;
     z-index: -1;
+
+    .box {
+      padding: 2rem 2rem;
+    }
   }
 }

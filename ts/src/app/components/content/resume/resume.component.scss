@@ -1,0 +1,36 @@
+@import "../../../../dist/scss/variables";
+
+section {
+  margin-block: 3rem;
+  border: 1px solid #ececec;
+  border-radius: 0.3rem;
+
+  .panel-header {
+    height: 4.5rem;
+    background-color: $tertiary-color;
+    border-bottom: 1px solid #ececec;
+
+    p {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #4e4e4e;
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .body {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    p {
+      font-family: $text-family-secondary;
+      color: #5c5c5c;
+
+      .btn-show-more {
+        text-decoration: none;
+        font-family: $text-family-secondary;
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
