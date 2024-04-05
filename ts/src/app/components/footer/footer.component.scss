@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.footer {
+  display: flex;
+  gap: 48px;
+  padding: 20px 44px;
+}
+
+.logo-galoa {
+  width: 176px;
+  height: 76px;
+}
+
+.footer-button {
+  width: 176px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #71478e;
+  font-family: $font-family-foreground;
+  font-size: 14px;
+  line-height: 140%;
+  color: #fff;
+}
+
+.footer-container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-text {
+  @include card-text(14px, 400);
+
+  strong {
+    font-weight: 500;
+  }
+}

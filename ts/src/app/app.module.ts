@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SummaryComponent } from './components/summary/summary.component';
     HeaderComponent,
     HeroComponent,
     SummaryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
