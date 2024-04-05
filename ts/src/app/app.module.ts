@@ -6,6 +6,8 @@ import { AsideMenuComponent } from './components/aside-menu/aside-menu.component
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { TopicsSectionComponent } from './components/topics-section/topics-section.component';
+import { CreateTopicComponent } from './components/create-topic/create-topic.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { SummaryComponent } from './components/summary/summary.component';
     AsideMenuComponent,
     HeaderComponent,
     HeroComponent,
-    SummaryComponent
+    SummaryComponent,
+    TopicsSectionComponent,
+    CreateTopicComponent,
   ],
   imports: [
     BrowserModule

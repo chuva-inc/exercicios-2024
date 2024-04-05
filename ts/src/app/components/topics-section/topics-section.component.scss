@@ -1,0 +1,38 @@
+.container-topics {
+    border-radius: 3px;
+    border: 1px solid #ECECEC
+}
+
+.container-topics h1 {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+
+    font-family: "Roboto";
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.563rem;
+
+    background: #FDF1EB;
+    border: 1px solid #ECECEC
+}
+
+.container-topics p {
+    padding: 1rem;
+
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+.container-topics a {
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+
+    color: #ed7839;
+}
