@@ -30,4 +30,8 @@ export class PageMainContentComponent implements OnInit {
     newForm.style.display = 'block' ? 'none' : 'block';
     submitedForm.style.display = 'none' ? 'block' : 'none';
   }
+
+  submitedForm() {
+    
+  }
 }

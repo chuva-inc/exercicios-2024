@@ -299,6 +299,29 @@
 
         .share-ideas {
             display: block;
+
+            .btn-create-topic {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                font-size: 0.93rem;
+                color: #FFF;
+    
+                background: linear-gradient(#FEB154, #F1833E);
+                width: 8.31rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                border: none;
+
+                display: flex;
+                justify-content: space-evenly;
+
+                margin-left: 45%;
+                margin-top: 3.3rem;
+            }
         }
     }
 
