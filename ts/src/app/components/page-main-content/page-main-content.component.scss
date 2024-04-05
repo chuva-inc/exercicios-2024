@@ -270,11 +270,35 @@
             color: #595959;
         }
 
-        .btn-create-topic {
+        .open-form{
             position: absolute;
             top: 65.2rem;
             left: 39.6rem;
             cursor: pointer;
+            background: linear-gradient(#FEB254, #F0813D);
+
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            color: #FFF;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            width: 8.31rem;
+            height: 2rem;
+
+            border: none;
+            border-radius: .06rem;
+        }
+
+        .create-new-topic-wrapper {
+            display: none;
+        }
+
+        .share-ideas {
+            display: block;
         }
     }
 
@@ -342,6 +366,95 @@
                 font-size: 0.87rem;
                 color: #757575;
             }
+        }
+    }
+
+    // Estiização relacionada ao formulário para envio de conteúdo de discussões
+    .create-new-topic-wrapper {
+        width: 64rem;
+        height: 13.62rem;
+        margin-left: 0.93rem;
+        text-align: center;
+
+        .create-new-topic-title {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 0.87rem;
+            color: #5C5C5C;
+        }
+
+        .topic-subject-wrapper {
+            text-align: left;
+
+            .new-topic-subject {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #ED7839;
+            }
+
+            #newSubjectTitle{
+                width: 64rem;
+                height: 2.4rem;
+                border-radius: .18rem;
+                margin-bottom: .62rem;
+                border: 1px solid #CCC;
+            }
+
+            #newSubjectTitle:focus {
+                border: 1px solid #CCC;
+            }
+        }
+        
+
+        .topic-content-wrapper{
+            text-align: left;
+
+            .new-topic-content {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #ED7839;
+            }
+
+            #newSubjectContent {
+                width: 64rem;
+                height: 4.6rem;
+                border: 1px solid #CCC;
+                border-top-left-radius: .18rem;
+                border-top-right-radius: .18rem;
+            }
+
+            #newSubjectContent:focus {
+                border: 1px solid #CCC;
+            }
+        }
+
+        .submit-subject-button-wrapper {
+            background-color: #EAF1F2;
+            height: 1.93rem;
+            border-bottom-left-radius: .18rem;
+            border-bottom-right-radius: .18rem;
+            border: 1px solid #CCC;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-create-topic {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            color: #FFF;
+
+            background: linear-gradient(#FEB154, #F1833E);
+            width: 12.8rem;
+            height: 1.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            border: none;
         }
     }
 }

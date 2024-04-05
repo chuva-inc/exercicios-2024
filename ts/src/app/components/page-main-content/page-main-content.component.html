@@ -125,19 +125,48 @@
             </header>
 
             <aside class="discuss-content">
-                <span class="discuss-subtitle">Compartilhe suas ideias ou dúvidas com os autores!</span>
+                <div class="share-ideas">
+                    <span class="discuss-subtitle">Compartilhe suas ideias ou dúvidas com os autores!</span>
 
-                <div class="images-wrapper">
-                    <img src="../../../assets/images/icone-mao.svg" alt="Imagem de duas mãos com uma folha">
-                    <img src="../../../assets/images/icone-q-a.svg" alt="Imagem contendo as letras Q e A">
-                    <img src="../../../assets/images/icone-pessoas.svg" alt="Imagem contendo duas pessoas e um balão de conversa">
+                    <div class="images-wrapper">
+                        <img src="../../../assets/images/icone-mao.svg" alt="Imagem de duas mãos com uma folha">
+                        <img src="../../../assets/images/icone-q-a.svg" alt="Imagem contendo as letras Q e A">
+                        <img src="../../../assets/images/icone-pessoas.svg" alt="Imagem contendo duas pessoas e um balão de conversa">
+                    </div>
+    
+                    <span>
+                        Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus <br> questionamentos ou sugestões para o autor!
+                    </span>
+
+                    <button class="open-form" (click)="showForm()">
+                        <img src="../../../assets/images/plus-icon.svg" alt="">
+                        criar tópico
+                    </button>
                 </div>
 
-                <span>
-                    Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus <br> questionamentos ou sugestões para o autor!
-                </span>
-
-                <img src="../../../assets/images/botão-criar-topico.svg" alt="Imagem de botão para criar novo tópico de discussão" class="btn-create-topic" (click)="showForm()">
+                <form action="" class="create-new-topic-wrapper">
+                    <span class="create-new-topic-title">
+                        Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+                    </span>
+              
+                    <div class="topic-subject-wrapper">
+                        <label class="new-topic-subject">Assunto</label>
+                            <br>
+                        <input type="text" name="newSubjectTitle" id="newSubjectTitle">
+                    </div>
+                    
+                    <div class="topic-content-wrapper">
+                        <label class="new-topic-content">Conteúdo</label>
+                            <br>
+                        <input type="text" name="newSubjectContent" id="newSubjectContent">
+                
+                        <div class="submit-subject-button-wrapper">
+                            <div class="subject-submit-button">
+                                <button class="btn-create-topic">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </aside>
 
             <article>
