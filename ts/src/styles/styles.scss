@@ -1,0 +1,50 @@
+@use "@angular/material" as mat;
+@use "./variables.scss";
+@use "./mixins.scss";
+
+@include mat.core();
+
+$ts-primary: (
+  50: #ffb354,
+  100: #ee7a3a,
+
+  900: #725c5c,
+  A100: #fdf1eb,
+  A200: #fff,
+  A400: #ed7839,
+
+  contrast: (
+    50: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%),
+    100: #000,
+
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #000,
+  ),
+);
+
+$ts-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ts-warn: mat.define-palette(mat.$red-palette);
+
+$ts-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ts-primary,
+      accent: $ts-accent,
+      warn: $ts-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($ts-theme);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
