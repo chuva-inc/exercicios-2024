@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { TopicsSectionComponent } from './components/topics-section/topics-section.component';
+import { TopicComponent } from './components/topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TopicsSectionComponent } from './components/topics-section/topics-secti
     HeroComponent,
     SummaryComponent,
     TopicsSectionComponent,
+    TopicComponent,
   ],
   imports: [
     BrowserModule
