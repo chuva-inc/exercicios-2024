@@ -170,20 +170,21 @@
 
 
                 <section class="submited-subject">
-                    <span class="submited-subject-subtitle">Seu tópico foi enviado com sucesso! :D</span>
+                    <div class="submited-subject-content-wrapper">
+                        <span class="submited-subject-subtitle">Seu tópico foi enviado com sucesso! :D</span>
 
-                    <span class="submited-subject-thank">
-                        Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!
-                    </span>
+                        <span class="submited-subject-thank">
+                            Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!
+                        </span>
+        
+                        <span class="submited-subject-find-new-works">
+                            Descubra outros trabalhos!
+                        </span>
     
-                    <span>
-                        Descubra outros trabalhos!
-                    </span>
-
-                    <button class="open-new-form" (click)="showForm()">
-                        <img src="../../../assets/images/plus-icon.svg" alt="">
-                        criar novo tópico
-                    </button>
+                        <button class="btn-create-topic" (click)="submitedForm()">
+                            criar novo tópico
+                        </button>
+                    </div>
                 </section>
             </aside>
 

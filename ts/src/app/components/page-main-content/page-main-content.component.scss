@@ -394,6 +394,59 @@
 
     .submited-subject {
         display: none;
+
+        .submited-subject-content-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submited-subject-subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ED7839;
+        }
+
+        .submited-subject-thank {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: .87rem;
+            color: #595959;
+            
+            margin-top: 1.1rem;
+        }
+
+        .submited-subject-find-new-works {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+            font-size: .87rem;
+            color: #F48F44;
+            text-decoration: underline;
+
+            margin-top: 1.8rem;
+            margin-bottom: 2.9rem;
+        }
+
+        .btn-create-topic {
+            background: linear-gradient(#FEB254, #F0813D);
+            width: 14.6rem;
+            height: 2rem;
+            border: none;
+
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: .93rem;
+            color: #FFF;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            margin-left: 26rem;
+            margin-top: 3.4rem;
+
+            cursor: pointer;
+        }
     }
 
     // Estiização relacionada ao formulário para envio de conteúdo de discussões

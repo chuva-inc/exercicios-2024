@@ -32,6 +32,10 @@ export class PageMainContentComponent implements OnInit {
   }
 
   submitedForm() {
-    
+    let submitedForm = document.querySelector(".submited-subject") as HTMLElement;
+    let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
+
+    submitedForm.style.display = 'block' ? 'none' : 'block';
+    newForm.style.display = 'none' ? 'block' : 'none';
   }
 }
