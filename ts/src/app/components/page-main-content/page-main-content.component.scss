@@ -1,7 +1,5 @@
-
 // Estilização da parte de conteúdos principais da página
 #page-main {
-    background-color: transparent;
     height: 86.3rem;
     width: calc(99vw - 13.75rem);
     position: absolute;
@@ -582,4 +580,16 @@
             }
         }
     }
+}
+
+
+// Estilização relacionada ao footer
+
+footer {
+    background-image: url("../../../assets/images/footer-image.png");
+    background-size: cover;
+    width: 71.6rem;
+    height: 11.3rem;
+    margin-top: 3.1rem;
+    margin-left: -8rem;
 }
