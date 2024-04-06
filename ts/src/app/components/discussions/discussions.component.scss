@@ -1,0 +1,104 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.container {
+  padding: 0;
+}
+
+.header-discussions {
+  @include header-card;
+}
+
+.discussions-title {
+  @include card-title;
+}
+
+.container-discussions-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box-dicussions-new-topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  width: calc(100% - 30px);
+  height: 0.2px;
+  background: $secondary-color-foreground;
+}
+
+.container-discussions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.card-discussions-title,
+.ops-topic-subject {
+  @include card-discussion-title;
+}
+
+.card-discussions-subtitle {
+  font-weight: 500;
+  @include card-text-accent;
+}
+
+.card-discussions-text {
+  padding-top: 10px;
+  @include card-text(14px, 400);
+}
+
+.card-dicussions-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 12px;
+}
+
+.menu-button-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background: #e4e4e4;
+  }
+}
+
+.discussions-icon {
+  color: $tertiary-color-foreground;
+}
+
+.button-hearth {
+  width: 27px;
+  height: 19px;
+  padding-top: 2px;
+  border: none;
+  background: $tertiary-color-foreground;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.24))
+    drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.12));
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: #c75a00;
+  }
+}
+
+.discussions-icon-hearth {
+  font-size: 14px;
+  color: $primary-color;
+}
+
+.card-discussion-react {
+  @include card-text(14px, 400);
+  color: #757575;
+  cursor: pointer;
+}

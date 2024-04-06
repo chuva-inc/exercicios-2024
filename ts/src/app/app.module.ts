@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -15,6 +16,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DiscussionsComponent } from './components/discussions/discussions.component';
+import { AnswersDiscussionsComponent } from './components/discussions/components/answers-discussions/answers-discussions.component';
+import { FormDiscussionsComponent } from './components/discussions/components/form-discussions/form-discussions.component';
+import { NewTopicDiscussionsComponent } from './components/discussions/components/new-topic-discussions/new-topic-discussions.component';
+import { ExpandTopicDiscussionsComponent } from './components/discussions/components/expand-topic-discussions/expand-topic-discussions.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,11 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     SummaryComponent,
     FooterComponent,
+    DiscussionsComponent,
+    AnswersDiscussionsComponent,
+    FormDiscussionsComponent,
+    NewTopicDiscussionsComponent,
+    ExpandTopicDiscussionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +45,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

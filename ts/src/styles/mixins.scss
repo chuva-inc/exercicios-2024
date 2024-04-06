@@ -31,3 +31,12 @@
   letter-spacing: 0.24px;
   color: $card-accent;
 }
+
+@mixin card-discussion-title {
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $tertiary-color-foreground;
+}

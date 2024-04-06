@@ -1,4 +1,5 @@
 # Página de Trabalho
+
 Na parte de html/scss/ts preparamos um [protótipo de alta fidelidade no figma](https://www.figma.com/proto/0D27YdXU8ibf0AhsBC2OEm/Chuva---Exerc%C3%ADcio-Frontend?page-id=0%3A1&type=design&node-id=1-123&viewport=404%2C346%2C0.24&t=qF57GDZnZJyE7F7q-1&scaling=scale-down&starting-point-node-id=1%3A123&show-proto-sidebar=1&mode=design) de uma tela para você implementar o HTML + CSS. Você pode fazer em CSS puro, utilizar pré-processadores CSS (SASS, LESS, etc), ou mesmo utilizar um framework (Bootstrap, Foundation, Ant, etc), utilize a ferramenta que você se sentir melhor e que lhe traga o melhor resultado.)
 
 ![Screenshot Figma](https://github.com/chuva-inc/exercicios-2023/raw/master/ts/src/assets/figma.jpg)
@@ -6,13 +7,12 @@ Na parte de html/scss/ts preparamos um [protótipo de alta fidelidade no figma](
 
 -> [Link para o Editável](https://www.figma.com/file/0D27YdXU8ibf0AhsBC2OEm/Chuva---Exerc%C3%ADcio-Frontend?type=design&node-id=0%3A1&mode=design&t=yAHAJDpJya32qSBU-1)
 
-
 ### Como rodar
 
 Dependências:
 
-* Node/npm
-* Cypress
+- Node/npm
+- Cypress
 
 Rode o seguinte comando para instalar o ambiente:
 
@@ -26,15 +26,16 @@ Para rodar os testes, rode o seguinte comando:
 npm run test
 ```
 
-
 Para rodar desenvolver, rode os seguintes comandos:
 
 Para ligar o ambiente
+
 ```
 ng serve
 ```
 
 Para rodar a UI de testes
+
 ```
 npx cypress open --env type=base
 ```

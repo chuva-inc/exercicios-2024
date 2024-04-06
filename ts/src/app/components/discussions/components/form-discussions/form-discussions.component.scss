@@ -1,0 +1,76 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+
+.discussions-form-container {
+  input {
+    width: 100%;
+    height: 39px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 3px;
+  }
+}
+
+.discussions-form-title {
+  text-align: center;
+  @include card-text(14px, 400);
+  padding-bottom: 12px;
+}
+
+.discussions-form-label {
+  display: block;
+  padding-top: 10px;
+  font-family: $font-family-foreground;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $secondary-color;
+}
+
+.box-area {
+  position: relative;
+}
+
+.discussions-form-area {
+  width: 100%;
+  height: 113px;
+  padding: 10px 10px 40px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+}
+
+.discussions-box-btn-submit {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  height: 31px;
+  border-radius: 0px 0px 4px 4px;
+  border: 1px solid #ccc;
+  background: #eaf1f2;
+
+  button {
+    width: 205.104px;
+    height: 31px;
+    border-radius: 0px 0px 4px 0px;
+    border: none;
+    background: $accent;
+    font-family: $font-family;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    color: $primary-color;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

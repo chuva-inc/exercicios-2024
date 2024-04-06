@@ -1,0 +1,50 @@
+<mat-card class="container">
+    <mat-card-header class="header-discussions">
+        <mat-card-title class="discussions-title">Discussões</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="container-discussions-content">
+        <div class="box-dicussions-new-topic">
+
+            <app-new-topic-discussions style="width: 100%;"></app-new-topic-discussions>
+
+            <div class="line"></div>
+        </div>
+
+        <div class="container-discussions">
+            <mat-card class="mat-elevation-z2">
+                <mat-card-header>
+                    <mat-card-title class="card-discussions-title">Assunto da pergunta aparece aqui</mat-card-title>
+                    <mat-card-subtitle class="card-discussions-subtitle">Carlos Henrique Santos</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p class="card-discussions-text">Comecinho da pergunta aparece aqui resente relato inscreve-se no
+                        campo da análise da dimensão e
+                        impacto de processo
+                        formativo situado impacto de processo formativo processo...</p>
+                </mat-card-content>
+
+                <mat-card-footer class="card-dicussions-footer">
+                    <button class="menu-button-icon">
+                        <mat-icon aria-label="icone de menu" class="discussions-icon">
+                            more_vert
+                        </mat-icon>
+                    </button>
+
+                    <button class="button-hearth">
+                        <mat-icon aria-label="icone de menu" class="discussions-icon-hearth">
+                            favorite
+                        </mat-icon>
+                    </button>
+
+                    <p class="card-discussion-react">1 like</p>
+                    <p class="card-discussion-react">1 resposta</p>
+                </mat-card-footer>
+            </mat-card>
+
+            <app-expand-topic-discussions></app-expand-topic-discussions>
+        </div>
+
+    </mat-card-content>
+</mat-card>
