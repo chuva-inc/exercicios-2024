@@ -14,7 +14,7 @@ describe('checa elementos básicos', () => {
   });
 
   it('botão de criar tópico existe', () => {
-    cy.get('.btn-create-topic').contains('criar tópico');
+    cy.get('button.btn-show-form').contains('criar tópico');
   });
 
   it('expandir tópico funciona', () => {
@@ -33,7 +33,7 @@ describe('checa elementos básicos', () => {
   });
 
   it('enviar o formulário exibe mensagem de sucesso', () => {
-    cy.get('.btn-create-topic').click();
+    cy.get('.btn-submit-form').click();
     cy.get('button').click();
     cy.get('body').contains('Aguardando feedback dos autores');
     cy.compareSnapshot('Trabalho - Topico enviado');
