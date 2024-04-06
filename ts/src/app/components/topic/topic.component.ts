@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic.component.scss'],
 })
 export class TopicComponent implements OnInit {
+  showAllTopic: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handleShowAllTopic(): void {
+    this.showAllTopic = !this.showAllTopic;
+  }
 }
