@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscussionsComponent implements OnInit {
 
+  isCreatingTopic: boolean = false;
+  isAwaitingFeedbackTopic: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addTopic() {
+    this.isCreatingTopic = true;
+  }
+
+  addTopicAwaitingFeedback() {
+    this.isAwaitingFeedbackTopic = true;
+  }
 }

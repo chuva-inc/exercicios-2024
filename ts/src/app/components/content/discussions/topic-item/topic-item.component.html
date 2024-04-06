@@ -1,19 +1,36 @@
 <div class="card">
-  <div class="card-header">
-    <h4 class="ops-topic-subjec">Assunto da pergunta aparece aqui</h4>
-    <span>Carlos Henrique Santos</span>
+  <div [ngClass]="{ 'awaiting-feedback': awaitingFeedback }">
+    <div class="card-header {{expanded ? 'answered-topic' : ''}}">
+      <h4 class="{{expanded ? 'ops-topic-subject' : ''}}" (click)="showComments()">
+        Assunto da pergunta aparece aqui
+      </h4>
+      <span>Carlos Henrique Santos</span>
+    </div>
+    <div class="card-body">
+      <p>
+        {{
+          truncateText(
+            "Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?"
+          )
+        }}
+      </p>
+    </div>
+    <div class="card-footer">
+      <img src="assets/more.svg" alt="" />
+      <img src="assets/like.svg" alt="" />
+      <span>{{ expanded ? "4 likes" : "1 like" }} </span>
+      <span>{{ expanded ? "4 respostas" : "1 resposta" }} </span>
+    </div>
   </div>
-  <div class="card-body">
-    <p>
-      Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da
-      análise da dimensão e impacto de processo formativo situado impacto de
-      processo formativo processo...
-    </p>
-  </div>
-  <div class="card-footer">
-    <img src="assets/more.svg" alt="" />
-    <img src="assets/like.svg" alt="" />
-    <span>1 like</span>
-    <span>1 resposta</span>
+  <div class="feedback-text" *ngIf="awaitingFeedback">
+    <img src="assets/check.svg" alt="check icon" />
+    <p>Aguardando feedback dos autores</p>
+    <a href="#">Editar tópico</a>
   </div>
 </div>
+
+<ng-container *ngIf="isShowingComments">
+  <div class="comments-container">
+    <app-answer-topic></app-answer-topic>
+  </div>
+</ng-container>

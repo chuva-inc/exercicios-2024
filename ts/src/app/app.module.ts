@@ -10,6 +10,9 @@ import { ResumeComponent } from './components/content/resume/resume.component';
 import { DiscussionsComponent } from './components/content/discussions/discussions.component';
 import { TopicItemComponent } from './components/content/discussions/topic-item/topic-item.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreateTopicComponent } from './components/content/discussions/create-topic/create-topic.component';
+import { SuccessfulSubmissionComponent } from './components/content/discussions/successful-submission/successful-submission.component';
+import { AnswerTopicComponent } from './components/content/discussions/answer-topic/answer-topic.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ResumeComponent,
     DiscussionsComponent,
     TopicItemComponent,
-    FooterComponent
+    FooterComponent,
+    CreateTopicComponent,
+    SuccessfulSubmissionComponent,
+    AnswerTopicComponent
   ],
   imports: [
     BrowserModule

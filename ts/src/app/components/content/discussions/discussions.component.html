@@ -3,24 +3,40 @@
     <p>Discussões</p>
   </div>
   <div class="add-topic-container">
-    <div class="body">
-      <h5>Compartilhe suas ideias ou dúvidas com os autores!</h5>
-      <div class="icons-group">
-        <img src="assets/hand.svg" alt="" />
-        <img src="assets/qa.svg" alt="" />
-        <img src="assets/idea.svg" alt="" />
+    <ng-container *ngIf="!isCreatingTopic">
+      <div class="body">
+        <h5>Compartilhe suas ideias ou dúvidas com os autores!</h5>
+        <div class="icons-group">
+          <img src="assets/hand.svg" alt="" />
+          <img src="assets/qa.svg" alt="" />
+          <img src="assets/idea.svg" alt="" />
+        </div>
+        <p>
+          Sabia que o maior estímulo no desenvolvimento científico e cultural é
+          a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+        </p>
+        <button (click)="addTopic()" class="btn-create-topic">
+          <img src="assets/add.svg" alt="" />
+          <span>criar tópico</span>
+        </button>
       </div>
-      <p>
-        Sabia que o maior estímulo no desenvolvimento científico e cultural é a
-        curiosidade? Deixe seus questionamentos ou sugestões para o autor!
-      </p>
-      <a href="#" class="btn-create-topic"
-        ><img src="assets/add.svg" alt="" /><span>criar tópico</span></a
-      >
-    </div>
+    </ng-container>
+    <ng-container *ngIf="isCreatingTopic && !isAwaitingFeedbackTopic">
+      <app-create-topic
+        (onSubmitTopic)="addTopicAwaitingFeedback()"
+      ></app-create-topic>
+    </ng-container>
+    <ng-container *ngIf="isAwaitingFeedbackTopic">
+      <app-successful-submission></app-successful-submission>
+    </ng-container>
     <div class="topic-items">
+      <ng-container *ngIf="isAwaitingFeedbackTopic">
+        <app-topic-item
+          [awaitingFeedback]="isAwaitingFeedbackTopic"
+        ></app-topic-item>
+      </ng-container>
       <app-topic-item></app-topic-item>
-      <app-topic-item></app-topic-item>
+      <app-topic-item [expanded]="true"></app-topic-item>
     </div>
   </div>
 </section>

@@ -5,15 +5,41 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   padding: 1.7rem 2.4rem;
-  height: 14.8rem;
+  min-height: 14.8rem;
+  position: relative;
+  cursor: pointer;
 
+  .awaiting-feedback {
+    filter: blur(4px);
+  }
+  .feedback-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    p {
+      font-family: $text-family-secondary;
+      font-weight: bold;
+      color: #707070;
+      margin-bottom: 0.8rem;
+    }
+
+    a {
+      font-size: 1.4rem;
+      color: $primary-color;
+    }
+  }
   .card-header {
-    .ops-topic-subjec {
       color: $primary-color;
       font-family: $text-family-secondary;
       font-size: 1.6rem;
       font-weight: bold;
-    }
+
 
     span {
       font-family: $text-family-secondary;

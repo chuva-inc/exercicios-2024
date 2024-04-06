@@ -1,0 +1,15 @@
+<ng-container *ngFor="let comment of comments">
+<section class="card {{!comment.role ? 'bg-white' : ''}}">
+  <div class="card-body">
+    <div class="author-comment">
+      <span class="author-name">{{comment.author}}</span>
+      <div class="author-info">
+        <span>{{comment.role}}</span>
+        <img src="assets/check-color.svg" alt="" />
+      </div>
+    </div>
+    <p [innerHTML]="comment.text">
+    </p>
+  </div>
+</section>
+</ng-container>

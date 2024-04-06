@@ -1,0 +1,64 @@
+@import "../../../../../dist/scss/variables";
+
+section {
+  margin-block: 1.5rem;
+  height: 100%;
+  p {
+    font-family: $text-family-secondary;
+    font-size: 1.4rem;
+    color: #5c5c5c;
+    text-align: center;
+  }
+  form {
+    display: flex;
+
+    flex-direction: column;
+    label {
+      color: $primary-color;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    input,
+    textarea {
+      border: 0.1rem solid #cccccc;
+      border-radius: 0.3rem;
+      outline: none;
+    }
+    .subject {
+      font-family: $text-family-secondary;
+      padding: 1rem 2.3rem;
+      margin-bottom: 0.5rem;
+
+      &::placeholder {
+        font-size: 1.4rem;
+        color: #4d4d4d;
+      }
+    }
+
+    .input-content {
+      padding: 0.5rem 1rem;
+      height: 8.2rem;
+      border-radius: 0.3rem 0.3rem 0 0;
+      resize: none;
+    }
+
+    .btn-send {
+      background-color: #cccccc;
+      text-align: end;
+      height: 3.1rem;
+      border-radius: 0px 0px 4px 4px;
+
+      .btn-create {
+        font-family: $text-family-secondary;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+        border-radius: 0px 0px 4px 0px;
+        color: #fff;
+        border: none;
+        height: 100%;
+        width: 20.5rem;
+      }
+    }
+  }
+}
