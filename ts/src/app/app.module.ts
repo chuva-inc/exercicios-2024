@@ -9,6 +9,7 @@ import { AsideComponent } from './components/content/aside/aside.component';
 import { ResumeComponent } from './components/content/resume/resume.component';
 import { DiscussionsComponent } from './components/content/discussions/discussions.component';
 import { TopicItemComponent } from './components/content/discussions/topic-item/topic-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TopicItemComponent } from './components/content/discussions/topic-item/
     AsideComponent,
     ResumeComponent,
     DiscussionsComponent,
-    TopicItemComponent
+    TopicItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
