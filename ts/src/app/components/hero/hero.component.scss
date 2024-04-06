@@ -96,9 +96,12 @@
     color: #4E4E4E;
 }
 
+
 .info-details {
     max-height: 24rem;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
 }
 
 .container-filters {
