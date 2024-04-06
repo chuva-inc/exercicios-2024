@@ -1,90 +1,529 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img src="data:image/png;base64,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" alt="" />
-  <span>Seu ambiente de dev para o exercício da chuva está rodando!</span>
-  <div class="spacer"></div>
-</div>
-
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-    <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
-      <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
-        <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
-        <g id="Group_47" data-name="Group 47" transform="translate(165.185 720.185)">
-          <path id="Path_33" data-name="Path 33" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" transform="translate(0.371 3.363)" fill="#fff"/>
-          <path id="Path_34" data-name="Path 34" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" transform="translate(0 0.005)" fill="#fff"/>
-        </g>
-      </g>
-    </svg>
-
-    <span>{{ title }} está rodando!</span>
-
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-      <title>Rocket Ship Smoke</title>
-      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-    </svg>
-
-  </div>
-
-  <!-- Next Steps -->
-  <h2>Próximos passos</h2>
-  <p>O que voce deve fazer agora?</p>
-
-  <input type="hidden" #selection>
-
-  <!-- Terminal -->
-  <div class="terminal">
-    <pre>npx cypress open --env type=base</pre>
-  </div>
-
-  <!-- Resources -->
-  <h2>Informações importantes</h2>
-  <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
-  <div id="required-elements">
-    <h3>O título do trabalho deve ser um h2: </h3>
-    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP'</h2>
-
-    <h3>O elemento de expandir resumo precisa ter a classe .btn-show-more</h3>
-    <a href="#" class="btn-show-more">ver mais</a>
-
-    <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a>
-
-    <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
+<div class="trabalho-base">
+  <div class="side-bar-shadow-parent">
+    <div class="side-bar-shadow"></div>
+    <div class="top-nome-evento">
+      <div class="top-nome-evento-child"></div>
+      <b class="slaca-2019">SLACA 2019</b>
     </div>
-    <div class="comments-container">
-      Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
+    <img
+      class="menu-itemlogo-icon"
+      loading="lazy"
+      alt=""
+      src="assets/menuitemlogo@2x.png"/>
+
+    <div class="menu-itemdesativado">
+      <div class="apresentao-wrapper">
+        <div class="apresentao">Apresentação</div>
+      </div>
+      <div class="menu-itemdesativado-child"></div>
+      <div class="menu-itemdesativado-item"></div>
     </div>
-
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
-
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
+    <div class="menu-itemdesativado1">
+      <div class="rectangle-parent">
+        <div class="frame-child"></div>
+        <div class="comits-wrapper">
+          <div class="comits">Comitês</div>
+        </div>
+      </div>
+      <div class="menu-itemdesativado-inner"></div>
+    </div>
+    <div class="menu-itemdesativado2">
+      <div class="rectangle-group">
+        <div class="frame-item"></div>
+        <div class="autores">Autores</div>
+      </div>
+      <div class="rectangle-div"></div>
+    </div>
+    <div class="menu-itemdesativado3">
+      <div class="eixos-temticos-wrapper">
+        <div class="eixos-temticos">Eixos temáticos</div>
+      </div>
+      <div class="menu-itemdesativado-child1"></div>
+      <div class="menu-itemdesativado-child2"></div>
+    </div>
+    <div class="menu-itemativado">
+      <div class="rectangle-container">
+        <div class="frame-inner"></div>
+        <div class="trabalhos">Trabalhos</div>
+        <div class="frame-child1"></div>
+      </div>
+      <div class="menu-itemativado-child"></div>
+    </div>
+    <div class="menu-itemdesativado4">
+      <div class="frame-div">
+        <div class="frame-child2"></div>
+        <div class="contato-wrapper">
+          <div class="contato">Contato</div>
+        </div>
+      </div>
+      <div class="menu-itemdesativado-child3"></div>
+    </div>
   </div>
+  <main class="header-parent">
+    <div class="header">
+      <nav class="bidirectional-tree">
+        <div class="boto-idiomas">
+          <div class="div"><i class="fas fa-globe"></i></div>
+          <div class="complete-graph">
+            <div class="pt-br">PT, BR</div>
+          </div>
+          <div class="directed-graph">
+            <img class="dropdown-icon" alt="" src="assets/dropdown.svg" />
+          </div>
+        </div>
+        <div class="weighted-graph">
+          <div class="bem-vindo">Bem vindo!</div>
+          <div class="alguem12galoasciencecom">
+            alguem12@galoascience.com
+          </div>
+        </div>
+        <div class="notification-badge">
+          <div class="masterbasic">
+            <img
+              class="imagem-icon"
+              loading="lazy"
+              alt=""
+              src="assets/imagem@2x.png"/>
+            <b class="divhddfe">2</b>
+          </div>
+        </div>
+      </nav>
+      <div class="anais-do-simpsio-latino-ameri-parent">
+        <div class="anais-do-simpsio">
+          Anais do Simpósio Latino Americano de Ciências de Alimentos
+        </div>
+        <div class="anais-do-13-simpsio-latino-a-wrapper">
+          <h3 class="anais-do-13">
+            Anais do 13º Simpósio Latino Americano de Ciência de Alimentos
+          </h3>
+        </div>
+        <div class="issn-1234-5678">ISSN: 1234-5678</div>
+      </div>
+    </div>
+    <section class="frame-wrapper">
+      <div class="ancestor-descendants-parent">
+        <div class="ancestor-descendants">
+          <div class="adjacent-descendants">
+            <h2 class="titulo-do-trabalho">
+              Análise sensorial de preparações funcionais desenvolvidas para
+              escolares entre 09 e 15 anos, do município de Campinas/SP
+            </h2>
+            <div class="leaf-descendants">
+              <div class="connected-descendants">
+                <div class="ancestors-descendants">
+                  <button class="download-button">
+                    <div class="div"><i class="fas fa-download"></i></div>
+                    <div class="text">Download</div>
+                  </button>
+                  <button class="favorite-button">
+                    <div class="div1"><i class="fas fa-star"></i></div>
+                    <div class="text1">Download</div>
+                  </button>
+                  <div class="doi-button">
+                    <img
+                      class="doi-icon"
+                      loading="lazy"
+                      alt=""
+                      src="assets/doi@2x.png"
+                    />
+                    <div class="text2">Download</div>
+                  </div>
+                </div>
+              </div>
+              <div class="citao">COMO CITAR ESSE TRABALHO?</div>
+            </div>
+          </div>
+          <div class="ancestor-descendants-inner">
+            <div class="video-apresentacao-parent">
+              <div class="video-apresentacao">
+                <div class="rootless-tree">
+                  <div class="profile-image"></div>
+                  <img
+                    class="dewey-1-icon"
+                    src="assets/dewey-1@2x.png"/>
+                </div>
+                <div class="video-overlay"></div>
+                <div class="image-handler">
+                  <h2 class="scott-masterson">
+                    Análise sensorial de preparações funcionais
+                    desenvolvidas para escolares entre 09 e 15 anos, do
+                    município de Campinas/SP
+                  </h2>
+                </div>
+                <div class="input-filter">
+                  <img
+                    class="masterround-icon"
+                    loading="lazy"
+                    src="assets/masterround@2x.png"/>
+                  <div class="input-filter-inner">
+                    <div class="scott-masterson-parent">
+                      <h1 class="scott-masterson1">
+                        Beatriz Christiane Melo
+                      </h1>
+                      <div class="scott-masterson-wrapper">
+                        <h3 class="scott-masterson2">
+                          FCA / Universidade Estadual de Campinas
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="detalhes-do-trabalho">
+                <div class="painel"></div>
+                <div class="painel-header">
+                  <div class="painel-header-child"></div>
+                  <div class="detalhes">Detalhes</div>
+                </div>
+                <div class="detalhes-do-trabalho-inner">
+                  <div class="scroll-container">
+                    <div class="frame-parent">
+                      <div class="tipo-de-apresentao-pster-e-wrapper">
+                        <div class="tipo-de-apresentao-container">
+                          <p class="tipo-de-apresentao-pster">
+                            <span class="tipo-de-apresentao-pster1">
+                              <span>
+                                <span>Tipo de Apresentação: </span>
+                                <b class="pster">Pôster</b>
+                              </span>
+                            </span>
+                          </p>
+                          <p class="eixo-temtico-alimentao-e-s">
+                            <span class="eixo-temtico-alimentao-e-s1">
+                              <span>
+                                <span class="eixo-temtico">Eixo temático:</span>
+                                <b>Alimentação e saúde (AS) </b>
+                              </span>
+                            </span>
+                          </p>
+                          <p class="palavras-chaves-alimentos-fun">
+                            <span class="palavras-chaves-alimentos-fun1">
+                              <span>
+                                <span class="palavras-chaves">Palavras-chaves:</span>
+                                <b>Alimentos funcionais, alimentação escolar.</b>
+                              </span>
+                            </span>
+                          </p>
+                          <p class="blank-line">
+                            <span class="blank-line1">
+                              <span>
+                                <b>&nbsp;</b>
+                              </span>
+                            </span>
+                          </p>
+                          <p class="autores1">
+                            <span class="autores2">
+                              <b><span>Autores:</span></b>
+                            </span>
+                          </p>
+                          <p class="galileo-galilei">
+                            <span>
+                              <span class="galileo-galilei1"><span>Galileo Galilei</span></span>
+                              <span class="span">¹</span>
+                            </span>
+                          </p>
+                          <p class="berta-lange-de-morretes">
+                            <span>
+                              <span class="berta-lange-de">Berta Lange de Morretes</span>
+                              <span class="span1">²</span>
+                            </span>
+                          </p>
+                          <p class="isaac-newton">
+                            <span>
+                              <span class="isaac-newton1">Isaac Newton</span>
+                              <span class="span2">³</span>
+                            </span>
+                          </p>
+                          <p class="cesar-lattes">
+                            <span>
+                              <span class="cesar-lattes1">Cesar Lattes</span>
+                              <span class="span3">¹</span>
+                            </span>
+                          </p>
+                          <p class="stephen-hawking">
+                            <span>
+                              <span class="stephen-hawking1">Stephen Hawking</span>
+                              <span class="span4">⁴</span>
+                            </span>
+                          </p>
+                          <p class="blank-line2">
+                            <span>
+                              <span class="blank-line3">&nbsp;</span>
+                            </span>
+                          </p>
+                          <p class="universidade-estadual-de-campi">
+                            <span>
+                              <span class="blank-line4">&nbsp;</span>
+                              <span class="universidade-estadual-de">¹Universidade Estadual de Campinas</span>
+                            </span>
+                          </p>
+                          <p class="universidade-de-so-paulo">
+                            <span>
+                              <span class="universidade-de-so">²Universidade de São Paulo</span>
+                            </span>
+                          </p>
+                          <p class="instituto-nacional-de-pesquisa">
+                            <span>
+                              <span class="instituto-nacional-de">³Instituto Nacional de Pesquisas Espaciais</span>
+                            </span>
+                          </p>
+                          <p class="universidade-federal-do-rio-de">
+                            <span>
+                              <span class="universidade-federal-do">⁴Universidade Federal do Rio de Janeiro</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="resumo-colapsado" [ngClass]="{ 'show-full': isExpanded }">
+          <div class="painel-header1">
+            <h2>Resumo</h2>
+          </div>
+          <div class="resumo-co-wrapper">
+            <div class="resumo-container">
+              <span *ngIf="!isExpanded">
+                <p class="resumo-initial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...</p>
+              </span>
+              <span class="resumo-full" *ngIf="isExpanded">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.</p>
+                <p>Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.</p>
+                <p>Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.</p>
+                <p>Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+              </span>
+              <b id="btnVerMais" class="btn-show-more" (click)="toggleExpand()">ver mais</b>
+            </div>
+          </div>
+        </div>
+        <div class="topicos-de-discusso">
+          <div class="painel-header2">
+            <h2>Discussões</h2>
+          </div>
+          <div class="topicos-de-discurso-inner" *ngIf="!showFormulario && !mostrarMensagemSucesso">
+            <div class="topicos-container">
+              <div class="compartilhe-suas-ideias">
+                <p>Compartilhe suas ideias ou dúvidas com os autores!</p>
+                <div class="icones-discussoes">
+                  <div class="icone1-parent">
+                    <img
+                      class="icone1"
+                      loading="lazy"
+                      alt=""
+                      src="assets/icone1.svg"/>
+                    <img
+                      class="icone2"
+                      loading="lazy"
+                      alt=""
+                      src="assets/icone2.svg"/>
+                    <img
+                      class="icone3"
+                      loading="lazy"
+                      alt=""
+                      src="assets/icone3.svg"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sabia-que-o-maior-estmulo-no-parent">
+              <div class="sabia-que-o">
+                Sabia que o maior estímulo no desenvolvimento científico e
+                cultural é a curiosidade? Deixe seus questionamentos ou
+                sugestões para o autor!
+              </div>
+              <div class="data-aggregator">
+                <div class="condition-splitter">
+                  <img
+                    class="divisria-icon"
+                    loading="lazy"
+                    alt=""
+                    src="assets/divisria.svg"/>
+                  <button class="btn-create-topic" id="botoCriarTpico" (click)="toggleFormulario()">
+                    <img
+                      class="button-bg-icon"
+                      alt=""
+                      src="assets/button-bg.svg"/>
+                    <div class="input-sorter">
+                      <div class="icon-criar">
+                        <div class="icon-criar-child"></div>
+                        <div class="icon-criar-item"></div>
+                      </div>
+                    </div>
+                    <b class="create-topic">criar tópico</b>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="formulario-container">
+            <div class="formulario" *ngIf="showFormulario">
+              <div class="tem-uma-divida">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</div>
+              <h4 class="assunto">Assunto</h4>
+              <input type="text" class="assunto-input subject" placeholder="Defina um tópico sucinto para notificar os autores...">
+              <h3 class="conteudo">Conteúdo</h3>
+              <input type="text" class="conteudo-input">
+              <div class="btn-enviar-container"><button class="btn-enviar" (click)="enviarFormulario()">Enviar</button></div>
+            </div>
+          </form>
+          <div class="mensagem-sucesso-container">
+            <div class="mensagem-sucesso" *ngIf="mostrarMensagemSucesso && !showFormulario">
+              <h2>Seu tópico foi enviado com sucesso! :D</h2>
+              <div>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</div>
+              <p>Descubra outros trabalhos!</p>
+              <button class="btn-create-topic" id="botoCriarTpico" (click)="toggleFormulario()">criar novo tópico</button>
+            </div>
+          </div>
+          <div class="answered-topic-container-feedback" *ngIf="mostrarMensagemAguardandoFeedback && !showFormulario && mostrarNovoTopico">
+            <div class="answered-topic-feedback">
+              <div class="answered-topic-item-feedback"></div>
+              <div class="ops-topic-subject-feedback">
+                <b>Assunto da pergunta aparece aqui</b>
+                <div class="carlos-henrique-santos1">
+                  Carlos Henrique Santos
+                </div>
+              </div>
+              <div class="comecinho-da-pergunta1">
+                Comecinho da pergunta aparece aqui resente relato
+                inscreve-se no campo da análise da dimensão e impacto de
+                processo formativo situado impacto de processo formativo
+                processo...
+              </div>
+              <div class="mensagem-aguardando-feedback" *ngIf="mostrarMensagemAguardandoFeedback && !showFormulario">
+                <div class="mensagem-aguardando-feedback-content">
+                  <i class="fas fa-check"></i>
+                  <p id="aguardando">Aguardando feedback dos autores</p>
+                  <p id="editar-topico">Editar tópico</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="answered-topic-container">
+            <div class="answered-topic1" id="cardDeTpicoColapsado">
+              <div class="answered-topic-item"></div>
+              <div class="ops-topic-subject-aparece-aq-group">
+                <b class="ops-topic-subject1"
+                  >Assunto da pergunta aparece aqui</b>
+                <div class="carlos-henrique-santos1">
+                  Carlos Henrique Santos
+                </div>
+              </div>
+              <div class="comecinho-da-pergunta1">
+                Comecinho da pergunta aparece aqui resente relato
+                inscreve-se no campo da análise da dimensão e impacto de
+                processo formativo situado impacto de processo formativo
+                processo...
+              </div>
+              <div class="frame-parent2">
+                <div class="mais-informaes-container">
+                  <img
+                    class="mais-informaes-icon1"
+                    loading="lazy"
+                    alt=""
+                    src="assets/mais-informacoes.svg"/>
+                </div>
+                <div class="favoritar1">
+                  <img
+                    class="button-bg-icon2"
+                    alt=""
+                    src="assets/button-bg.svg"/>
+                  <div class="green-apples-221">favorite</div>
+                </div>
+                <div class="likes1">1 like</div>
+                <div class="respostas1">1 resposta</div>
+              </div>
+            </div>
+          </div>
+          <div class="answered-topic-container">
+            <div class="answered-topic" id="cardDeTpicoColapsado" (click)="toggleComments()" >
+              <div class="answered-topic-item"></div>
+              <div class="ops-topic-subject-aparece-aq-group">
+                <b class="ops-topic-subject ">Assunto da pergunta aparece aqui</b>
+                <div class="carlos-henrique-santos1">
+                  Carlos Henrique Santos
+                </div>
+              </div>
+              <div class="comecinho-da-pergunta1">
+                Comecinho da pergunta aparece aqui resente relato
+                inscreve-se no campo da análise da dimensão e impacto de
+                processo formativo situado impacto de processo formativo
+                processo...
+              </div>
+              <div class="frame-parent2">
+                <div class="mais-informaes-container">
+                  <img
+                    class="mais-informaes-icon1"
+                    loading="lazy"
+                    alt=""
+                    src="assets/mais-informacoes.svg"/>
+                </div>
+                <div class="favoritar1">
+                  <img
+                    class="button-bg-icon2"
+                    alt=""
+                    src="assets/button-bg.svg"/>
 
-  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <title>Gray Clouds Background</title>
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
-
+                  <div class="green-apples-221">favorite</div>
+                </div>
+                <div class="likes1">4 like</div>
+                <div class="respostas1">4 resposta</div>
+              </div>
+              <div class="comments-container" *ngIf="mostrarComentario">
+                <div class="comments-card">
+                  <div class="comentario-autor">
+                    <div class="comentario-autor-header">
+                      <h2>Adriano da Silva</h2>
+                      <div class="nome-autor">
+                        <h3>Autor</h3>
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+                    <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                  </div>
+                  <div class="comentario-comum">
+                    <div class="comentario-comum-header">
+                      <h2>Carlos Henrique Santosa</h2>
+                    </div>
+                    <p>Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.</p>
+                    <p>Obrigada pela resposta, muito interessante o seu trabalho!</p>
+                  </div>
+                  <div class="comentario-coautor">
+                    <div class="comentario-coautor-header">
+                      <h2>Carmila Ferreira Andrade</h2>
+                      <div class="nome-coautor">
+                        <h3>Coautor</h3>
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+                    <p>Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                    <p>Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                  </div>
+                  <div class="comentario-coautor">
+                    <div class="comentario-coautor-header">
+                      <h2>Ana Carolina</h2>
+                      <div class="nome-coautor">
+                        <h3>Coautor</h3>
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+                    <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <img
+        class="imagem-footer"
+        loading="lazy"
+        alt=""
+        src="assets/imagem--footer@2x.png"/>
+    </section>
+  </main>
 </div>
