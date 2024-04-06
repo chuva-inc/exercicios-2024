@@ -270,29 +270,6 @@
             color: #595959;
         }
 
-        .open-form{
-            position: absolute;
-            top: 65.2rem;
-            left: 39.6rem;
-            cursor: pointer;
-            background: linear-gradient(#FEB254, #F0813D);
-
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            font-size: 0.93rem;
-            color: #FFF;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-            width: 8.31rem;
-            height: 2rem;
-
-            border: none;
-            border-radius: .06rem;
-        }
-
         .create-new-topic-wrapper {
             display: none;
         }
@@ -300,7 +277,7 @@
         .share-ideas {
             display: block;
 
-            .btn-create-topic {
+            .btn-show-form {
                 font-family: 'Quicksand', sans-serif;
                 font-weight: 700;
                 font-size: 0.93rem;
@@ -323,6 +300,18 @@
                 margin-top: 3.3rem;
             }
         }
+
+        .btn-submit-form {
+            width: 12.8rem;
+            height: 1.9rem;
+            background: linear-gradient(#FEB154, #F1833E);
+            border: none;
+            color: #FFF;
+            font-weight: 700;
+            font-family: 'Quicksand', sans-serif;
+            font-size: .93rem;
+            cursor: pointer;
+        }
     }
 
     article {
@@ -336,9 +325,16 @@
             border-radius: 0.25rem;
         }
 
-        .first-one {
+        .answered-topic-first {
+            border: 1px solid #E7E7E7;
+            width: 64.25rem;
+            height: 9.25rem;
+            margin-left: 0.93rem;
             margin-top: 1.8rem;
             margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            padding-top: 1.06rem;
+            border-radius: 0.25rem;
         }
 
         .topic-subject-wrapper {
@@ -443,7 +439,7 @@
             justify-content: space-evenly;
 
             margin-left: 26rem;
-            margin-top: 3.4rem;
+            margin-top: 1.7rem;
 
             cursor: pointer;
         }

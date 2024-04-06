@@ -14,7 +14,7 @@ describe('checa elementos básicos', () => {
   });
 
   it('botão de criar tópico existe', () => {
-    cy.get('button.btn-show-form').contains('criar tópico');
+    cy.get('.btn-show-form').contains('criar tópico');
   });
 
   it('expandir tópico funciona', () => {

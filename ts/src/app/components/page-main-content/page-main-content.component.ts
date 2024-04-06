@@ -30,6 +30,7 @@ export class PageMainContentComponent implements OnInit {
     let discuss = document.querySelector("#discuss") as HTMLElement;
     let discussContent = document.querySelector(".discuss-content") as HTMLElement;
     
+    discuss.style.height = '49rem';
     discussContent.style.height = '16.2rem' ? '11.81rem' : '16.2rem';
     newForm.style.display = 'block' ? 'none' : 'block';
     submitedForm.style.display = 'none' ? 'block' : 'none';
@@ -40,9 +41,11 @@ export class PageMainContentComponent implements OnInit {
     let submitedForm = document.querySelector(".submited-subject") as HTMLElement;
     let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
     let waitingFeedback = document.querySelector(".waiting-feedback") as HTMLElement;
+    let discuss = document.querySelector("#discuss") as HTMLElement;
     let discussContent = document.querySelector(".discuss-content") as HTMLElement;
-
-    discussContent.style.height = '16.2rem' ? '11.81rem' : '16.2rem';
+    
+    discuss.style.height = '40.5rem';
+    discussContent.style.height = '16.2rem' ? '14.3rem' : '16.2rem';
     submitedForm.style.display = 'block' ? 'none' : 'block';
     newForm.style.display = 'none' ? 'block' : 'none';
     waitingFeedback.style.display = 'block' ? 'none' : 'block';
