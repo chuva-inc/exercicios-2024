@@ -15,16 +15,18 @@
 }
 
 .title {
-  margin: 0;
   font-family: $font-family-foreground;
   font-size: 30px;
   font-weight: 700;
   color: $primary-color;
 }
 
-.nav-list {
-  margin: 0;
+.logo {
+  width: 220px;
+  height: 258px;
+}
 
+.nav-list {
   a {
     font-family: $font-family;
     font-size: 15px;
@@ -33,7 +35,16 @@
   }
 }
 
-.logo {
-  width: 220px;
-  height: 258px;
+.active {
+  position: relative;
+  background: #fdf1eb;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 48px;
+    background: $accent;
+  }
 }

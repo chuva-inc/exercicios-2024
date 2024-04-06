@@ -60,6 +60,12 @@
   font-weight: 500;
   line-height: normal;
   color: $primary-color;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: #833f00;
+  }
 }
 
 .hero-details-subtitle {

@@ -22,14 +22,13 @@
 
 .summary-item {
   @include card-text(14px, 400);
-
-  strong {
-    font-weight: 700;
-    color: $tertiary-color-foreground;
-    cursor: pointer;
-  }
 }
 
+.btn-show-more {
+  font-weight: 700;
+  color: $tertiary-color-foreground;
+  cursor: pointer;
+}
 .summary-item.remove {
   display: none;
 }
