@@ -24,10 +24,11 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 15px;
 }
 
 .line {
-  width: calc(100% - 30px);
+  width: 100%;
   height: 0.2px;
   background: $secondary-color-foreground;
 }
@@ -37,6 +38,63 @@
   flex-direction: column;
   gap: 15px;
   padding: 15px;
+}
+
+.new-topic {
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-topic.show {
+  display: block;
+}
+
+.overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  background: #ddd;
+  opacity: 0.8;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(2px);
+
+  img {
+    width: 20px;
+    height: 23px;
+  }
+}
+
+.feedback {
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #707070;
+}
+
+.edit-topic {
+  font-size: 14px;
+  color: $tertiary-color-foreground;
 }
 
 .card-discussions-title,

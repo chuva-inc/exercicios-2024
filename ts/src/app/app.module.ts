@@ -21,6 +21,7 @@ import { AnswersDiscussionsComponent } from './components/discussions/components
 import { FormDiscussionsComponent } from './components/discussions/components/form-discussions/form-discussions.component';
 import { NewTopicDiscussionsComponent } from './components/discussions/components/new-topic-discussions/new-topic-discussions.component';
 import { ExpandTopicDiscussionsComponent } from './components/discussions/components/expand-topic-discussions/expand-topic-discussions.component';
+import { ConfirmedNewTopicComponent } from './components/discussions/components/confirmed-new-topic/confirmed-new-topic.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ExpandTopicDiscussionsComponent } from './components/discussions/compon
     FormDiscussionsComponent,
     NewTopicDiscussionsComponent,
     ExpandTopicDiscussionsComponent,
+    ConfirmedNewTopicComponent,
   ],
   imports: [
     BrowserModule,
