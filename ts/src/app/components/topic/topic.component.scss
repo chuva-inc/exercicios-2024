@@ -48,6 +48,14 @@
     height: 1.125rem;
 }
 
+.container-interact-topic>a:hover {
+    transform: scale(1.1);
+}
+
+.container-interact-topic>a:active {
+    transform: scale(1);
+}
+
 .container-interact-topic div {
     display: flex;
     justify-content: center;
@@ -62,6 +70,15 @@
 
 .container-interact-topic>div img {
     width: 0.875rem;
+}
+
+.container-interact-topic div:hover {
+    cursor: pointer;
+    background-color: #da6f36;
+}
+
+.container-interact-topic div:active {
+    background-color: #c26330;
 }
 
 .container-interact-topic span {
