@@ -4,7 +4,14 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  justify-content: center;
   padding: 25px 44px 50px 44px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
