@@ -38,5 +38,4 @@ describe('checa elementos básicos', () => {
     cy.get('body').contains('Aguardando feedback dos autores');
     cy.compareSnapshot('Trabalho - Topico enviado');
   });
-
 })

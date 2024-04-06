@@ -88,7 +88,7 @@
                 <article>
                     <section class="colapsed-text">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. <span class="btn-show-more">ver mais</span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. <span class="btn-show-more" (click)="expandResume()">ver mais</span>
                         </p>
                     </section>
                     
@@ -112,7 +112,7 @@
                         <br>
         
                         <p>
-                            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="btn-show-more" (click)="colapseResume()">ver menos</span>
                         </p>
                     </section>
                 </article>
@@ -152,13 +152,13 @@
                     <div class="topic-subject-wrapper">
                         <label class="new-topic-subject">Assunto</label>
                             <br>
-                        <input type="text" name="newSubjectTitle" id="newSubjectTitle">
+                        <input type="text" name="newSubjectTitle" class="subject-title" placeholder="Defina um tópico sucinto para notificar os autores">
                     </div>
                     
                     <div class="topic-content-wrapper">
                         <label class="new-topic-content">Conteúdo</label>
                             <br>
-                        <input type="text" name="newSubjectContent" id="newSubjectContent">
+                        <input type="text" name="newSubjectContent" class="subject">
                 
                         <div class="submit-subject-button-wrapper">
                             <div class="subject-submit-button">

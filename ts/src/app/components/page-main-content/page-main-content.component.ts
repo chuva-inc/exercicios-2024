@@ -13,12 +13,34 @@ export class PageMainContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  expandResume() {
+    let resumeContentWrapper = document.querySelector(".resume-text-content") as HTMLElement;
+    let colapsedResume = document.querySelector(".colapsed-text") as HTMLElement;
+    let expandedResume = document.querySelector(".expanded-text") as HTMLElement;
+
+    
+    colapsedResume.style.display = 'none';
+    expandedResume.style.display = 'block';
+    resumeContentWrapper.style.height = '66.12rem';
+  }
+
+  colapseResume() {
+    let resumeContentWrapper = document.querySelector(".resume-text-content") as HTMLElement;
+    let colapsedResume = document.querySelector(".colapsed-text") as HTMLElement;
+    let expandedResume = document.querySelector(".expanded-text") as HTMLElement;
+
+    
+    colapsedResume.style.display = 'block';
+    expandedResume.style.display = 'none';
+    resumeContentWrapper.style.height = '66.12rem';
+  }
+
   showForm() {
     let shareIdeas = document.querySelector(".share-ideas") as HTMLElement;
     let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
 
-    shareIdeas.style.display = 'block' ? 'none' : 'block';
-    newForm.style.display = 'none' ? 'block' : 'none';
+    shareIdeas.style.display = 'none';
+    newForm.style.display = 'block';
   }
 
   submitForm(event:any) {
@@ -50,4 +72,4 @@ export class PageMainContentComponent implements OnInit {
     newForm.style.display = 'none' ? 'block' : 'none';
     waitingFeedback.style.display = 'block' ? 'none' : 'block';
   }
-} 
+}
