@@ -26,16 +26,20 @@ export class PageMainContentComponent implements OnInit {
     
     let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
     let submitedForm = document.querySelector(".submited-subject") as HTMLElement;
+    let waitingFeedback = document.querySelector(".waiting-feedback") as HTMLElement;
 
     newForm.style.display = 'block' ? 'none' : 'block';
     submitedForm.style.display = 'none' ? 'block' : 'none';
+    waitingFeedback.style.display = 'none' ? 'block' : 'none';
   }
 
   submitedForm() {
     let submitedForm = document.querySelector(".submited-subject") as HTMLElement;
     let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
+    let waitingFeedback = document.querySelector(".waiting-feedback") as HTMLElement;
 
     submitedForm.style.display = 'block' ? 'none' : 'block';
     newForm.style.display = 'none' ? 'block' : 'none';
+    waitingFeedback.style.display = 'block' ? 'none' : 'block';
   }
 }

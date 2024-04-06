@@ -450,6 +450,48 @@
     }
 
     // Estiização relacionada ao formulário para envio de conteúdo de discussões
+    .waiting-feedback {
+        background-color: #DDD;
+        width: 64.2rem;
+        height: 9.2rem;
+        border: 1px solid #E7E7E7;
+        margin-left: 0.93rem;
+        margin-top: 2rem;
+        padding-left: 1.5rem;
+        padding-top: 1.06rem;
+        border-radius: 0.25rem;
+
+        display: none;
+
+        .waiting-feedback-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 1.4em;
+                margin-top: 1em;
+                margin-bottom: 1rem;
+            }
+
+            span {
+                font-family: 'Segoe UI', sans-serif;
+                font-weight: 400;
+                font-size: .87rem;
+                color: #ED7839;
+                text-decoration: underline;
+            }
+
+            p {
+                margin-bottom: .6em;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #707070;
+            }
+        }
+    }
+
     .create-new-topic-wrapper {
         width: 64rem;
         height: 13.62rem;
