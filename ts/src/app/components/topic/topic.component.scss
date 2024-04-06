@@ -1,4 +1,4 @@
-.container-topic {
+.answered-topic {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
@@ -11,7 +11,7 @@
     border: 1px solid #E7E7E7;
 }
 
-.container-title-topic h3 {
+.container-title-topic .ops-topic-subject {
     font-family: "Quicksand";
     font-size: 1rem;
     font-weight: 700;
@@ -29,7 +29,7 @@
     color: #5C5C5C;
 }
 
-.container-topic p {
+.answered-topic p {
     font-family: "Quicksand";
     font-size: 0.875rem;
     font-weight: 400;
