@@ -8,6 +8,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { TopicsSectionComponent } from './components/topics-section/topics-section.component';
 import { TopicComponent } from './components/topic/topic.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TopicComponent } from './components/topic/topic.component';
     SummaryComponent,
     TopicsSectionComponent,
     TopicComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule
