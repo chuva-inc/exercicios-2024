@@ -111,3 +111,29 @@
 
     color: #757575;
 }
+
+
+.container-title-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-title-comment div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.container-title-comment div span {
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+
+    color: #ED7839;
+}
+
+.container-title-comment div img {
+    height: 1.3rem;
+}
