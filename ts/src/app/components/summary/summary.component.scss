@@ -14,6 +14,9 @@
 }
 
 .summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 15px;
 }
 
@@ -23,5 +26,19 @@
   strong {
     font-weight: 700;
     color: $tertiary-color-foreground;
+    cursor: pointer;
   }
+}
+
+.summary-item.remove {
+  display: none;
+}
+
+.summary-text {
+  @include card-text(14px, 400);
+  display: none;
+}
+
+.summary-text.show {
+  display: block;
 }
