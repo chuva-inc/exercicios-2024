@@ -7,7 +7,7 @@ footer {
 }
 
 .container-logo-footer img {
-    width: 15rem;
+    width: 10rem;
 }
 
 .container-logo-footer a {
@@ -15,11 +15,12 @@ footer {
     justify-content: center;
     align-items: center;
 
-    width: 15rem;
-    padding: 0.7rem 5rem;
+    width: 10rem;
+    padding: 0.7rem 2rem;
     border-radius: 5px;
 
     font-family: "Roboto";
+    font-size: 1rem;
 
     background-color: #71478E;
     color: #fff;
@@ -37,12 +38,12 @@ footer {
 
     padding-top: 0.5rem;
     gap: 1.5rem;
-
 }
 
 .container-info-footer p {
     font-family: "Roboto";
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
     color: #6b6b6b;
 }
 
