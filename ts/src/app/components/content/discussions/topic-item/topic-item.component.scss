@@ -1,0 +1,44 @@
+@import "../../../../../dist/scss/variables";
+
+.card {
+  border: 1px solid $secondary-color;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 1.7rem 2.4rem;
+  height: 14.8rem;
+
+  .card-header {
+    .ops-topic-subjec {
+      color: $primary-color;
+      font-family: $text-family-secondary;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    span {
+      font-family: $text-family-secondary;
+      font-size: 1.2rem;
+      color: #5c5c5c;
+      font-weight: 500;
+    }
+  }
+
+  .card-body p {
+    font-family: $text-family-secondary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #4d4d4d;
+    margin-block: 1.1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    span {
+      color: #757575;
+      font-size: 1.4rem;
+    }
+  }
+}
