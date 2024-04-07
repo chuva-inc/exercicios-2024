@@ -34,6 +34,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          flutter-version: 3.19.5
 
       - name: Install dependencies
         run: cd dart; flutter pub get
