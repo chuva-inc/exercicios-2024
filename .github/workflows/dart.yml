@@ -8,10 +8,13 @@ on:
 
 jobs:
   integration_test:
-    runs-on: macos-latest
+    timeout-minutes: 20
+    runs-on: macos-14
     env:
-      IOS_DEVICE: 'iPhone 14 Pro Simulator (16.2)'
+      IOS_DEVICE: 'iPhone 14 Pro Simulator (17.4)'
     steps:
+      # Uncomment the following line to see all available simulators upon
+      # macos version change.
       # - name: List all simulators
       #   run: xcrun xctrace list devices
 
