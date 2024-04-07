@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AsideMenuComponent } from './components/aside-menu/aside-menu.component';
@@ -24,7 +25,7 @@ import { FormCreateTopicComponent } from './components/form-create-topic/form-cr
     FormCreateTopicComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
