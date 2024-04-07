@@ -180,7 +180,7 @@
     outline: 1px solid #919191;
 }
 
-.container-button-create-topic {
+.container-button-submit-topic {
     display: flex;
     justify-content: flex-end;
 
@@ -192,7 +192,7 @@
     background: #EAF1F2;
 }
 
-.container-button-create-topic button {
+.container-button-submit-topic button {
     all: unset;
 
     padding: 0.5rem 4.125rem;
@@ -206,11 +206,52 @@
     background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
 }
 
-.container-button-create-topic button:hover {
+.container-button-submit-topic button:hover {
     background: linear-gradient(180deg, #e9a34d 0%, #d47236 100%);
     cursor: pointer;
 }
 
-.container-button-create-topic button:active {
+.container-button-submit-topic button:active {
     background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+}
+
+.container-feedback-message {
+    max-height: 10rem;
+}
+
+.feedback-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    position: relative;
+    z-index: 900;
+    bottom: 10rem;
+    left: 0;
+    height: 10rem;
+
+    backdrop-filter: blur(0.3125rem);
+}
+
+.feedback-message img {
+    height: 1.875rem;
+}
+
+.feedback-message h3 {
+    font-family: "Quicksand";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+
+    color: #707070;
+}
+
+.feedback-message a {
+    text-decoration: underline;
+}
+
+.feedback-message a:hover {
+    color: #d36b2a;
 }

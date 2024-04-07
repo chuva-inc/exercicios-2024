@@ -16,7 +16,7 @@
             questionamentos
             ou sugestões para o autor!
         </span>
-        <div>
+        <div class="container-button-create-topic">
             <div> </div>
             <button type="button" class="btn-create-topic" (click)="handleShowFormCreateTopic()">
                 <img src="../../../assets/plus.svg" alt="Sinal de mais">
@@ -40,7 +40,7 @@
             <label for="topic-content">
                 Conteúdo:
                 <textarea id="topic-content" class="content" formControlName="content"></textarea>
-                <div class="container-button-create-topic">
+                <div class="container-button-submit-topic">
                     <button>
                         Enviar
                     </button>
@@ -48,6 +48,38 @@
             </label>
         </div>
     </form>
+
+    <div class="container-feedback" *ngIf="stepForm==='feedback'">
+        <div class="container-create-topic">
+            <h3>
+                Seu tópico foi enviado com sucesso! :D
+            </h3>
+            <span>
+                Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for
+                respondido!
+            </span>
+            <div class="container-button-create-topic">
+                <div> </div>
+                <button type="button" class="btn-create-topic" (click)="handleShowFormCreateTopic()">
+                    <img src="../../../assets/plus.svg" alt="Sinal de mais">
+                    criar novo tópico
+                </button>
+            </div>
+        </div>
+
+        <div class="container-feedback-message">
+            <app-topic></app-topic>
+            <div class="feedback-message">
+                <img src="../../../assets/double-check-gray.svg" alt="símbolo de dupla-checagem">
+                <h3>
+                    Aguardando feedback dos autores
+                </h3>
+                <a href="#">
+                    Editar tópico
+                </a>
+            </div>
+        </div>
+    </div>
 
     <app-topic></app-topic>
 

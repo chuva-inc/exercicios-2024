@@ -31,7 +31,9 @@ export class TopicsSectionComponent implements OnInit {
   handleShowFormCreateTopic(): void {
     this.stepForm = "create";
   }
+
   handleSubmitNewTopic() {
-    console.log(this.topicForm.value)
+    console.log(this.topicForm.value);
+    this.stepForm = "feedback";
   }
 }
