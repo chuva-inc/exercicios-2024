@@ -4,9 +4,9 @@
         <h3 class="text-orange-500 font-semibold">Seu tópico foi enviado com sucesso! :D</h3>
         <p class="p-2">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
         <a href="" class="text-orange-400 border-b-2 border-b-orange-400 ">Descubra outros Trabalhos!</a>
-        <button class=" z-auto bg-gradient-to-b from-orange-300 to-orange-400 m-auto mt-10 text-white text-center flex justify-center text-xl p-2 ">criar novo tópico</button>
+        <button class=" z-auto bg-gradient-to-b from-orange-300 to-orange-400 m-auto mt-10 text-white text-center flex justify-center text-xl p-2 " *ngIf="!validationForm">criar novo tópico</button>
         <div class=" relative border-b-2 z-auto">
-    
+            
         </div>
     </div>
     
@@ -24,7 +24,7 @@
                 <path d="M0.0332031 0.5H1024.55V27C1024.55 28.933 1022.98 30.5 1021.05 30.5H3.5332C1.60021 30.5 0.0332031 28.933 0.0332031 27V0.5Z" fill="#EAF1F2" stroke="#CCCCCC"/>
                 
                 </svg>
-            <button type="submit" class=" btn-send-topic bg-gradient-to-b from-orange-300 to-orange-500 w-40 h-8 justify-end text-white " (click)="displayValidationForm()" [style]="styleContent">Enviar</button>                     
+            <button type="submit" class=" btn-send-topic bg-gradient-to-b from-orange-300 to-orange-400 w-40 h-8 justify-end text-white " (click)="displayValidationForm()" [style]="styleContent">Enviar</button>                     
         </div>
         
         
