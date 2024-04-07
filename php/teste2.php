@@ -4,21 +4,21 @@ libxml_use_internal_errors(true);
 $documento = new DOMDocument();
 $documento->loadHTML($html);
 
-$domNodelist = $documento->getElementsByTagName("article");
-$contentList = [];
+$domNodelist = $documento->getElementsByTagName("a");
+$linklist = [];
 
-foreach ($domNodelist as $article) {
-    $title = $article->getElementsByTagName("h5")[0]->textContent;
-    $abstract = $article->getElementsByTagName("p")[0]->textContent;
-    
-    $contentList[] = [$title, $abstract];
+foreach ($domNodelist as $link) {
+    $href = $link->getAttribute("href");
+    if (!empty($href)) {
+        $linklist[] = $href;
+    }
 }
 
 // Abrir arquivo
 $arquivo = fopen('file.csv', 'w');
 // Escrever conteúdo
-foreach ($contentList as $content) {
-    fputcsv($arquivo, $content);
+foreach ($linklist as $link) {
+    fputcsv($arquivo, [$link]);
 }
 fclose($arquivo);
 ?>
