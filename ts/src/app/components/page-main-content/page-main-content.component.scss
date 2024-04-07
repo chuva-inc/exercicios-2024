@@ -309,6 +309,10 @@
                     margin-bottom: .62rem;
                     border: 1px solid #CCC;
                 }
+
+                .subject-title::placeholder {
+                    padding: 1rem;
+                }
     
                 .subject-title:focus {
                     border: 1px solid #CCC;
