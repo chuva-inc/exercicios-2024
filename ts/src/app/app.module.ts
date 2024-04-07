@@ -9,6 +9,7 @@ import { SummaryComponent } from './components/summary/summary.component';
 import { TopicsSectionComponent } from './components/topics-section/topics-section.component';
 import { TopicComponent } from './components/topic/topic.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormCreateTopicComponent } from './components/form-create-topic/form-create-topic.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
     TopicsSectionComponent,
     TopicComponent,
     FooterComponent,
+    FormCreateTopicComponent,
   ],
   imports: [
     BrowserModule

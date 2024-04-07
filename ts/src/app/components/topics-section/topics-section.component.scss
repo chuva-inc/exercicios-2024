@@ -118,3 +118,99 @@
 .btn-create-topic:active {
     background: linear-gradient(180deg, #cf9043 0%, #8d481e 100%);
 }
+
+.container-topics form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+
+    padding: 1rem;
+}
+
+.container-topics form h4 {
+    margin: 0 auto;
+
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+    color: #5C5C5C;
+}
+
+.container-topics form label {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.172rem;
+
+    color: #ED7839;
+}
+
+.container-topics form label input,
+.container-topics form label textarea {
+    padding: 0.625rem 1.438rem;
+    margin-top: 0.2rem;
+
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+
+    font-family: "Quicksand";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+}
+
+#topic-subject {
+    height: 2.438rem;
+}
+
+#topic-content {
+    height: 5.125rem;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    resize: none;
+}
+
+.container-topics form label input:focus,
+.container-topics form label textarea:focus {
+    outline: 1px solid #919191;
+}
+
+.container-button-create-topic {
+    display: flex;
+    justify-content: flex-end;
+
+    height: 2rem;
+
+    border: 1px solid #CCCCCC;
+    border-radius: 0 0 3px 3px;
+
+    background: #EAF1F2;
+}
+
+.container-button-create-topic button {
+    all: unset;
+
+    padding: 0.5rem 4.125rem;
+    border-radius: 0 0 3px 0;
+
+    font-family: "Quicksand";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: #fff;
+    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+}
+
+.container-button-create-topic button:hover {
+    background: linear-gradient(180deg, #e9a34d 0%, #d47236 100%);
+    cursor: pointer;
+}
+
+.container-button-create-topic button:active {
+    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+}

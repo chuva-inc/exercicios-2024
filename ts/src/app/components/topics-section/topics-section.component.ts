@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topics-section.component.scss']
 })
 export class TopicsSectionComponent implements OnInit {
+  showFormCreateTopic: boolean = true; // TODO: Deixar como false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handleShowFormCreateTopic(): void {
+    this.showFormCreateTopic = true;
+  }
 }

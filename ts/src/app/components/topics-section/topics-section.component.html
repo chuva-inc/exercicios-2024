@@ -2,7 +2,7 @@
     <h1>
         Discussões
     </h1>
-    <div class="container-create-topic">
+    <div class="container-create-topic" *ngIf="!showFormCreateTopic">
         <h3>
             Compartilhe suas ideias ou dúvidas com os autores!
         </h3>
@@ -18,13 +18,34 @@
         </span>
         <div class="container-button-create-topic">
             <div> </div>
-            <button type="button" class="btn-create-topic">
+            <button type="button" class="btn-create-topic" (click)="handleShowFormCreateTopic()">
                 <img src="../../../assets/plus.svg" alt="Sinal de mais">
                 criar tópico
             </button>
         </div>
 
         <app-topic></app-topic>
-
     </div>
+    <form *ngIf="showFormCreateTopic">
+        <h4>
+            Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+        </h4>
+
+        <label for="topic-subject">
+            Assunto:
+            <input id="topic-subject" class="subject"
+                placeholder="Defina um tópico sucinto para notificar os autores..." type="text">
+        </label>
+        <div class="container-topic-content">
+            <label for="topic-content">
+                Conteúdo:
+                <textarea id="topic-content" class="content"></textarea>
+                <div class="container-button-create-topic">
+                    <button>
+                        Enviar
+                    </button>
+                </div>
+            </label>
+        </div>
+    </form>
 </section>
