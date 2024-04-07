@@ -14,9 +14,73 @@
     margin-bottom: 1.25rem;
 }
 
-.container-hero img {
-    height: 27.5rem;
-    width: 49rem;
+
+.video-presentation {
+    width: 48.75rem;
+    height: 26.875rem;
+    position: relative;
+}
+
+.video-presentation img {
+    width: 48.75rem;
+    height: 26.875rem;
+    filter: brightness(0.7) sepia(0.2);
+}
+
+.title-video-presentation {
+    position: relative;
+    bottom: 25rem;
+    left: 2rem;
+
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.5rem;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.info-title-video-presentation {
+    position: relative;
+    bottom: 12rem;
+    left: 2rem;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.info-title-video-presentation img {
+    height: 5rem;
+    width: 5rem;
+
+    padding: 0.313rem;
+
+    border-radius: 50%;
+    border: 1px solid #ED7839
+}
+
+.container-video-info-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.313rem;
+}
+
+.author-video-presentation,
+.college-video-presentation {
+    font-family: "Roboto";
+    font-weight: 900;
+    line-height: 1.563rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.author-video-presentation {
+    font-size: 2rem;
+}
+
+.college-video-presentation {
+    font-size: 1.25rem;
 }
 
 .container-hero-options {
