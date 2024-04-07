@@ -44,6 +44,8 @@ jobs:
 
       - run: cd dart; flutter doctor
 
+      - run: cd dart; flutter build ios --no-codesign
+
       - name: Run tests
         run: |
           cd dart
