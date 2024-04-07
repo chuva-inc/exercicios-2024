@@ -2,27 +2,23 @@
 $html = file_get_contents("https://proceedings.science/papers-published");
 libxml_use_internal_errors(true);
 $documento = new DOMDocument();
-$documento ->loadHTML($html);
+$documento->loadHTML($html);
 
 $domNodelist = $documento->getElementsByTagName("a");
-$linklist = '';
+$linklist = [];
 
-/**@var DOMNode $elemento */
-foreach($domNodelist as $link){
-    $href .= $link->getAttribute("href");
-    
-    if(!empty($href)){
-        $linklist .= $link->getAttribute("href") . "<br>";
-      }
+foreach ($domNodelist as $link) {
+    $href = $link->getAttribute("href");
+    if (!empty($href)) {
+        $linklist[] = $href;
+    }
 }
 
-//abrir aquivo
-echo $linklist;
-$copia= $linklist;
-$cabecalho= ['local', 'nome', 'e-mail'];
-
-$arquivo =fopen('file.csv', 'w');
-//escrever conteudo
-fputcsv($arquivo, $copia);
+// Abrir arquivo
+$arquivo = fopen('file.csv', 'w');
+// Escrever conteúdo
+foreach ($linklist as $link) {
+    fputcsv($arquivo, [$link]);
+}
 fclose($arquivo);
 
