@@ -8,6 +8,22 @@ import { PostService } from 'src/app/post.service';
   styleUrls: ['./topic-form-component.component.scss']
 })
 export class TopicFormComponentComponent implements OnInit {
+  validationForm:boolean = true;
+  showValidationForm = new EventEmitter<boolean>();
+  styleContent: string = '';
+
+   async displayValidationForm(){
+   this.validationForm = !this.validationForm ;
+   this.showValidationForm.emit(this.validationForm);
+   
+
+   if (this.validationForm) {
+    this.styleContent = 'display: block;';
+  } else {
+    this.styleContent = 'display: none;';
+  }
+  }
+
     form:FormGroup
   constructor(private formBuilder:FormBuilder, private postService:PostService) {
     this.form = this.formBuilder.group({
@@ -17,24 +33,12 @@ export class TopicFormComponentComponent implements OnInit {
     })
    }
 
-  validationForm:boolean = true;
-  showValidationForm = new EventEmitter<boolean>();
-
-   async displayValidationForm(){
-   this.validationForm = !this.validationForm ;
-   this.showValidationForm.emit(this.validationForm)
-
-    if(this.validationForm){
-      await this.showValidationForm.emit(false)
-    }
-  }
-
-
-
 
   ngOnInit(): void {
   }
   onSubmit(): void {
     this.postService.updatePosts([this.form.value] )
   }
+
+  
 }

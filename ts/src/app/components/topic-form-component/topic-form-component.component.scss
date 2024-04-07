@@ -1,4 +1,12 @@
 .border-b-2{
     width: 900px;
-    margin: -35px;
+    margin-top: -25px;
+    z-index: -1;
+}
+.form-validation {
+    display: block;
+}
+.btn-send-topic {
+    z-index: 1;
+    display: block;
 }
