@@ -1,0 +1,30 @@
+<div class="block text-start border-2 shadow-md mt-5" *ngFor="let post of postValues">
+    <h2 class=" text-bold pl-3 pt-2 text-orange-500 ops-topic-subject">{{post.subject}}</h2>
+    <h6 class="text-semibold pl-3">{{post.author}}</h6>
+    <p class="text-semibold p-3">{{post.topic}}</p>
+    <div class="p-3">
+        <app-subject-section-footer-component></app-subject-section-footer-component>
+    </div>
+</div>
+
+<div class="block text-start border-2 shadow-md mt-5">
+    <h2 class=" text-bold pl-3 pt-2 text-orange-500 ops-topic-subject">Assunto da Pergunta Aparece aqui</h2>
+    <h6 class="text-semibold pl-3">Carlos Henrique Santos</h6>
+    <p class="text-semibold p-3">comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise de dimensão e impacto no processo formativo situado impacto de processo formativo processo</p>
+    <div class="p-3">
+        <app-subject-section-footer-component></app-subject-section-footer-component>
+    </div>
+</div>
+
+<div class="block text-start border-2 mt-2 shadow-md answered-topic">
+    <h2 class=" text-bold pl-3 pt-2 text-orange-500 ops-topic-subject">Assunto da Pergunta Aparece aqui</h2>
+    <h6 class="text-semibold pl-3">Carlos Henrique Santos</h6>
+    <p class="text-semibold p-3">comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise de dimensão e impacto no processo formativo situado impacto de processo formativo processo</p>
+    <div class="p-3">
+        <button (click)="showAnswers()" >
+            <app-colapse-icons-component></app-colapse-icons-component>
+        </button>
+    <app-colapsed-answer-section *ngIf="!showFullyAnswers" ></app-colapsed-answer-section>
+        
+    </div>
+</div>

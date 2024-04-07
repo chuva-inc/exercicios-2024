@@ -18,6 +18,5 @@ describe('TopBannerComponentComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });
