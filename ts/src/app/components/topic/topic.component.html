@@ -1,5 +1,5 @@
 <div class="container-topic">
-    <div class="answered-topic" (click)="handleShowAllTopic()">
+    <div class="answered-topic" (click)="handleShowAllTopic($event)">
         <div class="container-title-topic">
             <h3 class="ops-topic-subject">Assunto da pergunta aparece aqui</h3>
             <h4>Carlos Henrique Santos</h4>
@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="container-interact-topic">
-            <a (click)="handleShowAllTopic()">
+            <a (click)="handleShowAllTopic($event)">
                 <img src="../../../assets/more-information.svg" alt="Símbolo para ver mais informações sobre o tópico">
             </a>
             <div>

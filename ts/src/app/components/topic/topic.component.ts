@@ -13,7 +13,8 @@ export class TopicComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleShowAllTopic(): void {
+  handleShowAllTopic(event: Event): void {
+    event.stopPropagation();
     this.showAllTopic = !this.showAllTopic;
   }
 }
