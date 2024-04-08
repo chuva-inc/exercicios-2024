@@ -1,6 +1,7 @@
 {
     "name": "chuva-inc/exercicios-2023",
     "description": "Exercícios do processo seletivo da Chuva Inc.",
+    "version": "1.0.0",
     "type": "project",
     "license": "None",
     "autoload": {
