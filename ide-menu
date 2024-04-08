@@ -1,0 +1,239 @@
+[33mcommit ee6bf8c2145a50bcaf4f1f3b198b059636a3aa48[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Wendy Souza <contato.wendy@hotmail.com>
+Date:   Mon Apr 8 13:02:27 2024 -0300
+
+    Criando o side-menu
+
+[33mcommit c10d12b78eaa91dffa24fcced0334b03bda692b4[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: a6c9f8a 2fa534d
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sun Apr 7 11:05:11 2024 -0300
+
+    Merge pull request #44 from chuva-inc/atualiza-flutter
+    
+    Atualiza Flutter
+
+[33mcommit 2fa534dec8965d569cbec6e305ddcf6b29903648[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sun Apr 7 10:39:32 2024 -0300
+
+    chore: Dá build antes de rodar o teste
+
+[33mcommit d320d345a96d9ba9e15f4e5f0522278ae9ccd6ec[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sun Apr 7 10:16:57 2024 -0300
+
+    fix: Especifica a versão do runner do job, ao invés de usar macos-latest
+
+[33mcommit c329b0b7cc07761aa948caf27bf17b1322cb0a3c[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sun Apr 7 10:06:25 2024 -0300
+
+    chore: Fixa versão do flutter
+
+[33mcommit d576756f2862df7ed778920fd5235c8a4b645915[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sat Apr 6 11:30:01 2024 -0300
+
+    fix: Corrige teste runner para Android
+
+[33mcommit 8615008023c28d04f8d7e44d5b649c60ac4b7a3a[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Sat Apr 6 11:28:15 2024 -0300
+
+    chore: Atualiza flutter pra versão mais recente (e corrige build no XCode 15.3)
+
+[33mcommit a6c9f8aa8394593d7e8e5e9b6415db901f621d91[m
+Merge: 4bbb9dd de98b7c
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Wed Nov 1 19:06:28 2023 -0300
+
+    Merge pull request #36 from chuva-inc/teste-assinatura-scrapper
+    
+    feat: Adiciona teste para a Assinatura do Scrapper
+
+[33mcommit de98b7c65495cb02a4765e7718f5a3c5b28a350e[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Wed Nov 1 19:05:18 2023 -0300
+
+    chore: lint
+
+[33mcommit 41a52362ebe72f23e7aff9dcf33ff35cf9e1231b[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Wed Nov 1 19:01:44 2023 -0300
+
+    feat: adiciona suporte a coverage
+
+[33mcommit 4f708f2e33c6c5127e2dc1623e8f7bad05b51463[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Wed Nov 1 19:01:30 2023 -0300
+
+    feat: Adiciona teste para a Assinatura do Scrapper
+
+[33mcommit 4bbb9dd3e59bafe0776203cdee9043f98a525d62[m
+Merge: 8504b54 4817f55
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 16:46:51 2023 -0300
+
+    Merge pull request #17 from chuva-inc/exercicio-dart
+    
+    renomeia arquivo pra facilitar a vida de usuários em que o fs não permite unicode
+
+[33mcommit 4817f5588136b680199c0745800049096f98a9b8[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 16:46:10 2023 -0300
+
+    chore: renomeia arquivo pra facilitar a vida de usuários em que o filesystem não permite unicode
+
+[33mcommit 8504b545e2d231e4420f65254a502a516f8671c5[m
+Merge: 88dfe90 b0537d4
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 15:41:47 2023 -0300
+
+    Merge pull request #15 from chuva-inc/dependabot/npm_and_yarn/ts/postcss-and-angular-devkit/build-angular-8.4.31
+    
+    chore(deps): bump postcss and @angular-devkit/build-angular in /ts
+
+[33mcommit 88dfe906fc6e8c2fe16f1e180df760e839de6090[m
+Merge: d157191 7b7b7e3
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 15:41:05 2023 -0300
+
+    Merge pull request #13 from chuva-inc/exercicio-dart
+    
+    feat: Adiciona protótipo e arquivos json do exercício de dart
+
+[33mcommit b0537d47d310b96d935611a5169baf04bb542d3c[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Oct 10 18:31:38 2023 +0000
+
+    chore(deps): bump postcss and @angular-devkit/build-angular in /ts
+    
+    Bumps [postcss](https://github.com/postcss/postcss) to 8.4.31 and updates ancestor dependency [@angular-devkit/build-angular](https://github.com/angular/angular-cli). These dependencies need to be updated together.
+    
+    
+    Updates `postcss` from 8.4.16 to 8.4.31
+    - [Release notes](https://github.com/postcss/postcss/releases)
+    - [Changelog](https://github.com/postcss/postcss/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/postcss/postcss/compare/8.4.16...8.4.31)
+    
+    Updates `@angular-devkit/build-angular` from 14.2.12 to 14.2.13
+    - [Release notes](https://github.com/angular/angular-cli/releases)
+    - [Changelog](https://github.com/angular/angular-cli/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/angular/angular-cli/compare/14.2.12...14.2.13)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: postcss
+      dependency-type: indirect
+    - dependency-name: "@angular-devkit/build-angular"
+      dependency-type: direct:development
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit 7b7b7e3d685c86600044cb3e6c211f5ecbf72fdc[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 15:30:17 2023 -0300
+
+    feat: Atualiza testes e código mock
+
+[33mcommit 59f1cc060eaa800d873d1c0536bf11404bf034ac[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 15:10:50 2023 -0300
+
+    feat: Adiciona protótipo e arquivos json do exercício de dart
+
+[33mcommit d15719189dcfff3d67df2161411c34c7359d3418[m
+Merge: cc6f813 9f6e6b1
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 10:41:40 2023 -0300
+
+    Merge pull request #11 from chuva-inc/exercicio-dart
+    
+    Adiciona exercício de dart
+
+[33mcommit 9f6e6b15e0e308138907cc46f95fa89c70561009[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 08:32:22 2023 -0300
+
+    feat #3: roda integration tests no github actions
+
+[33mcommit d88c0eaa5ff72a805bc912f9826286a1a7f6eb0d[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 08:27:44 2023 -0300
+
+    chore #3: remove podlock
+
+[33mcommit c7c1c9e429066b8e78d544011152ff97a1528380[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 08:27:23 2023 -0300
+
+    chore #3: readiciona ios
+
+[33mcommit f8e7cbdcfd5c280b589815e0dbf35c43c3a5c7d7[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 00:58:53 2023 -0300
+
+    fix #3: roda testes no android
+
+[33mcommit 93632c303318ace119c0946e55f483510dba33d2[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 00:58:14 2023 -0300
+
+    fix #3: roda testes no android
+
+[33mcommit 99c6f1814a33b7ab69c9e41835049f2d06b71162[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 00:50:08 2023 -0300
+
+    fix #3: Adiciona teste de dart
+
+[33mcommit fb389c0744a641d01a196a789ffa900d9dbd8ce8[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Tue Oct 10 00:49:19 2023 -0300
+
+    feat: atualiza .gitignore com arquivos do flutter
+
+[33mcommit cc6f8131b625cb1a84561d8c61c618e8651a87cf[m
+Merge: e1f802e dbf9209
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Mon Oct 9 23:09:36 2023 -0300
+
+    Merge pull request #10 from chuva-inc/primeira-leva-testes-php
+    
+    feat: Adiciona PHPUnit
+
+[33mcommit dbf92095e660e7aad1f2b0ec6fb68252541918ee[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Mon Oct 9 23:07:35 2023 -0300
+
+    feat: Adiciona PHPUnit
+
+[33mcommit e1f802ecbf00fefbe1dd4cd37457c0c32fce6d5b[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Fri Oct 6 13:58:47 2023 -0300
+
+    feat: atualiza faq
+
+[33mcommit 3aa0de7c92821e89b7f861ed2737b38d78138ccf[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Fri Oct 6 13:24:43 2023 -0300
+
+    chore: quebra linha
+
+[33mcommit 90688e5a87ff3a31c06164747b798793127d3fd3[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Fri Oct 6 13:22:44 2023 -0300
+
+    feat: Deixa explícito o link para o protótipo
+
+[33mcommit ed876a0eabcba0ce0f81714feefba7aa9c3ed8a0[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:   Thu Oct 5 18:26:42 2023 -0300
+
+    chore: garante que pasta pro dart/flutter existe
+
+[33mcommit 038d3125dcff19f3ea95a7b290c7a3edf9e9db9c[m
+Author: Fabiano Sant'Ana <fabiano@chuva-inc.com>
+Date:  
