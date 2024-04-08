@@ -4,7 +4,8 @@
 
     <div>
         <label class="discussions-form-label" for="subject">Assunto:</label>
-        <input type="text" name="subject" id="subject" required>
+        <input type="text" name="subject" id="subject" class="subject"
+            placeholder="Defina um tópico sucinto para notificar os autores..." required>
     </div>
 
     <div>
@@ -13,7 +14,8 @@
         <div class="box-area">
             <textarea class="discussions-form-area" type="text" name="content" id="content" required> </textarea>
 
-            <span class="discussions-box-btn-submit"><button (click)="submit()">Enviar</button></span>
+            <span class="discussions-box-btn-submit"><button (click)="submit()"
+                    class="btn-create-topic">Enviar</button></span>
         </div>
     </div>
 </form>
