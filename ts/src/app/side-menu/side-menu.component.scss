@@ -1,3 +1,6 @@
+$gradiente-primario: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+$cor-header-selecionado: rgba(253, 241, 235, 1);
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +9,7 @@
 .header {
     width: 220px;
     height: 1701px;
+    box-shadow: 0px 0px 10px 0px #00000040;
     // margin: 0;
 }
 
@@ -51,6 +55,9 @@
     border-color: #FFB354;
   }
 
-// .trabalhos {
-//     border-left: 6px solid #ED7839;
-// }
+  .ativado {
+    border-left: 6px solid orange;
+    background-color: $cor-header-selecionado;
+  }
+
+

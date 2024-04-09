@@ -1,0 +1,386 @@
+
+.titulo_e_citacao {
+    display: flex;
+    gap: 30px;
+    .titulo {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: rgba(237, 120, 57, 1);
+        margin: 0;
+        margin-bottom: 19px;
+        width: 786px
+    }
+    .citacao {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 60px; 
+        width: 240px;
+        .texto_citacao {
+            margin: 0; 
+            width: 239px;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            text-align: right;
+            color: rgba(237, 120, 57, 1);
+        }
+        .botoes {
+            display: flex; 
+            flex-direction: row; 
+            gap: 15px; 
+            margin: 0;
+            padding: 0;
+            .bt_download {
+                display: flex;
+                justify-content: space-around;
+                text-decoration: none;
+                border: none;
+                background: rgba(237, 120, 57, 1);
+                width: 120px;
+                height: 31px;
+                padding: 6px 12px 6px 12px;
+                border-radius: 4px;
+                .texto_download {
+                    color: #FFFFFF;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18.75px;
+                    text-align: center;
+                }
+            }
+            .outros_botoes {
+                border: none;
+                background: rgba(237, 120, 57, 1);
+                width: 43px;
+                height: 31px;
+                padding: 6px 12px 6px 12px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.video_e_detalhes {
+    display: flex; 
+    gap: 30px;
+    .video {
+        width: 786px;
+        height: 54px;
+        margin: 0;
+        .imagem_overlay {
+            position: absolute;
+            top: 70px;
+            left: 0px;
+            opacity: 50%;
+        }
+        .video_texto_e_imagem {
+            .titulo_video {
+                position: absolute;
+                top: 80px;
+                left: 10px;
+                opacity: 100%;
+                color: #FFFFFF;
+                margin: 20px 32px;
+                font-family: Roboto;
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 25px;
+                letter-spacing: 0.05em;
+                text-align: left;
+                width: 734px;
+            }
+            .circulo {
+                position: absolute;
+                top: 360px;
+                left: 50px;
+            }
+            .nome_circulo {
+                position: absolute;
+                top: 380px;
+                left: 160px;
+                font-family: Roboto;
+                font-size: 34px;
+                font-weight: 900;
+                line-height: 25px;
+                letter-spacing: 0.05em;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            .univ_circulo {
+                position: absolute;
+                top: 410px;
+                left: 160px;
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 900;
+                line-height: 25px;
+                letter-spacing: 0.05em;
+                text-align: left;    
+                color: #FFFFFF;
+            }            
+        }   
+    }
+    .detalhes_do_trabalho {
+        width: 242px;
+        height: 439px;
+        border-radius: 3px;
+        border: 1px solid rgba(236, 236, 236, 1);
+        background-color: rgb(255, 255, 255);
+        .detalhes {
+            width: 242px;
+            height: 45px;
+            top: 73px;
+            left: 816px;
+            gap: 0px;
+            border-radius: 3px 3px 0px 0px;
+            border: 1px 0px 0px 0px;
+            background: rgba(253, 241, 235, 1);
+        
+            h1 {
+                padding: 11px;
+                margin: 0;
+                font-family: Roboto;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 25px;
+                text-align: left;
+            }
+        }
+        
+        .detalhes_textos {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            height: 83%;
+            overflow-y: scroll;
+        }
+        
+        .detalhes_primeiro_texto {
+            font-family: Quicksand;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.4px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            margin-bottom: 25px;
+        
+            strong {
+                font-family: Quicksand;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14.4px;
+                letter-spacing: 0.02em;
+                text-align: left;
+            }
+        }   
+        
+        .detalhes_segundo_texto {
+            font-family: Quicksand;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            margin-bottom: 25px;
+            
+            strong {
+                font-family: Quicksand;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 16.8px;
+                letter-spacing: 0.02em;
+                text-align: left;        
+            }
+        }
+        
+        .detalhes_terceiro_texto {
+            font-family: Quicksand;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 12px;
+            letter-spacing: 0.02em;
+            text-align: left;
+        
+            
+            strong {
+                font-family: Quicksand;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 12px;
+                letter-spacing: 0.02em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.resumo {
+    display: flex;
+    margin: 35px 0 35px 0;
+    flex-direction: column;
+    width: 1058px;
+    // height: 189px;
+    border-radius: 3px;
+    border: 1px solid rgba(236, 236, 236, 1);
+    
+
+    .resumo_titulo {
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        color: rgba(78, 78, 78, 1);
+        padding: 0 0 0 15px;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-bottom: 1px solid rgba(236, 236, 236, 1);
+        background-color: rgba(253, 241, 235, 1);
+    }
+
+    .resumo_introducao {
+        display: flex;
+        gap: 25px;
+        padding: 15px;
+        font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 400;
+        border-radius: 0px 0px 3px 3px;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 700;
+        color: rgba(237, 120, 57, 1);
+   }  
+}
+
+.discussoes {
+    // margin-top: 35px;
+    width: 1058px;
+    // height: 621px;
+    border: 1px solid rgba(236, 236, 236, 1);
+    border-radius: 3px;
+    .card_discussoes {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 15px;
+        height: 45px;
+        background-color: rgba(253, 241, 235, 1);
+        border-bottom: 1px solid rgba(236, 236, 236, 1);
+        .titulo_dicussoes {
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+            text-align: left;
+            margin: 0;
+        }
+    }
+    .compartilhe_ideias {
+        margin-top: 15px;
+        text-align: center;
+        align-items: center;
+        .compartilhe_ideias_titulo {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.09px;
+            text-align: left;    
+            color: rgba(237, 120, 57, 1);
+        }
+        .compartilhe_ideias_imagens {
+            margin-top: 27px;
+            img {
+                margin-left: 51px;
+            }
+        }
+        .compartilhe_ideias_frase{
+            margin-top: 35px;
+            .compartilhe_ideias_frase_titulo {
+                font-family: Quicksand;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19.25px;
+                text-align: center;
+            }
+        }
+        .traco {
+            background-color: rgba(231, 231, 231, 1);
+            border: 4px;
+            width: 80%;
+            height: 1px;
+            margin: 0 auto;
+            position: relative;
+            top: -15px;
+            z-index: -1;
+          }
+
+        .criar_topico {
+            cursor: pointer;
+            margin-top: 21px;
+            color: #FFFFFF;
+            font-family: Quicksand;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: center;
+            border: none;
+            width: 133px;
+            height: 32px;
+            border-radius: 4px;
+            background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+            }
+    }
+
+    .card_assuntos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 1028px;
+        height: 148px;    
+        border-radius: 4px;
+        border: 1px solid rgba(231, 231, 231, 1);
+        margin: 15px 15px 17px 15px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2509803922);
+    }
+
+    .card_assuntos_titulo {
+        font-size: 16px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        padding: 0 0 3px 24.17px;
+        color: rgba(237, 120, 57, 1);
+    }
+
+    .card_assuntos_nome {
+        font-size: 12px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        padding: 0 0 10px 24.17px;
+        color: rgba(92, 92, 92, 1); 
+    }
+
+    .card_assuntos_comentario {
+        font-size: 14px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 400;
+        padding: 0 23.17px 11px 24.17px;
+        color: rgba(77, 77, 77, 1);
+    }
+
+    .icone_comentario {
+        padding: 0 0 0 24.17px;
+    }
+}
+
+
+
