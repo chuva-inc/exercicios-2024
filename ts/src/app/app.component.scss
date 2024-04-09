@@ -1,12 +1,13 @@
-$primaryColor: #f38b42;
+$primaryColor: #ed7839;
 $secondaryColor: #fdf1eb;
 $textColor: #725c5c;
-$textColorSecondary:#656261;
+$textColorSecondary: #4e4e4e;
+$borderColor: #ececec;
 
 .container {
   background-color: white;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   display: flex;
 }
 .toolBar {
@@ -35,7 +36,7 @@ $textColorSecondary:#656261;
     .listItens {
       width: 100%;
       padding: 1rem 1rem;
-      border-bottom: 2px solid rgb(200, 200, 200);
+      border-bottom: 2px solid $borderColor;
       color: $textColor;
       font-weight: bold;
     }
@@ -47,10 +48,10 @@ $textColorSecondary:#656261;
   height: 100%;
   box-shadow: 1px 10px 20px -1px rgba(0, 0, 0, 0.43);
   .navBar {
-    height: 5.9rem;
+    height: 10vh;
     background-color: $secondaryColor;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     .textNavBar {
       display: flex;
       flex-direction: column;
@@ -64,50 +65,48 @@ $textColorSecondary:#656261;
     }
     .navBarUser {
       width: max-content;
-      margin-left: 10rem;
-      justify-content: center;
       text-align: center;
       align-items: center;
-      margin-top: 1rem;
       display: flex;
-      height: 3.5rem;
+      margin-right: 5rem;
       select {
         background-color: transparent;
         text-align: center;
         width: 8rem;
         height: 3rem;
-        margin-top: 0.5rem;
         border-radius: 0.2rem;
+        border: 1px solid #cccccc;
+        font-size: large;
+        color: $textColorSecondary;
       }
-      .textBox{
+      .textBox {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-left:1rem;
-        margin-top: 0.8rem;
-        .welcome{
+        margin-left: 2rem;
+        .welcome {
           font-weight: 400;
-          margin-left: 7rem;
+          text-align: end;
           font-size: large;
           color: $textColorSecondary;
         }
-        .userEmail{
+        .userEmail {
           color: $textColorSecondary;
         }
       }
-      .user{
-        margin-top: 0.2rem;
-        width: 5rem;
+      .user {
         display: flex;
         justify-content: end;
-        .userImage{
-          width: 6rem;
-        }
-        .textNotify{
+        margin-left: 0.5rem;
+        .userImage {
           border-radius: 100%;
-          width: 1.5rem;
-          height: 1.5rem;
-          font-size: larger;
+        }
+        .textNotify {
+          border-radius: 100%;
+          width: 1rem;
+          height: 1rem;
+          font-size: small;
+          font-weight: bold;
           background-color: red;
           color: white;
           position: absolute;
@@ -117,5 +116,226 @@ $textColorSecondary:#656261;
   }
   .mainText {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 90vh;
+    max-height: max-content;
+    .mainTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      width: 100%;
+      height: 10vh;
+      .title {
+        color: $primaryColor;
+        font-weight: bold;
+        font-size: xx-large;
+        width: 70%;
+        margin-left: 3rem;
+      }
+      .mainAside {
+        display: flex;
+        flex-wrap: wrap;
+        width: 20rem;
+        gap: 1rem;
+        margin-right: 2rem;
+        .download {
+          display: flex;
+          justify-content: space-between;
+          font-size: larger;
+          background-color: #ed7839;
+          padding: 0.5rem 2rem;
+          width: 11rem;
+          height: 2.5rem;
+          border: none;
+          color: white;
+          border-radius: 5%;
+        }
+        .fav {
+          background-color: #ed7839;
+          border: none;
+          width: 3.5rem;
+          height: 2.5rem;
+          border-radius: 10%;
+          color: white;
+        }
+        .doi {
+          background-color: #ed7839;
+          width: 3.5rem;
+          height: 2.5rem;
+          border-radius: 10%;
+          border: none;
+          color: white;
+        }
+        h5 {
+          color: #ed7839;
+          font-size: x-large;
+          width: 100%;
+        }
+      }
+    }
+    .mainSection {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      .video {
+        margin-left: 3rem;
+      }
+      .details {
+        width: 21rem;
+        margin-right: 2rem;
+        height: 27.4rem;
+        border: 1px solid $borderColor;
+        border-radius: 1%;
+        .navDetails {
+          background-color: $secondaryColor;
+          height: 4rem;
+          border-bottom: 1px solid $borderColor;
+          .navTitle {
+            padding: 1rem;
+            color: $textColorSecondary;
+            font-weight: 400;
+          }
+        }
+        .detailsInfo {
+          overflow-y: scroll;
+          height: max-content;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          color: $textColorSecondary;
+          margin: 1rem;
+          .authorsDiv {
+            display: flex;
+            flex-direction: column;
+          }
+          .footerDetails {
+            color: #ada0a0;
+            margin-top: 1rem;
+            font-size: medium;
+          }
+          &::-webkit-scrollbar {
+            width: 0.3rem;
+          }
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: gray;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .abstract {
+      margin-left: 3rem;
+      margin-top: 2rem;
+      width: 95%;
+      height: max-content;
+      border: 1px solid $borderColor;
+      .abstractTitle {
+        background-color: $secondaryColor;
+        border-bottom: 1px solid $borderColor;
+        height: 4.5rem;
+        padding: 1rem;
+        color: $textColorSecondary;
+      }
+      .abstractText {
+        color: $textColorSecondary;
+        padding: 1rem;
+        font-size: large;
+      }
+      .openText {
+        color: #ed7839;
+        cursor: pointer;
+      }
+    }
+    .topicMainDiv {
+      margin-left: 3rem;
+      margin-top: 2rem;
+      width: 95%;
+      height: max-content;
+      border: 1px solid $borderColor;
+      .topicTitle {
+        background-color: $secondaryColor;
+        border-bottom: 1px solid $borderColor;
+        height: 4.5rem;
+        padding: 1rem;
+        color: $textColorSecondary;
+      }
+      .topicSubDiv {
+        width: 95%;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .topicSubTitle {
+          color: $primaryColor;
+          font-size: x-large;
+          margin-top: 1rem;
+        }
+        .imagesTopic {
+          display: flex;
+          gap: 3rem;
+          margin-top: 2rem;
+        }
+        .topicSub {
+          margin-top: 2rem;
+          color: $textColorSecondary;
+          text-align: center;
+        }
+        .createTopic {
+          margin-top: 2rem;
+          background: rgb(167, 91, 1);
+          background: linear-gradient(
+            0deg,
+            rgba(167, 91, 1, 1) 0%,
+            rgba(255, 174, 0, 1) 100%
+          );
+          color: white;
+          font-weight: bold;
+          font-size: x-large;
+          width: 10rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          border: none;
+          z-index: 10;
+        }
+        .line{
+          color: red;
+          width: 70%;
+          height: 1px;
+          background-color: #E7E7E7;
+          position: absolute;
+          top: 131%;
+        }
+        .card{
+          display: flex;
+          flex-direction: column;
+          width: 92%;
+          border: 1px solid $borderColor;
+          height: 17rem;
+          margin-top: 1rem;
+          border-radius: 0.4rem;
+          box-shadow: 15px 15px 15px 1px $borderColor;
+          .cardTitle{
+            color: $primaryColor;
+            padding: 1rem 0.5rem;
+            font-size: larger;
+          }
+          .cardName{
+            padding: 1rem;
+            padding: 1rem 0.5rem;
+          }
+          .cardContent{
+            padding: 1rem;
+            padding: 1rem 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
