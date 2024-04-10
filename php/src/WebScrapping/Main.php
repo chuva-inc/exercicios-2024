@@ -2,6 +2,9 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use DOMXPath;
+use DOMDocument;
+
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Box\Spout\Common\Entity\Row;
 use PhpParser\Node\Stmt\Echo_;
@@ -26,27 +29,100 @@ class Main
     // Write your logic to save the output file bellow.
     print_r($data);
 
-    //O objetivo aqui é iterar sobre $data e coletar e armazenar em um vetor todos os id
-    foreach ($data as $item) {
-      if (isset($item->id)) {
-        $ids[] = $item->id;
+
+
+    // Inicializa um novo objeto DOMDocument
+    //$domm = new \DOMDocument();
+
+    // Loop sobre o array de strings
+    foreach ($data as $html) {
+      // Suprima os avisos de erros para carregar o HTML, pois ele pode conter erros de formatação
+      libxml_use_internal_errors(true);
+
+      // Carrega o HTML na estrutura DOM
+      //   $dom->loadHTML($html);
+
+      // Volte a exibir os avisos de erros
+      //  libxml_use_internal_errors(false);
+
+      // Agora você pode manipular o DOM como necessário...
+
+      // Por exemplo, encontrar todos os elementos <a> e imprimir seus atributos href
+      $links = $dom->getElementsByTagName('a');
+      foreach ($links as $link) {
+        $linksArray[] = $link->getAttribute('href');
       }
     }
 
+    $xpath = new DOMXPath($dom);
+    $atributoClasseId = "volume-info";
+    $divs = $xpath->query("//div[contains(@class, '$atributoClasseId')]");
 
-    //Preciso pegar os dados dentro de $data e colocar eles dentro de uma planilha
-    // uma planilha possui linhas e colunas. Neste caso vou ter as colunas: id, title, type e authors
-    //Pegar um dado dentro de uma var e colocar na planilha no campo espécíficado que ela pertence
-
-
-    //1 - ler a var $data e pegar todos os id   Armazenando  em um vetor. Fazer a mesma coisa com as outra colunas.
-    // escrever os vetores na planilha
-    // Vou pedir pro spout escrver um lista 
-
-    $writer = WriterEntityFactory::createXLSXWriter();
+    foreach ($divs as $div) {
+      // Obtém o conteúdo da div e adiciona ao array $conteudosDiv
+      $conteudoDiv = $div->nodeValue;
+      $conteudosDiv[] = $conteudoDiv;
 
 
 
-    $writer->openToFile("./assets/solucao.xlsx");
-  }
-}
+      $filePath = getcwd() . '/t12.xlsx';
+
+      $writer = WriterEntityFactory::createXLSXWriter();
+
+
+
+      $writer->openToFile($filePath);
+
+
+
+      foreach ($conteudosDiv as $conteudo) {
+
+        $cells = [
+          WriterEntityFactory::createCell($conteudo)
+        ];
+
+
+
+        $singleRow = WriterEntityFactory::createRow($cells);
+        $writer->addRow($singleRow);
+      }
+
+
+
+
+
+      $writer->close();
+    }
+
+
+
+
+
+    //vetor de ids
+
+    //achar div
+    //achar classe dentro da div
+
+    //  $data = [
+    //  ['id'],
+    //[$conteudo],
+    // 
+    //];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  } //runer
+}//main
