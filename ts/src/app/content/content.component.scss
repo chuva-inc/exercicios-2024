@@ -18,10 +18,10 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-        height: 60px; 
+        height: 60px;
         width: 240px;
         .texto_citacao {
-            margin: 0; 
+            margin: 0;
             width: 239px;
             font-family: Roboto;
             font-size: 15px;
@@ -32,9 +32,9 @@
             color: rgba(237, 120, 57, 1);
         }
         .botoes {
-            display: flex; 
-            flex-direction: row; 
-            gap: 15px; 
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
             margin: 0;
             padding: 0;
             .bt_download {
@@ -69,7 +69,7 @@
 }
 
 .video_e_detalhes {
-    display: flex; 
+    display: flex;
     gap: 30px;
     .video {
         width: 786px;
@@ -123,10 +123,10 @@
                 font-weight: 900;
                 line-height: 25px;
                 letter-spacing: 0.05em;
-                text-align: left;    
+                text-align: left;
                 color: #FFFFFF;
-            }            
-        }   
+            }
+        }
     }
     .detalhes_do_trabalho {
         width: 242px;
@@ -143,7 +143,7 @@
             border-radius: 3px 3px 0px 0px;
             border: 1px 0px 0px 0px;
             background: rgba(253, 241, 235, 1);
-        
+
             h1 {
                 padding: 11px;
                 margin: 0;
@@ -154,7 +154,7 @@
                 text-align: left;
             }
         }
-        
+
         .detalhes_textos {
             display: flex;
             flex-direction: column;
@@ -162,7 +162,7 @@
             height: 83%;
             overflow-y: scroll;
         }
-        
+
         .detalhes_primeiro_texto {
             font-family: Quicksand;
             font-size: 12px;
@@ -171,7 +171,7 @@
             letter-spacing: 0.02em;
             text-align: left;
             margin-bottom: 25px;
-        
+
             strong {
                 font-family: Quicksand;
                 font-size: 12px;
@@ -180,8 +180,8 @@
                 letter-spacing: 0.02em;
                 text-align: left;
             }
-        }   
-        
+        }
+
         .detalhes_segundo_texto {
             font-family: Quicksand;
             font-size: 14px;
@@ -190,17 +190,17 @@
             letter-spacing: 0.02em;
             text-align: left;
             margin-bottom: 25px;
-            
+
             strong {
                 font-family: Quicksand;
                 font-size: 14px;
                 font-weight: 700;
                 line-height: 16.8px;
                 letter-spacing: 0.02em;
-                text-align: left;        
+                text-align: left;
             }
         }
-        
+
         .detalhes_terceiro_texto {
             font-family: Quicksand;
             font-size: 12px;
@@ -208,8 +208,8 @@
             line-height: 12px;
             letter-spacing: 0.02em;
             text-align: left;
-        
-            
+
+
             strong {
                 font-family: Quicksand;
                 font-size: 12px;
@@ -227,10 +227,9 @@
     margin: 35px 0 35px 0;
     flex-direction: column;
     width: 1058px;
-    // height: 189px;
     border-radius: 3px;
     border: 1px solid rgba(236, 236, 236, 1);
-    
+
 
     .resumo_titulo {
         font-size: 20px;
@@ -259,15 +258,14 @@
         text-decoration: none;
         font-weight: 700;
         color: rgba(237, 120, 57, 1);
-   }  
+   }
 }
 
 .discussoes {
-    // margin-top: 35px;
     width: 1058px;
-    // height: 621px;
     border: 1px solid rgba(236, 236, 236, 1);
     border-radius: 3px;
+
     .card_discussoes {
         display: flex;
         align-items: center;
@@ -288,14 +286,7 @@
         margin-top: 15px;
         text-align: center;
         align-items: center;
-        .compartilhe_ideias_titulo {
-            font-family: Roboto;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 21.09px;
-            text-align: left;    
-            color: rgba(237, 120, 57, 1);
-        }
+
         .compartilhe_ideias_imagens {
             margin-top: 27px;
             img {
@@ -304,13 +295,7 @@
         }
         .compartilhe_ideias_frase{
             margin-top: 35px;
-            .compartilhe_ideias_frase_titulo {
-                font-family: Quicksand;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 19.25px;
-                text-align: center;
-            }
+
         }
         .traco {
             background-color: rgba(231, 231, 231, 1);
@@ -341,16 +326,139 @@
             }
     }
 
+    .formulario {
+      width: 1025px;
+      margin: 15px 15px 15px 18px;
+    }
+
+    .subtitulo {
+      font-size: 14px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 400;
+      color: rgba(92, 92, 92, 1);
+      text-align: center;
+      margin: 0 0 22px 0;
+    }
+
+    .titulos_formulario {
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      color: rgba(237, 120, 57, 1);
+      width: 1025.52px;
+    }
+
+    .caixas {
+    }
+
+    ::placeholder {
+      font-size: 14px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 400;
+      color: rgba(77, 77, 77,1);
+      padding: 0 0 0 23.13px;
+    }
+
+    .form_caixa_assunto{
+      width: 1025.52px;
+      height: 39px;
+      border: 1px solid rgba(204, 204, 204, 1);
+      border-radius: 3px;
+      margin: 1px 0 10px 0;
+    }
+
+    .form_caixa_text {
+      width: 1025.52px;
+      height: 113px;
+      border: 1px solid rgba(204, 204, 204, 1);
+      border-radius: 3px;
+      margin: 4px 0 0 0;
+    }
+
+    .retangulo {
+      height: 31px;
+      width: 1031px;
+      display: flex;
+      justify-content: end;
+      position: relative;
+      top: -6px;
+      background: rgba(234, 241, 242, 1);
+      border: 1px solid rgba(204, 204, 204, 1)
+
+    }
+
+    .botao_enviar {
+      width: 205.1px;
+      background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+      border: none;
+      font-family: Quicksand;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .compartilhe_ideias_titulo {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21.09px;
+      text-align: left;
+      color: rgba(237, 120, 57, 1);
+  }
+
+  .compartilhe_ideias_frase_titulo {
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.25px;
+    text-align: center;
+}
+
+  .descubra_outros_trabalhos {
+  color: #F0813D;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.25px;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+  .botao_novo_topico {
+    margin-top: 47px;
+    margin-bottom: 14px;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 235.15px;
+    height: 32px;
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  }
+
+    .traco2 {
+      background-color: rgba(231, 231, 231, 1);
+      border: 4px;
+      height: 1px;
+    }
+
     .card_assuntos {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         width: 1028px;
-        height: 148px;    
         border-radius: 4px;
         border: 1px solid rgba(231, 231, 231, 1);
         margin: 15px 15px 17px 15px;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2509803922);
+        padding: 18px 0 0 0;
     }
 
     .card_assuntos_titulo {
@@ -366,7 +474,7 @@
         font-family: "Quicksand", sans-serif;
         font-weight: 500;
         padding: 0 0 10px 24.17px;
-        color: rgba(92, 92, 92, 1); 
+        color: rgba(92, 92, 92, 1);
     }
 
     .card_assuntos_comentario {
@@ -378,9 +486,70 @@
     }
 
     .icone_comentario {
-        padding: 0 0 0 24.17px;
+        padding: 0 0 18px 24.17px;
+    }
+
+    .card_respondido {
+      display: flex;
+      flex-direction: column;
+      padding: 0 23.19px 35px 23.19px;
+      border: 1px solid rgba(231, 231, 231, 1);
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      justify-content: center;
+      background-color: rgba(248, 248, 248, 1);      ;
+      }
+
+    .card_respondido1 {
+      display: flex;
+      flex-direction: column;
+      padding: 0 23.19px 35px 23.19px;
+      border: 1px solid rgba(231, 231, 231, 1);
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      justify-content: center;
+    }
+
+    .card_superior{
+      display: flex;
+    }
+
+    .card_respondido_nome {
+      font-size: 12px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      padding: 18px 0 15px 0;
+      color: rgba(92, 92, 92, 1);
+      width: 542.6px;
+    }
+
+    .card_superior_lateral{
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .card_participacao{
+      font-size: 14px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      font-family: Quicksand;
+      color: rgba(237, 120, 57, 1);
+    }
+
+    .verificado{
+      width: 30.92px;
+      height: 23.22px;
+    }
+
+    .card_respondido_comentario {
+      font-family: "Quicksand", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(77, 77, 77, 1);
     }
 }
-
-
-

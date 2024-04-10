@@ -8,12 +8,12 @@ $cor-header-selecionado: rgba(253, 241, 235, 1);
 
 .header {
     width: 220px;
-    height: 1701px;
+    height: 100%;
     box-shadow: 0px 0px 10px 0px #00000040;
     // margin: 0;
 }
 
-.titulo { 
+.titulo {
     font-size: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -38,7 +38,7 @@ $cor-header-selecionado: rgba(253, 241, 235, 1);
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
  }
-  
+
   .nav a {
     text-decoration: none;
     color:#725C5C;
@@ -49,8 +49,8 @@ $cor-header-selecionado: rgba(253, 241, 235, 1);
     align-items: center;
     padding-left: 24px;
     transition: border-color 0.2s ease-in-out;
-  } 
-  
+  }
+
   .nav a:hover {
     border-color: #FFB354;
   }
