@@ -35,19 +35,17 @@ class Main
 
 
 
-    // Loop sobre o array de strings
+    // tentativa de iterar em $data
     foreach ($data as $html) {
       // Suprima os avisos de erros para carregar o HTML, pois ele pode conter erros de formatação
       libxml_use_internal_errors(true);
-
-
-
-      // encontrar todos os elementos <a>
-      $links = $dom->getElementsByTagName('a');
-      foreach ($links as $link) {
-        $linksArray[] = $link->getAttribute('href');
-      }
     }
+    // encontrar todos os elementos <a>
+    $links = $dom->getElementsByTagName('a');
+    foreach ($links as $link) {
+      $linksArray[] = $link->getAttribute('href');
+    }
+
     //encontrar as div que possue uma classe com o atributo "volume-info"
     $xpath = new DOMXPath($dom);
     $atributoClasseId = "volume-info";
