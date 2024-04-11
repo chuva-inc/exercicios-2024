@@ -122,6 +122,7 @@ body{
   background-color: #FDF1EB;
   border-radius: 2PX;
   width: 4.5vw;
+  font-size: 0.8vw;
 }
 
 #DirText{
@@ -213,6 +214,7 @@ body{
 #botaoDownload{
   width: 8vw;
   color: white;
+  font-size: 1vw;
 }
 
 #botaoFavoritos{
@@ -326,7 +328,7 @@ body{
   width: 8vw;
   height: 4vh;
   color: white;
-  font-size: 15px;
+  font-size: 1vw;
   font-weight: 700;
   background: rgb(238,122,58); 
   background: linear-gradient(0deg, rgba(238,122,58,1) 41%, rgba(238,176,69,1) 100%);
@@ -349,11 +351,21 @@ body{
 
 #botaoCriarTopico p{
   color: white;
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: 700;
   align-self: center;
   width: auto;
   height: auto;
+}
+
+.btn-create-topic{
+  color: white;
+  font-size: 1vw;
+  font-weight: 700;
+  align-self: center;
+  width: auto;
+  height: auto;
+  text-decoration: none;
 }
 
 #iconeMais{
