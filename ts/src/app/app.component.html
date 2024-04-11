@@ -94,9 +94,9 @@
                 <div id="criarTopicoP" class="mb-3">
                     <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
                 </div>
-                <button type="button" class="btn-create-topic" id="botaoCriarTopico" (click)="criarTopico()">
+                <button type="button" id="botaoCriarTopico" (click)="criarTopico()">
                     <i id="iconeMais" class="fa-solid fa-plus"></i>
-                    <p>criar tópico</p>
+                    <p><a href="#" class="btn-create-topic">criar tópico</a></p>
                 </button>
             </div>
             <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
@@ -108,7 +108,7 @@
                         <label for="conteudoTopico" class="mt-3">Conteúdo</label>
                         <input type="text" class="form-control p-3" id="conteudoTopico" placeholder="Defina um tópico sucinto para notificar os autores...">
                         <div id="formGroupFooter">
-                            <button type="submit" id="botaoEnviar" class="justify-content-center w-15" (click)="enviarTopico()">
+                            <button type="submit" id="botaoEnviar" class="botaoEnviar justify-content-center w-15" (click)="enviarTopico()">
                                 Enviar
                             </button>
                         </div>
