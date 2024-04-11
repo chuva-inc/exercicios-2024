@@ -7,6 +7,7 @@ use DOMDocument;
 
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 use Box\Spout\Common\Entity\Row;
+use PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ForEachLoopDeclarationSniff;
 use PhpParser\Node\Stmt\Echo_;
 
 /**
@@ -58,7 +59,7 @@ class Main
       $conteudosDiv[] = $conteudoDiv;
     }
 
-    $filePath = getcwd() . '/t22.xlsx';
+    $filePath = getcwd() . '/t34.xlsx';
 
     $writer = WriterEntityFactory::createXLSXWriter();
 
@@ -66,19 +67,6 @@ class Main
 
     $writer->openToFile($filePath);
 
-
-
-    // foreach ($conteudosDiv as $conteudo) {
-
-    // $cells = [
-    //   WriterEntityFactory::createCell($conteudo)
-    //];
-
-
-
-    //  $singleRow = WriterEntityFactory::createRow($cells);
-    // $writer->addRow($singleRow);
-    // }
 
 
     //****encontrando os titulos*****
@@ -94,12 +82,56 @@ class Main
       $conteudosH4[] = $conteudoH4;
     }
 
+    $atributoClasseType = "tags mr-sm";
+    $divsType = $xpath->query("//div[contains(@class, '$atributoClasseType')]");
+
+    foreach ($divsType as $divType) {
+      $conteudoDivType = $divType->nodeValue;
+      $conteudosDivType[] = $conteudoDivType;
+    }
+
+    $atributoDivAutores = "authors";
+    $divsAutores = $xpath->query("//div[contains(@class, '$atributoDivAutores')]"); //obter os autores indivíduais
+
+    foreach ($divsAutores as $divAutores) {
+      $conteudoDivAutores = $divAutores->nodeValue;
+      $conteudosDivAutores[] = $conteudoDivAutores;
+    }
+
+
+
+    $spanTitlesInstituicao = $xpath->query("//span[@title]");
+
+    foreach ($spanTitlesInstituicao as $spanTitle) {
+      $spanTitlesInstituicaoConteudo = $spanTitle->getAttribute('title');
+      $spanTitlesInstituicaoConteudos[] = $spanTitlesInstituicaoConteudo;
+    }
+
+    $autoresEInstituicoes = [];
+
+    foreach ($divsAutores as $index => $divAutores) {
+      $autor = $divAutores->nodeValue;
+      $instituicao = $spanTitlesInstituicaoConteudos[$index];
+
+      $autoresEInstituicoes[] = ['autor' => $autor, 'instituicao' => $instituicao];
+    }
+
+
+
+
+
+
+    $coluna = 3;
     $multiplerows = [];
 
-    for ($i = 0; $i < count($conteudosDiv) && $i < count($conteudosH4); $i++) {
+    for ($i = 0; $i < count($conteudosDiv) && $i < count($conteudosH4) && $i < count($conteudosDivType) && $i < count($conteudosDivAutores) && $i < count($autoresEInstituicoes); $i++) {
+      $pares = $autoresEInstituicoes[$i];
       $cells = [
         WriterEntityFactory::createCell($conteudosDiv[$i]),
-        WriterEntityFactory::createCell($conteudosH4[$i])
+        WriterEntityFactory::createCell($conteudosH4[$i]),
+        WriterEntityFactory::createCell($conteudosDivType[$i]),
+        WriterEntityFactory::createCell($pares['autor']),
+        WriterEntityFactory::createCell($pares['instituicao']),
       ];
 
       $row = WriterEntityFactory::createRow($cells);
@@ -111,17 +143,6 @@ class Main
 
 
 
-    //   foreach ($conteudosH4 as $conteudoH4) {
-
-    //     $cells = [
-    //     WriterEntityFactory::createCell($conteudoH4)
-    //   ];
-
-
-
-    //  $singleRow = WriterEntityFactory::createRow($cells);
-    //  $writer->addRow($singleRow);
-    // }
 
 
     $writer->close();
