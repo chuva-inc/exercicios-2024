@@ -26,7 +26,7 @@
         </div>
         <div id="headerDir">
             <div id="selectIdioma">
-                <fa-icon id="globoIcon" [icon]="globo"></fa-icon>
+                <i id="globoIcon" class="fa-solid fa-globe"></i>
                 <select class="form-select" aria-label="Default select example">
                     <option selected >PT, BR</option>
                     <option value="1">EN, EU</option>
@@ -34,7 +34,7 @@
             </div>
             <div id="DirText">
                 <p>Bem vindo!</p>
-                <p>alguem12@galoascience.com</p>
+                <p>{{nome}}</p>
             </div>
             <a href="#" class="profile">
                 <img id="logoProfileImg" src="assets/images/headerProfileImg.png">
@@ -95,8 +95,8 @@
                     <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
                 </div>
                 <button type="button" class="btn-create-topic" id="botaoCriarTopico" (click)="criarTopico()">
-                    <fa-icon id="iconeMais" [icon]="mais"></fa-icon>
-                    criar tópico
+                    <i id="iconeMais" class="fa-solid fa-plus"></i>
+                    <p>criar tópico</p>
                 </button>
             </div>
             <div *ngIf="criandoNovoTopico" id="novoTopicoForm">
@@ -125,7 +125,7 @@
             </div>
             <div id="glass">
                 <div id="aguardandoFeedback" *ngIf="carregandoTopico">
-                    <fa-icon [icon]="doubleCheckIcon"></fa-icon>
+                    <i class="fa-solid fa-check-double"></i>
                     <h2>Aguardando feedback dos autores</h2>
                     <p><a href="#" class="link">Editar tópico</a></p>
                 </div>
@@ -139,7 +139,7 @@
                         </div>
                         
                         <div class="discussoesCardFooter">
-                            <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
+                            <i class="faIcon fa-solid fa-ellipsis-vertical"></i>
                             <img src="assets/images/favoritar.png">
                             <p>1 like</p>
                             <p>1 resposta</p>
@@ -155,7 +155,7 @@
                         <p>Comecinho da pergunta aparece aqui resente relatoComecinho da pergunta aparece aqui resente relatComecinho da pergunta aparece aqui resente relat inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                     </div>
                     <div class="discussoesCardFooter">
-                        <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
+                        <i class="fas fa-ellipsis-v faIcon"></i>
                         <img src="assets/images/favoritar.png">
                         <p>1 like</p>
                         <p>1 resposta</p>
@@ -172,7 +172,7 @@
                     </div>
                     
                     <div class="discussoesCardFooter">
-                        <fa-icon class="faIcon" [icon]="verticalElipsis"></fa-icon>
+                        <i class="fas fa-ellipsis-v faIcon"></i>
                         <img src="assets/images/favoritar.png">
                         <p>1 like</p>
                         <p>1 resposta</p>

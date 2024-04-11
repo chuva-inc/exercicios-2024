@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faCheckDouble, faEllipsisV, faGlobe, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +7,8 @@ import { faCheckDouble, faEllipsisV, faGlobe, faHeart, faPlus } from '@fortaweso
 })
 export class AppComponent {
   title = 'DevChuva';
-  
-  verticalElipsis = faEllipsisV;
-  heart = faHeart;
-  globo = faGlobe;
-  mais = faPlus;
-  doubleCheckIcon = faCheckDouble;
-
+    
+  nome: string = 'alguem12@galoascience.com'
   exibir:boolean = false;
   criandoNovoTopico:boolean = false;
   carregandoTopico:boolean = false;

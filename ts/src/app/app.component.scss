@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 *{
   margin: 0;
   padding: 0;
@@ -332,10 +334,31 @@ body{
   border: none;
   margin-bottom: 2vh;
   align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#botaoCriarTopico i{
+  color: white;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin-right: 5px;
+}
+
+#botaoCriarTopico p{
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  align-self: center;
+  width: auto;
+  height: auto;
 }
 
 #iconeMais{
-  color: white
+  color: white;
+  font-size: 16px;
 }
 
 #criarNovoTopicoDiv{
