@@ -35,11 +35,6 @@ class Main
 
 
 
-    // tentativa de iterar em $data
-    foreach ($data as $html) {
-      // Suprima os avisos de erros para carregar o HTML, pois ele pode conter erros de formatação
-      libxml_use_internal_errors(true);
-    }
     // encontrar todos os elementos <a>
     $links = $dom->getElementsByTagName('a');
     foreach ($links as $link) {
@@ -57,7 +52,7 @@ class Main
       $conteudosDiv[] = $conteudoDiv;
     }
 
-    $filePath = getcwd() . '/t34.xlsx';
+    $filePath = getcwd() . '/t35.xlsx';
 
     $writer = WriterEntityFactory::createXLSXWriter();
 
