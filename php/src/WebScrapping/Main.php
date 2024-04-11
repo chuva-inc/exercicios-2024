@@ -15,6 +15,8 @@ use PhpParser\Node\Stmt\Echo_;
 class Main
 {
 
+
+
   /**
    * Main runner, instantiates a Scrapper and runs.
    */
@@ -50,6 +52,38 @@ class Main
     $atributoClasseId = "volume-info";
     $divs = $xpath->query("//div[contains(@class, '$atributoClasseId')]");
 
+    foreach ($divs as $div) {
+      // Obtém o conteúdo da div e adiciona ao array $conteudosDiv
+      $conteudoDiv = $div->nodeValue;
+      $conteudosDiv[] = $conteudoDiv;
+    }
+
+    $filePath = getcwd() . '/t22.xlsx';
+
+    $writer = WriterEntityFactory::createXLSXWriter();
+
+
+
+    $writer->openToFile($filePath);
+
+
+
+    // foreach ($conteudosDiv as $conteudo) {
+
+    // $cells = [
+    //   WriterEntityFactory::createCell($conteudo)
+    //];
+
+
+
+    //  $singleRow = WriterEntityFactory::createRow($cells);
+    // $writer->addRow($singleRow);
+    // }
+
+
+    //****encontrando os titulos*****
+    //encontrar o elemento h4 
+    //encontrar a classe desse elemento que possui atributo  "my-xs paper-title"
 
     $atributoClasseTitulo = "my-xs paper-title";
     $h4s = $xpath->query("//h4[contains(@class, '$atributoClasseTitulo')]");
@@ -60,46 +94,36 @@ class Main
       $conteudosH4[] = $conteudoH4;
     }
 
+    $multiplerows = [];
 
-
-    foreach ($divs as $div) {
-      // Obtém o conteúdo da div e adiciona ao array $conteudosDiv
-      $conteudoDiv = $div->nodeValue;
-      $conteudosDiv[] = $conteudoDiv;
-    }
-
-    $conteudo = [];
-
-    foreach ($conteudosDiv as $conteudoDiv) {
-      foreach ($conteudosH4 as $conteudoH4) {
-        $conteudos[] = [$conteudoDiv, $conteudoH4];
-      }
-    }
-
-
-
-
-    $filePath = getcwd() . '/t18.xlsx';
-
-    $writer = WriterEntityFactory::createXLSXWriter();
-
-
-
-    $writer->openToFile($filePath);
-
-    foreach ($conteudos as $conteudo) {
+    for ($i = 0; $i < count($conteudosDiv) && $i < count($conteudosH4); $i++) {
       $cells = [
-        WriterEntityFactory::createCell($conteudo[0]), // id ou title
-        WriterEntityFactory::createCell($conteudo[1]), // conteúdo
+        WriterEntityFactory::createCell($conteudosDiv[$i]),
+        WriterEntityFactory::createCell($conteudosH4[$i])
       ];
 
-      $singleRow = WriterEntityFactory::createRow($cells);
-      $writer->addRow($singleRow);
+      $row = WriterEntityFactory::createRow($cells);
+      // Adiciona a linha ao conjunto de múltiplas linhas
+      $multiplerows[] = $row;
     }
 
+    $writer->addRows($multiplerows);
 
+
+
+    //   foreach ($conteudosH4 as $conteudoH4) {
+
+    //     $cells = [
+    //     WriterEntityFactory::createCell($conteudoH4)
+    //   ];
+
+
+
+    //  $singleRow = WriterEntityFactory::createRow($cells);
+    //  $writer->addRow($singleRow);
+    // }
 
 
     $writer->close();
-  } //runer
-}//main
+  }
+}
