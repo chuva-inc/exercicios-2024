@@ -35,6 +35,15 @@ class Main
 
 
 
+    // tentativa de iterar em $data
+    // foreach ($data as $html) {
+    // Suprima os avisos de erros para carregar o HTML, pois ele pode conter erros de formatação
+    //  libxml_use_internal_errors(true);
+    // }
+
+
+
+
     // encontrar todos os elementos <a>
     $links = $dom->getElementsByTagName('a');
     foreach ($links as $link) {
@@ -52,7 +61,7 @@ class Main
       $conteudosDiv[] = $conteudoDiv;
     }
 
-    $filePath = getcwd() . '/t35.xlsx';
+    $filePath = getcwd() . '/solucao2.xlsx';
 
     $writer = WriterEntityFactory::createXLSXWriter();
 
@@ -114,7 +123,7 @@ class Main
 
 
 
-    $coluna = 3;
+    // $coluna = 3;
     $multiplerows = [];
 
     for ($i = 0; $i < count($conteudosDiv) && $i < count($conteudosH4) && $i < count($conteudosDivType) && $i < count($conteudosDivAutores) && $i < count($autoresEInstituicoes); $i++) {
