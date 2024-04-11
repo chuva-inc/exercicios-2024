@@ -4,7 +4,7 @@
     width: calc(99vw - 13.75rem);
     position: absolute;
     top: 4.2rem;
-    margin-left: 13.8rem;
+    margin-left: 13.8rem;    
 
     display: flex;
     justify-content: center;
@@ -302,15 +302,12 @@
                     color: #ED7839;
                 }
     
-                .subject-title{
+                .subject{
                     width: 64rem;
                     height: 2.4rem;
                     border-radius: .18rem;
                     margin-bottom: .62rem;
                     border: 1px solid #CCC;
-                }
-
-                .subject-title::placeholder {
                     padding: 1rem;
                 }
     
@@ -330,12 +327,13 @@
                     color: #ED7839;
                 }
     
-                .subject {
+                .topic-content {
                     width: 64rem;
                     height: 4.6rem;
                     border: 1px solid #CCC;
                     border-top-left-radius: .18rem;
                     border-top-right-radius: .18rem;
+                    padding: 1rem;
                 }
     
                 .subject:focus {

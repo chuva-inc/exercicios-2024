@@ -39,10 +39,8 @@ export class PageMainContentComponent implements OnInit {
     let shareIdeas = document.querySelector(".share-ideas") as HTMLElement;
     let newForm = document.querySelector(".create-new-topic-wrapper") as HTMLElement;
 
-    // shareIdeas.style.display = 'none';
-    // newForm.style.display = 'block';
-    shareIdeas.style.position = 'relavite';
-    newForm.style.position = 'absolute';
+    shareIdeas.style.display = 'none';
+    newForm.style.display = 'block';
   }
 
   submitForm(event:any) {

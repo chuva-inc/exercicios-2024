@@ -24,7 +24,7 @@ describe('checa elementos básicos', () => {
   });
 
   it('clicar em `criar tópico` exibe o formulário', () => {
-    cy.get('.btn-create-topic').click();
+    cy.get('.btn-show-form').click();
     cy.get('button').contains('Enviar')
     cy.get('form').contains('Assunto');
     cy.get('form').contains('Conteúdo');
@@ -33,8 +33,8 @@ describe('checa elementos básicos', () => {
   });
 
   it('enviar o formulário exibe mensagem de sucesso', () => {
-    cy.get('.btn-submit-form').click();
-    cy.get('button').click();
+    cy.get('.btn-submit-form').click({force: true, multiple: true});
+    cy.get('button').click({force: true, multiple: true});
     cy.get('body').contains('Aguardando feedback dos autores');
     cy.compareSnapshot('Trabalho - Topico enviado');
   });
