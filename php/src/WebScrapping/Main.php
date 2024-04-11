@@ -24,105 +24,82 @@ class Main
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
     $data = (new Scrapper())->scrap($dom);
-    $ids = [];
+
+
 
     // Write your logic to save the output file bellow.
     print_r($data);
 
 
 
-    // Inicializa um novo objeto DOMDocument
-    //$domm = new \DOMDocument();
-
     // Loop sobre o array de strings
     foreach ($data as $html) {
       // Suprima os avisos de erros para carregar o HTML, pois ele pode conter erros de formatação
       libxml_use_internal_errors(true);
 
-      // Carrega o HTML na estrutura DOM
-      //   $dom->loadHTML($html);
 
-      // Volte a exibir os avisos de erros
-      //  libxml_use_internal_errors(false);
 
-      // Agora você pode manipular o DOM como necessário...
-
-      // Por exemplo, encontrar todos os elementos <a> e imprimir seus atributos href
+      // encontrar todos os elementos <a>
       $links = $dom->getElementsByTagName('a');
       foreach ($links as $link) {
         $linksArray[] = $link->getAttribute('href');
       }
     }
-
+    //encontrar as div que possue uma classe com o atributo "volume-info"
     $xpath = new DOMXPath($dom);
     $atributoClasseId = "volume-info";
     $divs = $xpath->query("//div[contains(@class, '$atributoClasseId')]");
+
+
+    $atributoClasseTitulo = "my-xs paper-title";
+    $h4s = $xpath->query("//h4[contains(@class, '$atributoClasseTitulo')]");
+
+    foreach ($h4s as $h4) {
+      // Obtém o conteúdo do h4 e adiciona ao array $conteudosH4
+      $conteudoH4 = $h4->nodeValue;
+      $conteudosH4[] = $conteudoH4;
+    }
+
+
 
     foreach ($divs as $div) {
       // Obtém o conteúdo da div e adiciona ao array $conteudosDiv
       $conteudoDiv = $div->nodeValue;
       $conteudosDiv[] = $conteudoDiv;
+    }
 
+    $conteudo = [];
 
-
-      $filePath = getcwd() . '/t12.xlsx';
-
-      $writer = WriterEntityFactory::createXLSXWriter();
-
-
-
-      $writer->openToFile($filePath);
-
-
-
-      foreach ($conteudosDiv as $conteudo) {
-
-        $cells = [
-          WriterEntityFactory::createCell($conteudo)
-        ];
-
-
-
-        $singleRow = WriterEntityFactory::createRow($cells);
-        $writer->addRow($singleRow);
+    foreach ($conteudosDiv as $conteudoDiv) {
+      foreach ($conteudosH4 as $conteudoH4) {
+        $conteudos[] = [$conteudoDiv, $conteudoH4];
       }
-
-
-
-
-
-      $writer->close();
     }
 
 
 
 
+    $filePath = getcwd() . '/t18.xlsx';
 
-    //vetor de ids
-
-    //achar div
-    //achar classe dentro da div
-
-    //  $data = [
-    //  ['id'],
-    //[$conteudo],
-    // 
-    //];
+    $writer = WriterEntityFactory::createXLSXWriter();
 
 
 
+    $writer->openToFile($filePath);
 
+    foreach ($conteudos as $conteudo) {
+      $cells = [
+        WriterEntityFactory::createCell($conteudo[0]), // id ou title
+        WriterEntityFactory::createCell($conteudo[1]), // conteúdo
+      ];
 
-
-
-
+      $singleRow = WriterEntityFactory::createRow($cells);
+      $writer->addRow($singleRow);
+    }
 
 
 
 
-
-
-
-
+    $writer->close();
   } //runer
 }//main
