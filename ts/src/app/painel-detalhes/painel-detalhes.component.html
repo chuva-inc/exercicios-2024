@@ -1,0 +1,20 @@
+<header>
+    <h2>Detalhes</h2>
+</header>
+
+<div id="painel">
+    <div id="conteudoInterno">
+        <p>Tipo de Apresentação: <strong>{{detalhes.tipoApresentacao}}</strong></p>
+        <p>Eixo temático: <strong>{{detalhes.eixoTematico}}</strong></p>
+        <p>Palavras-chave: <Strong>{{detalhes.palavrasChave}}</Strong></p>
+
+        <p class="mt-4"><strong>Autores:</strong></p>
+        <p *ngFor="let autor of autores">{{autor}}</p>
+
+        <p class="mt-5"></p>
+        <p *ngFor="let universidade of universidades" id="universidades">{{universidade}}</p>
+
+        <p class="mt-5"></p>
+        <p *ngFor="let universidade of universidades" id="universidades">{{universidade}}</p>
+    </div>
+</div>

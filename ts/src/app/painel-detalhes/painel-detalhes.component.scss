@@ -1,0 +1,80 @@
+#painel{
+    border: 3px solid #FDF1EB;
+    margin: 0;
+    padding: 0;
+    max-height: 53vh;
+    max-width: 21vw;
+    height: 58vh;
+    overflow-y: scroll;
+    margin-left: 4vw;
+}
+
+header{
+    background-color: #FDF1EB;
+    max-width: 20.5vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+    padding-left: 1vw;
+    padding-top: 10px;   
+    margin-top: 7%; 
+    margin-left: 4vw;
+}
+
+h2{
+    color: #4E4E4E;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    color: #5C5C5C;
+}
+
+#conteudoInterno{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-align: start;
+    padding-left: 1vw;
+    padding-top: 1vh;
+}
+
+*::-webkit-scrollbar {
+height: 7px;
+width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+border-radius: 4px;
+background-color: #E7E7E7;
+}
+
+*::-webkit-scrollbar-track:hover {
+background-color: #E7E7E7;
+}
+
+*::-webkit-scrollbar-track:active {
+background-color: #E7E7E7;
+}
+
+*::-webkit-scrollbar-thumb {
+border-radius: 5px;
+background-color: #BFBFBF;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+background-color: #BFBFBF;
+}
+
+*::-webkit-scrollbar-thumb:active {
+background-color: #BFBFBF;
+}
+
+#universidades{
+    color: lightgray;
+}

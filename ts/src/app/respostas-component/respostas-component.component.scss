@@ -1,0 +1,29 @@
+#respostaCard{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #c9c7c7;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+#tag{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+    margin-right: 23px;
+}
+
+#tag p{
+    color: #ED7839;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#faIcon{
+    color: #ED7839;
+    margin-left: 1vw;
+}
