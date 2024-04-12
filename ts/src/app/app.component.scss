@@ -48,7 +48,7 @@ $borderColor: #ececec;
   height: 100%;
   box-shadow: 1px 10px 20px -1px rgba(0, 0, 0, 0.43);
   .navBar {
-    height: 10vh;
+    height: 9.5vh;
     background-color: $secondaryColor;
     display: flex;
     justify-content: space-between;
@@ -183,11 +183,13 @@ $borderColor: #ececec;
       margin-top: 2rem;
       .video {
         margin-left: 3rem;
+        width: 70%;
+        height: 70%;
       }
       .details {
         width: 21rem;
         margin-right: 2rem;
-        height: 27.4rem;
+        height: 37.3rem;
         border: 1px solid $borderColor;
         border-radius: 1%;
         .navDetails {
@@ -205,16 +207,21 @@ $borderColor: #ececec;
           height: max-content;
           display: flex;
           flex-wrap: wrap;
-          gap: 0.5rem;
+          gap: 1rem;
           color: $textColorSecondary;
           margin: 1rem;
           .authorsDiv {
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
           }
           .footerDetails {
             color: #ada0a0;
-            margin-top: 1rem;
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
             font-size: medium;
           }
           &::-webkit-scrollbar {
@@ -248,7 +255,7 @@ $borderColor: #ececec;
         padding: 1rem;
         font-size: large;
       }
-      .openText {
+      .btn-show-more {
         color: #ed7839;
         cursor: pointer;
       }
@@ -268,7 +275,7 @@ $borderColor: #ececec;
       }
       .topicSubDiv {
         width: 95%;
-        height: 40rem;
+        height: max-content;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -304,38 +311,142 @@ $borderColor: #ececec;
           border: none;
           z-index: 10;
         }
-        .line{
-          color: red;
-          width: 70%;
-          height: 1px;
-          background-color: #E7E7E7;
-          position: absolute;
-          top: 131%;
-        }
-        .card{
+        .card {
           display: flex;
           flex-direction: column;
           width: 92%;
           border: 1px solid $borderColor;
-          height: 17rem;
+          height: 12rem;
           margin-top: 1rem;
           border-radius: 0.4rem;
           box-shadow: 15px 15px 15px 1px $borderColor;
-          .cardTitle{
-            color: $primaryColor;
-            padding: 1rem 0.5rem;
+            .cardTitle {
+              color: #ed7839;
+              font-size: larger;
+              margin-left: 3rem;
+              margin-top: 1rem;
+            }
+            .cardName {
+              margin-left: 3rem;
+              margin-top: 0.5rem;
+              font-weight: 100;
+            }
+            .cardContent {
+              margin-left: 3rem;
+              margin-top: 1rem;
+              font-weight: 100;
+              color: #4e4e4e;
+            }
+            .footerCard {
+              gap: 1rem;
+              display: flex;
+              width: 100%;
+              margin-left: 3rem;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              .openInfo {
+                cursor: pointer;
+              }
+            }
+        }
+        .cardOpen {
+          display: flex;
+          flex-direction: column;
+          width: 92%;
+          border: 1px solid $borderColor;
+          height: 12rem;
+          margin-top: 1rem;
+          border-radius: 0.4rem;
+          box-shadow: 15px 15px 15px 1px $borderColor;
+          .ops-topic-subject {
+            color: #ed7839;
             font-size: larger;
+            margin-left: 3rem;
+            margin-top: 1rem;
           }
-          .cardName{
-            padding: 1rem;
-            padding: 1rem 0.5rem;
+          .cardName {
+            margin-left: 3rem;
+            margin-top: 0.5rem;
+            font-weight: 100;
           }
-          .cardContent{
-            padding: 1rem;
-            padding: 1rem 0.5rem;
+          .cardContent {
+            margin-left: 3rem;
+            margin-top: 1rem;
+            font-weight: 100;
+            color: #4e4e4e;
+          }
+          .footerCard {
+            gap: 1rem;
+            display: flex;
+            width: 100%;
+            margin-left: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            .openInfo {
+              cursor: pointer;
+            }
+          }
+        }
+        .answered-topic {
+          display: flex;
+          flex-direction: column;
+          width: 92%;
+          border: 1px solid $borderColor;
+          height: 12rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 0.4rem;
+          box-shadow: 15px 15px 15px 1px $borderColor;
+          .ops-topic-subject {
+            color: #ed7839;
+            font-size: larger;
+            margin-left: 3rem;
+            margin-top: 1rem;
+          }
+          .cardName {
+            margin-left: 3rem;
+            margin-top: 0.5rem;
+            font-weight: 100;
+          }
+          .cardContent {
+            margin-left: 3rem;
+            margin-top: 1rem;
+            font-weight: 100;
+            color: #4e4e4e;
+          }
+          .footerCard {
+            gap: 1rem;
+            display: flex;
+            width: 100%;
+            margin-left: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            .openInfo {
+              cursor: pointer;
+            }
+          }
+        }
+        .comments-container {
+          width: 92%;
+          height: max-content;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1rem;
+          .subCard {
+            width: 100%;
+            height: 12rem;
+            border-radius: 0.2rem;
           }
         }
       }
+    }
+  }
+  footer {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }

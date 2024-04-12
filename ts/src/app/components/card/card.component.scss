@@ -1,0 +1,30 @@
+.container {
+  .cardTitle {
+    color: #ed7839;
+    font-size: larger;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .cardName {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    font-weight: 100;
+  }
+  .cardContent {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    font-weight: 100;
+    color: #4e4e4e;
+  }
+  .footerCard {
+    gap: 1rem;
+    display: flex;
+    width: 100%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .openInfo {
+      cursor: pointer;
+    }
+  }
+}

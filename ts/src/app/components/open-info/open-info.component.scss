@@ -1,0 +1,44 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    border-radius: 0.2rem;
+    .card1{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        .navCard{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 1rem;
+            .nameSubCard{
+                font-size: large;
+                font-weight: 500;
+            };
+            .info{
+                color: #ed7839;
+                display: flex;
+                gap: 2rem;
+                margin-right: 2rem;
+                span{
+                    font-size: larger;
+                    font-weight: 100;
+                }
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+        p{
+            margin-top: 1rem;
+            color: #4e4e4e;
+        }
+    }
+}
+.customBg{
+        background-color: white;
+}
