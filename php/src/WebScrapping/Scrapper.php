@@ -11,19 +11,13 @@ use Chuva\Php\WebScrapping\Entity\Person;
 class Scrapper {
 
   /**
-   * Normalizes bad-formatted names and return a
-   */
-  private function normalizeName(string $name){
-
-  }
-
-  /**
    * Loads paper information from the HTML and returns the array with the data.
    */
   public function scrap(\DOMDocument $dom): array {
 
     $dom_anchors = $dom->getElementsByTagName("a");
 
+    $papers = [];
     foreach ($dom_anchors as $anchor) {
       if ($anchor->getAttribute("class") == "paper-card p-lg bd-gradient-left") {
         $base_node = $anchor;
@@ -48,21 +42,14 @@ class Scrapper {
 
         $paper_infos = $base_node->getElementsByTagName("div")[1]->getElementsByTagName("div");
 
-        $paper_type = $paper_infos[0]->nodeValue;
-        $paper_id = $paper_infos[1]->getElementsByTagName("div")[1]->nodeValue;
+        $paper_type = $paper_infos[0]->textContent;
+        $paper_id = $paper_infos[1]->getElementsByTagName("div")[1]->textContent;
+
+        $papers[] = New Paper($paper_id, $paper_title, $paper_type, $paper_authors);
       }
     }
 
-    return [new Paper(
-      123,
-      'The Nobel Prize in Physiology or Medicine 2023',
-      'Nobel Prize',
-      [
-        new Person('Katalin Karikó', 'Szeged University'),
-        new Person('Drew Weissman', 'University of Pennsylvania'),
-      ]
-    ),
-  ];
+    return $papers;
   }
 
 }
