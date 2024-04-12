@@ -15,6 +15,12 @@ li {
     background-color: $link-color;
   }
 
+  &.list-group-item {
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
   .bar {
     width: 5px;
     height: 100%;
