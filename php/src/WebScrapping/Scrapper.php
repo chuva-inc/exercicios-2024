@@ -31,10 +31,10 @@ class Scrapper {
           $author_institutions = $author->getAttribute("title");
 
           if ($author_institutions != '') {
-            $formatted_name = preg_replace(array('/\s{2,}/'), ' ', $author->textContent);
+            $formatted_name = preg_replace(['/\s{2,}/'], ' ', $author->textContent);
             $formatted_name = trim($formatted_name, ' ;');
             $formatted_name = ucwords(strtolower($formatted_name));
-  
+
             $author_name = $formatted_name;
             $paper_authors[] = new Person($author_name, $author_institutions);
           }
