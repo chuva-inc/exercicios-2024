@@ -45,6 +45,11 @@ class Scrapper {
               $paper_authors[] = new Person($author_name, $author_institutions);
             }
         }
+
+        $paper_infos = $base_node->getElementsByTagName("div")[1]->getElementsByTagName("div");
+
+        $paper_type = $paper_infos[0]->nodeValue;
+        $paper_id = $paper_infos[1]->getElementsByTagName("div")[1]->nodeValue;
       }
     }
 
