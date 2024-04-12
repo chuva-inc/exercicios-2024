@@ -1,15 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import NavLink from 'src/interfaces/NavLink';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  links: NavLink[] = [
+    {
+      path: '/',
+      label: 'Apresentação',
+    },
+    {
+      path: '/comites',
+      label: 'Comitês',
+    },
+    {
+      path: '/autores',
+      label: 'Autores',
+    },
+    {
+      path: '/eixos-tematicos',
+      label: 'Eixos Temáticos',
+    },
+    {
+      path: '/trabalhos',
+      label: 'Trabalhos',
+      active: true,
+    },
+    {
+      path: '/contato',
+      label: 'Contato',
+    },
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

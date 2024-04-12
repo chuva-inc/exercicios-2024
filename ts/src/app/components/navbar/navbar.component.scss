@@ -1,0 +1,29 @@
+$link-color: #fdf1eb;
+h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navbar-content {
+  height: 100vh;
+}
+
+li {
+  margin-left: 10px;
+
+  &.link-active {
+    background-color: $link-color;
+  }
+
+  .bar {
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  .link-content {
+    display: flex;
+    align-items: center;
+  }
+}
