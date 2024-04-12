@@ -21,6 +21,8 @@ class Scrapper {
       if ($anchor->getAttribute("class") == "paper-card p-lg bd-gradient-left") {
         $base_node = $anchor;
         
+        $paper_title = $base_node->getElementsByTagName("h4")[0]->textContent;
+        
       }
     }
 
