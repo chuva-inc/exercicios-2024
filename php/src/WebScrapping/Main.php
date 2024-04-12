@@ -4,9 +4,9 @@ namespace Chuva\Php\WebScrapping;
 
 use OpenSpout\Common\Entity\Style\Border;
 use OpenSpout\Common\Entity\Style\Color;
-use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
 use OpenSpout\Writer\Common\Creator\Style\BorderBuilder;
 use OpenSpout\Writer\Common\Creator\Style\StyleBuilder;
+use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
 
 /**
  * Runner for the Webscrapping exercice.
@@ -70,7 +70,6 @@ class Main {
       ->setFontBold()
       ->build();
 
-  
     $keysRow = WriterEntityFactory::createRow($keysCells, $keysStyle);
     $writer->addRow($keysRow);
     $writer->addRows($valuesRows);
@@ -78,4 +77,5 @@ class Main {
     $writer->close();
 
   }
+
 }
