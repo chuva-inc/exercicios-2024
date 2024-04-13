@@ -11,10 +11,6 @@ h2 {
 li {
   margin-left: 10px;
 
-  &.link-active {
-    background-color: $link-color;
-  }
-
   &.list-group-item {
     border-top: none;
     border-right: none;

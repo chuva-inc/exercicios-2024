@@ -1,5 +1,5 @@
 <div class="navbar-content shadow">
-  <div class="bg-gradient p-3">
+  <div class="bg-gradient p-3 d-flex justify-content-center align-items-center">
     <h2 class="m-0 p-0">SLACA 2019</h2>
   </div>
   <div id="logo">
@@ -10,7 +10,7 @@
       <li
         class="list-group-item p-0 m-0 position-relative"
         *ngFor="let link of links"
-        [class.link-active]="link.active"
+        [class.bg-primary]="link.active"
       >
         <div class="link-content">
           <div *ngIf="link.active" class="bar bg-gradient"></div>

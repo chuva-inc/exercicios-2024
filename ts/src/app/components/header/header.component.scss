@@ -1,0 +1,24 @@
+.header-titles {
+  span,
+  small {
+    color: #725c5c;
+    font-family: "Roboto";
+    font-weight: 400;
+    display: block;
+  }
+}
+
+.person-icon {
+  margin-left: 10px;
+  position: relative;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  span.rounded-pill {
+    font-size: 10px;
+    margin-left: -4px;
+    margin-top: 4px;
+  }
+}

@@ -3,6 +3,8 @@
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "tertiary": $tertiary,
+  "danger": $danger,
 );
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
