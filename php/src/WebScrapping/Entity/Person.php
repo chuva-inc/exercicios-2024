@@ -2,25 +2,13 @@
 
 namespace Chuva\Php\WebScrapping\Entity;
 
-/**
- * Paper Author personal information.
- */
 class Person {
 
-  /**
-   * Person name.
-   */
-  public string $name;
+public string $name;
+public string $institution;
 
-  /**
-   * Person institution.
-   */
-  public string $institution;
-
-  /**
-   * Builder.
-   */
-  public function __construct($name, $institution) {
+//construtor recebe nome e instituicao do autor
+public function __construct($name, $institution) {
     $this->name = $name;
     $this->institution = $institution;
   }
