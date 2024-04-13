@@ -7,6 +7,8 @@ import NavLink from 'src/interfaces/NavLink';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  logo: string = 'assets/images/logo.png';
+
   links: NavLink[] = [
     {
       path: '/',

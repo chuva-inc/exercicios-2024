@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row gx-0">
+    <div class="col-xl-8">
+      <h2 class="text-tertiary fw-bold">
+        Análise sensorial de preparações funcionais desenvolvidas para escolares
+        entre 09 e 15 anos, do município de Campinas/SP
+      </h2>
+    </div>
+    <div class="col-xl-4">
+      <div class="container">
+        <div class="row justify-content-xl-end justify-content-center">
+          <div
+            class="px-1"
+            *ngFor="let icon of buttonIcons"
+            [ngClass]="icon.col"
+          >
+            <div class="d-grid">
+              <button class="btn button-icon">
+                <img [src]="icon.path" alt="{{ icon.alt }}" />
+                <span class="fs-6 ms-2" *ngIf="icon.label">{{
+                  icon.label
+                }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-10 fw-medium mt-2 text-tertiary">
+            <h4>COMO CITAR ESSE TRABALHO?</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gx-0">
+      <div class="col-xl-8 mb-3">
+        <div class="container">
+          <div class="card border-0 text-light">
+            <img [src]="videoBackground" class="card-img" />
+            <div class="card-img-overlay p-4 d-flex flex-column">
+              <h1 class="card-title">
+                Análise sensorial de preparações funcionais desenvolvidas para
+                escolares entre 09 e 15 anos, do município de Campinas/SP
+              </h1>
+              <div class="d-flex mt-auto mb-4">
+                <div class="rounded-profile-icon">
+                  <img [src]="authorIcon" alt="author icon" />
+                </div>
+                <div class="ms-3">
+                  <h1 class="m-0" style="font-size: 34px">
+                    Beatriz Christine Melo
+                  </h1>
+                  <h3>FCA / Universidade Estadual de Campinas</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 mb-3">
+        <div class="container">
+          <div class="border details-card pb-2 rounded">
+            <div class="bg-primary border-bottom p-2">
+              <h2 class="m-0">Detalhes</h2>
+            </div>
+            <div class="p-2" style="max-height: 30vw; overflow: scroll">
+              <div>
+                Tipo de Apresentação:
+                <strong>{{ detailsCard.type }}</strong>
+              </div>
+              <div>
+                Eixo temático:
+                <strong>{{ detailsCard.axis }}</strong>
+              </div>
+              <div>
+                Palavras-chaves:
+                <strong>{{ detailsCard.keywords.join(", ") }}</strong>
+              </div>
+              <div class="mt-4 authors">
+                <strong>Autores</strong>
+                <ul>
+                  <li *ngFor="let author of detailsCard.authors">
+                    {{ author }}
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-4 universities">
+                <ul>
+                  <li *ngFor="let university of detailsCard.universities">
+                    {{ university }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
