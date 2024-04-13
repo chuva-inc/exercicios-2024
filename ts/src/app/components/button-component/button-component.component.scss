@@ -1,3 +1,15 @@
 .hero-card{
     margin-left: -0px;
 }
+
+
+@media (max-width:768px) {
+    .hero-card{
+      display: inline-block;
+    }
+    .hero-card p {
+        text-align: start;
+        margin-left: 10px;
+    }
+  }
+  

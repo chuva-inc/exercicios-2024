@@ -32,6 +32,8 @@ p {
   flex: 1;
 }
 
+
+
 // .toolbar {
 //   position:relative;
 //   top: 0;
@@ -271,6 +273,25 @@ svg#clouds {
   h2, a {
     font-size: 12px;
   }
+}
+
+
+
+
+@media (max-width:768px) {
+ .main-title{
+  margin: 0;
+  padding: 0;
+  display: block!important;
+  overflow: hidden;
+ }
+ .main-title h2{
+ 
+  text-align: justify;
+  padding: 0;
+  width: 350px;
+  margin-left: 8px;
+ }
 }
 
 

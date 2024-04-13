@@ -1,3 +1,60 @@
-.top-banner {
-    margin-left: -99px;
+.top-banner{
+    margin-left: -10px;
+}
+select{
+    -webkit-appearance-: none !important;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0;
+    
+
+}
+.login-photo{
+    border-radius: 60%;
+}
+.login-avatar{
+    padding: 0;
+}
+.lang-options{
+    margin-top: -50px!important;
+}
+
+
+
+@media (max-width:768px) {
+    .top-banner{
+        
+        padding: 10px;
+        margin: 0;
+        display: inline-block;
+    }
+    .lang-options{
+        
+        margin-top: 0px!important;
+    }
+    .lang-container{
+
+        justify-content: end;
+        display: flex;
+        margin-top: 2px;
+        margin-left: 198px;
+        width: 150px;
+    }
+    .material-icons{
+        margin-left: 20px;
+        display: flex;
+    }
+    .login-par{
+        display: block;
+        text-align: start;
+        padding: 2px;
+        margin: 2px;
+    }
+    .login-photo{
+        display: flex;
+        padding: 0px;
+
+        margin-left:53px;
+    }
 }
