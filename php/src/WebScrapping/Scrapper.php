@@ -26,7 +26,15 @@ class Scrapper {
       $titles_array[] = $title->textContent;
     }
 
-    return $titles_array;
+    // Loads information about all paper types
+    $types = $xpath->query('//div[contains(@class, "tags mr-sm")]');
+    $types_array = array();
+
+    foreach($types as $type){
+        $types_array[] = $type->textContent;
+    }
+
+
 
   }
 
