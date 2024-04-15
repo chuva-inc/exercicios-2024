@@ -1,90 +1,301 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!DOCTYPE html>
+<html lang="PT-BR">
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img src="data:image/png;base64,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" alt="" />
-  <span>Seu ambiente de dev para o exercício da chuva está rodando!</span>
-  <div class="spacer"></div>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLACA 2019</title>
+  <link rel="stylesheet" href="app.component.css">
+  <script src="script.js"></script>
+</head>
 
-<div class="content" role="main">
+<body>
 
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-    <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
-      <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
-        <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
-        <g id="Group_47" data-name="Group 47" transform="translate(165.185 720.185)">
-          <path id="Path_33" data-name="Path 33" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" transform="translate(0.371 3.363)" fill="#fff"/>
-          <path id="Path_34" data-name="Path 34" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" transform="translate(0 0.005)" fill="#fff"/>
-        </g>
-      </g>
-    </svg>
-
-    <span>{{ title }} está rodando!</span>
-
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-      <title>Rocket Ship Smoke</title>
-      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-    </svg>
-
-  </div>
-
-  <!-- Next Steps -->
-  <h2>Próximos passos</h2>
-  <p>O que voce deve fazer agora?</p>
-
-  <input type="hidden" #selection>
-
-  <!-- Terminal -->
-  <div class="terminal">
-    <pre>npx cypress open --env type=base</pre>
-  </div>
-
-  <!-- Resources -->
-  <h2>Informações importantes</h2>
-  <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
-  <div id="required-elements">
-    <h3>O título do trabalho deve ser um h2: </h3>
-    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP'</h2>
-
-    <h3>O elemento de expandir resumo precisa ter a classe .btn-show-more</h3>
-    <a href="#" class="btn-show-more">ver mais</a>
-
-    <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a>
-
-    <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
-    </div>
-    <div class="comments-container">
-      Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
+  <div id="menu">
+    <div class="site_name">
+      <a class="nav_title" href="index.html">SLACA 2019</a>
     </div>
 
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
+    <div>
+      <img class="nav_image" src="./img/menu.png">
+    </div>
 
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
+    <nav class="menu_nav">
+      <button class="nav_button">Apresentação</button>
+      <button class="nav_button">Comitês</button>
+      <button class="nav_button">Autores</button>
+      <button class="nav_button">Eixos temáticos</button>
+      <button class="nav_button">Trabalhos</button>
+      <button class="nav_button">Contato</button>
+    </nav>
   </div>
 
-  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <title>Gray Clouds Background</title>
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
+  <div id="container">
 
-</div>
+    <header>
+      <div class="page_title">
+        <h5 class="general_title">Anais do Simpósio Latino Americano de Ciências de Alimentos</h5>
+        <h3 class="general_subtitle">Anais do 13º Simpósio Latino Americano de Ciência de Alimentos</h3>
+        <h5 class="issn">ISSN: 1234-5678</h5>
+      </div>
+
+      <div class="rigth_side">
+        <select id="languages">
+          <option>PT, BR</option>
+          <option>EN</option>
+        </select>
+
+        <div class="user_info">
+          <div class="login">
+            <h5 class="wellcome">Bem vindo!</h5>
+            <h6 class="email_login">alguem12@galoascience.com</h6>
+          </div>
+          <img id="Imagem_user" src="./img/user.png">
+          <h6 class="notifications">2</h6>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="page_top">
+        <h2 class="article_title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15
+          anos, do município de Campinas/SP </h2>
+        <aside class="cite">
+          <div class="cite_buttons">
+            <button class="download_button"><img src="./img/download.png"></button>
+            <button class="favorite_button"><img src="./img/favorite.png"></button>
+            <button class="doi_button"><img src="./img/doi.png"></button>
+          </div>
+          <h3 class="how_to_cite">COMO CITAR ESSE TRABALHO?</h3>
+        </aside>
+      </section>
+
+      <div class="main_content">
+        <div class="video">
+          <h3 class="video_title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15
+            anos, do município de Campinas/SP </h3>
+          <div class="about_video">
+            <img class="img_user_video" src="./img/videoimg.png">
+            <div class="only_about">
+              <h2 class="about_video1">Beatriz Christiane Melo</h2>
+              <h4 class="about_video2">FCA / Universidade Estadual de Campinas</h4>
+            </div>
+          </div>
+        </div>
+        <aside class="details">
+          <h3 class="details_title">Detalhes</h3>
+          <div class="details_container">
+            <p class="keywords">Tipo de Apresentação: <strong>Pôster</strong><br>
+              Eixo temático: <strong>Alimentação e saúde (AS)</strong><br>
+              Palavras-chaves: <strong>Alimentos funcionais, alimentação escolar.</strong></p><br>
+
+            <p class="writers"><strong>Autores:</strong><br>
+              Galileo Galilei¹<br>
+              Berta Lange de Morretes²<br>
+              Isaac Newton³<br>
+              Cesar Lattes¹<br>
+              Stephen Hawking⁴</p><br>
+
+            <p class="universities"><small>¹Universidade Estadual de Campinas<br>
+                ²Universidade de São Paulo<br>
+                ³Instituto Nacional de Pesquisas Espaciais<br>
+                ⁴Universidade Federal do Rio de Janeiro</small>
+          </div>
+        </aside>
+      </div>
+
+      <section class="abstract">
+
+        <h3 class="abstract_title">Resumo</h3>
+        <p class="abstract_paragraphs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis
+          auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus.
+          Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet.
+          Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum
+          lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
+          vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque
+          sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet
+          enim accumsan sit ametl accumsant<span id="points">...</span>
+          <span id="moreText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor,
+            mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
+            auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet.
+            Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum
+            lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
+            vestibulum.<br><br>
+
+            Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin
+            dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales
+            id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam
+            finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum
+            quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet
+            odio.<br><br>
+
+            Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend
+            vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui
+            eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent
+            blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio.
+            Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque
+            sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu
+            libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus
+            massa.<br><br>
+
+            Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut
+            hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor
+            at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at
+            malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit.</span><button onclick="readMore()" id="verMais">ver
+            mais</button>
+        </p>
+      </section>
+
+      <section class="discussions">
+
+        <h3 class="discussions_title">Discussões</h3>
+        <div class="discussions_container">
+          <div id="create_topic">
+            <h4 class="discussions_subtitle">Compartilhe suas ideias ou dúvidas com os autores!</h4>
+            <div class="icons">
+              <img class="discussions_icons" src="./img/icone1.png">
+              <img class="discussions_icons" src="./img/icone2.png">
+              <img class="discussions_icons" src="./img/icone3.png">
+            </div>
+            <h5 class="discussions_paragraphs">Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+              curiosidade? Deixe seus questionamentos ou sugestões para o autor!</h5>
+            <button onclick="createATopic()" id="topic_button"><img src="./img/criar_topico.png"></button>
+          </div>
+
+          <div id="form">
+
+            <p class="form_paragraphs">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+            <p class="form_questions">Assunto</p>
+            <form>
+              <input class="subjetc_form" type="text" value="Defina um tópico sucinto para notificar os autores...">
+            </form>
+            <p class="form_questions">Conteúdo</p>
+            <form>
+              <input class="container_form" type="text">
+            </form>
+            <div class="submit_form">
+              <div class="edition">
+                <img class="editions_img" src="./img/strong.png">
+                <img class="editions_img" src="./img/emphasis.png">
+              </div>
+              <button onclick="submitForm()" id="submit_button">Enviar</button>
+            </div>
+
+          </div>
+
+          <div id="sent">
+            <div class="topic_sent_sucessfully">
+              <h4 class="sent_title">Seu tópico foi enviado com sucesso! :D</h4>
+              <p class="sent_paragraphs">Agradecemos por sua contribuição, uma notificação será enviada ao seu email
+                assim que seu tópico for respondido!</p>
+              <a class="others_articles" href="" target="_blank">Descubra outros trabalhos!</a>
+              <button id="new_topic_button" onclick="createNewTopic()"><img
+                  src="./img/criar_novo_topico.png"></button>
+            </div>
+
+            <div class="coments_sent">
+              <img class="img_comments_sent" src="./img/seta_feedback.png">
+              <p class="waiting_text">Aguardando feedback dos autores</p>
+              <a class="edit_sent" href="" target="_blank">Editar tópico</a>
+            </div>
+
+          </div>
+
+          <div class="coments">
+            <h4 class="subject">Assunto da pergunta aparece aqui</h4>
+            <h6 class="user_comment">Carlos Henrique Santos</h6>
+            <p class="paragraphs_comment">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+            <aside class="reactions">
+              <button class="more_info"><img src="./img/moreinfo.png"></button>
+              <button class="like"><img src="./img/like.png"></button>
+              <span class="var_like">1 like</span>
+              <span class="var_answers">1 resposta</span>
+            </aside>
+          </div>
+
+          <div class="coments">
+            <h4 class="subject">Assunto da pergunta aparece aqui</h4>
+            <h6 class="user_comment">Carlos Henrique Santos</h6>
+            <p class="paragraphs_comment">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da
+              análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+            <aside class="reactions">
+              <button class="more_info"><img class="img_more_info" src="./img/moreinfo.png"></button>
+              <button class="like"><img class="img_likes" src="./img/like.png"></button>
+              <span class="var_like">4 likes</span>
+              <span onclick="coments()" id="var_answers">4 respostas</span>
+            </aside>
+
+            <div id="interactions">
+              <div class="first_comment">
+                <div class="comment_identity">
+                  <h5 class="author_comment_name">Adriano da Silva</h5>
+                  <div class="rigth_side_comments">
+                    <h5 class="designation">Autor</h5>
+                    <img class="feedback_img2" src="./img/seta_feedback2.png">
+                  </div>
+                </div>
+                <p class="interactions_paragraphs">Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                  dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                  inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de
+                  processo formativo processo.</p>
+              </div>
+              <div class="second_comment">
+                <div class="comment_identity">
+                  <h5 class="author_comment_name">Carlos Henrique Santos</h5>
+                </div>
+                <p class="interactions_paragraphs">Consegui entender melhor agora! Parece que a variação da análise da
+                  dimensão e impacto de processo formativo situado impacto de processo formativo.</p>
+                <br>
+                <p class="interactions_paragraphs">Obrigada pela resposta, muito interessante o seu trabalho! </p>
+              </div>
+              <div class="first_comment">
+                <div class="comment_identity">
+                  <h5 class="author_comment_name">Carmila Ferreira Andrade</h5>
+                  <div class="rigth_side_comments">
+                    <h5 class="designation">Coautor</h5>
+                    <img class="feedback_img2" src="./img/seta_feedback2.png">
+                  </div>
+                </div>
+                <p class="interactions_paragraphs">Também ínteressante lembrar que o relato inscreve-se no campo da
+                  análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo
+                  resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado
+                  impacto de processo formativo processo.</p>
+                <br>
+                <p class="interactions_paragraphs">Situado impacto de processo formativo processo resente relato
+                  inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de
+                  processo formativo processo.</p>
+              </div>
+              <div class="first_comment">
+                <div class="comment_identity">
+                  <h5 class="author_comment_name">Ana Carolina</h5>
+                  <div class="rigth_side_comments">
+                    <h5 class="designation">Coautor</h5>
+                    <img class="feedback_img2" src="./img/seta_feedback2.png">
+                  </div>
+                </div>
+                <p class="interactions_paragraphs">Resposta do autor é aqui. Relato inscreve-se no campo da análise da
+                  dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato
+                  inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de
+                  processo formativo processo.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <img src="./img/footer.png" class="img_footer">
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
