@@ -34,6 +34,14 @@ class Scrapper {
         $types_array[] = $type->textContent;
     }
 
+    // Loads information about all ids:
+    $ids = $xpath->query('//div[contains(@class, "volume-info")]');
+    $ids_array = array();
+
+    foreach($ids as $id){
+        $ids_array[] = $id->textContent;
+    }
+
 
 
   }
