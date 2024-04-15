@@ -9,12 +9,9 @@ export class AppComponent {
   title = 'DevChuva';
     
   nome: string = 'alguem12@galoascience.com'
-  exibir:boolean = false;
+  exibirRespostas:boolean = false;
   criandoNovoTopico:boolean = false;
   carregandoTopico:boolean = false;
-  expandido: boolean = false;
-  resto: boolean = true;
-  alturaPainel = 'auto';
   
   texto: string = this.gerarLoremIpsum(20);
   limite: number = 780;
@@ -30,8 +27,8 @@ export class AppComponent {
     return texto.repeat(tamanho);
   }
 
-  exibirRespostas(){
-    this.exibir = !this.exibir;
+  exibirRespostasContainer(){
+    this.exibirRespostas = !this.exibirRespostas;
   }
 
   criarTopico(){

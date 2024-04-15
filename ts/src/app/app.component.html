@@ -161,7 +161,7 @@
                     </div>
                 </div>
             </div>
-            <div class="answered-topic" (click)="exibirRespostas()" id="discussoesCardTopico">
+            <div class="answered-topic" (click)="exibirRespostasContainer()" id="discussoesCardTopico">
                 <div class="p-3">
                     <h2 class="ops-topic-subject">Assunto da pergunta aparece aqui</h2>
                     <h3 class="mt-2">Carlos Henrique Santos</h3>
@@ -177,7 +177,7 @@
                         <p>1 resposta</p>
                     </div>
                 </div>
-                <div *ngIf="exibir" class="comments-container mt-2">
+                <div *ngIf="exibirRespostas" class="comments-container mt-2">
                     <app-respostas-component [tag]="'Autor'" [nome]="'Adriano da Silva'"></app-respostas-component>
                     <app-respostas-component [nome]="'Carlos Henrique Santos'"></app-respostas-component>
                     <app-respostas-component [tag]="'Coautor'" [nome]="'Carmila Ferreira Andrade'"></app-respostas-component>
