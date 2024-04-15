@@ -91,7 +91,8 @@ class Scrapper {
       
       $papers[] = new Paper($id, $title, $type, $paper_authors); 
     }
-
+    
+    return $papers;
   }
 
 }
