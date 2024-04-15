@@ -15,22 +15,18 @@ class Scrapper {
    */
   public function scrap(\DOMDocument $dom): array {
     
-    // Find all the titles:
-    $titles = $dom->getElementsByTagName('h4');
+    // Defines an XPath variable
+    $xpath = new \DOMXPath($dom);
 
+    // XPath query to find all elements with the desired class
+    $titles = $xpath->query("//h4[@class='my-xs paper-title']");
     $titles_array = array();
 
-    foreach($titles as $title){
-        $title_text = $title->textContent;
-        $titles_array[] = $title_text;
+    foreach($titles as $title){   
+      $titles_array[] = $title->textContent;
     }
 
-    $titles_array = array_slice($titles_array, 4); //
-    array_pop($titles_array);
-
-    echo 'Titulos: <br><br>';
-    print_r($titles_array);
-    echo '<br><br><br><br>';
+    return $titles_array;
 
   }
 
