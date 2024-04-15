@@ -10,16 +10,16 @@ class Scrapper {
   //Loads paper information from the HTML and returns the array with the data.
   //return [new Paper(id,titulo,tipo,[new Pessoa(autorN,instN)])]
   public function scrap(\DOMDocument $dom): array {
-    return [
-        new Paper(
-            123,
-            'titulo artigo',
-            'tipo', 
-            [
-                new Person('autor1', 'inst1'),
-                new Person('autor2', 'inst2')
-            ]
-        )
-    ];
-}
+    $papers = [];
+
+        $links = $dom->getElementsByTagName('a'); //tentando fazer de forma q sempre que ache a tag <a href=...> identifique q é um novo paper
+        foreach ($links as $link) {
+            $paper = $this->parsePaperFromLink($link);
+            if ($paper) {
+                $papers[] = $paper;
+            }
+        }
+
+        return $papers;
+    }
 }
