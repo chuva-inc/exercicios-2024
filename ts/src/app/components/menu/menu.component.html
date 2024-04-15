@@ -1,0 +1,25 @@
+<div class="menu-container">
+  <div class="menu-title">
+    <h1>SCALA 2019</h1>
+  </div>
+  <div class="menu-site-logo">
+    <img src="assets/dewey-4.png" alt="Site logo">
+  </div>
+  <div class="menu-links">
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <div *ngIf="item.isSelected; else elseBlock" class="link-selected">
+          <span class="link-selected__detail"></span>
+          <p>{{item.nome}}</p>
+        </div>
+        <ng-template #elseBlock>
+          <div>
+            <p>{{item.nome}}</p>
+          </div>
+        </ng-template>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
