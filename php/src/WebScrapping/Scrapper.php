@@ -34,7 +34,7 @@ class Scrapper {
         $types_array[] = $type->textContent;
     }
 
-    // Loads information about all ids:
+    // Loads information about all ids
     $ids = $xpath->query('//div[contains(@class, "volume-info")]');
     $ids_array = array();
 
@@ -42,6 +42,22 @@ class Scrapper {
         $ids_array[] = $id->textContent;
     }
 
+    // Loads information about authors and institutions and inserts into the Person class
+    $spanElements = $xpath->query('//div[@class="authors"]/span');
+
+    $persons = array();
+
+    foreach ($spanElements as $span) {
+      // Gets the span title
+      $institution = $span->getAttribute('title');
+    
+      // Gets the content of the span
+      $author = $span->textContent;
+      $author = str_replace(";", "", $author);
+
+      // Add data to the Person class
+      $persons[] = new Person($author, $institution);
+    }
 
 
   }
