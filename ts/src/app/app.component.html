@@ -73,11 +73,10 @@
                 <h2>Resumo</h2>
             </header>
             <div id="painel" (click)="clickExpandir()">
-                <p id="limitar">{{ loremIpsum3 }}</p>
-                <p [hidden]="resto">{{ loremIpsum3 }}</p>
-                <div id="verMaisVersao2">
-                    <p id="laranja" *ngIf="resto" (click)="clickExpandir()" class="btn-show-more">ver mais</p>
-                </div>
+                <p>
+                    {{ exibirTextoExpandido ? texto : (texto | slice:0:limite) }}
+                    <span *ngIf="!exibirTextoExpandido && texto.length > limite" class="btn-show-more">... <span id="laranja">ver mais</span></span>
+                </p>
             </div>
         </div>
         <header id="discussoesContainerHeader" class="mt-5">
