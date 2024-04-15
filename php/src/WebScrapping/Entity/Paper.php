@@ -15,6 +15,10 @@ class Paper {
  
 
   public function __construct($id, $title, $type, $authors = []) { //construtor pede id, titulo, tipo e autores[];
+    $this->id = $id;
+    $this->title = $title;
+    $this->type = $type;
+    $this->authors = $authors;
   }
 
 }
