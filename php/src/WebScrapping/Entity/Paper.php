@@ -39,6 +39,19 @@ class Paper {
    * Builder.
    */
   public function __construct($id, $title, $type, $authors = []) {
+    $this->id = $id;
+    $this->title = $title;
+    $this->type = $type;
+    $this->authors = $authors;
   }
 
+  /**
+   * Fill paper data from HTML.
+   *
+   * @param string $html The HTML content.
+   * @return void
+   */
+  public function fillFromHtml($html) {
+    // Implementar a lógica para preencher os dados do Paper a partir do HTML
+  }
 }
