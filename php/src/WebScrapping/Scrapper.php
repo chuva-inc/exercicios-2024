@@ -31,7 +31,7 @@ class Scrapper {
     $types_array = array();
 
     foreach($types as $type){
-        $types_array[] = $type->textContent;
+      $types_array[] = $type->textContent;
     }
 
     // Loads information about all ids
@@ -39,7 +39,7 @@ class Scrapper {
     $ids_array = array();
 
     foreach($ids as $id){
-        $ids_array[] = $id->textContent;
+      $ids_array[] = $id->textContent;
     }
 
     // Loads information about authors and institutions and inserts into the Person class
@@ -57,6 +57,14 @@ class Scrapper {
 
       // Add data to the Person class
       $persons[] = new Person($author, $institution);
+    }
+
+    // Loads information about all authors who wrote a given paper:
+    $authors = $xpath->query('//div[contains(@class, "authors")]');
+    $authors_array = array();
+    
+    foreach($authors as $author){
+      $authors_array[] = $author->textContent;
     }
 
 
