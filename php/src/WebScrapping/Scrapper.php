@@ -67,6 +67,30 @@ class Scrapper {
       $authors_array[] = $author->textContent;
     }
 
+    // Instantiates the data within the Paper class
+    $papers = array();
+
+    for($i=0; $i<count($ids_array); $i++){
+      $id = $ids_array[$i];
+      $title = $titles_array[$i];
+      $type = $types_array[$i];
+      $authors = explode('; ', $authors_array[$i]);
+      // Remove the last element from the array - empty string
+      array_pop($authors);
+      
+      $paper_authors = array();
+
+      foreach($authors as $author){
+        foreach($persons as $person){
+          if($author == $person->name){
+            $paper_authors[] = $person;
+            break;
+          }
+        }
+      }
+      
+      $papers[] = new Paper($id, $title, $type, $paper_authors); 
+    }
 
   }
 
