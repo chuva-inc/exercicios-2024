@@ -1,0 +1,130 @@
+header {
+  background: #FDF1EB;
+  font-family: 'Roboto';
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 68px;
+  width: 85.5vw;
+}
+
+.container-title-header {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15%;
+}
+
+.container-title-header h3,
+.container-title-header h2,
+.container-title-header h4 {
+  color: #725C5C;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.container-title-header h3 {
+  margin-bottom: 0.125rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container-title-headert h2 {
+  font-size: 22px;
+}
+
+.container-title-header h4 {
+  font-size: 14px;
+}
+
+.container-select-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 9px;
+  margin-right: 10px;
+  width: 100px;
+  height: 34px;
+  border-radius: 3px;
+  border: 1px solid #CCCCCC
+}
+
+.container-select-language:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
+.container-select-language:hover{
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
+.container-select-language:active {
+  cursor: pointer;
+  background-color: #b4b1b1;
+}
+
+.container-select-language img {
+  width: 16px;
+  margin: 4px;
+}
+
+.container-select-language span {
+  font-family: "Quicksand";
+  font-size: 14px;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.container-info-user {
+  display: flex;
+}
+
+.text-info-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "Quicksand";
+  color: #333333;
+}
+
+.text-info-user:first-child {
+  font-size: 15px;
+}
+
+.text-info-usert:last-child {
+  font-size: 12px;
+
+}
+
+.icon-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-user span {
+  position: relative;
+  bottom: 12px;
+  left: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  padding: 6.4px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 10px;
+  color: white;
+  background: #F85959;
+}
+
+.icon-user img {
+  width: 30.3px;
+  height: 30.63px;
+  top: 18.68px;
+  left: 1077.85px;
+  border: 1px 0px 0px 0px;
+}
