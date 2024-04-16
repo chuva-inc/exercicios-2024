@@ -17,4 +17,8 @@ export class SummaryComponent implements OnInit {
     this.showFullText = !this.showFullText;
   }
 
+  showsLessSummary(): void {
+    this.showFullText = false;
+  }
+
 }
