@@ -1,0 +1,77 @@
+<div class="container-fluid">
+  <div class="border">
+    <div class="bg-primary border-bottom p-2">
+      <h2 class="m-0">Resumo</h2>
+    </div>
+    <div class="summary p-2">
+      <div *ngIf="!showFullSummary">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          eleifend interdum condimentum. Phasellus at pretium leo, non hendrerit
+          orci. Sed dictum massa lobortis lorem gravida lacinia. Donec nec
+          rutrum neque. Cras pretium sed lacus nec convallis. Phasellus sagittis
+          non libero a interdum. Pellentesque convallis, nulla ut posuere
+          hendrerit, lacus est egestas eros, ac elementum velit lacus ut dolor.
+          Aliquam sollicitudin ex nec facilisis dapibus. Quisque et risus nibh.
+          Aenean a mi eu ligula condimentum hendrerit at in metus. Mauris in
+          ipsum efficitur ante bibendum elementum. Nullam id sem commodo,
+          vehicula nulla condimentum, accumsan ligula. Aliquam erat volutpat.
+          Vestibulum dolor dolor, tincidunt eget consequat ut, pellentesque at
+          augue...
+          <button
+            class="ms-2 btn btn-show-more text-tertiary fw-bold p-0"
+            (click)="toggleSummary()"
+          >
+            ver mais
+          </button>
+        </p>
+      </div>
+      <div *ngIf="showFullSummary">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          eleifend interdum condimentum. Phasellus at pretium leo, non hendrerit
+          orci. Sed dictum massa lobortis lorem gravida lacinia. Donec nec
+          rutrum neque. Cras pretium sed lacus nec convallis. Phasellus sagittis
+          non libero a interdum. Pellentesque convallis, nulla ut posuere
+          hendrerit, lacus est egestas eros, ac elementum velit lacus ut dolor.
+          Aliquam sollicitudin ex nec facilisis dapibus. Quisque et risus nibh.
+          Aenean a mi eu ligula condimentum hendrerit at in metus. Mauris in
+          ipsum efficitur ante bibendum elementum. Nullam id sem commodo,
+          vehicula nulla condimentum, accumsan ligula. Aliquam erat volutpat.
+          Vestibulum dolor dolor, tincidunt eget consequat ut, pellentesque at
+          augue.
+        </p>
+        <p>
+          Phasellus diam massa, pellentesque quis ullamcorper non, ullamcorper
+          sit amet orci. Maecenas vel pulvinar nunc. Curabitur maximus luctus
+          nisl vel pharetra. Maecenas vitae consequat neque. Donec erat magna,
+          lacinia eu ante et, auctor sodales ex. Donec sed nisl volutpat, tempor
+          augue sed, bibendum magna. Fusce vehicula nisi vel hendrerit cursus.
+          Curabitur scelerisque et augue ut ultricies. Cras est lectus, mollis
+          at lorem a, dictum consequat arcu. Proin tristique risus diam.
+          Suspendisse in porttitor nibh.
+        </p>
+        <p class="mb-3">
+          Phasellus magna lectus, fringilla congue magna ut, bibendum hendrerit
+          magna. Ut mattis suscipit magna sed interdum. Curabitur et justo
+          nulla. Vestibulum ante ipsum primis in faucibus orci luctus et
+          ultrices posuere cubilia curae; Proin tincidunt accumsan urna a
+          vestibulum. Donec vitae augue nunc. Donec facilisis arcu id rhoncus
+          dapibus. Aliquam eleifend, mauris varius placerat molestie, nisi felis
+          scelerisque nisi, et volutpat sem massa vel lorem. Integer nec ante
+          vel enim gravida placerat. Nullam nec libero in leo sodales convallis.
+          Quisque velit nisi, egestas ac ante facilisis, iaculis tristique
+          ipsum. Suspendisse sed arcu vel mauris maximus porta ut eget turpis.
+          Proin mollis, est id ornare pharetra, quam magna pulvinar lacus, vitae
+          sodales eros tortor vitae orci. Sed ut accumsan diam.
+        </p>
+        <button
+          class="btn btn-show-more text-tertiary fw-bold p-0"
+          (click)="toggleSummary()"
+        >
+          ver menos
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
