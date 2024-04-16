@@ -6,9 +6,14 @@ h1 {
 }
 
 .navbar-content {
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 16rem;
+  overflow-y: auto;
+  z-index: 1000;
 }
-
 li {
   margin-left: 10px;
 
