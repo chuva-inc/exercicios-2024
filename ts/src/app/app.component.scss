@@ -96,6 +96,7 @@
       }
 
       .project-details-2 {
+        margin-bottom: 1.875rem;
 
         .project-video {
           display: flex;
@@ -256,6 +257,37 @@
           border-radius: 3px;
         }
       }
+    }
+
+    .half-resume-content {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.75px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #5C5C5C;
+      text-align: justify;
+
+      .btn-show-more {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21.33px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #ED7839;
+        cursor: pointer;
+      }
+    }
+
+    .full-resume-content {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.75px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: #5C5C5C;
     }
   }
 }
