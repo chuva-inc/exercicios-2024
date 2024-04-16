@@ -4,6 +4,8 @@ require_once 'vendor/autoload.php';
 
 namespace Chuva\Php\WebScrapping;
 
+require_once __DIR__ . '/../../vendor/autoload.php';
+
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 use Openspout\Writer\Common\Creator\WriterEntityFactory;
