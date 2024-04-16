@@ -3,14 +3,10 @@
 namespace Chuva\Php\WebScrapping;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
-//require_once '/../../vendor/openspout/openspout/src/Common/Entity/Cell.php';
 
-//use Chuva\Php\WebScrapping\Entity\Paper;
-//use Chuva\Php\WebScrapping\Entity\Person;
 use OpenSpout\Writer\XLSX\Writer;
 use OpenSpout\Common\Entity\Style\Style;
 use OpenSpout\Common\Entity\Row;
-//use OpenSpout\Common\Entity\Cell;
 
 class Excel {
 
@@ -31,7 +27,9 @@ class Excel {
 
         $writer = new Writer();
 
-        $writer->openToFile(__DIR__ . '/../../assets/data.xlsx');
+        $filepath = __DIR__ . '/../../assets/data.xlsx';
+
+        $writer->openToFile($filepath);
 
         // Creates an array with the headers values
         $headers = ['ID', 'Title', 'Type'];
@@ -46,10 +44,10 @@ class Excel {
         $style->setFontBold();
 
         // Creates the headers row
-        $headersRow = Row::fromValues($headers, $style);
+        $headersRow = Row::fromValues($headers);
 
         // Adds the row in the spreadsheet
-        $writer->addRow($headersRow);
+        $writer->addRow($headersRow, $style);
 
         // Closes the writer and saves the file
         $writer->close();
