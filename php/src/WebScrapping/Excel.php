@@ -8,8 +8,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
-use Openspout\Writer\Common\Creator\WriterEntityFactory;
-use Openspout\Writer\Common\Creator\Style\StyleBuilder;
+use OpenSpout\Writer\Common\Creator\WriterFactory;
 
 class Excel {
 
