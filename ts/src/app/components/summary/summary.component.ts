@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary.component.scss']
 })
 export class SummaryComponent implements OnInit {
+  showFullText: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSummary(): void {
+    this.showFullText = !this.showFullText;
   }
 
 }
