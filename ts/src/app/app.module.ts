@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SectionOneComponent } from './components/section-one/section-one.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { DiscussionTopicsComponent } from './components/discussion-topics/discussion-topics.component';
+import { SectionTopicsComponent } from './components/section-topics/section-topics.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SummaryComponent } from './components/summary/summary.component';
     HeaderComponent,
     FooterComponent,
     SectionOneComponent,
-    SummaryComponent
+    SummaryComponent,
+    DiscussionTopicsComponent,
+    SectionTopicsComponent
   ],
   imports: [
     BrowserModule
