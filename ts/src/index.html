@@ -9,5 +9,30 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+    
+function showMore(){
+    let points=document.getElementById("points");
+    let moreText=document.getElementById("more");
+    let btnShowMore=document.getElementById("btn-show-more");
+
+
+    if(points.style.display === "none"){
+      points.style.display="inline";
+      moreText.style.display="none";
+      btnShowMore.innerHTML="ver mais";
+
+
+    }else{
+      points.style.display="none";
+      moreText.style.display="inline";
+      btnShowMore.innerHTML="ver menos";
+    }
+}
+
+
+  </script>
+
 </body>
 </html>
