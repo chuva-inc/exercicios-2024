@@ -13,22 +13,51 @@
   <script>
     
 function showMore(){
-    let points=document.getElementById("points");
-    let moreText=document.getElementById("more");
-    let btnShowMore=document.getElementById("btn-show-more");
+    let points=document.getElementById("points")
+    let moreText=document.getElementById("more")
+    let btnShowMore=document.getElementById("btn-show-more")
 
 
     if(points.style.display === "none"){
-      points.style.display="inline";
-      moreText.style.display="none";
-      btnShowMore.innerHTML="ver mais";
+      points.style.display="inline"
+      moreText.style.display="none"
+      btnShowMore.innerHTML="ver mais"
 
 
     }else{
-      points.style.display="none";
-      moreText.style.display="inline";
-      btnShowMore.innerHTML="ver menos";
+      points.style.display="none"
+      moreText.style.display="inline"
+      btnShowMore.innerHTML="ver menos"
     }
+}
+
+function createTopic(){
+  const showHideDiv = document.getElementById('show-hide-div')
+  const newTopicMessage = document.getElementById('new-topic-message')
+  const newTopicForm = document.getElementById('new-topic-form')
+  const btnCreateTopic = document.getElementById('btn-create-topic')
+
+  showHideDiv.style.display="none"
+  newTopicMessage.style.display="flex"
+  newTopicForm.style.display="inline"
+  btnCreateTopic.style.display="none"
+}
+
+function sendTopic(){
+  const waitingAnswerTopic = document.getElementById('waiting-answer-topic')
+  const waitingOverlay = document.getElementById('waiting-overlay')
+  const newTopicMessage = document.getElementById('new-topic-message')
+  const newTopicForm = document.getElementById('new-topic-form')
+  const showFeedback = document.getElementById('show-feedback')
+  const btnCreateNewTopic = document.getElementById('btn-create-new-topic')
+
+  showFeedback.style.display="flex"
+  btnCreateNewTopic.style.display="flex"
+  newTopicMessage.style.display="none"
+  newTopicForm.style.display="none"
+  waitingOverlay.style.display="flex"
+  waitingAnswerTopic.style.display="block"
+
 }
 
 
