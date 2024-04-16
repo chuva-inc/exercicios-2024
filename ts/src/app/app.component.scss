@@ -1,3 +1,88 @@
-.main-content {
+.main-container {
   margin-left: 13.75rem;
+
+  .main-content {
+    padding: 1.25rem 2.75rem;
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .project-title {
+        width: 49.125rem;
+        height: 3.375rem;
+
+        h2 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 25px;
+          letter-spacing: 0.05em;
+          text-align: left;
+          color: #ED7839;
+        }
+      }
+
+      .project-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .options-share {
+          display: flex;
+          justify-content: flex-end;
+          gap: 5px;
+          align-items: center;
+
+          .options-share__download {
+            width: 7.5rem;
+            height: 1.938rem;
+            padding: 6px 12px 6px 12px;
+            border-radius: 4px;
+            background: #ED7839;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+              font-family: 'Roboto', sans-serif;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 18.75px;
+              text-align: center;
+              color: #FFFFFF;
+            }
+          }
+
+          .options-share__favorite {
+            width: 2.688rem;
+            height: 1.938rem;
+            padding: 6px 12px 6px 12px;
+            border-radius: 4px;
+            background: #ED7839;
+          }
+
+          .options-share__doi {
+            width: 2.688rem;
+            height: 1.938rem;
+            padding: 6px 12px 6px 12px;
+            border-radius: 4px;
+            background: #ED7839;
+          }
+        }
+
+        .options-cowork p {
+          font-family: 'Roboto', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 25px;
+          letter-spacing: 0.05em;
+          text-align: right;
+          color: #ED7839;
+        }
+      }
+
+    }
+  }
 }
