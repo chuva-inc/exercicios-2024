@@ -1,0 +1,125 @@
+.container-section-one {
+  display: flex;
+  gap: 30px;
+}
+
+.container-section-one h2 {
+  color: #ED7839;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.container-section-one img {
+  height: 440px;
+  width: 784px; 
+}
+
+.container-section-one-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px; 
+}
+
+.container-section-one-options span {
+  color: #ED7839;
+  font-family: "Roboto";
+  font-size: 14px; 
+  font-weight: 500;
+  line-height: 25px; 
+  letter-spacing: 0.01em;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.container-section-one-buttons {
+  display: flex;
+  gap: 4.8px;
+}
+
+.container-section-one-buttons button {
+  all: unset;
+  background: #ED7839;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  gap: 4.8px;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 16px; 
+  font-weight: 500;
+  line-height: 16px; 
+}
+
+.container-section-one-buttons button img {
+  width: 16px;
+  height: 16px;
+}
+
+.container-section-one-buttons button:hover {
+  cursor: pointer;
+}
+
+.container-section-one-buttons button:active {
+  background-color: #d3652a;
+}
+
+.container-detail-info {
+  border-radius: 3px;
+  border: 1px solid #ECECEC;
+  width: 300px;
+}
+
+.title-detail-info {
+  background: #FDF1EB;
+  border-radius: 3px;
+  border: 1px solid #ECECEC;
+  color: #4E4E4E;
+  padding: 16px;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+}
+
+.info-details {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.container-presentations {
+  color: #4E4E4E;
+  padding: 16px;
+  font-family: "Quicksand";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.5px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.container-authors {
+  color: #4E4E4E;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-family: "Quicksand";
+  font-size: 14px;
+  line-height: 19.5px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.container-university {
+  padding: 0 16px;
+  font-family: "Quicksand";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: left;
+}
