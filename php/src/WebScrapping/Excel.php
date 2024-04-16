@@ -26,6 +26,8 @@ class Excel {
 
     public function export(Array $papers): void{
 
+        require_once 'vendor/openspout/openspout/src/Autoloader/autoload.php';
+
         $writer = WriterEntityFactory::createXLSXWriter();
 
         $writer->openToFile(__DIR__ . '/../../assets/data.xlsx');
