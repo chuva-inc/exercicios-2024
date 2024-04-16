@@ -1,5 +1,7 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 namespace Chuva\Php\WebScrapping;
 
 use Chuva\Php\WebScrapping\Entity\Paper;
