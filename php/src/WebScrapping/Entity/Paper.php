@@ -50,4 +50,7 @@ class Paper {
    */
   public function countAuthors(): int{
     return count($this->authors);
+  }
+  
 }
+
