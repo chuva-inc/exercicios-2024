@@ -2,13 +2,15 @@
 
 namespace Chuva\Php\WebScrapping;
 
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+//require_once '/../../vendor/openspout/openspout/src/Common/Entity/Cell.php';
 
-use Chuva\Php\WebScrapping\Entity\Paper;
-use Chuva\Php\WebScrapping\Entity\Person;
-use OpenSpout\Writer\Common\Creator\WriterFactory;
+//use Chuva\Php\WebScrapping\Entity\Paper;
+//use Chuva\Php\WebScrapping\Entity\Person;
+use OpenSpout\Writer\XLSX\Writer;
 use OpenSpout\Common\Entity\Style\Style;
 use OpenSpout\Common\Entity\Row;
+//use OpenSpout\Common\Entity\Cell;
 
 class Excel {
 
@@ -19,7 +21,7 @@ class Excel {
         $max = 0;
         
         foreach($papers as $paper){
-            $max = max($max, $paper->authors->countAuthors());
+            $max = max($max, $paper->countAuthors());
         }
         
         return $max;
@@ -27,7 +29,7 @@ class Excel {
 
     public function export(Array $papers): void{
 
-        $writer = WriterFactory::createFromFile(__DIR__ . '/../../assets/data.xlsx');
+        $writer = new Writer();
 
         $writer->openToFile(__DIR__ . '/../../assets/data.xlsx');
 
@@ -35,15 +37,16 @@ class Excel {
         $headers = ['ID', 'Title', 'Type'];
         $maxAuthor = $this->maxAuthors($papers);
         for ($i = 0; $i < $maxAuthor; $i++) {
-            array_push($headers, "Author " . ($i + 1), "Author " . ($i + 1) . " Institution ");
+            $headers[] = "Author " . ($i + 1);
+            $headers[] = "Author " . ($i + 1) . " Institution";
         }
 
         // Creates a spreadsheet header style
-        $boldStyle = (new Style())->setFontBold();
+        $style = new Style();
+        $style->setFontBold();
 
         // Creates the headers row
-        $headersRow = Row::fromValues($headers);
-        $headersRow->setStyle($boldStyle);
+        $headersRow = Row::fromValues($headers, $style);
 
         // Adds the row in the spreadsheet
         $writer->addRow($headersRow);
