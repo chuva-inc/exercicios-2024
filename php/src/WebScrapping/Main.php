@@ -92,10 +92,8 @@ class Main {
   }
     
   $writer->close();
-
   }
 
 }
-
 $gerar = new Main();
 $gerar->gerarPlanilha();
