@@ -11,12 +11,12 @@
     impacto de processo formativo situado impacto de processo formativo processo?</p>
   </ng-template>
   <div class="topic-actions">
-    <button class="more-info-button">
+    <span class="more-info-button">
       <img src="assets/icon-more-info.svg" alt="More info">
-    </button>
-    <button class="like-button">
+    </span>
+    <span class="like-button">
       <img src="assets/icon-heart.svg" alt="Like">
-    </button>
+    </span>
     <p *ngIf="!isShowingAnswer; else likes4">1 like</p>
     <p *ngIf="!isShowingAnswer; else replies4">1 resposta</p>
     <ng-template #likes4>
