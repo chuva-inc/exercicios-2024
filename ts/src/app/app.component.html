@@ -124,13 +124,29 @@
             <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou
             sugestões para o autor!</p>
           </div>
-          <app-form-topic *ngIf="isCreatingTopic"></app-form-topic>
+          <app-form-topic *ngIf="isCreatingTopic" (topicCreated)="handleCreateTopic($event)"></app-form-topic>
+          <div *ngIf="isTopicSubmitted && !isCreatingTopic" class="topic-submited-message">
+            <h3>Seu tópico foi enviado com sucesso! :D</h3>
+            <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+            <a href="#">Descubra outros trabalhos!</a>
+          </div>
           <div class="criar-topico__container">
             <div class="criar-topico__divider"></div>
-            <button class="btn-create-topic" (click)="handleStartCreatingTopic()" *ngIf="!isCreatingTopic">
+            <button class="btn-create-topic" (click)="handleStartCreatingTopic()" *ngIf="!isCreatingTopic && !isTopicSubmitted">
               <img src="assets/icon-criar.svg" alt="Plus">
               criar tópico
             </button>
+            <button clicable class="btn-re-create-topic" (click)="handleStartCreatingTopic()" *ngIf="!isCreatingTopic && isTopicSubmitted">
+              criar novo tópico
+            </button>
+          </div>
+          <div class="waiting-authors-feedback-container" *ngIf="!isCreatingTopic && isTopicSubmitted">
+            <div class="waiting-authors-feedback-message">
+              <img src="assets/gray_check-icon.svg" alt="">
+              <h3>Aguardando feedback dos autores</h3>
+              <button>Editar tópico</button>
+            </div>
+            <app-topic></app-topic>
           </div>
           <app-answer-topic></app-answer-topic>
         </div>

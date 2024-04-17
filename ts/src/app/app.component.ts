@@ -20,8 +20,8 @@ export class AppComponent {
     this.hasStartedToCreateATopic = true;
   }
 
-  handleCreateTopic() {
+  handleCreateTopic(status: boolean) {
     this.isCreatingTopic = false;
-    this.isTopicSubmitted = true;
+    this.isTopicSubmitted = status;
   }
 }

@@ -375,6 +375,109 @@
             height: 17px;
           }
         }
+
+        .btn-re-create-topic {
+          background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: none;
+          width: 235.15px;
+          height: 32px;
+          background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+          box-shadow: 0px 2px 2px 0px #0000003D;
+          box-shadow: 0px 0px 2px 0px #0000001F;
+          color: #FFFFFF;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          border-radius: 1px;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 16px;
+          text-align: center;
+          border-radius: 1px;
+          cursor: pointer;
+        }
+      }
+
+      .waiting-authors-feedback-container {
+        position: relative;
+        box-shadow: 0px 0px 8px 0px #0000001F;
+
+        .waiting-authors-feedback-message {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: .5rem;
+          background: rgba(221, 221, 221, 1);
+          z-index: 9;
+
+          h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: left;
+            color: #707070;
+          }
+
+          button {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18.62px;
+            text-align: left;
+            color: #ED7839;
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+          }
+        }
+      }
+
+      .topic-submited-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.938rem;
+
+        h3 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 21.09px;
+          text-align: center;
+          color: #ED7839;
+          margin-bottom: 1.125rem;
+        }
+
+        p {
+          font-family: 'Quicksand', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 19.25px;
+          text-align: center;
+          color: #595959;
+        }
+
+        a {
+          font-family: 'Quicksand', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.25px;
+          text-align: center;
+          color: #F48F44;
+          text-decoration: underline;
+        }
       }
     }
   }
