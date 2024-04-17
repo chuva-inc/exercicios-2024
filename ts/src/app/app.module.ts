@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { HeaderModule } from './components/header/header.module';
 import { ContentModule } from './components/content/content.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FooterComponent],
   imports: [BrowserModule, NavbarModule, HeaderModule, ContentModule],
   providers: [],
   bootstrap: [AppComponent],
