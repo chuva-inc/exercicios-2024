@@ -2,7 +2,7 @@
 
 namespace Chuva\Php\WebScrapping;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use OpenSpout\Writer\XLSX\Writer;
 use OpenSpout\Common\Entity\Style\Style;
@@ -10,9 +10,7 @@ use OpenSpout\Common\Entity\Row;
 
 class Excel {
 
-    /**
-    * Exports data information to a spreadsheet.
-    */
+    
     public function maxAuthors(Array $papers): int {
         $max = 0;
         
@@ -23,12 +21,14 @@ class Excel {
         return $max;
     }
 
+    /**
+    * Exports data information to a spreadsheet.
+    */
     public function export(Array $papers): void{
 
-        $writer = new Writer();
-
+        // Creates and open a xlsx file
         $filepath = __DIR__ . '/../../assets/data.xlsx';
-
+        $writer = new Writer();
         $writer->openToFile($filepath);
 
         // Creates an array with the headers values
@@ -48,6 +48,17 @@ class Excel {
 
         // Adds the row in the spreadsheet
         $writer->addRow($headersRow, $style);
+
+        // Adds a row for each paper:
+        foreach ($papers as $paper){
+            $row = [$paper->id, $paper->title, $paper->type];
+            foreach ($paper->author as $author){
+                $row[] = $author->name;
+                $row[] = $author->institution;
+            }
+            $row = Row::fromValues($row);
+            $writer->addRow($row);
+        }
 
         // Closes the writer and saves the file
         $writer->close();
