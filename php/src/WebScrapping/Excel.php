@@ -52,7 +52,7 @@ class Excel {
         // Adds a row for each paper:
         foreach ($papers as $paper){
             $row = [$paper->id, $paper->title, $paper->type];
-            foreach ($paper->author as $author){
+            foreach ($paper->authors as $author){
                 $row[] = $author->name;
                 $row[] = $author->institution;
             }
