@@ -289,5 +289,92 @@
       text-align: left;
       color: #5C5C5C;
     }
+
+    .discussoes-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .discussoes-title  {
+        margin-bottom: 1.688rem;
+
+        h4{
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 21.09px;
+          text-align: left;
+          color: #ED7839;
+        }
+      }
+
+      .discussoes-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.25rem;
+        margin-bottom: 2.188rem;
+
+        img {
+          width: 3.125rem;
+          height: 3.063rem;
+        }
+      }
+
+      .discussoes-description {
+        width: 39.125rem;
+        margin-bottom: 1.938rem;
+
+        p {
+          font-family: 'Quicksand', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 19.25px;
+          text-align: center;
+          color: #595959;
+        }
+      }
+
+      .criar-topico__container {
+        position: relative;
+        margin-bottom: 1.875rem;
+
+        .criar-topico__divider {
+          width: 69.5rem;
+          height: 1px;
+          border: 1px solid #E7E7E7;
+        }
+
+        .btn-create-topic {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: none;
+          width: 133px;
+          height: 32px;
+          background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+          box-shadow: 0px 2px 2px 0px #0000003D;
+          box-shadow: 0px 0px 2px 0px #0000001F;
+          color: #FFFFFF;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          border-radius: 1px;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 16px;
+          text-align: center;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+      }
+    }
   }
 }
