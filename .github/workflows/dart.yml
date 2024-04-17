@@ -1,0 +1,58 @@
+name: dart
+
+on:
+  push:
+    paths:
+      - 'dart/**'
+      - '.github/workflows/dart.yml'
+
+jobs:
+  integration_test:
+    timeout-minutes: 20
+    runs-on: macos-14
+    env:
+      IOS_DEVICE: 'iPhone 14 Pro Simulator (17.4)'
+    steps:
+      # Uncomment the following line to see all available simulators upon
+      # macos version change.
+      # - name: List all simulators
+      #   run: xcrun xctrace list devices
+
+      - name: Start Simulator
+        run: |
+          DEVICE=$(xcrun xctrace list devices | grep "^$IOS_DEVICE" | awk '{gsub(/[()]/,""); print $NF; exit}')
+          echo $DEVICE
+          xcrun simctl boot "${DEVICE:?No Simulator with this name found}"
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v1
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ${{ runner.os }}-flutter
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: 3.19.5
+
+      - name: Install dependencies
+        run: cd dart; flutter pub get
+
+      - run: cd dart; flutter doctor
+
+      - run: cd dart; flutter build ios --no-codesign
+
+      - name: Run tests
+        run: |
+          cd dart
+          flutter test --update-goldens integration_test/
+
+      - name: Archive screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: dart/screenshots/

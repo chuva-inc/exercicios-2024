@@ -1,0 +1,57 @@
+name: PHP
+
+on:
+  push:
+    paths:
+      - 'php/**'
+
+jobs:
+  Psalm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Installs composer
+      run: |
+        cd php;
+        composer install -n --prefer-dist
+
+    - name: Run Psalm
+      run: |
+        cd php;
+        vendor/bin/psalm.phar --threads=2 --no-cache
+
+  PHPlint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Installs composer
+      run: |
+        cd php;
+        composer install -n --prefer-dist
+
+    - name: Configure PHPCS
+      run: |
+        cd php;
+        ./vendor/bin/phpcs --config-set installed_paths `$PWD`vendor/drupal/coder/coder_sniffer,vendor/sirbrillig/phpcs-variable-analysis,vendor/slevomat/coding-standard/
+
+    - name: Run PHPCS
+      run: |
+        cd php;
+        vendor/bin/phpcs --standard=Drupal --ignore='*.md' --extensions=php,profile,inc,install src/
+
+  PHPUnit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Installs composer
+      run: |
+        cd php;
+        composer install -n --prefer-dist
+
+    - name: Configure PHPCS
+      run: |
+        cd php;
+        ./vendor/bin/phpunit --fail-on-warning --fail-on-notice  tests/Unit

@@ -1,0 +1,46 @@
+name: ts
+
+on:
+  push:
+    paths:
+      - 'ts/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/included:10.11.0
+    timeout-minutes: 5
+    env:
+      ELECTRON_EXTRA_LAUNCH_ARGS: '--disable-gpu'
+    steps:
+    - name: Use Node.js 14.21.2
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.21.2
+
+    - uses: actions/checkout@v2
+
+    - name: npm install
+      run: |
+        cd ts;
+        npm install;
+
+    - name: run test
+      run: |
+        cd ts;
+        npm run test
+
+    - name: Stores screenshots
+      uses: actions/upload-artifact@v3
+      with:
+        name: cypress-screenshots
+        path: ./ts/cypress/screenshots
+      if: always()
+
+    - name: Stores snapshots
+      uses: actions/upload-artifact@v3
+      with:
+        name: cypress-snapshots
+        path: ./ts/cypress/snapshots
+      if: always()
