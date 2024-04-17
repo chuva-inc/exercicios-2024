@@ -70,7 +70,7 @@ class Main {
     $dirPath = __DIR__ . '/../../results/';
     $filePath = $dirPath . 'data.xlsx';
 
-    if (!is_dir($dirPath)){
+    if (!is_dir($dirPath)) {
       mkdir($dirPath);
     }
 
