@@ -23,16 +23,6 @@ class Main {
 
     $data = (new Scrapper())->scrap($dom);
 
-    $filePath = __DIR__ . '/data.xlsx';
-
-    $defaultStyle = (new StyleBuilder())
-      ->setFontSize(10)
-      ->setFontName("Arial")
-      ->build();
-
-    $writer = WriterEntityFactory::createXLSXWriter();
-    $writer->setDefaultRowStyle($defaultStyle)->openToFile($filePath);
-
     $maxAuthorsPerRow = 0;
     $valuesRows = [];
     $keysCells = [
@@ -65,12 +55,23 @@ class Main {
       ->setBorderBottom(Color::BLACK, Border::WIDTH_THIN)
       ->build();
 
+    $defaultStyle = (new StyleBuilder())
+      ->setFontSize(10)
+      ->setFontName("Arial")
+      ->build();
+
     $keysStyle = (new StyleBuilder())
       ->setBorder($border)
       ->setFontBold()
       ->build();
 
     $keysRow = WriterEntityFactory::createRow($keysCells, $keysStyle);
+
+    $filePath = __DIR__ . '/data.xlsx';
+
+    $writer = WriterEntityFactory::createXLSXWriter();
+    $writer->setDefaultRowStyle($defaultStyle)->openToFile($filePath);
+
     $writer->addRow($keysRow);
     $writer->addRows($valuesRows);
 
