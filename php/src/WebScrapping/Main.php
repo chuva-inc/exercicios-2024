@@ -16,7 +16,6 @@ class Main {
   public static function gerarPlanilha(): void {
 
   $file = 'planilhaProceedings.xlsx';
-
   $writer = WriterEntityFactory::createXLSXWriter();
   $writer->openToBrowser($file);
 
