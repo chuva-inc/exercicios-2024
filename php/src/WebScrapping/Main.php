@@ -5,14 +5,9 @@ namespace Chuva\Php\WebScrapping;
 require_once '../vendor/box/spout/src/Spout/Autoloader/autoload.php';
 
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
-/**
- * Runner for the Webscrapping exercice.
- */
+
 class Main {
 
-  /**
-   * Main runner, instantiates a Scrapper and runs.
-   */
   public static function gerarPlanilha(): void {
 
   $file = 'planilhaProceedings.xlsx';
