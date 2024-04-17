@@ -67,7 +67,12 @@ class Main {
 
     $keysRow = WriterEntityFactory::createRow($keysCells, $keysStyle);
 
-    $filePath = __DIR__ . '/data.xlsx';
+    $dirPath = __DIR__ . '/../../results/';
+    $filePath = $dirPath . 'data.xlsx';
+
+    if (!is_dir($dirPath)){
+      mkdir($dirPath);
+    }
 
     $writer = WriterEntityFactory::createXLSXWriter();
     $writer->setDefaultRowStyle($defaultStyle)->openToFile($filePath);
