@@ -82,5 +82,10 @@ export class DiscussionComponent implements OnInit {
       responses: 0,
       waiting: true,
     });
+
+    this.form = {
+      subject: '',
+      content: '',
+    };
   }
 }
