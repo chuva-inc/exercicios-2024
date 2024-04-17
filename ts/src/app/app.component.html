@@ -112,21 +112,25 @@
 
       <app-section-topic title="Discussões">
         <div class="discussoes-container">
-          <div class="discussoes-title">
+          <div *ngIf="!hasStartedToCreateATopic" class="discussoes-title">
             <h4>Compartilhe suas ideias ou dúvidas com os autores!</h4>
           </div>
-          <div class="discussoes-icons">
+          <div *ngIf="!hasStartedToCreateATopic" class="discussoes-icons">
             <img src="assets/icone1.svg" alt="icone 1">
             <img src="assets/icone2.svg" alt="icone 2">
             <img src="assets/icone3.svg" alt="icone 3">
           </div>
-          <div class="discussoes-description">
+          <div *ngIf="!hasStartedToCreateATopic" class="discussoes-description">
             <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou
             sugestões para o autor!</p>
           </div>
+          <app-form-topic *ngIf="isCreatingTopic"></app-form-topic>
           <div class="criar-topico__container">
             <div class="criar-topico__divider"></div>
-            <button class="btn-create-topic"><img src="assets/icon-criar.svg" alt="Plus">criar tópico</button>
+            <button class="btn-create-topic" (click)="handleStartCreatingTopic()" *ngIf="!isCreatingTopic">
+              <img src="assets/icon-criar.svg" alt="Plus">
+              criar tópico
+            </button>
           </div>
           <app-answer-topic></app-answer-topic>
         </div>

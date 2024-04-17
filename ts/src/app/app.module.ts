@@ -9,9 +9,10 @@ import { SectionTopicComponent } from './components/section-topic/section-topic.
 import { AnswerTopicComponent } from './components/answer-topic/answer-topic.component';
 import { TopicComponent } from './components/answer-topic/topic/topic.component';
 import { AnswerComponent } from './components/answer-topic/answer/answer.component';
+import { FormTopicComponent } from './components/form-topic/form-topic.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HeaderComponent, FooterComponent, SectionTopicComponent, AnswerTopicComponent, TopicComponent, AnswerComponent],
+  declarations: [AppComponent, MenuComponent, HeaderComponent, FooterComponent, SectionTopicComponent, AnswerTopicComponent, TopicComponent, AnswerComponent, FormTopicComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
