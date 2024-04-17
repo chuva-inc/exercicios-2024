@@ -88,7 +88,7 @@ class Main
         $headerStyle = (new StyleBuilder())
             ->setFontBold()
             ->setFontSize(12)
-            ->setFontColor(Color::GREEN)
+            ->setFontColor(Color::BLACK)
             ->build();
 
         // Adicionar os cabeçalhos com estilo personalizado
