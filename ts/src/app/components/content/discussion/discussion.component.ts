@@ -30,7 +30,7 @@ export class DiscussionComponent implements OnInit {
       content:
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       likes: 1,
-      responses: 1,
+      responses: [],
     },
     {
       title: 'Assunto da pergunta aparece aqui',
@@ -38,7 +38,19 @@ export class DiscussionComponent implements OnInit {
       content:
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       likes: 1,
-      responses: 1,
+      responses: [
+        {
+          author: 'Adriano da Silva',
+          content:
+            'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+        },
+        {
+          author: 'Carlos Henrique Santos',
+          content: `Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
+
+          Obrigada pela resposta, muito interessante o seu trabalho! `,
+        },
+      ],
     },
   ];
 
@@ -49,6 +61,10 @@ export class DiscussionComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  expandDiscussion(discussion: Discussion) {
+    discussion.expanded = !discussion.expanded;
+  }
 
   toggleShowForm() {
     this.showInitials = false;
@@ -79,7 +95,7 @@ export class DiscussionComponent implements OnInit {
       author: 'Carlos Henrique Santos',
       content: this.form.content,
       likes: 0,
-      responses: 0,
+      responses: [],
       waiting: true,
     });
 

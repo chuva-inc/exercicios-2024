@@ -105,7 +105,7 @@
       </div>
       <div class="mt-3">
         <div
-          class="card my-2"
+          class="card my-2 answered-topic"
           *ngFor="let discussion of discussions"
           [ngClass]="{ 'p-2': discussion.waiting }"
         >
@@ -140,10 +140,19 @@
               </div>
               <div>
                 <div class="text-muted">
-                  <small>{{ discussion.responses }} resposta</small>
+                  <small>{{ discussion.responses.length }} respostas</small>
                 </div>
               </div>
             </div>
+            <button
+              *ngIf="discussion.responses.length > 0"
+              class="btn p-0 mt-3 fw-medium text-tertiary ops-topic-subject"
+              (click)="expandDiscussion(discussion)"
+            >
+              <small>
+                {{ discussion.expanded ? "ocultar" : "exibir respostas" }}
+              </small>
+            </button>
           </div>
           <div *ngIf="discussion.waiting" class="overlay">
             <div>
@@ -156,6 +165,21 @@
             <h4 class="fw-bold my-2">Aguardando feedback dos autores</h4>
             <div class="text-tertiary">
               <u><small>Editar tópico</small></u>
+            </div>
+          </div>
+          <div *ngIf="discussion.expanded" class="comments-container">
+            <div
+              *ngFor="let response of discussion.responses"
+              class="border border-end-0 border-start-0"
+            >
+              <div class="card-body">
+                <h5 class="card-subtitle mb-2 text-body-secondary fw-bold">
+                  {{ response.author }}
+                </h5>
+                <small class="card-text mt-2">
+                  {{ response.content }}
+                </small>
+              </div>
             </div>
           </div>
         </div>
