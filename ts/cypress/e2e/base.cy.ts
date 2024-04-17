@@ -10,6 +10,7 @@ describe('checa elementos básicos', () => {
 
   it('botão de expandir resumo existe', () => {
     cy.get('.btn-show-more').contains('ver mais');
+    cy.get('.btn-show-more').click();
     cy.compareSnapshot('Trabalho - Resumo expandido');
   });
 
@@ -34,7 +35,7 @@ describe('checa elementos básicos', () => {
 
   it('enviar o formulário exibe mensagem de sucesso', () => {
     cy.get('.btn-create-topic').click();
-    cy.get('button').click();
+    cy.get('.envia').click();
     cy.get('body').contains('Aguardando feedback dos autores');
     cy.compareSnapshot('Trabalho - Topico enviado');
   });
