@@ -23,7 +23,7 @@ class Main {
   $writer->addRow($rowFromValues); 
 
   // Utilizando DOMDocument para acessar o conteudo da pagina
-  $html = file_get_contents(DIR . '/../../assets/origin.html');
+  $html = file_get_contents(__DIR__ . '/../../assets/origin.html');
   $dom = new \DOMDocument;
 
   // Carregando o HTML da pagina
