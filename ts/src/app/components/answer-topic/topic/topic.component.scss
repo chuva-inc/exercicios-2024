@@ -1,0 +1,72 @@
+.answered-topic {
+  border: 1px solid #E7E7E7;
+  box-shadow: 0px 0px 8px 0px #0000001F;
+  width: 100%;
+  max-height: 148px;
+  border-radius: 4px;
+  padding: 1.063rem 1.5rem;
+
+  .topic-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+
+    .ops-topic-subject {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-align: left;
+      color: #ED7839;
+    }
+
+    span {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 15px;
+      text-align: left;
+    }
+  }
+
+  p {
+    font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17.5px;
+      text-align: left;
+      color: #4D4D4D;
+  }
+
+  .topic-actions {
+    margin-top: 11px;
+    max-height: 1.188rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    button {
+      border: none;
+    }
+
+    .more-info-button {
+      background: none;
+    }
+
+    .like-button {
+      width: 1.688rem;
+      height: 1.188rem;
+      background: #ED7839;
+      box-shadow: 0px 2px 2px 0px #0000003D;
+      box-shadow: 0px 0px 2px 0px #0000001F;
+      text-align: center;
+      border-radius: 3px;
+
+      img {
+
+      }
+    }
+  }
+}

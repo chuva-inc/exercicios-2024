@@ -1,0 +1,19 @@
+<div class="answered-topic" (click)="handleShowAnswer()">
+  <div class="topic-info">
+    <h4 class="ops-topic-subject">Assunto da pergunta aparece aqui</h4>
+    <span>Carlos Henrique Santos</span>
+  </div>
+  <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo
+  formativo situado impacto de processo formativo processo...</p>
+  <div class="topic-actions">
+    <button class="more-info-button">
+      <img src="assets/icon-more-info.svg" alt="More info">
+    </button>
+    <button class="like-button">
+      <img src="assets/icon-heart.svg" alt="Like">
+    </button>
+    <p>1 like</p>
+    <p>1 resposta</p>
+  </div>
+</div>
+<app-answer *ngIf="isShowingAnswer"></app-answer>
