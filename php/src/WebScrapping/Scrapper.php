@@ -47,6 +47,14 @@ class Scrapper {
           $autoresArray[] = ['nome' => $autor, 'instituicao' => $instituicao];
         }
 
+                // criando vetor associativo com as informaçoes do paper q ta sendo lido na iteraçao atual
+                $paperInfo = [
+                  'titulo' => $titulo,
+                  'id' => $id,
+                  'tipo' => $tipo,
+                  'autores' => $autoresArray,
+              ];
+
            }
     }
     }
