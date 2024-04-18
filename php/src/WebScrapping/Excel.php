@@ -49,11 +49,12 @@ class Excel {
             $headers[] = "Author " . ($i + 1) . " Institution";
         }
 
-        // Creates the spreadsheet header style
-        $style = new Style();
-        $style->setFontBold();
-        $style->setFontSize(11);
-        $style->setFontName('Arial');
+        // Creates a sytle for the header
+        $headerStyle = (new Style())
+            ->setFontBold()
+            ->setFontSize(11)
+            ->setFontName('Arial')
+            ->setShouldWrapText(false);
 
         // Creates the headers row
         $headers = Row::fromValues($headers, $style);
