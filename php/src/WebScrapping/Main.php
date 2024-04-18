@@ -32,10 +32,16 @@ class Main {
     $singleRow = new Row($header);
     $writer->addRow($singleRow);
 
-    $writer->close();
+    foreach ($papers as $paper) {
+      $row = new Row([
+        Cell::fromValue($paper->id),
+        Cell::fromValue($paper->title),
+        Cell::fromValue($paper->type),
+      ]);
+      $writer->addRow($row);
+    }
 
-    // Write your logic to save the output file bellow.
-    print_r($papers);
+    $writer->close();
   }
 
 }

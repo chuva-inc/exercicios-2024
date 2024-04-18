@@ -34,7 +34,7 @@ class Scrapper {
       $id = $xpath->query($idXPath, $paperNode)->item(0)->nodeValue;
     
       //inicializa array para armazenar infos do(s) autor(es)
-      $authorsArray = [];
+      $authors = [];
 
          //extraindo as informações dos autores de cada paper
         $authorsNodes = $xpath->query($authorXPath, $paperNode);
@@ -44,18 +44,13 @@ class Scrapper {
           //lendo também o conteudo correto da instituicao desse autor
           $institution = $authorNode->getAttribute('title');
           //atribuindo esses valores lidos para essa instancia de autor
-          $authorsArray[] = ['name' => $author, 'institution' => $institution];
+          $authors[] = new Person($author, $institution);
         }
 
-                // criando vetor associativo com as informaçoes do paper q ta sendo lido na iteraçao atual
-                $paperInfo = [
-                  'title' => $title,
-                  'id' => $id,
-                  'type' => $type,
-                  'authors' => $authorsArray,
-              ];
+        // instanciado classe Paper com os dados extraídos e os autores
+          $paper = new Paper($id, $title, $type, $authors);
               //passando todas as informações do array associativo para o array papers
-        $papers[] = $paperInfo;
+        $papers[] = $paper;
            }
 
           //retorna todas as informações de todos os papers
