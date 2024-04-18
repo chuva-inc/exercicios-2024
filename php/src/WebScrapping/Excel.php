@@ -28,6 +28,8 @@ class Excel {
 
         // Creates and open a xlsx file
         $filepath = __DIR__ . '/../../assets/data.xlsx';
+        $options = new Options();
+        $writer = new Writer($options);
         $writer = new Writer();
         $writer->openToFile($filepath);
 
