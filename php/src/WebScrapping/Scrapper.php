@@ -14,9 +14,9 @@ class Scrapper {
     $xpath = new \DOMXPath($dom); //inicializa uma variavel xpath
     // definindo os caminhos XPath para os elementos que queremos extrair
     $tituloXPath = "//h4[@class='my-xs paper-title']";
-    $instituicaoXPath = "//span[@title='institution']";
+    $instituicaoXPath = "//div[@class='authors']/span/@title";
     $autorXPath = "//div[@class='authors']/span";
-    $tipoXPath = "//div[@class='tags mr-sn']";
+    $tipoXPath = "//div[@class='tags mr-sm']";
     $idXPath = "//div[@class='volume-info']";
     
     // Extrair os dados usando XPath
