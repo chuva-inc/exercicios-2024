@@ -21,11 +21,7 @@ class Scrapper {
     $idXPath = "//div[@class='volume-info']";
     
     // Extrair os dados usando XPath
-    $titulos = $xpath->query($tituloXPath);
-    $instituicoes = $xpath->query($instituicaoXPath);
-    $autores = $xpath->query($autorXPath);
-    $tipos = $xpath->query($tipoXPath);
-    $ids = $xpath->query($idXPath);
+    $papersNodes = $xpath->query($paperXPath);
     
     // Iterar sobre os resultados e exibir os dados
     for ($i = 0; $i < $titulos->length; $i++) {
