@@ -57,6 +57,9 @@ class Scrapper {
               //passando todas as informações do array associativo para o array papers
         $papers[] = $paperInfo;
            }
+
+          //retorna todas as informações de todos os papers
+           return $papers;
     }
     }
     
