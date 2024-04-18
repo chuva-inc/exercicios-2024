@@ -56,7 +56,7 @@ class Excel {
         $style->setFontName('Arial');
 
         // Creates the headers row
-        $headersRow = Row::fromValues($headers);
+        $headersRow = Row::fromValues($headers, $style);
 
         // Adds the row in the spreadsheet
         $writer->addRow($headersRow, $style);
