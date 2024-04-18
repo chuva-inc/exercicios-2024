@@ -74,7 +74,7 @@ class Excel {
                 $row[] = $author->name;
                 $row[] = $author->institution;
             }
-            $row = Row::fromValues($row, $style);
+            $row = Row::fromValues($row, $contentStyle);
             $writer->addRow($row);
         }
 
