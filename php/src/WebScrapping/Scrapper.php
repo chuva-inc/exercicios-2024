@@ -38,6 +38,8 @@ class Scrapper {
 
          //extraindo as informações dos autores de cada paper
         $autoresNodes = $xpath->query($autorXPath, $paperNode);
+        foreach ($autoresNodes as $autorNode) {
+        }
 
            }
     }
