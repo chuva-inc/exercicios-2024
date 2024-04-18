@@ -54,7 +54,8 @@ class Scrapper {
                   'tipo' => $tipo,
                   'autores' => $autoresArray,
               ];
-
+              //passando todas as informações do array associativo para o array papers
+        $papers[] = $paperInfo;
            }
     }
     }
