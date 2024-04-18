@@ -1,7 +1,7 @@
 <?php
 
 namespace Chuva\Php\WebScrapping;
-
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
 /**
  * Runner for the Webscrapping exercice.
  */
@@ -14,10 +14,35 @@ class Main {
     $dom = new \DOMDocument('1.0', 'utf-8');
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
-    $data = (new Scrapper())->scrap($dom);
+    $allData = (new Scrapper())->scrap($dom);
 
     // Write your logic to save the output file bellow.
-    print_r($data);
+    $outputFilePath = "result.xlsx";
+
+    $writer = WriterEntityFactory::createXLSXWriter();
+    $writer->openToFile($outputFilePath);
+
+    $header = [ "ID","Title","Type"];
+    
+    $authorsTotal = 0;
+
+    foreach ($allData as $singleData) {
+      $authorsCount = $singleData->getAuthorCount();
+      if ($authorsCount > $authorsTotal) {
+        $authorsTotal = $authorsCount;
+      }
+    }
+
+    for ($i = 1; $i <= $authorsTotal; $i++) {
+      $header[] = "Author $i";
+      $header[] = "Author $i Institution";
+    }
+
+    $headerRow = WriterEntityFactory::createRowFromArray($header);
+    $writer->addRow($headerRow);
+
+    $writer->close();
+
   }
 
 }

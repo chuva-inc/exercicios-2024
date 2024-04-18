@@ -35,6 +35,12 @@ class Paper {
    */
   public $authors;
 
+
+  public function getAuthorCount() {
+    return count($this->authors);
+  }
+
+
   /**
    * Builder.
    */
