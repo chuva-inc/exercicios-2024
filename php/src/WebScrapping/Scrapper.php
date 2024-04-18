@@ -12,12 +12,20 @@ class Scrapper {
   public function scrap(\DOMDocument $dom): array {
 
     $xpath = new \DOMXPath($dom); //inicializa uma variavel xpath
-// Definir os caminhos XPath para os elementos que queremos extrair
-    $tituloXPath = "//h4";
+    // definindo os caminhos XPath para os elementos que queremos extrair
+    $tituloXPath = "//h4[@class='my-xs paper-title']";
     $instituicaoXPath = "//span[@title='institution']";
     $autorXPath = "//span[@title='person']";
     $tipoXPath = "//div[@class='tags mr-sn']";
     $idXPath = "//div[@class='volume-info']";
+
+    //queries do xpath
+    $titulos = $xpath->query($tituloXPath);
+    $instituicoes = $xpath->query($instituicaoXPath);
+    $autores = $xpath->query($autorXPath);
+    $tipos = $xpath->query($tipoXPath);
+    $ids = $xpath->query($idXPath);
+
 
 }
 }
