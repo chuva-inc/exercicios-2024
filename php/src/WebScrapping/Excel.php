@@ -52,6 +52,8 @@ class Excel {
         // Creates a spreadsheet header style
         $style = new Style();
         $style->setFontBold();
+        $style->setFontSize(11);
+        $style->setFontName('Arial');
 
         // Creates the headers row
         $headersRow = Row::fromValues($headers);
