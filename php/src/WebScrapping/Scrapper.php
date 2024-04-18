@@ -21,7 +21,32 @@ class Scrapper {
     // Consulta XPath para obter os elementos que contêm atributos de papers e de person
     $idsQuery = $xpath->query('//div[@class="volume-info"]');
     $typesQuery = $xpath->query('//div[@class="tags mr-sm"]');
-    $authorsQuery = $xpath->query('//div[@class="authors"]//span');
     $titlesQuery = $xpath->query('//h4[@class="my-xs paper-title"]');
     
+    // Iteração sobre os resultados
+    for ($i = 0; $i < $idsQuery->length; $i++) {
+      // Obtenção de valores
+      $id = $idsQuery->item($i)->textContent;
+      $type = $typesQuery->item($i)->textContent;
+      $title = $titlesQuery->item($i)->textContent;
+      $authorNames = $xpath->query('.//span', $xpath->query('//div[@class="authors"]')->item($i));
+      
+      // Array para armazenar os nomes dos autores
+      $articleAuthors = [];
+      foreach ($authorNames as $authorName) {
+        $author = $authorName->textContent;
+        $authorInstitution = $authorName->getAttribute("title");
+        $articleAuthors[] = new Person($author, $authorInstitution);
+      }
+      
+      // Criação de um objeto Paper e armazenamento no array $data
+      $articleData = new Paper($id, $type, $title, $articleAuthors);
+      $data[] = $articleData;
+    }
+
+    // Retorno do array contendo os objetos Paper
+    return $data;
+
+
+  }
 }
