@@ -19,57 +19,40 @@ class Scrapper {
     $xpath = new \DOMXPath($dom);
 
     // XPath query to find all elements with the desired class
+
+    // Loads information about all titles, paper types, ids and authors
     $titles = $xpath->query("//h4[@class='my-xs paper-title']");
-    $titles_array = array();
-
-    foreach($titles as $title){   
-      $titles_array[] = $title->textContent;
-    }
-
-    // Loads information about all paper types
     $types = $xpath->query('//div[contains(@class, "tags mr-sm")]');
-    $types_array = array();
-
-    foreach($types as $type){
-      $types_array[] = $type->textContent;
-    }
-
-    // Loads information about all ids
     $ids = $xpath->query('//div[contains(@class, "volume-info")]');
-    $ids_array = array();
+    $authors = $xpath->query('//div[contains(@class, "authors")]');
 
-    foreach($ids as $id){
-      $ids_array[] = $id->textContent;
+    $titles_array = array();
+    $types_array = array();
+    $ids_array = array();
+    $authors_array = array();
+
+    for($i = 0; $i < $ids->length; $i++){   
+      $titles_array[] = $titles[$i]->textContent;
+      $types_array[] = $types[$i]->textContent;
+      $ids_array[] = $ids[$i]->textContent;
+      $authors_array[] = $authors[$i]->textContent;
     }
 
     // Loads information about authors and institutions and inserts into the Person class
     $spanElements = $xpath->query('//div[@class="authors"]/span');
-
     $persons = array();
-
     foreach ($spanElements as $span) {
       // Gets the span title
       $institution = $span->getAttribute('title');
-    
       // Gets the content of the span
       $author = $span->textContent;
       $author = str_replace(";", "", $author);
-
       // Add data to the Person class
       $persons[] = new Person($author, $institution);
     }
-
-    // Loads information about all authors who wrote a given paper:
-    $authors = $xpath->query('//div[contains(@class, "authors")]');
-    $authors_array = array();
-    
-    foreach($authors as $author){
-      $authors_array[] = $author->textContent;
-    }
-
+  
     // Instantiates the data within the Paper class
     $papers = array();
-
     for($i=0; $i<count($ids_array); $i++){
       $id = $ids_array[$i];
       $title = $titles_array[$i];
@@ -88,7 +71,7 @@ class Scrapper {
           }
         }
       }
-      
+
       $papers[] = new Paper($id, $title, $type, $paper_authors); 
     }
     

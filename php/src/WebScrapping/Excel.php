@@ -5,6 +5,7 @@ namespace Chuva\Php\WebScrapping;
 require __DIR__ . '/../../vendor/autoload.php';
 
 use OpenSpout\Writer\XLSX\Writer;
+use OpenSpout\Writer\XLSX\Options;
 use OpenSpout\Common\Entity\Style\Style;
 use OpenSpout\Common\Entity\Row;
 
@@ -32,7 +33,7 @@ class Excel {
         $writer = new Writer($options);
         $writer = new Writer();
         $writer->openToFile($filepath);
-
+        
 
         // Set the columns width:
         $options->setColumnWidth(15.0, 2);
@@ -59,7 +60,7 @@ class Excel {
         $headersRow = Row::fromValues($headers, $style);
 
         // Adds the row in the spreadsheet
-        $writer->addRow($headersRow, $style);
+        $writer->addRow($headersRow);
 
         // Adds a row for each paper:
         foreach ($papers as $paper){
