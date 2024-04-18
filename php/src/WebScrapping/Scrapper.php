@@ -14,11 +14,11 @@ class Scrapper {
     $xpath = new \DOMXPath($dom); //inicializa uma variavel xpath
     
     // definindo os caminhos XPath para os elementos que queremos extrair
-    $paperXpath = "//a[@class='paper-card p-lg bd-gradient-left']";
-    $tituloXPath = "//h4[@class='my-xs paper-title']";
-    $autorXPath = "//div[@class='authors']/span";
-    $tipoXPath = "//div[@class='tags mr-sm']";
-    $idXPath = "//div[@class='volume-info']";
+    $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
+    $tituloXPath = ".//h4[@class='my-xs paper-title']";
+    $tipoXPath = ".//div[@class='tags mr-sm']";
+    $idXPath = ".//div[@class='volume-info']";
+    $autorXPath = ".//div[@class='authors']/span";
     
     // juntando os dados de cada paper em uma unica variavel $paperNodes
     $papersNodes = $xpath->query($paperXPath);
