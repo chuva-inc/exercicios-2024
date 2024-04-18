@@ -2,6 +2,9 @@
 
 namespace Chuva\Php\WebScrapping;
 
+use OpenSpout\Common\Entity\Cell;
+use OpenSpout\Common\Entity\Row;
+
 /**
  * Runner for the Webscrapping exercice.
  */
@@ -14,10 +17,10 @@ class Main {
     $dom = new \DOMDocument('1.0', 'utf-8');
     @$dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
-    $data = (new Scrapper())->scrap($dom);
+    $papers = (new Scrapper())->scrap($dom);
 
     // Write your logic to save the output file bellow.
-    print_r($data);
+    print_r($papers);
   }
 
 }
