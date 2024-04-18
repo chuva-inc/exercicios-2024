@@ -39,19 +39,11 @@ class Main {
           Cell::fromValue($paper->title),
           Cell::fromValue($paper->type),
       ]);
-      $writer->addRow($row);
-  
-      // Process authors for this paper
-      foreach ($paper->authors as $author) {
-          // Create a new row for each author
-          $authorRow = new Row([
-              Cell::fromValue($author->name), // Assuming 'name' is a property in your Person class
-              Cell::fromValue($author->institution), // Assuming 'institution' is a property in your Person class
-          ]);
-          $writer->addRow($authorRow);
-      }
-  }
-  
-  $writer->close();
+
+      //usar um vetor de autores para guardar info de TDS autores
+         $authorInfo = [];
+
+         //pra cada autor em autores quero preencher as celulas
+         foreach ($paper->authors as $author) {
 }
 }
