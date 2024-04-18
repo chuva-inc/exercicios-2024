@@ -45,5 +45,7 @@ class Main {
 
          //pra cada autor em autores quero preencher as celulas
          foreach ($paper->authors as $author) {
+          $authorInfo[] = $author->name; //teoricamente aqui imprime o nome do autor
+          $authorInfo[] = $author->institution; //teoricamente aqui imprime o nome da instituiçao do autor
 }
 }
