@@ -26,6 +26,8 @@ class Scrapper {
     // criando um array para armazenar os papers
     $papers = [];
     
+    //extraindo as informações dos autores de cada paper
+    $autoresNodes = $xpath->query($autorXPath, $paperNode);
     // usando foreach para iterar em todos os papers
     foreach ($papersNodes as $paperNode) {
       $titulo = $xpath->query($tituloXPath, $paperNode)->item(0)->nodeValue;
