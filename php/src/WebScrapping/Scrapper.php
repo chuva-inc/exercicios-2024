@@ -32,6 +32,9 @@ class Scrapper {
       $tipo = $xpath->query($tipoXPath, $paperNode)->item(0)->nodeValue;
       $id = $xpath->query($idXPath, $paperNode)->item(0)->nodeValue;
     
+      //inicializa array para armazenar infos do(s) autor(es)
+      $autoresArray = [];
+
            }
     }
     }
