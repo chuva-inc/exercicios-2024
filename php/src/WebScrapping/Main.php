@@ -19,6 +19,9 @@ class Main {
 
     $papers = (new Scrapper())->scrap($dom);
 
+    $writer = new \OpenSpout\Writer\XLSX\Writer();
+    $writer->openToFile('src/saidaDados/planilhaDados.xlsx');
+
     // Write your logic to save the output file bellow.
     print_r($papers);
   }
