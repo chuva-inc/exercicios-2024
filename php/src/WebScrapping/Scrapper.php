@@ -39,6 +39,12 @@ class Scrapper {
          //extraindo as informações dos autores de cada paper
         $autoresNodes = $xpath->query($autorXPath, $paperNode);
         foreach ($autoresNodes as $autorNode) {
+          //lendo o conteudo correto para o autor q esta sendo instanciado
+          $autor = $autorNode->nodeValue;
+          //lendo também o conteudo correto da instituicao desse autor
+          $instituicao = $autorNode->getAttribute('title');
+          //atribuindo esses valores lidos para essa instancia de autor
+          $autoresArray[] = ['nome' => $autor, 'instituicao' => $instituicao];
         }
 
            }
