@@ -32,6 +32,8 @@ class Main {
     $singleRow = new Row($header);
     $writer->addRow($singleRow);
 
+    $writer->close();
+
     // Write your logic to save the output file bellow.
     print_r($papers);
   }
