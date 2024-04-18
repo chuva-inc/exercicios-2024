@@ -61,7 +61,7 @@ class Excel {
 
         // Adds the row in the spreadsheet
         $writer->addRow($headersRow);
-
+        
         // Adds a row for each paper:
         foreach ($papers as $paper){
             $row = [$paper->id, $paper->title, $paper->type];
