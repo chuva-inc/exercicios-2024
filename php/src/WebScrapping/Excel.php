@@ -37,13 +37,13 @@ class Excel {
         // Set the columns width
         $options->setColumnWidth(15.0, 2);
         $options->setColumnWidth(5.0, 3);
-        for($i = 4; $i < $this->maxAuthors($papers)*2; $i++){
+        $maxAuthor = $this->maxAuthors($papers);
+        for($i = 4; $i < $maxAuthor*2; $i++){
             $options->setColumnWidth(7.0, $i);
         }
 
         // Creates an array with the headers values
         $headers = ['ID', 'Title', 'Type'];
-        $maxAuthor = $this->maxAuthors($papers);
         for ($i = 0; $i < $maxAuthor; $i++) {
             $headers[] = "Author " . ($i + 1);
             $headers[] = "Author " . ($i + 1) . " Institution";
@@ -56,10 +56,10 @@ class Excel {
         $style->setFontName('Arial');
 
         // Creates the headers row
-        $headersRow = Row::fromValues($headers, $style);
+        $headers = Row::fromValues($headers, $style);
 
         // Adds the row in the spreadsheet
-        $writer->addRow($headersRow);
+        $writer->addRow($headers);
         
         // Adds a row for each paper changing the style
         $style->setFontBold(false);
@@ -69,7 +69,7 @@ class Excel {
                 $row[] = $author->name;
                 $row[] = $author->institution;
             }
-            $row = Row::fromValues($row);
+            $row = Row::fromValues($row, $style);
             $writer->addRow($row);
         }
 
