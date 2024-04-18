@@ -26,7 +26,14 @@ class Scrapper {
     $tipos = $xpath->query($tipoXPath);
     $ids = $xpath->query($idXPath);
 
-    for ($i = 0; $i < $titulos->length; $i++) { //for que vai iterar sobre cada paper e identificar os atributos q queremos
-
+    //for que vai iterar sobre cada paper e identificar os atributos q queremos
+    for ($i = 0; $i < $titulos->length; $i++) { 
+        $titulo = $titulos->item($i)->nodeValue;
+        $instituicao = $instituicoes->item($i)->nodeValue;
+        $autor = $autores->item($i)->nodeValue;
+        $tipo = $tipos->item($i)->nodeValue;
+        $id = $ids->item($i)->nodeValue;
+    }
 }
 }
+  
