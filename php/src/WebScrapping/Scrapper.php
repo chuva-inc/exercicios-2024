@@ -20,8 +20,11 @@ class Scrapper {
     $tipoXPath = "//div[@class='tags mr-sm']";
     $idXPath = "//div[@class='volume-info']";
     
-    // Extrair os dados usando XPath
+    // juntando os dados de cada paper em uma unica variavel $paperNodes
     $papersNodes = $xpath->query($paperXPath);
+
+    // criando um array para armazenar os papers
+    $papers = [];
     
     // Iterar sobre os resultados e exibir os dados
     for ($i = 0; $i < $titulos->length; $i++) {
