@@ -48,4 +48,7 @@ class Main {
           $authorInfo[] = $author->name; //teoricamente aqui imprime o nome do autor
           $authorInfo[] = $author->institution; //teoricamente aqui imprime o nome da instituiçao do autor
 }
+
+      //cria nova linha combinando as celulas infos do artigo + celulas info autores
+      $row = new Row(array_merge($row->getCells(), array_map(fn ($value) => Cell::fromValue($value), $authorInfo)));
 }
