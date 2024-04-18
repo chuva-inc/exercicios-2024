@@ -15,10 +15,10 @@ class Scrapper {
     
     // definindo os caminhos XPath para os elementos que queremos extrair
     $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
-    $tituloXPath = ".//h4[@class='my-xs paper-title']";
-    $tipoXPath = ".//div[@class='tags mr-sm']";
+    $titleXPath = ".//h4[@class='my-xs paper-title']";
+    $typeXPath = ".//div[@class='tags mr-sm']";
     $idXPath = ".//div[@class='volume-info']";
-    $autorXPath = ".//div[@class='authors']/span";
+    $authorXPath = ".//div[@class='authors']/span";
     
     // juntando os dados de cada paper em uma unica variavel $paperNodes
     $papersNodes = $xpath->query($paperXPath);
@@ -29,30 +29,30 @@ class Scrapper {
  
     // usando foreach para iterar em todos os papers
     foreach ($papersNodes as $paperNode) {
-      $titulo = $xpath->query($tituloXPath, $paperNode)->item(0)->nodeValue;
-      $tipo = $xpath->query($tipoXPath, $paperNode)->item(0)->nodeValue;
+      $title = $xpath->query($titleXPath, $paperNode)->item(0)->nodeValue;
+      $type = $xpath->query($typeXPath, $paperNode)->item(0)->nodeValue;
       $id = $xpath->query($idXPath, $paperNode)->item(0)->nodeValue;
     
       //inicializa array para armazenar infos do(s) autor(es)
-      $autoresArray = [];
+      $authorsArray = [];
 
          //extraindo as informações dos autores de cada paper
-        $autoresNodes = $xpath->query($autorXPath, $paperNode);
-        foreach ($autoresNodes as $autorNode) {
+        $authorsNodes = $xpath->query($authorXPath, $paperNode);
+        foreach ($authorsNodes as $authorNode) {
           //lendo o conteudo correto para o autor q esta sendo instanciado
-          $autor = $autorNode->nodeValue;
+          $author = $authorNode->nodeValue;
           //lendo também o conteudo correto da instituicao desse autor
-          $instituicao = $autorNode->getAttribute('title');
+          $institution = $authorNode->getAttribute('title');
           //atribuindo esses valores lidos para essa instancia de autor
-          $autoresArray[] = ['nome' => $autor, 'instituicao' => $instituicao];
+          $authorsArray[] = ['name' => $author, 'institution' => $institution];
         }
 
                 // criando vetor associativo com as informaçoes do paper q ta sendo lido na iteraçao atual
                 $paperInfo = [
-                  'titulo' => $titulo,
+                  'title' => $title,
                   'id' => $id,
-                  'tipo' => $tipo,
-                  'autores' => $autoresArray,
+                  'type' => $type,
+                  'authors' => $authorsArray,
               ];
               //passando todas as informações do array associativo para o array papers
         $papers[] = $paperInfo;
