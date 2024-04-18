@@ -33,6 +33,15 @@ class Scrapper {
         $autor = $autores->item($i)->nodeValue;
         $tipo = $tipos->item($i)->nodeValue;
         $id = $ids->item($i)->nodeValue;
+
+        //imprimindo os dados q estao sendo lidos
+      echo "Título: $titulo<br>";
+      echo "Instituição: $instituicao<br>";
+      echo "Autor: $autor<br>";
+      echo "Tipo: $tipo<br>";
+      echo "ID: $id<br>";
+      echo "<br>";
+
     }
 }
 }
