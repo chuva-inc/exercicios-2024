@@ -20,7 +20,17 @@ class Main {
     $papers = (new Scrapper())->scrap($dom);
 
     $writer = new \OpenSpout\Writer\XLSX\Writer();
-    $writer->openToFile('src/saidaDados/planilhaDados.xlsx');
+    $writer->openToFile(__DIR__ . '/../../assets/scrappedData.xlsx');
+
+    //adicionando cabeçalho da planilha
+    $header = [
+      Cell::fromValue('ID'),
+      Cell::fromValue('Title'),
+      Cell::fromValue('Type'),
+  ];
+  
+    $singleRow = new Row($header);
+    $writer->addRow($singleRow);
 
     // Write your logic to save the output file bellow.
     print_r($papers);
