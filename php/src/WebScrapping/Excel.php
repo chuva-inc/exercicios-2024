@@ -33,6 +33,14 @@ class Excel {
         $writer = new Writer();
         $writer->openToFile($filepath);
 
+
+        // Set the columns width:
+        $options->setColumnWidth(15.0, 2);
+        $options->setColumnWidth(5.0, 3);
+        for($i = 4; $i < $this->maxAuthors($papers)*2; $i++){
+            $options->setColumnWidth(7.0, $i);
+        }
+
         // Creates an array with the headers values
         $headers = ['ID', 'Title', 'Type'];
         $maxAuthor = $this->maxAuthors($papers);
