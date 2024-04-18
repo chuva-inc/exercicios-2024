@@ -62,7 +62,8 @@ class Excel {
         // Adds the row in the spreadsheet
         $writer->addRow($headersRow);
         
-        // Adds a row for each paper:
+        // Adds a row for each paper changing the style
+        $style->setFontBold(false);
         foreach ($papers as $paper){
             $row = [$paper->id, $paper->title, $paper->type];
             foreach ($paper->authors as $author){
