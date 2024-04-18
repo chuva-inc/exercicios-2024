@@ -31,7 +31,6 @@ class Excel {
         $filepath = __DIR__ . '/../../assets/data.xlsx';
         $options = new Options();
         $writer = new Writer($options);
-        $writer = new Writer();
         $writer->openToFile($filepath);
         
 
