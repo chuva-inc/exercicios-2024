@@ -40,7 +40,7 @@ class Scrapper {
       }
       
       // Criação de um objeto Paper e armazenamento no array $data
-      $articleData = new Paper($id, $type, $title, $articleAuthors);
+      $articleData = new Paper($id, $title, $type, $articleAuthors);
       $data[] = $articleData;
     }
 
