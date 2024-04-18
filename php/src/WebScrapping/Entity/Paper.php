@@ -38,7 +38,11 @@ class Paper {
   /**
    * Builder.
    */
-  public function __construct($id, $title, $type, $authors = []) {
+  public function __construct($id, $title, $type, $authors) {
+    $this->id = $id;
+    $this->title = $title;
+    $this->type = $type;
+    $this->authors = $authors;
   }
 
 }
