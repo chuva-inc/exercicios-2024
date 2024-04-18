@@ -49,7 +49,7 @@ class Excel {
             $headers[] = "Author " . ($i + 1) . " Institution";
         }
 
-        // Creates a spreadsheet header style
+        // Creates the spreadsheet header style
         $style = new Style();
         $style->setFontBold();
         $style->setFontSize(11);
