@@ -57,7 +57,7 @@ class Excel {
             ->setShouldWrapText(false);
 
         // Creates the headers row
-        $headers = Row::fromValues($headers, $style);
+        $headers = Row::fromValues($headers, $headerStyle);
 
         // Adds the row in the spreadsheet
         $writer->addRow($headers);
