@@ -23,6 +23,7 @@ class Scrapper {
     $typesQuery = $xpath->query('//div[@class="tags mr-sm"]');
     $titlesQuery = $xpath->query('//h4[@class="my-xs paper-title"]');
     
+    $data = [];
     // Iteração sobre os resultados
     for ($i = 0; $i < $idsQuery->length; $i++) {
       // Obtenção de valores
