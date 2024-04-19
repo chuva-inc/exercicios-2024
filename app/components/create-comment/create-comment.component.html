@@ -1,0 +1,52 @@
+<div class="create-comment">
+  <div class="" [style.display] = "Cdisplay">
+    <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
+    <div class="comments-icons">
+      <!-- por algum motivo add imagens muda o tamanho da width da tela.. -->
+      <img src="./../assets/bear.jpg" alt="">
+      <img src="./../assets/bear.jpg" alt="">
+      <img src="./../assets/bear.jpg" alt="">
+    </div>
+    <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+    <div style="position: relative; width: 98%; margin-bottom: 10px; margin-top: 30px;">
+      <div class="line"></div>
+      <button class="btn-create-topic btn-topic" (click)="createTopic()" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <span class="material-symbols-outlined">
+          add
+        </span>
+        criar tópico
+      </button>
+    </div>
+  </div>
+  <div [style.display] = "Thanksdisplay" class="thanksdiv">
+    <h3>Seu tópico foi enviado com sucesso! :D</h3>
+    <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+    <p><a>Descubra outros trabalhos!</a></p>
+    <div style="position: relative; width: 98%; margin-bottom: 10px; margin-top: 30px;">
+      <div class="line"></div>
+      <button class="btn-topic btn-create-topic" (click)="createTopic()" >criar novo tópico</button>
+    </div>
+  </div>
+  <div class="form" [style.display] = "Sdisplay">
+    <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+    <div>
+      <form (submit)="sendTopic($event)">
+        <div class="subject-box">
+          <h3>Assunto</h3>
+          <input class="subject" type="text" name="" id="" placeholder="Defina um tópico sucinto para notificar os autores...">
+        </div>
+        <div class="form-content">
+          <h3>Conteúdo</h3>
+          <div class="form-content-text">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="form-bt">
+              <div class="form-bt-background"></div>
+              <button class="btn-send-topic btn-create-topic">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

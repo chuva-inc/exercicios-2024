@@ -1,0 +1,11 @@
+<div class="content-box">
+  <div class="content-header">
+    <p>Resumo</p>
+  </div>
+  <div class="content-box-text">
+    <p class="" [style.maxHeight.px]="alturaMaxima">
+      {{ text }}
+    </p >
+    <a (click)="expandirTexto()" class="btn-show-more" [style.visibility]="hide">ver mais</a>
+  </div>
+</div>

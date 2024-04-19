@@ -1,0 +1,46 @@
+<div class="main-content">
+  <div class="c-video">
+    <h2>{{title}}</h2>
+    <img src="./../../../assets/video.jpg" alt="" />
+  </div>
+  <div class="c-info">
+    <div class="c-info-bts">
+      <button>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <span class="material-symbols-outlined">
+          download
+        </span>
+        Download
+      </button>
+      <button>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <span class="material-symbols-outlined">
+          star
+        </span>
+      </button>
+      <button>
+        <img src="./../../../assets/doi.png" alt="" width="25px">
+      </button>
+    </div>
+    <p>COMO CITAR ESSE TRABALHO?</p>
+    <div class="c-info-details">
+      <div class="content-header">
+        <p>Detalhes</p>
+      </div>
+      <div class="content-box-text">
+        <div>
+          <p>Tipo de Apresentação: <strong>{{type_presentation}}</strong></p>
+          <p>Eixo temático: <strong>{{thematic_axis}}</strong></p>
+          <p>Palavras-chaves: <strong *ngFor="let key_word of key_words">{{key_word}}.</strong></p>
+        </div>
+        <div class="details-authors">
+          <h3><strong>Autores:</strong></h3>
+          <p *ngFor="let autor of autores">{{autor}}</p>
+        </div>
+        <div class="details-locals">
+          <p *ngFor="let local of locais">{{local}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

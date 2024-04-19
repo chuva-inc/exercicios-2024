@@ -1,0 +1,39 @@
+.aside{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.aside-header{
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+  color: white;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-align: center;
+}
+.aside img{
+  width: 220px;
+  height: 258px;
+}
+.aside-menu-items{
+  color: #725C5C;
+  font-family: 'Quicksand';
+  font-size: large;
+  font-weight: 500;
+}
+.aside-menu-items p {
+  padding-left: 30px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.selected-item{
+  background-color: #FDF1EB;
+  border-left: 5px solid #F89D4A;
+}
