@@ -51,9 +51,12 @@ class Main {
 
       //cria nova linha combinando as celulas infos do artigo + celulas info autores
       $row = new Row(array_merge($row->getCells(), array_map(fn ($value) => Cell::fromValue($value), $authorInfo)));
-}
 
-  // fecha writer pra nao bugar
+            // escrevendo nova linha q agora tem toda as infos!
+            $writer->addRow($row);
+          }
+            // fecha writer pra nao bugar
   $writer->close();
 }
+
 }
