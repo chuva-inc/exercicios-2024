@@ -1,4 +1,15 @@
 /* Sidebar Menu */
+.sidenav {
+  height: 100%;
+  width: 13.750rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: gray;
+}
+
 #titleDiv {
   background: linear-gradient(#FFB354, #EE7A3A);
   text-align: center;
@@ -9,18 +20,22 @@
 
 #sidebarTitle {
   color: white;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 1.9rem;
   font-weight: 700;
   line-height: 2.2rem;
 }
 
-.sidenav {
-  height: 106.3rem;
-  width: 13.750rem;
-  background-color: gray;
+#buttonDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidenav a {
   text-decoration: none;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.7rem;
 }
