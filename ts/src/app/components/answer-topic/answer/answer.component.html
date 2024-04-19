@@ -1,0 +1,10 @@
+<div class="comments-container">
+  <div *ngFor="let reply of replies" class="comment" [ngClass]="adminClass(reply.role)">
+    <h5>{{reply.author_name}}</h5>
+    <p [innerHTML]="reply.content"></p>
+    <div *ngIf="isAutorOrCoautor(reply.role)" class="comment-details">
+      <span>{{reply.role}}</span>
+      <div><img src="assets/icon-owner.svg" alt="Owner check"></div>
+    </div>
+  </div>
+</div>

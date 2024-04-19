@@ -1,0 +1,92 @@
+.form-create-topic {
+  margin: 15px 0;
+  min-width: 64.095rem;
+
+  h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-align: center;
+    color: #5C5C5C;
+    margin-bottom: 1.375rem;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    label {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18.75px;
+      text-align: left;
+      color: #ED7839;
+      margin-bottom: 4px;
+    }
+
+    .subject-container {
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 64.095rem;
+      margin-bottom: 10px;
+
+      .subject {
+        width: 100%;
+        padding: 10px 1.446rem;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+      }
+    }
+
+    .subject-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 64.095rem;
+      border: 1px solid #CCCCCC;
+      border-radius: 4px;
+
+      input {
+        width: 100%;
+        height: 100%;
+        min-height: 7.063rem;
+        border-radius: 3px;
+        border: none;
+        padding: 10px 1.446rem;
+        font-family: 'Quicksand', sans-serif;
+        text-align: left;
+      }
+
+      .form-button-container {
+        width: 100%;
+        height: 1.938rem;
+        background: #EAF1F2;
+        border: 1px solid #CCCCCC;
+        border-radius: 0px, 0px, 4px, 4px;
+        text-align: right;
+
+        button {
+          background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+          width: 12.819rem;
+          height: 1.938rem;
+          border-radius: 0px 0px 4px 0px;
+          border: none;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 16px;
+          text-align: center;
+          color: #FFFFFF;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

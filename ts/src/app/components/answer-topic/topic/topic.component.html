@@ -1,0 +1,30 @@
+<div class="answered-topic" (click)="handleShowAnswer()">
+  <div class="topic-info">
+    <h4 class="ops-topic-subject">Assunto da pergunta aparece aqui</h4>
+    <span>Carlos Henrique Santos</span>
+  </div>
+  <p *ngIf="!isShowingAnswer; else fullTopicContent">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo
+  formativo situado impacto de processo formativo processo...</p>
+  <ng-template #fullTopicContent>
+    <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo
+    formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e
+    impacto de processo formativo situado impacto de processo formativo processo?</p>
+  </ng-template>
+  <div class="topic-actions">
+    <span class="more-info-button">
+      <img src="assets/icon-more-info.svg" alt="More info">
+    </span>
+    <span class="like-button">
+      <img src="assets/icon-heart.svg" alt="Like">
+    </span>
+    <p *ngIf="!isShowingAnswer; else likes4">1 like</p>
+    <p *ngIf="!isShowingAnswer; else replies4">1 resposta</p>
+    <ng-template #likes4>
+      <p>4 likes</p>
+    </ng-template>
+    <ng-template #replies4>
+      <p>4 respostas</p>
+    </ng-template>
+  </div>
+</div>
+<app-answer *ngIf="isShowingAnswer" [replies]="replies"></app-answer>
