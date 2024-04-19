@@ -54,14 +54,23 @@ class Main {
     $writer->addRow($headerRow);
 
     foreach ($allData as $data) {
-      $dataValues = [ // Array para armazenar os valores de dados para esta linha
+      $dataValues = [ // Array para armazenar os dados do artigo
         $data->getId(), // Retorna o ID do dado atual
         $data->getTitle(), // Retorna o título do dado atual
         $data->getType() // Retorna o tipo do dado atual
       ];
+      
+      // Itera sobre os dados do artigo atual para retornar os valores referentes aos autores
+      foreach ($data->getAuthors() as $authorData) {
+        $authorName = $authorData->getName(); // Retorna os nomes dos autores e atribui a variável
+        $dataValues[] = $authorName; // Adiciona o nome dos autores aos dados do artigo
+
+        $authorInstitution = $authorData->getInstitution(); // Retorna a instituição dos autores e atribui a variável
+        $dataValues[] = $authorInstitution; //Adiciona a instituição ou as instituições dos autores aos dados do artigo
+      }
   
       $rowDataEntity = WriterEntityFactory::createRowFromArray($dataValues); // Cria uma entidade de linha com base nos valores de dados
-      $writer->addRow($rowDataEntity); // Adiciona a linha ao escritor
+      $writer->addRow($rowDataEntity); // Adiciona a linha ao escritor 
     }
   
     // Fecha o arquivo de saída

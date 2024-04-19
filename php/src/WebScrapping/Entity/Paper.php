@@ -47,6 +47,10 @@ class Paper {
     return $this->type;
   }
 
+  public function getAuthors() {
+    return $this->authors;
+  }
+
   public function getAuthorCount() {
     return count($this->authors);
   }
