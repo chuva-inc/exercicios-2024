@@ -35,7 +35,6 @@ export class DiscussionTopicsComponent implements OnInit {
   }
 
   handleSubmitNewTopic() {
-    console.log(this.topicForm.value);
     this.stepForm = "feedback";
   }
 
