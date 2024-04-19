@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-topics.component.scss']
 })
 export class SectionTopicsComponent implements OnInit {
+  showAllTopic: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleShowAllTopic(event: Event): void {
+    event.stopPropagation();
+    this.showAllTopic = !this.showAllTopic;
   }
 
 }
