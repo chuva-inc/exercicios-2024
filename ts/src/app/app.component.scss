@@ -7,7 +7,8 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
-  background-color: gray;
+  background-color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #titleDiv {
@@ -29,13 +30,44 @@
 #buttonDiv {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
 }
 
 .sidenav a {
   text-decoration: none;
+  color: #725C5C;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7rem;
+  padding-left: 1.5em;
+  padding-top: 0.43em;
+  padding-bottom: 0.43em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.hiddenRetangle {
+  background: linear-gradient(#FFB455, #ED7839);
+  width: 0.31rem;
+  height: 2.06rem;
+  display: none;
+}
+
+.hoverOrganizer {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  box-sizing: border-box;
+  width: 13.75rem;
+  height: 2.06rem;
+  margin-bottom: 0.125rem;
+}
+
+.hoverOrganizer:hover {
+  background: #FDF1EB;
+}
+
+.hoverOrganizer:hover .hiddenRetangle {
+  display: block;
 }
