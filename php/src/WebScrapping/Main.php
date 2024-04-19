@@ -53,6 +53,17 @@ class Main {
     // Adiciona a linha de cabeçalho à planilha
     $writer->addRow($headerRow);
 
+    foreach ($allData as $data) {
+      $dataValues = [ // Array para armazenar os valores de dados para esta linha
+        $data->getId(), // Retorna o ID do dado atual
+        $data->getTitle(), // Retorna o título do dado atual
+        $data->getType() // Retorna o tipo do dado atual
+      ];
+  
+      $rowDataEntity = WriterEntityFactory::createRowFromArray($dataValues); // Cria uma entidade de linha com base nos valores de dados
+      $writer->addRow($rowDataEntity); // Adiciona a linha ao escritor
+    }
+  
     // Fecha o arquivo de saída
     $writer->close();
 
