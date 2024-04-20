@@ -13,6 +13,7 @@ class ChuvaDart extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 69,97,137)),
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 69,97,137),
