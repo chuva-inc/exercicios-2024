@@ -14,9 +14,12 @@
         "webscrapping": "php -r \"require 'vendor/autoload.php'; Chuva\\Php\\WebScrapping\\Main::run();\""
     },
     "require": {
-        "openspout/openspout": "^3.4",
+        "openspout/openspout": "^4.*",
         "psalm/phar": "^4.7",
-        "drupal/coder": "8.3.x-dev"
+        "drupal/coder": "11.*.x-dev",
+        "box/spout": "^3.*",
+        "symfony/dom-crawler": "*",
+        "fabpot/goutte": "*"
     },
     "config": {
         "allow-plugins": {
@@ -25,5 +28,11 @@
     },
     "require-dev": {
         "phpunit/phpunit": "10.5.x-dev"
+    },
+
+
+    "require": {
+        "monolog/monolog": "1.25.*",
+        "ext-dom": "*"
     }
 }

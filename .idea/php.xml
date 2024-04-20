@@ -12,6 +12,24 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
+      <path value="$PROJECT_DIR$/vendor/voku/anti-xss" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-utf8" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/php/vendor/vimeo/psalm" />
       <path value="$PROJECT_DIR$/php/vendor/sebastian/lines-of-code" />
       <path value="$PROJECT_DIR$/php/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/php/vendor/sebastian/code-unit" />
@@ -41,6 +59,9 @@
       <path value="$PROJECT_DIR$/php/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/php/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/php/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
@@ -52,6 +73,7 @@
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/php/phpunit.xml" custom_loader_path="$PROJECT_DIR$/php/vendor/autoload.php" use_configuration_file="true" />
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/php/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
