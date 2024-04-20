@@ -134,3 +134,58 @@ header h2 {
   border-width: 1px;
   border-color: #CCCCCC;
 }
+
+#headerUserDiv {
+  width: 10.731rem;
+  height: 2.125rem;
+  margin-left: 1.375rem;
+  margin-top: 1.063rem;
+}
+
+#welcomeText {
+  color: #333333;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.094rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 5.688rem;
+}
+
+#emailText {
+  color: #333333;
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#pictureProfile {
+  float: right;
+  border-radius: 50%;
+  margin-top: 1.168rem;
+}
+
+#notificationBadge {
+  position: absolute;
+  background: #F85959;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-top: 1.063rem;
+  margin-left: 68.625rem;
+}
+
+#badgeText {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 0.733rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.188rem;
+}
