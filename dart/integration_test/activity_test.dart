@@ -1,3 +1,4 @@
+import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
