@@ -7,7 +7,6 @@ class AppBarCalendar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 120,
         backgroundColor: Theme.of(context).appBarTheme.foregroundColor,
         leading: const Icon(Icons.arrow_back_ios,color: Colors.white,),
         centerTitle: true,

@@ -1,8 +1,13 @@
+import 'package:chuva_dart/Home/service/Activities_service.dart';
 import 'package:flutter/material.dart';
-import "Home/calendar.dart";
+import "Home/pages/calendar.dart";
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const ChuvaDart());
+  runApp(ChangeNotifierProvider(
+      create: (context) => ActivitiesService(),
+      child: const ChuvaDart())
+  );
 }
 
 class ChuvaDart extends StatelessWidget {

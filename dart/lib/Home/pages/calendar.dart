@@ -1,9 +1,7 @@
-import 'package:chuva_dart/Activity/activity.dart';
-import 'package:chuva_dart/Home/components/app_bar.dart';
+import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
 import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:chuva_dart/Schedule/schedule.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
 class Calendar extends StatefulWidget {
@@ -43,7 +41,7 @@ class _CalendarState extends State<Calendar> {
                     children: [
                        Text(
                         formattedMonth,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 25,
                             height: 0.8),
@@ -67,16 +65,22 @@ class _CalendarState extends State<Calendar> {
                           .withBlue(195),
                       child: const Tab_Bar()),
                 ),
-                // Container(
-                //   color: Theme.of(context)
-                //       .colorScheme
-                //       .primary
-                //       .withRed(48)
-                //       .withGreen(109)
-                //       .withBlue(195),
-                // )
               ],
             ),
+
+            Expanded(
+              child: TabBarView(
+                  children: [
+
+                    Schedule(),
+                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('2 Page',)))),
+                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('3 Page',)))),
+                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('4 Page',)))),
+                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('5 Page',)))),
+                  ]
+              ),
+            )
+
             // const Text(
             //   'Nov',
             // ),
