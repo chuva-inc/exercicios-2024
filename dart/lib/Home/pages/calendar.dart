@@ -1,6 +1,7 @@
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
+import 'package:chuva_dart/Home/components/Schedule/schedule.dart';
 import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
-import 'package:chuva_dart/Schedule/schedule.dart';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
