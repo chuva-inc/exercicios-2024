@@ -3,29 +3,30 @@ import 'package:chuva_dart/Home/components/TabBar/tab_item.dart';
 import 'package:flutter/material.dart';
 
 class Tab_Bar extends StatelessWidget {
-  const Tab_Bar({super.key});
+  final DateTime currentDate;
+  final TabController controller;
+  const Tab_Bar({super.key, required this.currentDate, required this.controller});
+
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       height: 60,
       child: TabBar(
+        controller: controller,
         isScrollable: true,
           tabAlignment: TabAlignment.start,
          indicatorSize: TabBarIndicatorSize.tab,
           dividerColor: Colors.transparent,
-          indicator: BoxDecoration(
+          indicator: const BoxDecoration(
             border: Border(bottom: BorderSide(color: Colors.black26, width: 3))
           ),
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white54,
-          tabs: [
-            TabItem(title: '26'),
-            TabItem(title: '27'),
-            TabItem(title: '28'),
-            TabItem(title: '29'),
-            TabItem(title: '30'),
-          ],
+          tabs: List.generate(5, (index) {
+            DateTime tabDate = currentDate.add(Duration(days: index));
+            return TabItem(title: '${tabDate.day}');
+          }),
       ),
     );
   }

@@ -1,14 +1,12 @@
-import 'package:chuva_dart/Home/service/Activities_service.dart';
+import 'package:chuva_dart/Home/service/activities_service.dart';
 import 'package:chuva_dart/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 import "Home/pages/calendar.dart";
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => ActivitiesService(),
-      child: const ChuvaDart())
-  );
+  runApp(const ChuvaDart());
 }
 
 class ChuvaDart extends StatelessWidget {
@@ -27,10 +25,9 @@ class ChuvaDart extends StatelessWidget {
             fontSize: 18,
             fontWeight: FontWeight.w400,
           ),
-
-
         ),
-        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 69,97,137)),
+        appBarTheme: const AppBarTheme(foregroundColor: Color.fromARGB(255, 69,97,137)),
+        tabBarTheme: TabBarTheme(labelColor: fromCssColor("#306dc3")),
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 69,97,137),
       ),
         useMaterial3: true,

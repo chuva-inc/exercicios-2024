@@ -10,121 +10,74 @@ class Calendar extends StatefulWidget {
 
   @override
   State<Calendar> createState() => _CalendarState();
+
 }
 
-class _CalendarState extends State<Calendar> {
-  DateTime _currentDate = DateTime(2023, 11, 26);
+class _CalendarState extends State<Calendar> with SingleTickerProviderStateMixin{
+  late final TabController _tabController;
+  final DateTime _currentDate = DateTime(2023, 11, 26);
 
-  bool _clicked = false;
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 5, vsync: this);
+  }
 
-  void _changeDate(DateTime newDate) {
-    setState(() {
-      _currentDate = newDate;
-    });
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     String formattedMonth = DateFormat('MMM').format(_currentDate);
-    return DefaultTabController(
-      length: 5,
-      child: Scaffold(
-        appBar: const PreferredSize(
-            preferredSize: Size.fromHeight(120), child: AppBarCalendar()),
-        body: Column(
-          children: [
-            Row(
-              children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-                  child: Column(
-                    children: [
-                       Text(
-                        formattedMonth,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 25,
-                            height: 0.8),
-                      ),
-                      Text(
-                        '${_currentDate.year}',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 25),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    // width: 200,
-                      color: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withRed(48)
-                          .withGreen(109)
-                          .withBlue(195),
-                      child: const Tab_Bar()),
-                ),
-              ],
-            ),
-
-            Expanded(
-              child: TabBarView(
+    return Scaffold(
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(120), child: AppBarCalendar()),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                child: Column(
                   children: [
-
-                    Schedule(),
-                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('2 Page',)))),
-                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('3 Page',)))),
-                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('4 Page',)))),
-                    Container(width: 200, height: 200, child: Center(child: Container( child: Text('5 Page',)))),
-                  ]
+                     Text(
+                      formattedMonth,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 25,
+                          height: 0.8),
+                    ),
+                    Text(
+                      '${_currentDate.year}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 25),
+                    ),
+                  ],
+                ),
               ),
-            )
+              Expanded(
+                child: Container(
+                  // width: 200,
+                    color: Theme.of(context).tabBarTheme.labelColor,
+                    child: Tab_Bar(currentDate: _currentDate, controller: _tabController,)),
+              ),
+            ],
+          ),
 
-            // const Text(
-            //   'Nov',
-            // ),
-            // const Text(
-            //   '2023',
-            // ),
-            // OutlinedButton(
-            //   onPressed: () {
-            //     _changeDate(DateTime(2023, 11, 26));
-            //   },
-            //   child: Text(
-            //     '26',
-            //     style: Theme.of(context).textTheme.headlineMedium,
-            //   ),
-            // ),
-            // OutlinedButton(
-            //   onPressed: () {
-            //     _changeDate(DateTime(2023, 11, 28));
-            //   },
-            //   child: Text(
-            //     '28',
-            //     style: Theme.of(context).textTheme.headlineMedium,
-            //   ),
-            // ),
-            // if (_currentDate.day == 26)
-            //   OutlinedButton(
-            //       onPressed: () {
-            //         setState(() {
-            //           _clicked = true;
-            //         });
-            //       },
-            //       child: const Text('Mesa redonda de 07:00 até 08:00')),
-            // if (_currentDate.day == 28)
-            //   OutlinedButton(
-            //       onPressed: () {
-            //         setState(() {
-            //           _clicked = true;
-            //         });
-            //       },
-            //       child: const Text('Palestra de 09:30 até 10:00')),
-            // if (_currentDate.day == 26 && _clicked) const Activity(),
-          ],
-        ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: List.generate(5, (index) {
+                int day = _currentDate.day + index;
+                return Schedule(day: day);
+              }),
+            ),
+          )
+        ],
       ),
     );
   }

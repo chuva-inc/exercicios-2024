@@ -51,7 +51,7 @@ class AppBarCalendar extends StatelessWidget {
                         alignment: AlignmentDirectional.centerStart,
                           child: Container(
                               decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.primary.withRed(48).withGreen(109).withBlue(195),
+                                color: Theme.of(context).tabBarTheme.labelColor,
                                 borderRadius: BorderRadius.circular(20.0), // Ajuste o raio para bordas mais ou menos arredondadas
                               ),
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
