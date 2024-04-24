@@ -7,7 +7,7 @@ part 'category.g.dart';
 class Category {
   final int id;
   final Title? title;
-  @JsonKey(defaultValue: "")
+  @JsonKey(defaultValue: "#2196f3")
   final String? color;
   @JsonKey(defaultValue: "",name: 'background-color') // JsonKey para mapear nomes de chaves JSON
   final String? backgroundColor;

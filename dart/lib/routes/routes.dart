@@ -4,6 +4,7 @@ import 'package:chuva_dart/Home/pages/calendar.dart';
 import 'package:go_router/go_router.dart';
 
 final routes = GoRouter(
+
     routes: [
       GoRoute(
           path: '/',
@@ -13,5 +14,9 @@ final routes = GoRouter(
           path: '/activities',
           builder: (context, state) => const Activity()
       ),
+      // GoRoute(
+      //     path: '/palestrante',
+      //     builder: (context, state) => const Activity()
+      // ),
     ]
 );

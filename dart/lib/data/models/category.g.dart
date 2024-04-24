@@ -11,7 +11,7 @@ Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
       title: json['title'] == null
           ? null
           : Title.fromJson(json['title'] as Map<String, dynamic>),
-      color: json['color'] as String? ?? '',
+      color: json['color'] as String? ?? '#2196f3',
       backgroundColor: json['background-color'] as String? ?? '',
     );
 
