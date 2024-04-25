@@ -3479,6 +3479,7 @@
         "openspout/openspout": 20,
         "drupal/coder": 20,
         "nelexa/zip": 20,
+        "symfony/mercure": 20,
         "phpunit/phpunit": 20
     },
     "prefer-stable": false,
