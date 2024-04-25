@@ -10,16 +10,13 @@ use Chuva\Php\WebScrapping\Entity\Person;
  */
 class Scrapper {
   /**
-   *
-   * Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
-   *
+   *Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
    *
    * @param \DOMDocument $dom //Param comment to correct error.
-   * 
-   * @return array 
-   * //Adding description so it corrects error on PHPlint.
+   *
+   * @return array
+   *   //Adding description so it corrects error on PHPlint.
    */
-
   public function scrap(\DOMDocument $dom): array {
         $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
 
