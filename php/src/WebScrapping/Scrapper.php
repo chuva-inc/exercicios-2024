@@ -18,9 +18,8 @@ class Scrapper {
    * @return array
    *   //Adding description so it corrects error on PHPlint.
    */
-
   public function scrap(\DOMDocument $dom): array {
-    $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
+    $xpath = new \DOMXPath($dom);
 
     // Defining XPath paths for the elements we want to extract.
     $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
@@ -53,13 +52,13 @@ class Scrapper {
         $institution = $authorNode->getAttribute('title');
         // Assigning these read values to this author's instance.
         $authors[] = new Person($author, $institution);
-        }
+      }
 
       // Instantiating Paper class with the extracted data and authors.
       $paper = new Paper($id, $title, $type, $authors);
       // Passing all information from the associative array to the papers array.
       $papers[] = $paper;
-      }
+    }
 
     // Returns all information of all papers.
     return $papers;
