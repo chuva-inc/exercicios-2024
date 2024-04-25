@@ -83,9 +83,11 @@ class Main {
       $authorInfo = [];
 
      // For each author in authors, add info to the array.
-      foreach ($paper->authors as $author) {
-        $authorInfo[] = $author->name; // Theoretically here prints the author's name.
-        $authorInfo[] = $author->institution; // Theoretically here prints the author's institution.
+     foreach ($paper->authors as $author) {
+        $authorInfo[] = $author->name;
+        // Add author's name.
+        $authorInfo[] = $author->institution;
+        // Add author's institution.
       }
 
       // Create new row combining paper info cells with author info cells.
