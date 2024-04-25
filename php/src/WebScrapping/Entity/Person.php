@@ -2,17 +2,36 @@
 
 namespace Chuva\Php\WebScrapping\Entity;
 
+/**
+ * Represents a person entity.
+ */
 class Person
 {
+  /**
+   * Name of the person.
+   *
+   * @var string
+   */
+  public string $name;
 
-    public string $name;
-    public string $institution;
+  /**
+   * Institution of the person.
+   *
+   * @var string
+   */
+  public string $institution;
 
-    //construtor recebe nome e instituicao do autor
-    public function __construct($name, $institution)
-    {
-        $this->name = $name;
-        $this->institution = $institution;
-    }
-
+  /**
+   * Person constructor.
+   *
+   * @param string $name        Name of the person
+   *                            The name of the person.
+   * @param string $institution Institution of the person
+   *                            The institution where the person belongs.
+   */
+  public function __construct(string $name, string $institution)
+  {
+    $this->name = $name;
+    $this->institution = $institution;
+  }
 }
