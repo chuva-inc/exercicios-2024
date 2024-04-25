@@ -24,13 +24,13 @@ class Person {
    * Person constructor.
    *
    * @param string $name
-   *    Name of the person.
+   *   Name of the person.
    * @param string $institution
-   *    Institution of the person.
+   *   Institution of the person.
    */
   public function __construct(string $name, string $institution) {
     $this->name = $name;
     $this->institution = $institution;
   }
-  
+
 }
