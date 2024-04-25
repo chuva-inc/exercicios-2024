@@ -74,29 +74,29 @@ class Main {
     foreach ($papers as $paper) {
       // Create a row for each paper.
       $row = new Row([
-              Cell::fromValue($paper->id),
-              Cell::fromValue($paper->title),
-              Cell::fromValue($paper->type),
-            ]);
+        Cell::fromValue($paper->id),
+        Cell::fromValue($paper->title),
+        Cell::fromValue($paper->type),
+      ]);
 
-  // Array to store author info.
-  $authorInfo = [];
+      // Array to store author info.
+      $authorInfo = [];
 
-  // For each author in authors, add info to the array.
-  foreach ($paper->authors as $author) {
-    $authorInfo[] = $author->name; // Theoretically here prints the author's name
-    $authorInfo[] = $author->institution; // Theoretically here prints the author's institution
-  }
+     // For each author in authors, add info to the array.
+      foreach ($paper->authors as $author) {
+        $authorInfo[] = $author->name; // Theoretically here prints the author's name.
+        $authorInfo[] = $author->institution; // Theoretically here prints the author's institution.
+      }
 
-  // Create new row combining paper info cells with author info cells.
-  $row = new Row(array_merge($row->getCells(), array_map(fn($value) => Cell::fromValue($value), $authorInfo)));
+      // Create new row combining paper info cells with author info cells.
+      $row = new Row(array_merge($row->getCells(), array_map(fn($value) => Cell::fromValue($value), $authorInfo)));
 
-  // Write the new row that now has all the info.
-  $writer->addRow($row);
+      // Write the new row that now has all the info.
+      $writer->addRow($row);
     }
 
     // Close the writer to prevent issues.
     $writer->close();
   }
-  
+
 }
