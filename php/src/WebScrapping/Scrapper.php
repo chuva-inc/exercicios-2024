@@ -12,7 +12,7 @@ class Scrapper {
   /**
    * Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
    *
-   * @param \DOMDocument $dom 
+   * @param \DOMDocument $dom
    *   //Param comment to correct error.
    *
    * @return array
@@ -20,7 +20,7 @@ class Scrapper {
    */
 
   public function scrap(\DOMDocument $dom): array {
-        $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
+    $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
 
     // Defining XPath paths for the elements we want to extract.
     $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
@@ -46,23 +46,23 @@ class Scrapper {
 
       // Extracting authors' information from each paper.
       $authorsNodes = $xpath->query($authorXPath, $paperNode);
-        foreach ($authorsNodes as $authorNode) {
-                // Reading the correct content for the author being instantiated.
-                $author = $authorNode->nodeValue;
-                // Also reading the correct content of the institution of this author.
-                $institution = $authorNode->getAttribute('title');
-                // Assigning these read values to this author's instance.
-                $authors[] = new Person($author, $institution);
-            }
-
-            // Instantiating Paper class with the extracted data and authors.
-            $paper = new Paper($id, $title, $type, $authors);
-            // Passing all information from the associative array to the papers array.
-            $papers[] = $paper;
+      foreach ($authorsNodes as $authorNode) {
+        // Reading correct content for the author being instantiated.
+        $author = $authorNode->nodeValue;
+        // Also reading the correct content of the institution of this author.
+        $institution = $authorNode->getAttribute('title');
+        // Assigning these read values to this author's instance.
+        $authors[] = new Person($author, $institution);
         }
 
-        // Returns all information of all papers.
-        return $papers;
+      // Instantiating Paper class with the extracted data and authors.
+      $paper = new Paper($id, $title, $type, $authors);
+      // Passing all information from the associative array to the papers array.
+      $papers[] = $paper;
+      }
+
+    // Returns all information of all papers.
+    return $papers;
   }
 
 }
