@@ -10,7 +10,7 @@ use Chuva\Php\WebScrapping\Entity\Person;
  */
 class Scrapper {
   /**
-   * Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
+   * 
    *
    * @param \DOMDocument $dom
    *   //Param comment to correct error.
