@@ -17,7 +17,8 @@
         "openspout/openspout": "4.x-dev",
         "psalm/phar": "^4.7",
         "drupal/coder": "8.3.x-dev",
-        "nelexa/zip": "dev-master"
+        "nelexa/zip": "dev-master",
+        "symfony/mercure": "^0.6.0@dev"
     },
     "config": {
         "allow-plugins": {
