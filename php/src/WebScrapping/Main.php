@@ -12,9 +12,9 @@ use OpenSpout\Writer\XLSX\Writer;
 class Main {
 
   /**
-     * Main runner, instantiates a Scrapper and runs.
-     */
-    public static function run(): void {
+   * Main runner, instantiates a Scrapper and runs.
+   */
+  public static function run(): void {
     $dom = new \DOMDocument('1.0', 'utf-8');
     @$dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
 
@@ -23,7 +23,7 @@ class Main {
     $writer = new Writer();
     $writer->openToFile(__DIR__ . '/../../assets/scrappedData.xlsx');
 
-        // Adding spreadsheet header.
+    // Adding spreadsheet header.
     $header = [
       Cell::fromValue('ID'),
       Cell::fromValue('Title'),
@@ -66,36 +66,37 @@ class Main {
       Cell::fromValue('Author 18 Institution'),
       Cell::fromValue('Author 19'),
       Cell::fromValue('Author 19 Institution'),
-        ];
+    ];
 
     $singleRow = new Row($header);
     $writer->addRow($singleRow);
 
-        foreach ($papers as $paper) {
-            // Create a row for each paper
-            $row = new Row([
-                Cell::fromValue($paper->id),
-                Cell::fromValue($paper->title),
-                Cell::fromValue($paper->type),
+    foreach ($papers as $paper) {
+      // Create a row for each paper.
+      $row = new Row([
+              Cell::fromValue($paper->id),
+              Cell::fromValue($paper->title),
+              Cell::fromValue($paper->type),
             ]);
 
-            // Array to store author info
-            $authorInfo = [];
+  // Array to store author info.
+  $authorInfo = [];
 
-            // For each author in authors, add info to the array
-            foreach ($paper->authors as $author) {
-                $authorInfo[] = $author->name; // Theoretically here prints the author's name
-                $authorInfo[] = $author->institution; // Theoretically here prints the author's institution
-            }
+  // For each author in authors, add info to the array.
+  foreach ($paper->authors as $author) {
+    $authorInfo[] = $author->name; // Theoretically here prints the author's name
+    $authorInfo[] = $author->institution; // Theoretically here prints the author's institution
+  }
 
-            // Create a new row combining paper info cells with author info cells
-            $row = new Row(array_merge($row->getCells(), array_map(fn($value) => Cell::fromValue($value), $authorInfo)));
+  // Create new row combining paper info cells with author info cells.
+  $row = new Row(array_merge($row->getCells(), array_map(fn($value) => Cell::fromValue($value), $authorInfo)));
 
-            // Write the new row that now has all the info
-            $writer->addRow($row);
-        }
-
-        // Close the writer to prevent issues
-        $writer->close();
+  // Write the new row that now has all the info.
+  $writer->addRow($row);
     }
+
+    // Close the writer to prevent issues.
+    $writer->close();
+  }
+  
 }
