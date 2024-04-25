@@ -18,8 +18,9 @@ class Scrapper {
    * @return array
    *   //Adding description so it corrects error on PHPlint.
    */
+  
   public function scrap(\DOMDocument $dom): array {
-    
+
     $xpath = new \DOMXPath($dom);
 
     // Defining XPath paths for the elements we want to extract.
