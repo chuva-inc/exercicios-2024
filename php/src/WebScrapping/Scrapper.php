@@ -6,19 +6,17 @@ use Chuva\Php\WebScrapping\Entity\Paper;
 use Chuva\Php\WebScrapping\Entity\Person;
 
 /**
- * Class Scrapper
+ * Class Scrapper calls webscrapping function.
  */
-class Scrapper
-{
-    /**
-     * Loads paper information from the HTML and returns the array with the data.
-     * Returns [new Paper(id,titulo,tipo,[new Pessoa(autorN,instN)])].
-     *
-     * @param \DOMDocument $dom
-     * @return array
-     */
-    public function scrap(\DOMDocument $dom): array
-    {
+class Scrapper {
+  /**
+   * Loads paper information from the HTML and returns the array with the data.
+   * Returns [new Paper(id,titulo,tipo,[new Pessoa(autorN,instN)])].
+   *
+   * @param \DOMDocument $dom
+   * @return array
+   */
+  public function scrap(\DOMDocument $dom): array {
         $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
 
     // Defining XPath paths for the elements we want to extract
