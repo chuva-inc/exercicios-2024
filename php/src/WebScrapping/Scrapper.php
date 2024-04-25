@@ -20,7 +20,6 @@ class Scrapper {
    */
   public function scrap(\DOMDocument $dom): array {
     $xpath = new \DOMXPath($dom);
-
     // Defining XPath paths for the elements we want to extract.
     $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
     $titleXPath = ".//h4[@class='my-xs paper-title']";
