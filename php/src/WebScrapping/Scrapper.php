@@ -10,18 +10,20 @@ use Chuva\Php\WebScrapping\Entity\Person;
  */
 class Scrapper {
   /**
-   * 
-   * Loads paper info and Returns [new Paper(id,titulo,tipo,[new Pessoa(autorN,instN)])].
+   *
+   * Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
+   *
    *
    * @param \DOMDocument $dom //Param comment to correct error.
    * 
-   * @return array //Adding description so it corrects error on PHPlint.
+   * @return array 
+   * //Adding description so it corrects error on PHPlint.
    */
-  
+
   public function scrap(\DOMDocument $dom): array {
         $xpath = new \DOMXPath($dom); // Initializes an XPath variable.
 
-    // Defining XPath paths for the elements we want to extract
+    // Defining XPath paths for the elements we want to extract.
     $paperXPath = "//a[@class='paper-card p-lg bd-gradient-left']";
     $titleXPath = ".//h4[@class='my-xs paper-title']";
     $typeXPath = ".//div[@class='tags mr-sm']";
