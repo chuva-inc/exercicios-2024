@@ -38,17 +38,16 @@ class Paper {
    * Paper constructor.
    *
    * @param int $id
-   *    Paper ID must be a positive integer.
+   *   Paper ID must be a positive integer.
    * @param string $title   
-   *    Paper title is the title of the paper.
+   *   Paper title is the title of the paper.
    * @param string $type
-   *    Paper type the type of the paper.
-   * @param array  $authors 
-   *    Array of authors the authors of the paper.
+   *   Paper type the type of the paper.
+   * @param array $authors 
+   *   Array of authors the authors of the paper.
    */
-  public function __construct(int $id, string $title, string $type, array $authors = [])
-  {
-    // Constructor requires id, title, type, and authors
+  public function __construct(int $id, string $title, string $type, array $authors = []){
+    // Constructor requires id, title, type, and authors.
     $this->id = $id;
     $this->title = $title;
     $this->type = $type;
