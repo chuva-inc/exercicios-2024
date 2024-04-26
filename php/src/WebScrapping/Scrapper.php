@@ -14,7 +14,7 @@ class Scrapper {
    * Loads paper information from the HTML and returns the array with the data.
    */
   public function scrap(\DOMDocument $dom): array {
-  
+
     // Defines an XPath variable to find all elements with the desired class:
     $xpath = new \DOMXPath($dom);
 

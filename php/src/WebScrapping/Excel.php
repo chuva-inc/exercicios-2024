@@ -13,12 +13,12 @@ use OpenSpout\Writer\XLSX\Writer;
  * Exports data to a spreadsheet.
  */
 class Excel {
-  
+
   /**
    * Defines the maximum number of authors of a paper from an array of papers.
    */
   public function maxAuthors(Array $papers): int {
-    
+  
     $max = 0;
 
     foreach ($papers as $paper) {
@@ -87,4 +87,5 @@ class Excel {
     $writer->close();
 
   }
+
 }
