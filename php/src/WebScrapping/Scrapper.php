@@ -8,7 +8,8 @@ use Chuva\Php\WebScrapping\Entity\Person;
 /**
  * Class Scrapper calls webscrapping function.
  */
-class Scrapper {
+ class Scrapper {
+
   /**
    * Loads info & return new Paper(id,titulo,tipo,new Pessoa(autorN,instN)).
    *
