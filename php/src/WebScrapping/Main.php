@@ -18,7 +18,7 @@ class Main {
 
     // Write your logic to save the output file bellow.
     (new Excel())->export($papers);
-    
+   
   }
 
 }
