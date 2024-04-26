@@ -2,8 +2,10 @@
 
 import 'package:chuva_dart/Home/components/Schedule/components/schedule_item.dart';
 import 'package:chuva_dart/Home/controllers/activities_controller.dart';
+import 'package:chuva_dart/Home/service/Activities_service.dart';
 import 'package:chuva_dart/data/stores/activities_store.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -18,6 +20,7 @@ class Schedule extends StatefulWidget {
 class _ScheduleState extends State<Schedule> {
 
   late final ActivitiesStore activitiesStore;
+
 
   @override
   void initState() {

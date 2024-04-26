@@ -3,6 +3,7 @@ import 'package:chuva_dart/data/exceptions/exceptions.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:flutter/cupertino.dart';
 
+
 class ActivitiesStore{
   final IActivitiesController controller;
   final int day;
@@ -23,8 +24,8 @@ class ActivitiesStore{
   Future getActivities() async {
     isLoading.value = true;
     try {
-      final result = await controller.getActivities(day);
-      state.value = result;
+        final result = await controller.getActivities();
+        state.value = result;
     } on NotFoundException catch (e) {
 
       erro.value = e.message;
@@ -33,5 +34,9 @@ class ActivitiesStore{
       erro.value = e.toString();
     }
     isLoading.value = false;
+  }
+
+  List<Activities> filterActivitiesByDay(day){
+    return controller.filterActivitiesByDay(day);
   }
 }

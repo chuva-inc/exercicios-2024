@@ -1,6 +1,7 @@
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
 import 'package:chuva_dart/Home/components/Schedule/schedule.dart';
 import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
+import 'package:chuva_dart/shared/button_app_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -34,7 +35,7 @@ class _CalendarState extends State<Calendar> with SingleTickerProviderStateMixin
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(120), child: AppBarCalendar()),
+          preferredSize: Size.fromHeight(120), child: AppBarCalendar(subtitle: '\n Progamação', buttonAppBar: ButtonAppBar(),)),
       body: Column(
         children: [
           Row(
