@@ -15,9 +15,8 @@ use OpenSpout\Writer\XLSX\Writer;
 class Excel {
   /**
    * Defines the maximum number of authors of a paper from an array of papers.
-   */
-  
-   public function maxAuthors(Array $papers): int {
+   */  
+  public function maxAuthors(Array $papers): int {
     $max = 0;
 
     foreach ($papers as $paper) {
@@ -58,9 +57,9 @@ class Excel {
       ->setFontBold()
       ->setFontSize(11)
       ->setFontName('Arial')
-      ->setShouldWrapText(false);
+      ->setShouldWrapText(FALSE);
 
-    // Creates the headers row
+    // Creates the headers row.
     $headers = Row::fromValues($headers, $headerStyle);
 
     // Adds the row in the spreadsheet.
@@ -70,7 +69,7 @@ class Excel {
     $contentStyle = (new Style())
       ->setFontSize(11)
       ->setFontName('Arial')
-      ->setShouldWrapText(false);
+      ->setShouldWrapText(FALSE);
 
     foreach ($papers as $paper) {
       $row = [$paper->id, $paper->title, $paper->type];
@@ -84,10 +83,5 @@ class Excel {
 
     // Closes the writer and saves the file.
     $writer->close();
-
   }
-  
 }
-
-
-
