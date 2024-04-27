@@ -15,7 +15,7 @@ class ExcelUtility {
         $writer->openToFile($filePath);
 
         
-        $row = WriterEntityFactory::createRowFromArray(['ID', 'Title', 'Type', 'Author 1', 'Institution 1', 'Author 2', 'Institution 2', 'Author 3', 'Institution 3', 'Author 4', 'Institution 4', 'Author 5', 'Institution 5', 'Author 6', 'Institution 6', 'Author 7', 'Institution 7', 'Author 8', 'Institution 8', 'Author 9', 'Institution 9']);
+        $row = WriterEntityFactory::createRowFromArray(['ID', 'Title', 'Type', 'Author 1', 'Author 1 Institution', 'Author 2', 'Author 2 Institution', 'Author 3', 'Author 3 Institution', 'Author 4', 'Author 4 Institution', 'Author 5', 'Author 5 Institution', 'Author 6', 'Author 6 Institution', 'Author 7', 'Author 7 Institution', 'Author 8', 'Author 8 Institution', 'Author 9', 'Author 9 Institution']);
         $writer->addRow($row);
 
 

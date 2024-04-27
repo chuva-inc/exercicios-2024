@@ -21,6 +21,10 @@ class Scrapper {
         $papers = [];
 
         foreach ($paperNodes as $node) {
+
+            $volumeNode = $xpath->query(".//div[contains(@class, 'volume-info')]", $node);
+            $volume = $volumeNode->length > 0 ? trim($volumeNode->item(0)->textContent) : '';
+
             $titleNode = $xpath->query(".//h4[contains(@class, 'paper-title')]", $node);
             $title = $titleNode->length > 0 ? trim($titleNode->item(0)->textContent) : '';
 
@@ -38,7 +42,7 @@ class Scrapper {
                 $tags[] = trim($tagNode->textContent);
             }
 
-            $papers[] = new Paper(0, $title, $tags, $authors);
+            $papers[] = new Paper($volume, $title, $tags, $authors);
         }
 
         return $papers;
