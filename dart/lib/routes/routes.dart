@@ -1,7 +1,10 @@
 
 import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/Home/pages/calendar.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../data/models/activities.dart';
 
 final routes = GoRouter(
 
@@ -12,7 +15,10 @@ final routes = GoRouter(
       ),
       GoRoute(
           path: '/activities',
-          builder: (context, state) => const Activity()
+        builder: (BuildContext context, GoRouterState state) {
+          final items = state.extra as Activities;
+          return Activity(items: items);
+        },
       ),
       // GoRoute(
       //     path: '/palestrante',

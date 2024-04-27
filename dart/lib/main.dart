@@ -1,11 +1,12 @@
-import 'package:chuva_dart/Home/service/activities_service.dart';
+import 'package:chuva_dart/configs/hive_config.dart';
 import 'package:chuva_dart/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
-import "Home/pages/calendar.dart";
-import 'package:provider/provider.dart';
 
-void main() {
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveConfig.start();
   runApp(const ChuvaDart());
 }
 
@@ -24,6 +25,17 @@ class ChuvaDart extends StatelessWidget {
             height: 1.2,
             fontSize: 18,
             fontWeight: FontWeight.w400,
+          ),
+          headlineLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          )
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5   ))),
+            iconColor: const MaterialStatePropertyAll(Colors.white),
+            backgroundColor: MaterialStateProperty.all(fromCssColor("#306dc3")),
           ),
         ),
         appBarTheme: const AppBarTheme(foregroundColor: Color.fromARGB(255, 69,97,137)),

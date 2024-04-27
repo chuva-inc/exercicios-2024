@@ -22,10 +22,9 @@ class ActivitiesController implements IActivitiesController{
   }
 
   @override
-  bool isEmpty() {
+  bool isEmpty(){
     return activitiesService.isEmpty();
   }
-
 
 
 }

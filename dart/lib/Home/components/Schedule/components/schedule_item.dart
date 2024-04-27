@@ -22,7 +22,7 @@ class ScheduleItems extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: InkWell(
               onTap: () {
-                context.push('/activities');
+                context.push('/activities', extra: items);
               },
               child: Ink(
                 padding: const EdgeInsets.only(left: 0),

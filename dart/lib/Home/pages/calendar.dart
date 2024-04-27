@@ -6,6 +6,9 @@ import 'package:chuva_dart/shared/button_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../data/stores/activities_store.dart';
+import '../controllers/activities_controller.dart';
+
 class Calendar extends StatefulWidget {
   const Calendar({super.key});
 
@@ -17,11 +20,16 @@ class Calendar extends StatefulWidget {
 class _CalendarState extends State<Calendar> with SingleTickerProviderStateMixin{
   late final TabController _tabController;
   final DateTime _currentDate = DateTime(2023, 11, 26);
+  late final ActivitiesStore activitiesStore;
+  late final Future _activitiesLoader;
+
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 5, vsync: this);
+    activitiesStore = ActivitiesStore(controller: ActivitiesController(), day: _currentDate.day);
+    _activitiesLoader = activitiesStore.getActivities();
   }
 
   @override
@@ -74,7 +82,7 @@ class _CalendarState extends State<Calendar> with SingleTickerProviderStateMixin
               controller: _tabController,
               children: List.generate(5, (index) {
                 int day = _currentDate.day + index;
-                return Schedule(day: day);
+                return Schedule(day: day,activitiesLoader: _activitiesLoader, activitiesStore: activitiesStore,);
               }),
             ),
           )

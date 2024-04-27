@@ -18,6 +18,8 @@ class Activities {
   final int? changed;
   @JsonKey(defaultValue: "")
   final String? name;
+  @JsonKey(defaultValue: false)
+  bool? favorite;
   @JsonKey(fromJson: _nullToEmptyString)
   final String? start;
   @JsonKey(fromJson: _nullToEmptyString)
@@ -39,8 +41,6 @@ class Activities {
   final List<Person> people;
   final int status;
   final int weight;
-  @JsonKey(fromJson: _roleFromJson)
-  final Role? role;
   @JsonKey(fromJson: _nullToEmptyString)
   final String? addons;
   @JsonKey(defaultValue: 0)
@@ -49,7 +49,7 @@ class Activities {
   final String? event;
 
   Activities( {
-    required this.role,
+    required this.favorite,
     required this.name,
     required this.picture,
     required this.bio,

@@ -7,7 +7,7 @@ part of 'activities.dart';
 // **************************************************************************
 
 Activities _$ActivitiesFromJson(Map<String, dynamic> json) => Activities(
-      role: Activities._roleFromJson(json['role'] as Map<String, dynamic>?),
+      favorite: json['favorite'] as bool? ?? false,
       name: json['name'] as String? ?? '',
       picture: Activities._nullToEmptyString(json['picture']),
       bio: Activities._bioFromJson(json['bio'] as Map<String, dynamic>?),
@@ -40,6 +40,7 @@ Map<String, dynamic> _$ActivitiesToJson(Activities instance) =>
       'id': instance.id,
       'changed': instance.changed,
       'name': instance.name,
+      'favorite': instance.favorite,
       'start': instance.start,
       'end': instance.end,
       'institution': instance.institution,
@@ -54,7 +55,6 @@ Map<String, dynamic> _$ActivitiesToJson(Activities instance) =>
       'people': instance.people,
       'status': instance.status,
       'weight': instance.weight,
-      'role': instance.role,
       'addons': instance.addons,
       'parent': instance.parent,
       'event': instance.event,

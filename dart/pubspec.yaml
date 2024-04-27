@@ -42,7 +42,10 @@ dependencies:
   json_annotation: ^4.8.1
   intl: ^0.19.0
   json_serializable: ^6.7.1
-  provider: ^6.1.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.2
+  html: ^0.15.4
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +57,8 @@ dev_dependencies:
   test: any
   flutter_lints: ^2.0.0
   build_runner: ^2.4.9
+
+
 
 # The following section is specific to Flutter packages.
 flutter:
