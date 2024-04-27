@@ -13,6 +13,7 @@ class ButtonAppBar extends StatelessWidget {
         child: ElevatedButton(
           onPressed: null,
           style: ButtonStyle(
+            shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
             backgroundColor: MaterialStateProperty.all(Colors.white),
             padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 5.0)),
           ),
@@ -24,7 +25,7 @@ class ButtonAppBar extends StatelessWidget {
                       child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).tabBarTheme.labelColor,
-                            borderRadius: BorderRadius.circular(20.0), // Ajuste o raio para bordas mais ou menos arredondadas
+                            borderRadius: BorderRadius.circular(20.0),
                           ),
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                           child: const Icon(Icons.calendar_month_outlined, color: Colors.black,size: 27,)

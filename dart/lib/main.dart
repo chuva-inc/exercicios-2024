@@ -28,16 +28,23 @@ class ChuvaDart extends StatelessWidget {
           ),
           headlineLarge: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 25,
+            fontSize: 22,
+          ),
+          bodyMedium: TextStyle(
+            fontSize: 12, // Tamanho da fonte
+            fontWeight: FontWeight.w500, // Peso da fonte
+            color: Colors.black, // Cor do texto
+            // fontFamily: 'Serif',
           )
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5   ))),
+            shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
             iconColor: const MaterialStatePropertyAll(Colors.white),
             backgroundColor: MaterialStateProperty.all(fromCssColor("#306dc3")),
           ),
         ),
+
         appBarTheme: const AppBarTheme(foregroundColor: Color.fromARGB(255, 69,97,137)),
         tabBarTheme: TabBarTheme(labelColor: fromCssColor("#306dc3")),
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 69,97,137),

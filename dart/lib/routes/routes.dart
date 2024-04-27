@@ -1,10 +1,13 @@
 
 import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/Home/pages/calendar.dart';
+import 'package:chuva_dart/Speaker/speaker.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../data/models/activities.dart';
+import '../data/models/person.dart';
 
 final routes = GoRouter(
 
@@ -20,9 +23,12 @@ final routes = GoRouter(
           return Activity(items: items);
         },
       ),
-      // GoRoute(
-      //     path: '/palestrante',
-      //     builder: (context, state) => const Activity()
-      // ),
+      GoRoute(
+        path: '/palestrantes',
+        builder: (BuildContext context, GoRouterState state) {
+          final speaker = state.extra as Person;
+          return Speaker(speaker: speaker,);
+        },
+      )
     ]
 );

@@ -1,5 +1,6 @@
 import 'package:chuva_dart/Activity/components/add_button.dart';
 import 'package:chuva_dart/Activity/components/info.dart';
+import 'package:chuva_dart/Activity/components/list_role.dart';
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,8 +42,10 @@ class _ActivityState extends State<Activity> {
   }
   String extractTextFromHtml(String htmlString) {
     html.Document document = parse(htmlString);
-    html.Element? paragraph = document.querySelector('p');
-    return paragraph?.text ?? '';
+    List<html.Element> paragraphs = document.querySelectorAll('p');
+    String allText = paragraphs.map((paragraph) => paragraph.text).join('\n\n');
+
+    return allText;
   }
 
   @override
@@ -54,6 +57,7 @@ class _ActivityState extends State<Activity> {
           child: AppBarCalendar()
       ),
       body: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
           Row(
             children: [
@@ -82,19 +86,19 @@ class _ActivityState extends State<Activity> {
             ),
           ),
           Info(formattedTime: formattedTime, activities: activities,),
-          const   SizedBox(height: 10,),
-          AddButton(),
-          Flexible(
-            flex: 2,
-            child: Container(
-              alignment: AlignmentDirectional.center,
-              padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
-              child: Text(
-                descriptionText,
-                textAlign: TextAlign.start,
-              ),
+          const SizedBox(height: 10,),
+          const AddButton(),
+          Container(
+            alignment: AlignmentDirectional.center,
+            padding: const EdgeInsetsDirectional.symmetric(horizontal: 10,vertical: 40),
+            child: Text(
+              descriptionText,
+              textAlign: TextAlign.start,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
+          // Spacer(),
+          ListRole(activities: activities),
         ],
       ),
     );
