@@ -29,14 +29,24 @@ class ChuvaDart extends StatelessWidget {
           headlineLarge: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
+            height: 1
           ),
           bodyMedium: TextStyle(
-            fontSize: 12, // Tamanho da fonte
-            fontWeight: FontWeight.w500, // Peso da fonte
-            color: Colors.black, // Cor do texto
-            // fontFamily: 'Serif',
-          )
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+            color: Colors.black,
+
+          ),
+          headlineMedium: TextStyle(
+            fontSize: 27,
+            height: 1.1
+          ),
+          headlineSmall: TextStyle(
+            fontWeight: FontWeight.w300,
+            fontSize: 22
+          ),
         ),
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),

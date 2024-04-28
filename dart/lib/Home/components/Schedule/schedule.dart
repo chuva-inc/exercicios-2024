@@ -35,7 +35,8 @@ class _ScheduleState extends State<Schedule> {
             itemCount: widget.activitiesStore.filterActivitiesByDay(widget.day).length,
             itemBuilder: (_, index) {
               final items = widget.activitiesStore.filterActivitiesByDay(widget.day).elementAt(index);
-              return ScheduleItems(items: items);
+              // print(widget.activitiesStore.state.value.map((e) => e.id));
+              return ScheduleItems(items: items, activities: widget.activitiesStore.state.value,);
             },
           );
         }

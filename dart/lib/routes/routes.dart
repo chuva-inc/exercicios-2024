@@ -6,9 +6,6 @@ import 'package:chuva_dart/Speaker/speaker.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../data/models/activities.dart';
-import '../data/models/person.dart';
-
 final routes = GoRouter(
 
     routes: [
@@ -19,15 +16,15 @@ final routes = GoRouter(
       GoRoute(
           path: '/activities',
         builder: (BuildContext context, GoRouterState state) {
-          final items = state.extra as Activities;
-          return Activity(items: items);
+          final items = state.extra as Activity;
+          return Activity(items: items.items, activities: items.activities,);
         },
       ),
       GoRoute(
         path: '/palestrantes',
         builder: (BuildContext context, GoRouterState state) {
-          final speaker = state.extra as Person;
-          return Speaker(speaker: speaker,);
+          final speaker = state.extra as Speaker;
+          return Speaker(speaker: speaker.speaker, activities: speaker.activities, listActivities: speaker.listActivities,);
         },
       )
     ]

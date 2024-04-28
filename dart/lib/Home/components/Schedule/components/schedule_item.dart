@@ -1,15 +1,16 @@
 
+import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:chuva_dart/data/models/person.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 class ScheduleItems extends StatelessWidget {
-  const ScheduleItems({super.key, required this.items});
+  const ScheduleItems({super.key, required this.items, required this.activities});
   final Activities items;
+  final List<Activities> activities;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class ScheduleItems extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: InkWell(
               onTap: () {
-                context.push('/activities', extra: items);
+                context.push('/activities', extra: Activity(items: items, activities: activities));
               },
               child: Ink(
                 padding: const EdgeInsets.only(left: 0),
