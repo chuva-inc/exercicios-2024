@@ -8,12 +8,15 @@ import 'package:html/dom.dart' as html;
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:html/parser.dart' show parse;
+import 'package:provider/provider.dart';
 import '../data/models/activities.dart';
+import '../data/repositories/activities_repository.dart';
 
 class Activity extends StatefulWidget {
   const Activity({super.key, required this.items, required this.activities});
   final Activities items;
   final List<Activities> activities;
+
 
   @override
   State<Activity> createState() => _ActivityState();
@@ -49,6 +52,7 @@ class _ActivityState extends State<Activity> {
 
   @override
   Widget build(BuildContext context) {
+
     String descriptionText = extractTextFromHtml(activities.description!.ptBr!);
     return Scaffold(
       appBar: const PreferredSize(
@@ -85,26 +89,19 @@ class _ActivityState extends State<Activity> {
           ),
           Info(formattedTime: formattedTime, activities: activities,),
           const SizedBox(height: 10,),
-          const AddButton(),
-          // SizedBox(height: 10,),
+          AddButton(activitie: activities),
+          const SizedBox(height: 10,),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Container(
-                    alignment: AlignmentDirectional.center,
-                    padding: const EdgeInsetsDirectional.symmetric(horizontal: 10, ),
-                    child: Text(
-                      descriptionText,
-                      textAlign: TextAlign.start,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ),
+            child: SingleChildScrollView(
+              child: Container(
+                alignment: AlignmentDirectional.center,
+                padding: const EdgeInsetsDirectional.symmetric(horizontal: 10, ),
+                child: Text(
+                  descriptionText,
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
-                // SizedBox(height: 20,),
-
-              ],
+              ),
             ),
           ),
           Flexible(

@@ -33,7 +33,7 @@ class _ListRoleState extends State<ListRole> {
     List<Activities> matchedActivities = [];
     for (var activity in widget.listActivities) {
       for (var person in activity.people) {
-        if (people.any((p) => p.id == person.id) && !uniqueActivityIds.contains(activity.id)) {
+        if (people.any((p) => p.name == person.name) && !uniqueActivityIds.contains(activity.id)) {
           matchedActivities.add(activity);
           uniqueActivityIds.add(activity.id);
           break;

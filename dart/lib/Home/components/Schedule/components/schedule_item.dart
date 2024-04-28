@@ -2,18 +2,28 @@
 import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:chuva_dart/data/models/person.dart';
+import 'package:chuva_dart/data/repositories/activities_repository.dart';
+
 import 'package:flutter/material.dart';
+
 import 'package:from_css_color/from_css_color.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class ScheduleItems extends StatelessWidget {
   const ScheduleItems({super.key, required this.items, required this.activities});
   final Activities items;
   final List<Activities> activities;
 
+
+
+
   @override
   Widget build(BuildContext context) {
+    ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();
+    bool isActivityFavorite = activitiesRepository.favorites.any((fav) => fav.id == items.id);
+
     return Column(
       children: [
         Padding(
@@ -50,34 +60,45 @@ class ScheduleItems extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
-                      child: ListTile(
-                        minVerticalPadding: 10,
-                        subtitle: Container(
-                          alignment: AlignmentDirectional.centerStart,
-                          child: Text(
-                            formataPalestrantes(items.people),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: ListTile(
+                              minVerticalPadding: 10,
+                              subtitle: Container(
+                                alignment: AlignmentDirectional.centerStart,
+                                child: Text(
+                                  formataPalestrantes(items.people),
+                                ),
+                              ),
+                              title: Column(
+                                children: [
+                                  Container(
+                                    alignment: AlignmentDirectional.centerStart,
+                                    child: Text(
+                                      "${items.type.title.ptBr} de ${fomataData(items.start!, items.end!)}",
+                                      style: Theme.of(context).textTheme.labelLarge,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: AlignmentDirectional.centerStart,
+                                    child: Text("${items.title?.ptBr}",
+                                      style: Theme.of(context).textTheme.titleLarge,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                        title: Column(
-                          children: [
-                            Container(
-                              alignment: AlignmentDirectional.centerStart,
-                              child: Text(
-                                "${items.type.title.ptBr} de ${fomataData(items.start!, items.end!)}",
-                                style: Theme.of(context).textTheme.labelLarge,
-                              ),
-                            ),
-                            Container(
-                              alignment: AlignmentDirectional.centerStart,
-                              child: Text("${items.title?.ptBr}",
-                                style: Theme.of(context).textTheme.titleLarge,
-                              ),
-                            ),
-                            // Text("${items.}")
-                          ],
-                        ),
+                        ],
                       ),
                     ),
+                    if (isActivityFavorite) // Condição para exibir o ícone de bookmark.
+                      Positioned(
+                        right: 0,
+                        top: 0,
+                        child: Icon(Icons.bookmark, color: fromCssColor("#7c90ac")),
+                      ),
                   ],
                 ),
               ),
@@ -87,6 +108,7 @@ class ScheduleItems extends StatelessWidget {
       ],
     );
   }
+
 
   String formataPalestrantes(List<Person> people){
     return people.map((person) => person.name).join(", ");

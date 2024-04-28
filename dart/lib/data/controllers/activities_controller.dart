@@ -1,11 +1,13 @@
-import 'package:chuva_dart/Home/service/activities_service.dart';
+
 import 'package:chuva_dart/data/models/activities.dart';
+import 'package:chuva_dart/data/service/activities_service.dart';
 
 
 abstract class IActivitiesController{
   Future<List<Activities>> getActivities();
   List<Activities> filterActivitiesByDay(int day);
   bool isEmpty();
+  void toggleFavorite(int id);
 }
 
 class ActivitiesController implements IActivitiesController{
@@ -24,6 +26,11 @@ class ActivitiesController implements IActivitiesController{
   @override
   bool isEmpty(){
     return activitiesService.isEmpty();
+  }
+
+  @override
+  void toggleFavorite(int id){
+    activitiesService.toggleFavorite(id);
   }
 
 

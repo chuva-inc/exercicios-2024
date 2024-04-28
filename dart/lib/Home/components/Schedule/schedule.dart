@@ -1,7 +1,6 @@
 
 
 import 'package:chuva_dart/Home/components/Schedule/components/schedule_item.dart';
-import 'package:chuva_dart/Home/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/stores/activities_store.dart';
 import 'package:flutter/material.dart';
 

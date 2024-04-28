@@ -1,4 +1,5 @@
-import 'package:chuva_dart/Home/controllers/activities_controller.dart';
+
+import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/exceptions/exceptions.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:flutter/cupertino.dart';

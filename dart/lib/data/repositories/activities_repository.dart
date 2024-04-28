@@ -60,11 +60,11 @@ class ActivitiesRepository extends ChangeNotifier {
   }
 
   toggleFavorite(int id) async {
-    var index = _activities.indexWhere((activity) => activity.id == id);
-    if (index != -1) {
-      _activities[index].favorite = !_activities[index].favorite!;
-      await box.put(id, _activities[index]);
-      notifyListeners();
-    }
+    bool isCurrentlyFavorite = _favoritesMap[id] ?? false;
+    _favoritesMap[id] = !isCurrentlyFavorite;
+    var activity = await box.get(id) as Activities;
+    activity.favorite = _favoritesMap[id];
+    await box.put(id, activity);
+    notifyListeners();
   }
 }

@@ -1,13 +1,13 @@
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
 import 'package:chuva_dart/Home/components/Schedule/schedule.dart';
 import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
+import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/shared/button_app_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../data/stores/activities_store.dart';
-import '../controllers/activities_controller.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({super.key});
