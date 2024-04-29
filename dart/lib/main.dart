@@ -3,11 +3,16 @@ import 'package:chuva_dart/data/repositories/activities_repository.dart';
 import 'package:chuva_dart/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
+
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await HiveConfig.start();
+  try {
+    await HiveConfig.start();
+  } catch (e) {
+    print('Error initializing Hive: $e');
+  }
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
       create: (context) => ActivitiesRepository(),

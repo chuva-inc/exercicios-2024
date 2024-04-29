@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'dart:collection';
 
+import 'package:path_provider/path_provider.dart';
+
 class ActivitiesRepository extends ChangeNotifier {
   final List<Activities> _activities = [];
   final Map<int, bool> _favoritesMap = {};
-  late LazyBox box;
+  LazyBox? box;
 
   static final ActivitiesRepository _singleton = ActivitiesRepository._internal();
 
@@ -31,13 +33,15 @@ class ActivitiesRepository extends ChangeNotifier {
 
   _openBoxActivities() async {
     Hive.registerAdapter(ActivitiesHiveAdapter());
+    final appDocumentDir = await getApplicationDocumentsDirectory();
+    Hive.init(appDocumentDir.path);
     box = await Hive.openLazyBox<Activities>('Activities');
   }
 
   _readActivities() async {
-    final keys = box.keys.toList();
-    for (var key in keys) {
-      Activities act = await box.get(key);
+    final keys = box?.keys.toList();
+    for (var key in keys!) {
+      Activities act = await box?.get(key);
       _activities.add(act);
       _favoritesMap[act.id] = act.favorite!;
       notifyListeners();
@@ -49,7 +53,7 @@ class ActivitiesRepository extends ChangeNotifier {
       if (!_activities.any((atual) => atual.id == activity.id)) {
         _activities.add(activity);
         _favoritesMap[activity.id] = activity.favorite!;
-        await box.put(activity.id, activity);
+        await box?.put(activity.id, activity);
       }
     });
     notifyListeners();
@@ -62,9 +66,9 @@ class ActivitiesRepository extends ChangeNotifier {
   toggleFavorite(int id) async {
     bool isCurrentlyFavorite = _favoritesMap[id] ?? false;
     _favoritesMap[id] = !isCurrentlyFavorite;
-    var activity = await box.get(id) as Activities;
+    var activity = await box?.get(id) as Activities;
     activity.favorite = _favoritesMap[id];
-    await box.put(id, activity);
+    await box?.put(id, activity);
     notifyListeners();
   }
 }

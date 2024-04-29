@@ -153,12 +153,15 @@ class _SpeakerState extends State<Speaker> {
               separatorBuilder: (context, index) => Container(height: 3),
               itemCount: widget.listActivities.length,
               itemBuilder: (_, index) {
-               return ScheduleItems(items: widget.listActivities[index], activities: widget.listActivities,);
+               return ScheduleItems(items: widget.listActivities[index], activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${fomataData(widget.activities.start!)} até ${fomataData(widget.activities.end!)}",);
               },
             ),
           )
         ],
       ),
     );
+  }
+  String fomataData(String data){
+    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
 }

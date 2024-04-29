@@ -2,16 +2,23 @@
 import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/Home/pages/calendar.dart';
 import 'package:chuva_dart/Speaker/speaker.dart';
+import 'package:chuva_dart/data/repositories/activities_repository.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 final routes = GoRouter(
-
     routes: [
       GoRoute(
-          path: '/',
-        builder: (context, state) => const Calendar(),
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          Provider.debugCheckInvalidValueType = null;
+          return Provider<ActivitiesRepository>(
+            create: (context) => ActivitiesRepository(),
+            child: Calendar(),
+          );
+        },
       ),
       GoRoute(
           path: '/activities',

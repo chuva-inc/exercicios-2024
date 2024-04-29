@@ -1,4 +1,3 @@
-
 import 'package:chuva_dart/Activity/activity.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:chuva_dart/data/models/person.dart';
@@ -12,9 +11,10 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class ScheduleItems extends StatelessWidget {
-  const ScheduleItems({super.key, required this.items, required this.activities});
+  const ScheduleItems({super.key, required this.items, required this.activities, required this.data});
   final Activities items;
   final List<Activities> activities;
+  final String data;
 
 
 
@@ -76,7 +76,7 @@ class ScheduleItems extends StatelessWidget {
                                   Container(
                                     alignment: AlignmentDirectional.centerStart,
                                     child: Text(
-                                      "${items.type.title.ptBr} de ${fomataData(items.start!, items.end!)}",
+                                      data,
                                       style: Theme.of(context).textTheme.labelLarge,
                                     ),
                                   ),
@@ -93,7 +93,7 @@ class ScheduleItems extends StatelessWidget {
                         ],
                       ),
                     ),
-                    if (isActivityFavorite) // Condição para exibir o ícone de bookmark.
+                    if (isActivityFavorite)
                       Positioned(
                         right: 0,
                         top: 0,
@@ -114,9 +114,9 @@ class ScheduleItems extends StatelessWidget {
     return people.map((person) => person.name).join(", ");
   }
 
-  String fomataData(String start, String end){
-    String startTimeLocal = DateFormat.Hm().format(DateTime.parse(start).toUtc().subtract(const Duration(hours: 3)));
-    String endTimeLocal = DateFormat.Hm().format(DateTime.parse(end).toUtc().subtract(const Duration(hours: 3)));
-    return '$startTimeLocal até $endTimeLocal';
+  String fomataData(String data){
+    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
+
+
   }
 }
