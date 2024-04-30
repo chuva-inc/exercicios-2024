@@ -1,5 +1,5 @@
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
-import 'package:chuva_dart/Home/components/Schedule/schedule.dart';
+import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
 import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
 import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/repositories/activities_repository.dart';
@@ -11,7 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/stores/activities_store.dart';
-import '../components/Schedule/components/schedule_item.dart';
+
 
 class Calendar extends StatefulWidget {
   const Calendar({super.key});

@@ -26,7 +26,7 @@ void main() {
       expect(find.text('Palestra de 09:30 até 10:00'), findsNothing);
       await expectLater(
         find.byType(Calendar),
-        matchesGoldenFile('../screenshots/CalendarPage-Day26.png'),
+        matchesGoldenFile('../screenshots/CalencddarPage-Day26.png'),
       );
 
       // Tap on the '28'.

@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
+import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../Home/components/Schedule/components/schedule_item.dart';
 import '../data/models/activities.dart';
 import '../data/models/person.dart';
 
