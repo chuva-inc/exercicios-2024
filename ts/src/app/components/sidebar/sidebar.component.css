@@ -31,11 +31,9 @@
   a{
     color: #725C5C;
     text-decoration: none;
-    height: 1rem auto;
     padding: 7px 24px ;
     border-bottom: solid 2px #E7E7E7;
     transition: 0.2s ease-in all;
-
     font-family: 'Quicksand', sans-serif;
     font-size: 0.938rem;
     font-weight: 500;
