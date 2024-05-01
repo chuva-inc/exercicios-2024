@@ -26,8 +26,11 @@ class Scrapper
         $nodes = $xpath->query('//a[contains(@class, "paper-card")]');
 
         foreach ($nodes as $node) {
-            $id = basename($node->getAttribute('href')); // Extrair o ID do link
-            $title = $node->getElementsByTagName('h4')->item(0)->nodeValue; // Extrair o título
+            // Extrair o ID do link
+            $id = basename($node->getAttribute('href'));
+
+            // Extrair o título
+            $title = $node->getElementsByTagName('h4')->item(0)->nodeValue;
 
             // Extrair os autores e suas instituições
             $authors = [];
@@ -67,7 +70,7 @@ class Scrapper
 class Main
 {
     /**
-     * Main runner, instantiates a Scrapper and runs.
+     * Main runner: Executa o programa principal, instanciando um Scrapper e executando-o.
      */
     public static function run(): void
     {
@@ -77,9 +80,9 @@ class Main
         $scrapper = new Scrapper();
         $data = $scrapper->scrap($dom);
 
-        // Criar uma planilha Excel utilizando Spout com nome personalizado
+        // Criar uma planilha Excel utilizando Spout 
         $writer = WriterEntityFactory::createXLSXWriter();
-        $writer->openToFile(__DIR__ . '/tabeladados.xlsx'); // Nome do arquivo personalizado
+        $writer->openToFile(__DIR__ . '/tabeladados.xlsx');
 
         // Definir estilos para as colunas
         $headerStyle = (new StyleBuilder())
