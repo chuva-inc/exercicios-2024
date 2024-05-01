@@ -3,7 +3,7 @@
         'name' => 'chuva-inc/exercicios-2023',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'c10d12b78eaa91dffa24fcced0334b03bda692b4',
+        'reference' => '46577cf5187f433430e411df28374f3f5a05a0bf',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'chuva-inc/exercicios-2023' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'c10d12b78eaa91dffa24fcced0334b03bda692b4',
+            'reference' => '46577cf5187f433430e411df28374f3f5a05a0bf',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -40,7 +40,7 @@
         'drupal/coder' => array(
             'pretty_version' => '8.3.x-dev',
             'version' => '8.3.9999999.9999999-dev',
-            'reference' => '496c1301961ffecc129db3d4327a5ee63c51eb34',
+            'reference' => '1a59890f972db5da091354f0191dec1037f7c582',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../drupal/coder',
             'aliases' => array(),
@@ -58,7 +58,7 @@
         'nikic/php-parser' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '46be4560c4cd4bab2b74882c0da39a4548a5cfbe',
+            'reference' => 'c5ee33df86c06b3278c670f64273b1ba768a0744',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nikic/php-parser',
             'aliases' => array(
@@ -152,7 +152,7 @@
         'phpunit/phpunit' => array(
             'pretty_version' => '10.5.x-dev',
             'version' => '10.5.9999999.9999999-dev',
-            'reference' => '835df1709ac6c968ba34bf23f3c30e5d5a266de8',
+            'reference' => '7a07c2f50ac63b039a9dcee132e8b61682d5dd68',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
@@ -305,7 +305,7 @@
         'sirbrillig/phpcs-variable-analysis' => array(
             'pretty_version' => '2.x-dev',
             'version' => '2.9999999.9999999.9999999-dev',
-            'reference' => 'ca242a0b7309e0f9d1f73b236e04ecf4ca3248d0',
+            'reference' => 'bb070b8f0fbccaa789e59c81f7a2212f0a7d5052',
             'type' => 'phpcodesniffer-standard',
             'install_path' => __DIR__ . '/../sirbrillig/phpcs-variable-analysis',
             'aliases' => array(),
@@ -325,7 +325,7 @@
         'squizlabs/php_codesniffer' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '30b3148b302aaba28d72bdb2432b144ff9d47751',
+            'reference' => '7aceb913e56be7eba19fef66b536d0bce4c63718',
             'type' => 'library',
             'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
             'aliases' => array(
@@ -347,7 +347,7 @@
         'symfony/polyfill-ctype' => array(
             'pretty_version' => '1.x-dev',
             'version' => '1.9999999.9999999.9999999-dev',
-            'reference' => 'ef4d7e442ca910c4764bce785146269b30cb5fc4',
+            'reference' => 'c9e59dec962d38cf2e0e4c61c4a1a1312f4dd7fe',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
             'aliases' => array(),
@@ -356,7 +356,7 @@
         'symfony/yaml' => array(
             'pretty_version' => '6.4.x-dev',
             'version' => '6.4.9999999.9999999-dev',
-            'reference' => 'd75715985f0f94f978e3a8fa42533e10db921b90',
+            'reference' => '53e8b1ef30a65f78eac60fddc5ee7ebbbdb1dee0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),
