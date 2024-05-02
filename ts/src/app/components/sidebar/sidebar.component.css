@@ -1,18 +1,6 @@
-.sidebar {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  width: 13.75em;
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  height: 100%;
-  left: 0px;
-
-}
-
 .header-sidebar {
   background: linear-gradient(to right, #ffb354 0%, #ee7a3a 100%);
-  height: 68px;
+  height: 4.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
