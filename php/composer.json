@@ -14,9 +14,10 @@
         "webscrapping": "php -r \"require 'vendor/autoload.php'; Chuva\\Php\\WebScrapping\\Main::run();\""
     },
     "require": {
-        "openspout/openspout": "^3.4",
+        "openspout/openspout": "^4",
         "psalm/phar": "^4.7",
-        "drupal/coder": "8.3.x-dev"
+        "drupal/coder": "8.3.x-dev",
+        "symfony/yaml": "^6.4"
     },
     "config": {
         "allow-plugins": {
