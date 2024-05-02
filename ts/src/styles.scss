@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~academicons/css/academicons.min.css";
+html, body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+    // background-color: black;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+

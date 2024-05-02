@@ -1,0 +1,44 @@
+.sidenav {
+    height: 100%;
+    width: 220px;
+    background-color: #ffffff;
+    border-color: #fac7a5;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 0px 10px 0px #00000040;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+
+.sidenav-header {
+    align-content: center;
+    height: 68px;
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+
+}
+
+
+.title {
+    font-weight: 600;
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+}
+.sidenav-logo-event {
+    width: 60%;
+}
+.logo {
+    width: 220px;
+}
+.btn {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #acacac;
+}

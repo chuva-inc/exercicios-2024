@@ -1,0 +1,28 @@
+.header-container {
+    align-items: center;
+    background-color: #FDF1EB;
+    width: 1145px;
+    height: 68px;
+    color: black;
+    display: flex;
+}
+.header-content {
+    padding-left: 30px;
+    height: 68px;
+
+    .texto-1 {
+        font-size: 1em;
+        margin: 1px;
+    }
+    .texto-2 {
+        font-size: 1.4em;
+        margin: 1px;
+    }
+    .texto-3 {
+        font-size: 1em;
+        margin: 1px;
+    }
+}
+.spacer {
+    padding-left: 10rem;
+}

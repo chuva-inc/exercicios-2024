@@ -1,0 +1,190 @@
+<app-header></app-header>
+<div class="container">
+    <div class="content-container">
+        <h2 class="title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos,
+            do
+            município de Campinas/SP </h2>  
+        <div class="video-player">
+            <p class="video-title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </p>
+            <p class="video-autora">Beatriz Christiane Melo</p>
+            <p class="video-creditos">FCA / Universidade Estadual de Campinas</p>
+            <div class="video-foto">
+                <img class="foto" src="assets\videoFoto.png" alt="foto">
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="spacer"></div>
+    <div class="content-actions">
+        <button class="btn-download">
+            <i class="fas fa-download" style="font-size: 1.3em;"></i>
+            Download</button>
+        <button class="btn-favorite">
+            <i class="fas fa-star" style="font-size: 1.3em;"></i>
+        </button>
+        <button class="btn-doi">
+            <i class="ai ai-doi" style="font-size: 1.3em;"></i>
+        </button>
+        <div class="citacao">COMO CITAR ESSE TRABALHO?</div>
+        <div class="detalhes-container">
+            <p class="detalhes-title">Detalhes</p>
+            <p type="text" class="detalhes-texto">{{textoDestalhes}}</p>
+        </div>
+    </div>
+</div>
+<div class="resumo-container">
+    <h3 class="resumo-title">Resumo</h3>
+    <div class="expandable-container">
+        <p class="content">
+            {{textoResumo}}
+            <span id="pontos">...</span>
+            <span id="mais">{{textoResumo}}</span>
+            <button class="btn-show-more" align="center" (click)="showMore()">{{btnShowMore}}</button>
+        </p>
+
+    </div>
+</div>
+<div class="discussao-container">
+    <h3 class="discussao-title">Discussões</h3>
+    <div class="discussao-content" *ngIf="this.openForm == 0">
+        <p class="discussao-subtitle">
+            Compartilhe suas ideias ou dúvidas com os autores!
+        </p>
+        <div class="discussao-icons">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <p class="discussao-legenda">
+            Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
+            questionamentos
+            ou sugestões para o autor!
+        </p>
+        <div class="discussao-divisoria"></div>
+        <button class="btn-create-topic" (click)="criarTopico()">
+            <i class="fas fa-plus" style="font-size: 1.3em;"></i>
+            criar tópico
+        </button>
+    </div>
+
+    <form class="form" *ngIf="this.openForm == 1">
+        <h3 class="subtitle">
+            Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+        </h3>
+        <div class="body">
+            <p class="assunto">Assunto</p>
+            <input class="subject" type="text" placeholder="Defina um tópico sucinto para notificar os autores...">
+            <p class="label-content">Conteúdo</p>
+            <div class="text-box">
+                <div class="btn-container">
+                    <button class="submit" (click)="submit()">Enviar</button>
+                </div>
+            </div>
+            <div class="discussao-divisoria"></div>
+        </div>
+    </form>
+
+    <div class="topico-submit-container" *ngIf="this.openForm == 2">
+        <p class="title">
+            Seu tópico foi enviado com sucesso! :D
+        </p>
+        <p class="content">
+            Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for
+            respondido!
+        </p>
+        <p class="mais-trabalhos">
+            Descubra outros trabalhos!
+        </p>
+        <div class="discussao-divisoria"></div>
+        <button class="btn-novo-topico" (click)="criarNovoTopico()">criar novo tópico</button>
+
+        <!-- <div class="sobreposto">
+            <i id="icone-sobreposto" class="fas fa-check-double" style="font-size: 1.3em;"></i>
+            <p>Aguardando feedback dos autores</p>
+        </div> -->
+
+        <div class="card-topico-aguardando">
+            <div class="header">
+                <p class="assunto">Assunto da pergunta aparece aqui</p>
+                <p class="contribuinte">Carlos Henrique Santos</p>
+            </div>
+            <div class="body">
+                <p class="content">
+                    Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e
+                    impacto
+                    de
+                    processo formativo situado impacto de processo formativo processo...
+                </p>
+            </div>
+            <div class="footer">
+                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
+                <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+                <span class="contador-likes">1 like</span>
+                <span class="contador-respostas">1 reposta</span>
+            </div>
+        </div>
+    </div>
+    <div class="sobreposto" *ngIf="this.openForm == 2">
+            <i id="icone-sobreposto" class="fas fa-check-double" style="font-size: 1.3em;"></i>
+            <p>Aguardando feedback dos autores</p>
+            <p class="editar-topico">
+                Editar tópico
+            </p>
+        </div>
+
+    <div class="card-topico">
+        <div class="header">
+            <p class="assunto">Assunto da pergunta aparece aqui</p>
+            <p class="contribuinte">Carlos Henrique Santos</p>
+        </div>
+        <div class="body">
+            <p class="content">
+                Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto
+                de
+                processo formativo situado impacto de processo formativo processo...
+            </p>
+        </div>
+        <div class="footer">
+            <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
+            <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+            <span class="contador-likes">1 like</span>
+            <span class="contador-respostas">1 reposta</span>
+        </div>
+    </div>
+
+    <div (click)="showComentarios()">
+        <div class="answered-topic">
+            <div class="header">
+                <p class="ops-topic-subject">Assunto da pergunta aparece aqui</p>
+                <p class="contribuinte">Carlos Henrique Santos</p>
+            </div>
+            <div class="body">
+                <p class="content">
+                    Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e
+                    impacto de
+                    processo formativo situado impacto de processo formativo processo...
+                </p>
+            </div>
+            <div class="footer">
+                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
+                <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+                <span class="contador-likes">1 like</span>
+                <span class="contador-respostas">1 reposta</span>
+            </div>
+        </div>
+        <div class="comments-container" [hidden]="!this.mostrarComentarios" *ngFor="let comentario of comentarios"
+            [ngStyle]="{ 'background-color': comentario.relevancia ? '#eeeeee' : 'white' }">
+            <div class="header">
+                <p class="contribuinte">{{comentario.contribuiente}}</p>
+                <div id="relevancia" class="relevancia" *ngIf="this.showRelevancia(comentario.relevancia)">
+                    {{this.comentario.relevancia}}
+                    <i class="fas fa-check-double" style="font-size: 1.3em;"></i>
+                </div>
+            </div>
+            <div class="body">
+                <p class="content">{{comentario.texto}}</p>
+            </div>
+        </div>
+    </div>
+</div>
