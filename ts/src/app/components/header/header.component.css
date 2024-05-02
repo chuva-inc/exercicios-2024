@@ -1,0 +1,80 @@
+.header-container {
+  background-color: #fdf1eb;
+  height: 4.25rem;
+  padding: 0 2.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    color: #725c5c;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+}
+
+.title-header {
+  padding-top: 5px;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  gap: 20px;
+
+  select {
+    height: 34px;
+    width: 97px;
+    background: url("../../../assets/language-image.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-family: "Quicksand";
+    font-weight: 400;
+    size: 14px;
+    color: #333333;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    gap: 8px;
+  }
+
+  .avatar-container {
+    position: relative;
+    display: inline-block;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("../../../assets/woman-photo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .badge {
+    background-color: #F85959;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+
+  }
+}
