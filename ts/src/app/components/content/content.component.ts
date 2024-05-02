@@ -46,7 +46,6 @@ export class ContentComponent {
   ];
   
   constructor(private textos:Textos){
-    this.textoDestalhes = this.textos.detalhes;
     this.textoResumo = this.textos.resumo;
   }
 
@@ -60,7 +59,7 @@ export class ContentComponent {
     }else{
       this.pontos.style.display = "none";
       this.maisTexto.style.display = "inline";
-      this.btnShowMore = "ver menos"
+      this.btnShowMore = ""
     }
   }
   public showComentarios(){

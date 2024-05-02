@@ -3,45 +3,72 @@
     <div class="content-container">
         <h2 class="title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos,
             do
-            município de Campinas/SP </h2>  
+            município de Campinas/SP </h2>
         <div class="video-player">
-            <p class="video-title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </p>
+            <p class="video-title">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e
+                15 anos, do município de Campinas/SP </p>
             <p class="video-autora">Beatriz Christiane Melo</p>
             <p class="video-creditos">FCA / Universidade Estadual de Campinas</p>
             <div class="video-foto">
                 <img class="foto" src="assets\videoFoto.png" alt="foto">
             </div>
-            <a href=""></a>
         </div>
-        
+
     </div>
 
     <div class="spacer"></div>
     <div class="content-actions">
-        <button class="btn-download">
-            <i class="fas fa-download" style="font-size: 1.3em;"></i>
-            Download</button>
-        <button class="btn-favorite">
-            <i class="fas fa-star" style="font-size: 1.3em;"></i>
-        </button>
-        <button class="btn-doi">
-            <i class="ai ai-doi" style="font-size: 1.3em;"></i>
-        </button>
+        <div class="content-buttons">
+            <div class="btn-download">
+                <i class="fas fa-download" style="font-size: 1.3em;"></i>
+                Download</div>
+            <div class="btn-favorite">
+                <i class="fas fa-star" style="font-size: 1.3em;"></i>
+            </div>
+            <div class="btn-doi">
+                <i class="ai ai-doi" style="font-size: 1.3em;"></i>
+            </div>
+        </div>
+        
+
         <div class="citacao">COMO CITAR ESSE TRABALHO?</div>
+
         <div class="detalhes-container">
             <p class="detalhes-title">Detalhes</p>
-            <p type="text" class="detalhes-texto">{{textoDestalhes}}</p>
+            <div class="detalhes-texto">
+                <p class="p1" type="text">
+                    Tipo de Apresentação: <strong>Pôster</strong><br>
+                    Eixo temático: <strong>Alimentação e saúde (AS)</strong><br>
+                    Palavras-chaves: <strong>Alimentos funcionais, alimentação escolar.</strong><br>
+                </p>
+                <p class="p2" type="text">
+                    <strong>Autores: </strong><br>
+                    Galileo Galilei¹<br>
+                    Berta Lange de Morretes²<br>
+                    Isaac Newton³<br>
+                    Cesar Lattes¹<br>
+                    Stephen Hawking⁴<br>
+                </p>
+                <p class="p3" type="text">
+                    ¹Universidade Estadual de Campinas\n
+                    ²Universidade de São Paulo\n
+                    ³Instituto Nacional de Pesquisas Espaciais\n
+                    ⁴Universidade Federal do Rio de Janeiro`;
+                </p>
+            </div>
+
         </div>
     </div>
+
 </div>
 <div class="resumo-container">
     <h3 class="resumo-title">Resumo</h3>
-    <div class="expandable-container">
+    <div class="expandable-container" (click)="showMore()">
         <p class="content">
             {{textoResumo}}
             <span id="pontos">...</span>
             <span id="mais">{{textoResumo}}</span>
-            <button class="btn-show-more" align="center" (click)="showMore()">{{btnShowMore}}</button>
+            <span class="btn-show-more">{{btnShowMore}}</span>
         </p>
 
     </div>
@@ -53,9 +80,29 @@
             Compartilhe suas ideias ou dúvidas com os autores!
         </p>
         <div class="discussao-icons">
-            <i></i>
-            <i></i>
-            <i></i>
+            <div class="icon1">
+                <img class="mancha" src="assets\Vector\icon1\mancha.png" alt="mancha">
+                <img class="punho" src="assets\Vector\icon1\punho.png" alt="punho">
+                <img class="mao" src="assets\Vector\icon1\mao.png" alt="mao">
+                <img class="broto" src="assets\Vector\icon1\broto.png" alt="broto">
+            </div>
+            <div class="icon2">
+                <img class="mancha" src="assets\Vector\icon2\mancha.png" alt="mancha">
+                <img class="Q" src="assets\Vector\icon2\Q.png" alt="Q">
+                <img class="Qinterior" src="assets\Vector\icon2\Qinterior.png" alt="Qinterior">
+                <img class="A" src="assets\Vector\icon2\A.png" alt="A">
+                <img class="Ainterior" src="assets\Vector\icon2\Ainterior.png" alt="Ainterior">
+
+            </div>
+            <div class="icon3">
+                <img class="mancha" src="assets\Vector\icon3\mancha.png" alt="mancha">
+                <img class="lampadaCima" src="assets\Vector\icon3\lampadaCima.png" alt="lampadaCima">
+                <img class="lampadaBaixo" src="assets\Vector\icon3\lampadaBaixo.png" alt="lampadaBaixo">
+                <img class="cabeca1" src="assets\Vector\icon3\cabeca1.png" alt="cabeca1">
+                <img class="corpo1" src="assets\Vector\icon3\corpo1.png" alt="corpo1">
+                <img class="cabeca2" src="assets\Vector\icon3\cabeca2.png" alt="cabeca2">
+                <img class="corpo2" src="assets\Vector\icon3\corpo2.png" alt="corpo2">
+            </div>
         </div>
         <p class="discussao-legenda">
             Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus
@@ -100,11 +147,6 @@
         <div class="discussao-divisoria"></div>
         <button class="btn-novo-topico" (click)="criarNovoTopico()">criar novo tópico</button>
 
-        <!-- <div class="sobreposto">
-            <i id="icone-sobreposto" class="fas fa-check-double" style="font-size: 1.3em;"></i>
-            <p>Aguardando feedback dos autores</p>
-        </div> -->
-
         <div class="card-topico-aguardando">
             <div class="header">
                 <p class="assunto">Assunto da pergunta aparece aqui</p>
@@ -119,20 +161,21 @@
                 </p>
             </div>
             <div class="footer">
-                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
-                <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1em;"></i>
+                <div class="btn-favoritar"><i class="fas fa-heart"></i></div>
                 <span class="contador-likes">1 like</span>
                 <span class="contador-respostas">1 reposta</span>
             </div>
         </div>
     </div>
+    
     <div class="sobreposto" *ngIf="this.openForm == 2">
-            <i id="icone-sobreposto" class="fas fa-check-double" style="font-size: 1.3em;"></i>
-            <p>Aguardando feedback dos autores</p>
-            <p class="editar-topico">
-                Editar tópico
-            </p>
-        </div>
+        <i id="icone-sobreposto" class="fas fa-check-double" style="font-size: 1.3em;"></i>
+        <p>Aguardando feedback dos autores</p>
+        <p class="editar-topico">
+            Editar tópico
+        </p>
+    </div>
 
     <div class="card-topico">
         <div class="header">
@@ -147,8 +190,8 @@
             </p>
         </div>
         <div class="footer">
-            <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
-            <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+            <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1em;"></i>
+            <div class="btn-favoritar"><i class="fas fa-heart"></i></div>
             <span class="contador-likes">1 like</span>
             <span class="contador-respostas">1 reposta</span>
         </div>
@@ -168,8 +211,8 @@
                 </p>
             </div>
             <div class="footer">
-                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1.3em;"></i>
-                <button class="btn-favoritar"><i class="fas fa-heart"></i></button>
+                <i id="more-options-icon" class="fas fa-ellipsis-vertical" style="font-size: 1em;"></i>
+                <div class="btn-favoritar"><i class="fas fa-heart"></i></div>
                 <span class="contador-likes">1 like</span>
                 <span class="contador-respostas">1 reposta</span>
             </div>
