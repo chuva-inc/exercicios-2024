@@ -8,6 +8,7 @@ abstract class IActivitiesController{
   List<Activities> filterActivitiesByDay(int day);
   bool isEmpty();
   void toggleFavorite(int id);
+
 }
 
 class ActivitiesController implements IActivitiesController{
@@ -32,6 +33,7 @@ class ActivitiesController implements IActivitiesController{
   void toggleFavorite(int id){
     activitiesService.toggleFavorite(id);
   }
+
 
 
 }

@@ -34,4 +34,5 @@ class ActivitiesStore{
   List<Activities> filterActivitiesByDay(day){
     return controller.filterActivitiesByDay(day);
   }
+
 }

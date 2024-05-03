@@ -116,7 +116,5 @@ class ScheduleItems extends StatelessWidget {
 
   String fomataData(String data){
     return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
-
-
   }
 }

@@ -61,12 +61,32 @@ class ActivitiesService implements IActivitiesService {
       throw Exception("Não foi possível carregar as activities");
     }
   }
-
   void _addActivitiesToRepo(Map<String, dynamic> dataMap) {
     final dataList = dataMap['data'] as List;
     final List<Activities> fetchedActivities = dataList.map((dataItem) => Activities.fromJson(dataItem)).toList();
-    repository.saveAll(fetchedActivities);
-    activities = repository.activities;
+
+    Map<int, List<Activities>> groupedActivities = _groupActivitiesByParent(fetchedActivities);
+
+    for (var parentId in groupedActivities.keys) {
+      activities.addAll(groupedActivities[parentId]!);
+    }
+
+    repository.saveAll(activities);
+  }
+
+  Map<int, List<Activities>> _groupActivitiesByParent(List<Activities> activitiesList) {
+    Map<int, List<Activities>> groupedActivities = {};
+
+    for (var activity in activitiesList) {
+      if (activity.parent != null) {
+        if (!groupedActivities.containsKey(activity.parent)) {
+          groupedActivities[activity.parent!] = [];
+        }
+        groupedActivities[activity.parent!]!.add(activity);
+      }
+    }
+
+    return groupedActivities;
   }
 
   @override

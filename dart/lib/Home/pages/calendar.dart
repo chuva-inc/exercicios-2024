@@ -10,11 +10,8 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-
+import '../../data/models/activities.dart';
 import '../../data/stores/activities_store.dart';
-
-
-
 
 class Calendar extends StatefulWidget {
   const Calendar({super.key});
@@ -37,7 +34,6 @@ class _CalendarState extends State<Calendar>
     activitiesStore = ActivitiesStore(
         controller: ActivitiesController(), day: _currentDate.day);
     _activitiesLoader = activitiesStore.getActivities();
-
   }
 
   @override
@@ -48,7 +44,8 @@ class _CalendarState extends State<Calendar>
 
   @override
   Widget build(BuildContext context) {
-    ActivitiesRepository activitiesRepository = Provider.of<ActivitiesRepository>(context);
+    ActivitiesRepository activitiesRepository =
+        Provider.of<ActivitiesRepository>(context);
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: PreferredSize(
@@ -58,16 +55,22 @@ class _CalendarState extends State<Calendar>
             elevation: 10,
             leading: GoRouter.of(context).canPop()
                 ? IconButton(
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-              onPressed: () => GoRouter.of(context).pop(),
-            )
+                    icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                    onPressed: () => GoRouter.of(context).pop(),
+                  )
                 : const Icon(Icons.arrow_back_ios, color: Colors.white),
             centerTitle: true,
             title: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Chuva 💜 Flutter", style: TextStyle(color: Colors.white),),
-                Text("Programação", style: TextStyle(color: Colors.white),)
+                Text(
+                  "Chuva 💜 Flutter",
+                  style: TextStyle(color: Colors.white),
+                ),
+                Text(
+                  "Programação",
+                  style: TextStyle(color: Colors.white),
+                )
               ],
             ),
             bottom: const PreferredSize(
@@ -100,7 +103,7 @@ class _CalendarState extends State<Calendar>
               ),
               Expanded(
                 child: Container(
-                  // width: 200,
+                    // width: 200,
                     color: Theme.of(context).tabBarTheme.labelColor,
                     child: Tab_Bar(
                       currentDate: _currentDate,
@@ -114,26 +117,42 @@ class _CalendarState extends State<Calendar>
               controller: _tabController,
               children: List.generate(5, (index) {
                 int day = _currentDate.day + index;
-                return
-                  FutureBuilder(
-                    future: _activitiesLoader,
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
-                      } else if (snapshot.hasError) {
-                        return const Text('Erro ao carregar as atividades');
-                      } else {
-                        return ListView.separated(
-                          separatorBuilder: (context, index) => Container(height: 3),
-                          itemCount: activitiesStore.filterActivitiesByDay(day).length,
-                          itemBuilder: (_, index) {
-                            final items = activitiesStore.filterActivitiesByDay(day).elementAt(index);
-                            return ScheduleItems(items: items, activities: activitiesStore.filterActivitiesByDay(day), data:"${items.type.title.ptBr} de ${fomataData(items.start!)} até ${fomataData(items.end!)}" );
-                          },
-                        );
-                      }
-                    },
-                  );
+                return FutureBuilder(
+                  future: _activitiesLoader,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    } else if (snapshot.hasError) {
+                      return const Center(
+                          child: Text('Erro ao carregar as atividades'));
+                    } else if (snapshot.data == null ||
+                        activitiesStore.filterActivitiesByDay(day).isEmpty) {
+                      return const Center(
+                          child: Text(
+                              'Nenhuma atividade encontrada para este dia'));
+                    } else {
+
+                      return ListView.separated(
+                        separatorBuilder: (context, index) =>
+                            Container(height: 3),
+                        itemCount:
+                            activitiesStore.filterActivitiesByDay(day).length,
+                        itemBuilder: (_, index) {
+                          final items = activitiesStore
+                              .filterActivitiesByDay(day)
+                              .elementAt(index);
+                          return
+                            ScheduleItems(
+                                items: items,
+                                activities:
+                                    activitiesStore.filterActivitiesByDay(day),
+                                data:
+                                    "${items.type.title.ptBr} de ${fomataData(items.start!)} até ${fomataData(items.end!)}");
+                        },
+                      );
+                    }
+                  },
+                );
               }),
             ),
           )
@@ -141,7 +160,9 @@ class _CalendarState extends State<Calendar>
       ),
     );
   }
-  String fomataData(String data){
-    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
+
+  String fomataData(String data) {
+    return DateFormat.Hm().format(
+        DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
 }
