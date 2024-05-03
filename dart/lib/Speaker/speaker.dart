@@ -161,9 +161,10 @@ class _SpeakerState extends State<Speaker> {
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) => Container(height: 3),
-              itemCount: widget.listActivities.length,
+              itemCount: filteraActivitiesByDay(widget.listActivities,speaker.name!).length,
               itemBuilder: (_, index) {
-               return ScheduleItems(items: widget.listActivities[index], activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${fomataData(widget.activities.start!)} até ${fomataData(widget.activities.end!)}",);
+                final item = filteraActivitiesByDay(widget.listActivities,speaker.name!)[index];
+               return ScheduleItems(items: item, activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${fomataData(widget.activities.start!)} até ${fomataData(widget.activities.end!)}",);
               },
             ),
           )
@@ -171,6 +172,11 @@ class _SpeakerState extends State<Speaker> {
       ),
     );
   }
+
+  List<Activities> filteraActivitiesByDay(List<Activities> activities, String speaker){
+    return activities.where((activitie) => activitie.people.any((person) => person.name == speaker)).toList();
+  }
+
   String fomataData(String data){
     return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
