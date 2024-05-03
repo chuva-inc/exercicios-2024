@@ -93,6 +93,16 @@ class _SpeakerState extends State<Speaker> {
                     imageUrl: "${speaker.picture}",
                     placeholder: (context, url) =>
                         const CircularProgressIndicator(),
+                    imageBuilder: (context, imageProvider) {
+                      return Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: imageProvider,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      );
+                    },
                     errorWidget: (context, url, error) => ClipRRect(
                       borderRadius: BorderRadius.circular(50),
                       child: Container(

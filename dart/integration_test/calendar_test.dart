@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:chuva_dart/Home/pages/calendar.dart';
 import 'package:chuva_dart/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +29,7 @@ void main() {
       expect(find.text('Palestra de 09:30 até 10:00'), findsNothing);
       await expectLater(
         find.byType(Calendar),
-        matchesGoldenFile('../screenshots/CalencddarPage-Day26.png'),
+        matchesGoldenFile('../screenshots/CalendarPage-Day26.png'),
       );
 
       // Tap on the '28'.
