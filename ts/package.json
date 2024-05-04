@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "bootstrap": "^5.3.3",
     "cypress-visual-regression": "^3.0.0",
     "rxjs": "~7.5.0",
     "start-server-and-test": "^2.0.1",

@@ -1,7 +1,20 @@
 <!-- Toolbar -->
-<div class="menu-lateral" role="banner">
-  <div class="slaca">
-    <h1>{{ title }}</h1>
+<div class="layout">
+  <div class="side-menu" role="banner">
+    <div class="slaca">
+      <h1>{{ title }}</h1>
+    </div>
+    <img src="../assets/13-slaca.png" alt="" />
+    <div class="side-menu-container">
+      <div
+        class="side-menu-item"
+        *ngFor="let menu of arrayOptions; let i = index"
+        (click)="selectItem(i)"
+        [class.selected]="i === selectedItem"
+      >
+        <span>{{ menu }}</span>
+      </div>
+    </div>
   </div>
-  <img src="../assets/13-slaca.jpg" alt="" />
+  <div class="content-area" role="main"></div>
 </div>

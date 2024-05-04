@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SLACA 2019';
+  arrayOptions = [
+    'Apresentação',
+    'Comitês',
+    'Autores',
+    'Eixos temáticos',
+    'Trabalhos',
+    'Contato',
+  ];
+
+  selectedItem: number | null = null; // selectedItem pode ser um number ou null
+
+  selectItem(index: number) {
+    this.selectedItem = index;
+  }
 }
