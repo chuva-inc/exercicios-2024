@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'SLACA 2019';
+  titleSideMenu = 'SLACA 2019';
   arrayOptions = [
     'Apresentação',
     'Comitês',
@@ -15,6 +15,11 @@ export class AppComponent {
     'Trabalhos',
     'Contato',
   ];
+  firstTitleHeader =
+    'Anais do Simpósio Latino Americano de Ciências de Alimentos';
+  titleHeader =
+    'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos';
+  issn = '2526-4806';
 
   selectedItem: number | null = null; // selectedItem pode ser um number ou null
 

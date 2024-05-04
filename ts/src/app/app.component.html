@@ -2,7 +2,7 @@
 <div class="layout">
   <div class="side-menu" role="banner">
     <div class="slaca">
-      <h1>{{ title }}</h1>
+      <h1>{{ titleSideMenu }}</h1>
     </div>
     <img src="../assets/13-slaca.png" alt="" />
     <div class="side-menu-container">
@@ -16,5 +16,32 @@
       </div>
     </div>
   </div>
-  <div class="content-area" role="main"></div>
+  <div class="content-area" role="main">
+    <div class="header">
+      <div class="header-content">
+        <div class="header-titles">
+          <span>{{ firstTitleHeader }}</span>
+          <h2>
+            {{ titleHeader }}
+          </h2>
+          <span>ISSN: {{ issn }}</span>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
