@@ -20,6 +20,7 @@ export class AppComponent {
   titleHeader =
     'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos';
   issn = '2526-4806';
+  languages = ['PT, BR', 'EN, US', 'ES, ES'];
 
   selectedItem: number | null = null; // selectedItem pode ser um number ou null
 

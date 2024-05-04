@@ -26,20 +26,13 @@
           </h2>
           <span>ISSN: {{ issn }}</span>
         </div>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <div class="select-language">
+          <select>
+            <option selected>Selecione uma opção</option>
+            <option *ngFor="let language of languages" [value]="language">
+              {{ language }}
+            </option>
+          </select>
         </div>
       </div>
     </div>
