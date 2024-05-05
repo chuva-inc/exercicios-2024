@@ -31,7 +31,7 @@
       </div>
       <div class="container-user-data-language">
         <div class="select-language">
-          <i class="fa-solid fa-user"></i>
+          <fa-icon [icon]="faCoffee"></fa-icon>
           <select (change)="selectLanguage($any($event.target).value)">
             <option *ngFor="let language of languages" [value]="language.id">
               {{ language.label }}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  faCoffee = faGlobe;
   titleSideMenu = 'SLACA 2019';
   optionsSideMenu = [
     { id: 1, label: 'Apresentação' },
