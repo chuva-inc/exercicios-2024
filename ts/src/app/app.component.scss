@@ -2,6 +2,8 @@
   color: #725c5c;
 }
 
+$padding-page: 44px;
+
 .layout {
   display: flex;
   height: 100vh;
@@ -65,9 +67,13 @@
   overflow-y: auto;
 }
 
+.spacePage {
+  padding-inline-start: 44px;
+}
+
 .header {
   height: 68px;
-  padding-inline-start: 44px;
+  padding-inline-start: $padding-page;
   display: flex;
   background-color: #fdf1eb;
   align-items: center;
@@ -96,7 +102,7 @@
 }
 
 .container-user-data-language {
-  padding-inline-end: 44px;
+  padding-inline-end: $padding-page;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -165,4 +171,15 @@
 .notification span {
   color: white;
   font-weight: bold;
+}
+
+.container-page {
+  padding-inline-start: $padding-page;
+  padding-inline-end: $padding-page;
+  padding-block-start: 22px;
+  padding-block-end: 22px;
+}
+
+.container-page h2 {
+  color: #ed7839;
 }
