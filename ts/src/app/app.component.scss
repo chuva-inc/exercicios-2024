@@ -100,19 +100,28 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 60px;
+  height: 48px;
 }
 
 .select-language {
-  background-color: red;
   border: 2px solid #cccccc;
   border-radius: 5px;
-  width: 100px;
+  width: 120px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 50px;
+}
+
+.select-language i {
+  margin-right: 5px;
+}
+
+.select-language select {
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 .user-data {

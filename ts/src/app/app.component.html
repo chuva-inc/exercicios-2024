@@ -8,11 +8,11 @@
     <div class="side-menu-container">
       <div
         class="side-menu-item"
-        *ngFor="let menu of arrayOptions; let i = index"
-        (click)="selectItem(i)"
-        [class.selected]="i === selectedItem"
+        *ngFor="let option of optionsSideMenu; let i = index"
+        (click)="selectItemMenu(i + 1)"
+        [class.selected]="selectedItemMenu === i + 1"
       >
-        <span>{{ menu }}</span>
+        <span>{{ option.label }}</span>
       </div>
     </div>
   </div>
@@ -20,9 +20,9 @@
     <div class="header">
       <div class="header-content">
         <div class="header-titles">
-          <span>{{ firstTitleHeader }}</span>
+          <span>{{ titleData["firstTitleHeader"] }}</span>
           <h2>
-            {{ titleHeader }}
+            {{ titleData["titleHeader"] }}
           </h2>
           <span>ISSN: {{ issn }}</span>
         </div>
@@ -30,9 +30,9 @@
       <div class="container-user-data-language">
         <div class="select-language">
           <i class="fa-solid fa-globe"></i>
-          <select>
-            <option *ngFor="let language of languages" [value]="language">
-              {{ language }}
+          <select (change)="selectLanguage($any($event.target).value)">
+            <option *ngFor="let language of languages" [value]="language.id">
+              {{ language.label }}
             </option>
           </select>
         </div>

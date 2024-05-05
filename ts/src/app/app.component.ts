@@ -7,31 +7,47 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titleSideMenu = 'SLACA 2019';
-  arrayOptions = [
-    'Apresentação',
-    'Comitês',
-    'Autores',
-    'Eixos temáticos',
-    'Trabalhos',
-    'Contato',
+  optionsSideMenu = [
+    { id: 1, label: 'Apresentação' },
+    { id: 2, label: 'Comitês' },
+    { id: 3, label: 'Autores' },
+    { id: 4, label: 'Eixos temáticos' },
+    { id: 5, label: 'Trabalhos' },
+    { id: 6, label: 'Contato' },
   ];
-  firstTitleHeader =
-    'Anais do Simpósio Latino Americano de Ciências de Alimentos';
-  titleHeader =
-    'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos';
+  titleData = {
+    firstTitleHeader:
+      'Anais do Simpósio Latino Americano de Ciências de Alimentos',
+    titleHeader:
+      'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos',
+  };
   issn = '2526-4806';
-  languages = ['PT, BR', 'EN, US', 'ES, ES'];
+  languages = [
+    { id: 1, label: 'PT, BR' },
+    { id: 2, label: 'EN, US' },
+    { id: 3, label: 'ES, ES' },
+  ];
   emailUser = 'alguem12@galoascience.com';
   notificationNoRead = 0;
-  selectedItem: number | null = null;
+  selectedItemMenu = 0;
+  selectedLanguages = 1;
+
   ngOnInit() {
-    this.receiveNotification();
-  }
-  selectItem(index: number) {
-    this.selectedItem = index;
+    this.notificationNumber();
+    this.selectedItemMenu = 5;
   }
 
-  receiveNotification(notification: number = 2) {
+  selectLanguage(itemId: number) {
+    this.selectedLanguages = itemId;
+  }
+
+  selectItemMenu(itemId: number) {
+    this.selectedItemMenu = itemId;
+  }
+
+  notificationNumber(notification: number = 2) {
     this.notificationNoRead += notification;
   }
+
+  findData() {}
 }
