@@ -26,13 +26,24 @@
           </h2>
           <span>ISSN: {{ issn }}</span>
         </div>
+      </div>
+      <div class="container-user-data-language">
         <div class="select-language">
           <select>
-            <option selected>Selecione uma opção</option>
             <option *ngFor="let language of languages" [value]="language">
               {{ language }}
             </option>
           </select>
+        </div>
+        <div class="user-data">
+          <span>Bem vindo!</span>
+          <span>{{ emailUser }}</span>
+        </div>
+        <div class="user-photo">
+          <img src="../assets/user-photo.jpeg" />
+          <div class="notification">
+            <span>{{ notificationNoRead }}</span>
+          </div>
         </div>
       </div>
     </div>

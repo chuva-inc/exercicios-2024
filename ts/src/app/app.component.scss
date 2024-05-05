@@ -1,5 +1,5 @@
 * {
-  color: #333;
+  color: #725c5c;
 }
 
 .layout {
@@ -15,7 +15,7 @@
 }
 
 .slaca {
-  padding: 20px;
+  height: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,9 +66,12 @@
 }
 
 .header {
-  display: flex;
+  height: 68px;
   padding-inline-start: 44px;
+  display: flex;
   background-color: #fdf1eb;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-content {
@@ -80,19 +83,77 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 20px;
 }
 
 .header-titles h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.header-titles span {
+  font-size: 14px;
+}
+
+.container-user-data-language {
+  padding-inline-end: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
 }
 
 .select-language {
   background-color: red;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
   width: 100px;
-  height: 40px;
-  margin-left: 20px;
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.user-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.user-photo img {
+  border-radius: 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.notification {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  background-color: #f85959;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notification span {
+  color: white;
+  font-weight: bold;
 }

@@ -21,10 +21,17 @@ export class AppComponent {
     'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos';
   issn = '2526-4806';
   languages = ['PT, BR', 'EN, US', 'ES, ES'];
-
-  selectedItem: number | null = null; // selectedItem pode ser um number ou null
-
+  emailUser = 'alguem12@galoascience.com';
+  notificationNoRead = 0;
+  selectedItem: number | null = null;
+  ngOnInit() {
+    this.receiveNotification();
+  }
   selectItem(index: number) {
     this.selectedItem = index;
+  }
+
+  receiveNotification(notification: number = 2) {
+    this.notificationNoRead += notification;
   }
 }
