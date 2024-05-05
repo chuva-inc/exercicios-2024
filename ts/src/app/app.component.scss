@@ -1,8 +1,14 @@
 * {
-  color: #725c5c;
+  color: #5c5c5c;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
 }
-
 $padding-page: 44px;
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
 
 .layout {
   display: flex;
@@ -14,6 +20,12 @@ $padding-page: 44px;
   height: 100%;
   position: fixed;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu img {
+  margin-top: 20px;
+  width: 220px;
+  height: 220px;
 }
 
 .slaca {
@@ -49,10 +61,9 @@ $padding-page: 44px;
 }
 
 .side-menu-item span {
-  font-size: medium;
-  margin-left: 20px;
   display: flex;
   align-items: flex-end;
+  padding: 0px 0px 0px 24px;
 }
 
 .selected {
@@ -93,12 +104,13 @@ $padding-page: 44px;
 
 .header-titles h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .header-titles span {
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .container-user-data-language {
@@ -106,7 +118,7 @@ $padding-page: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 48px;
+  height: 34px;
 }
 
 .select-language {
@@ -125,9 +137,11 @@ $padding-page: 44px;
 }
 
 .select-language select {
+  font-size: 12px;
   border: none;
   background-color: transparent;
   outline: none;
+  color: #333333;
 }
 
 .user-data {
@@ -173,13 +187,29 @@ $padding-page: 44px;
   font-weight: bold;
 }
 
-.container-page {
+.content-page {
   padding-inline-start: $padding-page;
   padding-inline-end: $padding-page;
   padding-block-start: 22px;
   padding-block-end: 22px;
 }
 
-.container-page h2 {
+.container-titulo-citacao {
+  display: flex;
+  flex-direction: row;
+}
+
+.titulo-imagem {
+  width: 1200px;
+  height: 784px;
+  // background-color: red;
+}
+
+.titulo-imagem h2 {
   color: #ed7839;
+  margin-bottom: 25px;
+}
+
+.citacao {
+  width: 20px;
 }

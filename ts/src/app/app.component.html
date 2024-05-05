@@ -4,15 +4,17 @@
     <div class="slaca">
       <h1>{{ titleSideMenu }}</h1>
     </div>
-    <img src="../assets/13-slaca.png" alt="" />
-    <div class="side-menu-container">
-      <div
-        class="side-menu-item"
-        *ngFor="let option of optionsSideMenu; let i = index"
-        (click)="selectItemMenu(i + 1)"
-        [class.selected]="selectedItemMenu === i + 1"
-      >
-        <span>{{ option.label }}</span>
+    <div>
+      <img src="../assets/13-slaca.png" alt="" />
+      <div class="side-menu-container">
+        <div
+          class="side-menu-item"
+          *ngFor="let option of optionsSideMenu; let i = index"
+          (click)="selectItemMenu(i + 1)"
+          [class.selected]="selectedItemMenu === i + 1"
+        >
+          <span>{{ option.label }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -29,7 +31,7 @@
       </div>
       <div class="container-user-data-language">
         <div class="select-language">
-          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-user"></i>
           <select (change)="selectLanguage($any($event.target).value)">
             <option *ngFor="let language of languages" [value]="language.id">
               {{ language.label }}
@@ -48,8 +50,14 @@
         </div>
       </div>
     </div>
-    <div class="container-page">
-      <h2>{{ titlePage }}</h2>
+    <div class="content-page">
+      <div class="container-titulo-citacao">
+        <div class="titulo-imagem">
+          <h2>{{ titlePage }}</h2>
+          <img src="../assets/video-image.png" />
+        </div>
+        <div class="citacao"></div>
+      </div>
     </div>
   </div>
 </div>
