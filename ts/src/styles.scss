@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('./assets/fontes/roboto/Roboto-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'roboto-ligth';
+    src: url('./assets/fontes/roboto/Roboto-Light.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'quicksand-medium';
+    src: url('./assets/fontes/quicksand/static/Quicksand-Medium.ttf');
+}
+
+
+body{
+    margin: 0;
+}

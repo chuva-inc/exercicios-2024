@@ -1,0 +1,64 @@
+.header{
+    width: 100%;
+    background-color:#FDF1EB ;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+        h1,h3{
+            margin:0;
+            font-family: 'roboto-ligth';
+            color: #725C5C;
+            
+        }
+    
+        h3{
+            font-size: 14px;
+        }
+    
+        h1{
+            font-size: 22px;
+        }
+    }
+
+    &__drop{
+        select{
+            background: none;
+            width:97px;
+            height: 34px;
+            text-align: center;
+        }
+
+        select > option{
+            background-image: url('../../assets/globo (1).png');
+        }
+    }
+
+    &__user{
+        display: flex;
+        align-items: center;
+
+        p{
+            margin: 0;
+            margin-right: 5px;
+            text-align: right;
+            font-family: 'quicksand-medium';
+        
+        }
+
+        &__text__bv{
+            font-size: 14px;
+        }
+
+        &__text__email{
+            font-size: 12px;
+        }
+
+    }
+}
