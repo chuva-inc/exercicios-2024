@@ -4,7 +4,11 @@
   font-size: 15px;
   font-weight: 500;
 }
+
 $padding-page: 44px;
+$font-roboto: "Roboto", sans-serif;
+$font-quicksand: "Quicksand", sans-serif;
+$orange-color: #ed7839;
 
 h1 {
   font-family: "Roboto", sans-serif;
@@ -186,7 +190,7 @@ h1 {
 }
 
 .notification span {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-roboto;
   font-size: 10px;
   color: white;
   font-weight: bold;
@@ -196,26 +200,95 @@ h1 {
   padding: 22px $padding-page 0 $padding-page;
 }
 
-.container-titulo-citacao {
+.container-row-title-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.title-page {
+  // background-color: red;
+  width: 810px;
+
+  h2 {
+    font-family: $font-roboto;
+    font-size: 20px;
+    font-weight: 900;
+    color: $orange-color;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-right: 100px;
+  }
+}
+
+.container-action-buttons {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightblue;
+  align-items: flex-end;
+
+  span {
+    font-family: $font-roboto;
+    font-size: 14px;
+    color: $orange-color;
+  }
+}
+
+.action-buttons {
   display: flex;
   flex-direction: row;
 }
-
-.container-titulo-imagem {
-  width: 808px;
-  height: 786px;
-  margin-right: 50px;
+.icon-white {
+  color: white;
 }
 
-.container-titulo-imagem h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 900;
-  color: #ed7839;
-  line-height: 25px;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
-  padding-right: 100px;
+.button-large {
+  width: 120px;
+  height: 31px;
+  background-color: $orange-color;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-family: $font-roboto;
+    color: #ffffff;
+    size: 16px;
+    font-weight: 500px;
+    line-height: 18px;
+    margin-left: 5px;
+  }
+}
+
+.button-small {
+  width: 43px;
+  height: 31px;
+  background-color: $orange-color;
+  border-radius: 4px;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-doi {
+  width: 19px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 .imagem-video {
@@ -296,7 +369,7 @@ h1 {
 }
 
 .content-imagem-text h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-roboto;
   font-size: 34px;
   line-height: 25px;
   font-weight: 900;
@@ -305,7 +378,7 @@ h1 {
 }
 
 .content-imagem-text h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-roboto;
   font-size: 24px;
   line-height: 25px;
   font-weight: 900;
@@ -314,7 +387,7 @@ h1 {
 }
 
 .content-imagem-text h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-roboto;
   font-size: 20px;
   line-height: 25px;
   font-weight: 900;
@@ -326,9 +399,4 @@ h1 {
   background-color: red;
   width: 100%;
   height: 100%;
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: row;
 }

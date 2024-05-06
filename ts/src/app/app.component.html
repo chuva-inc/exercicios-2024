@@ -31,7 +31,7 @@
       </div>
       <div class="container-user-data-language">
         <div class="select-language">
-          <fa-icon [icon]="faCoffee"></fa-icon>
+          <fa-icon [icon]="faGlobe"></fa-icon>
           <select (change)="selectLanguage($any($event.target).value)">
             <option *ngFor="let language of languages" [value]="language.id">
               {{ language.label }}
@@ -51,6 +51,35 @@
       </div>
     </div>
     <div class="content-page">
+      <div class="container-row-title-buttons">
+        <div class="title-page">
+          <h2>{{ titlePage }}</h2>
+        </div>
+        <fa-icon [icon]="faStarAndCrescent"></fa-icon>
+        <fa-icon [icon]="faStarHalf"></fa-icon>
+        <fa-icon [icon]="faStarHalfAlt"></fa-icon>
+        <fa-icon [icon]="faStarOfDavid"></fa-icon>
+        <fa-icon [icon]="faStarOfLife"></fa-icon>
+        <div class="container-action-buttons">
+          <div class="action-buttons">
+            <div class="button-large">
+              <fa-icon [icon]="faDownload" class="icon-white"></fa-icon>
+              <a>Download</a>
+            </div>
+            <div class="button-small">
+              <fa-icon [icon]="faStar" class="icon-white"></fa-icon>
+            </div>
+            <div class="button-small">
+              <div class="icon-doi">
+                <img src="../assets/doi-icon.png" />
+              </div>
+            </div>
+          </div>
+          <span>COMO CITAR ESSE TRABALHO?</span>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="content-page">
       <div class="container-titulo-citacao">
         <div class="container-titulo-imagem">
           <h2>{{ titlePage }}</h2>
@@ -73,11 +102,9 @@
           </div>
         </div>
         <div class="container-citacao">
-          <div class="action-buttons">
-            <!-- <button>asdasd</button> -->
-          </div>
+          <div class="action-buttons"></div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobe,
+  faDownload,
+  faStar,
+  faStarAndCrescent,
+  faStarHalf,
+  faStarHalfAlt,
+  faStarOfDavid,
+  faStarOfLife,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +16,15 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  faCoffee = faGlobe;
+  faGlobe = faGlobe;
+  faDownload = faDownload;
+  faStar = faStar;
+  faStarAndCrescent = faStarAndCrescent;
+  faStarHalf = faStarHalf;
+  faStarHalfAlt = faStarHalfAlt;
+  faStarOfDavid = faStarOfDavid;
+  faStarOfLife = faStarOfLife;
+
   titleSideMenu = 'SLACA 2019';
   optionsSideMenu = [
     { id: 1, label: 'Apresentação' },
