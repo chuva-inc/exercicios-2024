@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^0.11.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "~1.2.36",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "bootstrap": "^5.3.3",
     "cypress-visual-regression": "^3.0.0",

@@ -55,19 +55,21 @@
         <div class="title-page">
           <h2>{{ titlePage }}</h2>
         </div>
-        <fa-icon [icon]="faStarAndCrescent"></fa-icon>
-        <fa-icon [icon]="faStarHalf"></fa-icon>
-        <fa-icon [icon]="faStarHalfAlt"></fa-icon>
-        <fa-icon [icon]="faStarOfDavid"></fa-icon>
-        <fa-icon [icon]="faStarOfLife"></fa-icon>
+
         <div class="container-action-buttons">
           <div class="action-buttons">
             <div class="button-large">
               <fa-icon [icon]="faDownload" class="icon-white"></fa-icon>
-              <a>Download</a>
+              <span>Download</span>
             </div>
-            <div class="button-small">
-              <fa-icon [icon]="faStar" class="icon-white"></fa-icon>
+            <div
+              class="button-small"
+              (click)="handleFavoritarCitacao(!citacaoFavorita)"
+            >
+              <fa-icon
+                [icon]="citacaoFavorita ? faStar : faStarRegular"
+                class="icon-white"
+              ></fa-icon>
             </div>
             <div class="button-small">
               <div class="icon-doi">
@@ -75,7 +77,53 @@
               </div>
             </div>
           </div>
-          <span>COMO CITAR ESSE TRABALHO?</span>
+          <a>COMO CITAR ESSE TRABALHO?</a>
+        </div>
+      </div>
+
+      <div class="container-row-imagem-video-detalhes">
+        <div class="content-imagem-text">
+          <h2>{{ videoData.titleVideo }}</h2>
+          <div class="information-video">
+            <div class="information-video-border-image">
+              <img src="../assets/author-image.png" />
+            </div>
+            <div class="information-video-user-data">
+              <h1>{{ videoData.authorName }}</h1>
+              <h3>{{ videoData.authorLocalization }}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="imagem-wrapper">
+          <img src="../assets/video-image.png" />
+        </div>
+        <div class="container-detalhes-trabalho">
+          <div class="header-detalhes">
+            <h3>Detalhes</h3>
+          </div>
+          <div class="detalhes-content">
+            <div class="poster-content">
+              <span *ngFor="let detalhe of detalhesTrabalho">
+                {{ detalhe.label }} :
+                <span class="detalhes-response">{{ detalhe.response }}</span>
+              </span>
+            </div>
+            <div class="autores-content">
+              <span class="detalhes-response">Autores: </span>
+              <span *ngFor="let autor of autores"
+                >{{ autor.name }}
+                <span class="small-number">{{ autor.number }} </span>
+              </span>
+            </div>
+            <div class="universidade-content">
+              <span *ngFor="let universidade of universidades">
+                <span class="small-number">{{
+                  universidade.universidadeNumber
+                }}</span>
+                {{ universidade.universidadeName }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

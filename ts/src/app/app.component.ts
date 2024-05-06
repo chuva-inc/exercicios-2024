@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  faGlobe,
-  faDownload,
-  faStar,
-  faStarAndCrescent,
-  faStarHalf,
-  faStarHalfAlt,
-  faStarOfDavid,
-  faStarOfLife,
-} from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faDownload, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -19,11 +11,7 @@ export class AppComponent {
   faGlobe = faGlobe;
   faDownload = faDownload;
   faStar = faStar;
-  faStarAndCrescent = faStarAndCrescent;
-  faStarHalf = faStarHalf;
-  faStarHalfAlt = faStarHalfAlt;
-  faStarOfDavid = faStarOfDavid;
-  faStarOfLife = faStarOfLife;
+  faStarRegular = faStarRegular;
 
   titleSideMenu = 'SLACA 2019';
   optionsSideMenu = [
@@ -52,14 +40,80 @@ export class AppComponent {
   selectedLanguages = 1;
   titlePage =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ';
-
   videoData = {
     titleVideo:
       'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ',
     authorName: 'Beatriz Christiane Melo',
     authorLocalization: 'FCA / Universidade Estadual de Campinas',
   };
+  citacaoFavorita = true;
+  detalhesTrabalho = [
+    {
+      id: 1,
+      label: 'Tipo de Apresentação',
+      response: 'Pôster',
+    },
+    {
+      id: 2,
+      label: 'Eixo Temático',
+      response: 'Alimentação e saúde (AS)',
+    },
+    {
+      id: 3,
+      label: 'Palavras Chaves',
+      response: 'Alimentos funcionais, alimentação escolar',
+    },
+  ];
+  autores = [
+    {
+      id: 1,
+      name: 'Galileo Galilei',
+      number: 1,
+    },
+    {
+      id: 2,
+      name: 'Berta Lange de Morretes',
+      number: 2,
+    },
+    {
+      id: 3,
+      name: 'Isaac Newton',
+      number: 3,
+    },
+    {
+      id: 4,
+      name: 'Cesar Lattes',
+      number: 1,
+    },
+    {
+      id: 5,
+      name: 'Stephen Hawking',
+      number: 4,
+    },
+  ];
 
+  universidades = [
+    {
+      id: 1,
+      universidadeName: 'Universidade Estadual de Campinas',
+      universidadeNumber: 1,
+    },
+    {
+      id: 2,
+      universidadeName: 'Universidade de São Paulo',
+      universidadeNumber: 2,
+    },
+    {
+      id: 3,
+      universidadeName: 'Instituto Nacional de Pesquisas Espaciais',
+      universidadeNumber: 3,
+    },
+    {
+      id: 4,
+      universidadeName: 'Universidade Federal do Rio de Janeiro',
+      universidadeNumber: 4,
+    },
+  ];
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;
@@ -75,6 +129,10 @@ export class AppComponent {
 
   notificationNumber(notification: number = 2) {
     this.notificationNoRead += notification;
+  }
+
+  handleFavoritarCitacao(citacao: boolean) {
+    this.citacaoFavorita = !this.citacaoFavorita;
   }
 
   findData() {}
