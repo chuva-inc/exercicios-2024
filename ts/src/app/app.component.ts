@@ -36,6 +36,13 @@ export class AppComponent {
   titlePage =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ';
 
+  videoData = {
+    titleVideo:
+      'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ',
+    authorName: 'Beatriz Christiane Melo',
+    authorLocalization: 'FCA / Universidade Estadual de Campinas',
+  };
+
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;

@@ -52,11 +52,31 @@
     </div>
     <div class="content-page">
       <div class="container-titulo-citacao">
-        <div class="titulo-imagem">
+        <div class="container-titulo-imagem">
           <h2>{{ titlePage }}</h2>
-          <img src="../assets/video-image.png" />
+          <div class="imagem-video">
+            <div class="content-imagem-text">
+              <h2>{{ videoData.titleVideo }}</h2>
+              <div class="information-video">
+                <div class="information-video-border-image">
+                  <img src="../assets/author-image.png" />
+                </div>
+                <div class="information-video-user-data">
+                  <h1>{{ videoData.authorName }}</h1>
+                  <h3>{{ videoData.authorLocalization }}</h3>
+                </div>
+              </div>
+            </div>
+            <div class="imagem-wrapper">
+              <img src="../assets/video-image.png" />
+            </div>
+          </div>
         </div>
-        <div class="citacao"></div>
+        <div class="container-citacao">
+          <div class="action-buttons">
+            <!-- <button>asdasd</button> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
