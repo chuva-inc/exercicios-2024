@@ -1,0 +1,154 @@
+.create-comment{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.create-comment h3{
+  color: #ED7839;
+  font-family: 'Roboto';
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+}
+.create-comment p{
+  width: 600px;
+  text-align: center;
+  font-family: 'Quicksand';
+  font-size: medium;
+  font-weight: 400;
+  color: #595959;
+}
+.comments-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.comments-icons img{
+  width: 100px;
+  height: 100px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #E7E7E7;
+}
+
+.btn-topic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  min-width: 140px;
+  max-width: 200px;
+  height: 32px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.btn-create-topic{
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+  font-family: 'Quicksand';
+  font-size: medium;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-send-topic{
+  width: 205px;
+  height: 100%;
+}
+
+
+.form{
+  width: 100%;
+  margin: 10px;
+}
+.form p{
+  width: 100%;
+  font-family: 'Quicksand';
+  font-size: medium;
+  font-weight: 400;
+  text-align: center;
+  color: #5C5C5C;
+}
+.form .subject-box, .form-content{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.form-content{
+  width: calc(100% - 2%);;
+}
+
+.form h3{
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: large;
+  font-weight: 700;
+  text-align: left;
+  color: #ED7839;
+}
+.form input{
+  width: calc(100% - 2%);
+  height: 30px;
+  margin-top: 5px;
+  padding-left: 5px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+
+.form-content-text textarea{
+  width: calc(100% - 0.5%);
+  resize: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-bottom: 31px;
+}
+
+.form-bt{
+  margin-top: -35px;
+  z-index: 1;
+  margin-left: 1px;
+  width: calc(100% - 2px);
+  height: 31px;
+  border-radius: 4px;
+  background-color: #EAF1F2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.form-bt-background{
+  width: 100%;
+  height: 31px;
+  margin-right: -5px;
+  border-radius: 4px;
+  background-color: #EAF1F2;
+}
+
+
+.thanksdiv a{
+  width: 600px;
+  font-family: 'Quicksand';
+  font-size: medium;
+  font-weight: 500;
+  text-align: center;
+  color: #F48F44;
+  text-decoration: underline;
+}

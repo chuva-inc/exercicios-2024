@@ -1,0 +1,80 @@
+/*
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+*/
+*{
+  margin: 0;
+  padding: 0; 
+}
+.page{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.container{
+  position: absolute;
+  left: 220px;
+  top: 68px;
+}
+.content{
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 60px;
+  height: 100%;
+  padding-bottom: 10px;
+  /*background-color: #333333;*/
+}
+
+.content-header{
+  background-color: #FDF1EB;
+  color: #4E4E4E;
+  border: 1px solid #ECECEC;
+  padding-left: 10px;
+  font-family: 'Roboto';
+  font-size: x-large;
+  font-weight: 500;
+}
+.content-box{
+  border: 1px solid #ECECEC;
+  font-family: 'Quicksand';
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.texto {
+  /* Estilo do texto sobreposto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #707070;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  /* Define um contexto de empilhamento acima da div de censura */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.texto a{
+  color: #ED7839;
+  width: 110px;
+  position: absolute;
+  top: 90%;
+  left: 38%;
+  font-family: 'Segoe UI';
+  font-size: medium;
+  font-weight: 400;
+  line-height: 18.62px;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.answered-topic{}

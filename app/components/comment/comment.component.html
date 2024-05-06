@@ -1,0 +1,25 @@
+<div class="comment" [style.display]="comment_status.comment_display" [style.pointer-events]="comment_status.pointer_events">
+  <div class="comment-box" [style.background-color]="comment_status.bg_color" [style.filter]="comment_status.blur">
+    <div class="comment-box-header">
+      <h3 class="ops-topic-subject" (click)="showAnswears()">{{question_subject}}</h3>
+      <h4>{{owners_question}}</h4>
+    </div>
+    <p class="comment-question">{{question}}</p>
+    <div class="comment-footer">
+      <button  (click)="showAnswears()" class="see-more-bt">
+        <div class="t-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-dot"></div>
+      </button>
+      <button class="like-bt" (click)="giveLike()">
+        <span class="material-symbols-outlined">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          favorite
+        </span>
+      </button>
+      <p>{{num_likes}} Likes</p>
+      <p>{{num_answears}} Respostas</p>
+    </div>
+  </div>
+  <app-comment-answear class="" [style.display]="answearsDisplay"  *ngFor="let comment of commentsList" [comment]="comment"></app-comment-answear>
+</div>

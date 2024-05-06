@@ -1,0 +1,12 @@
+<div class=".comments-container">
+  <div class="comment-box" [ngStyle]="getStyle()" >
+    <div class="comment-box-header">
+      <h4>{{comment.owner}}</h4>
+      <div class="header-right-side">
+        <h3>{{comment.owner_status}}</h3>
+        <div>✔️</div>
+      </div>
+    </div>
+    <p class="comment-text">{{comment.text}}</p>
+  </div>
+</div>

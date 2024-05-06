@@ -1,0 +1,43 @@
+<div class="page">
+  <app-side-menu></app-side-menu>
+  <!-- HEADER ; CONTENT ; FOOTER  -->
+  <div>
+    <app-header></app-header>
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="content">
+        <!-- VIDEO AND DETAILS -->
+        <app-video-details></app-video-details>
+        <!-- RESUME -->
+        <app-summary></app-summary>
+        <!-- COMMENTS -->
+        <div class="content-box">
+          <div class="content-header">
+            <p>Discussões</p>
+          </div>
+          <!-- CREATE COMMENT -->
+          <app-create-comment></app-create-comment>
+          <!-- COMMENT -->
+          <div style="margin-top: 30px;">
+            <!--
+              Only reveals an already created comment when user sends a new one, to actually create would need some back-end logic
+            -->
+            <div style="position: relative;" *ngFor="let comment of commentList">
+              <div class="texto" [style.display]="comment.censorship_display">
+                Aguardando feedback dos autores
+                <a>Editar tópico</a>
+              </div>
+              <app-comment class="answered-topic" [comment_status]="comment"></app-comment>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <div>
+        <app-footer></app-footer>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,34 +1,46 @@
-# Exercícios
+# Página de Trabalho
+Na parte de html/scss/ts preparamos um [protótipo de alta fidelidade no figma](https://www.figma.com/proto/0D27YdXU8ibf0AhsBC2OEm/Chuva---Exerc%C3%ADcio-Frontend?page-id=0%3A1&type=design&node-id=1-123&viewport=404%2C346%2C0.24&t=qF57GDZnZJyE7F7q-1&scaling=scale-down&starting-point-node-id=1%3A123&show-proto-sidebar=1&mode=design) de uma tela para você implementar o HTML + CSS. Você pode fazer em CSS puro, utilizar pré-processadores CSS (SASS, LESS, etc), ou mesmo utilizar um framework (Bootstrap, Foundation, Ant, etc), utilize a ferramenta que você se sentir melhor e que lhe traga o melhor resultado.)
 
-Olá! Este repositório contém os exercícios de desenvolvimento da Chuva, você **deve** implementar pelo menos uma das tecnologias disponíveis, conforme sua preferência pessoal e aptidão.
+![Screenshot Figma](https://github.com/chuva-inc/exercicios-2023/raw/master/ts/src/assets/figma.jpg)
+-> [Link para o Protótipo](https://www.figma.com/proto/0D27YdXU8ibf0AhsBC2OEm/Chuva---Exerc%C3%ADcio-Frontend?page-id=0%3A1&type=design&node-id=1-123&viewport=404%2C346%2C0.24&t=qF57GDZnZJyE7F7q-1&scaling=scale-down&starting-point-node-id=1%3A123&show-proto-sidebar=1&mode=design)
 
-Só serão considerados para correção testes em que as verificações do Github Actions estejam passando (verdinhas).
+-> [Link para o Editável](https://www.figma.com/file/0D27YdXU8ibf0AhsBC2OEm/Chuva---Exerc%C3%ADcio-Frontend?type=design&node-id=0%3A1&mode=design&t=yAHAJDpJya32qSBU-1)
 
 
-# Tecnologias
-## Dart
-Nesse caso você deve implementar um protótipo de alta fidelidade no figma de uma tela para você implementar em Flutter, [veja detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/dart/).
+### Como rodar
 
-## PHP
-Em PHP você deve implementar o [GaloScrapper, veja os detalhes aqui](https://github.com/chuva-inc/exercicios-2023/tree/master/php/src/WebScrapping).
+Dependências:
 
-## Typescript + HTML + SCSS
-Nesse caso você deve implementar uma [página de trabalho](https://github.com/chuva-inc/exercicios-2023/tree/master/ts). Pra facilitar sua vida, nosso repositório já vem com pronto pra consumo, e mesmo que você não for familiar com o Angular ou Typescript, dá pra só colocar o html e o scss nos arquivos corretos, e vai funcionar (inclusive os testes automatizados vão passar).
+* Node/npm
+* Cypress
 
-# FAQ
-Ficou com alguma dúvida? Crie uma issue nesse repo com a sua dúvida :)
+Rode o seguinte comando para instalar o ambiente:
 
-## Posso resolver mais de um exercício?
-Sim, pode resolver em todos se quiser, e vamos levar todas as resoluções em consideração!
+```
+npm install
+```
 
-## Tenho que resolver todos os exercícios?
-Não, você pode resolver só um, dois, ou todos.
+Para rodar os testes, rode o seguinte comando:
 
-## Como entregar os exercícios?
+```
+npm run test
+```
 
-Para entregar os exercícios:
 
-1. Crie um fork **público** deste repositório.
-2. Enquanto programa sua solução, faça [commits atômicos](https://en.wikipedia.org/wiki/Atomic_commit).
-3. Quando estiver tudo passando nos testes, grave o vídeo explicando sua resolução.
-4. Nos envie o link do seu repositório pelo formulário que te enviamos.
+Para rodar desenvolver, rode os seguintes comandos:
+
+Para ligar o ambiente
+```
+ng serve
+```
+
+Para rodar a UI de testes
+```
+npx cypress open --env type=base
+```
+
+### Dicas de resolução
+
+Pra facilitar sua vida, nosso repositório já vem com pronto pra consumo, e mesmo que você não for familiar com o Angular ou Typescript, dá pra só colocar o html e o scss nos arquivos corretos, e vai funcionar (inclusive os testes automatizados vão passar).
+
+Não esqueca de commitar os screenshots que o cypress gera, utilizaremos eles na correção do exercício.
