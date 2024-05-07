@@ -39,7 +39,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #ee7b3a, #feb253);
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
 }
 
 .slaca h1 {
@@ -543,10 +543,6 @@ h1 {
 }
 
 .container-criar-topico {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   h2 {
     font-family: $font-roboto;
     font-size: 18px;
@@ -559,6 +555,14 @@ h1 {
     color: #595959;
     text-align: center;
   }
+}
+
+.container-nao-criando-topico {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .compartilhe-ideias {
@@ -592,11 +596,8 @@ h1 {
   position: absolute;
   width: 133px;
   height: 32px;
-  background: linear-gradient(to top, #ee7b3a, #feb253);
-  // box-shadow: 0px 2px 2px 0px #0000003d;
-
+  background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
   box-shadow: 0px 2px 2px 0px #0000003d, 0px 0px 2px 0px #0000001f;
-
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -614,10 +615,7 @@ h1 {
   }
 
   &:hover {
-    background-color: $orange-color-hover;
-    &:hover {
-      background: linear-gradient(to top, #feb253, #ee7b3a);
-    }
+    background: linear-gradient(180deg, #f0813d 0%, #feb254 100%);
   }
 }
 
@@ -669,7 +667,6 @@ h1 {
   height: 19px;
   display: flex;
   justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -724,4 +721,74 @@ h1 {
 .text-footer {
   display: flex;
   flex-direction: column;
+}
+
+.container-criando-topico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-criando-topico {
+  span {
+    letter-spacing: 0.5px;
+  }
+}
+
+.comments-container {
+  width: 100%;
+  margin-bottom: 20px;
+  input {
+    height: 40px;
+    width: 100%;
+    border: 0.5px solid #cccccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    border: 0.5px solid #cccccc;
+    border-radius: 3px 3px 0 0;
+    outline: none;
+    padding: 10px 10px 20px 20px;
+    margin-bottom: 0;
+  }
+}
+
+.container-row-enviar-topico {
+  width: 100%;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.btn-create-topic {
+  background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+  width: 205.1px;
+  height: 31px;
+  top: 214px;
+  left: 818.4px;
+  gap: 0px;
+  border-radius: 0px 0px 4px 0px;
+  opacity: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, #f1833e 0%, #feb154 100%);
+  }
 }

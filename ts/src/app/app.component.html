@@ -168,25 +168,60 @@
         </div>
         <div class="content-card">
           <div class="container-criar-topico">
-            <div class="compartilhe-ideias">
-              <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
-              <div class="discussoes-icons">
-                <img src="../assets/icone1.svg" />
-                <img src="../assets/icone2.svg" />
-                <img src="../assets/icone3.svg" />
+            <div
+              class="container-nao-criando-topico"
+              *ngIf="!criandoTopico; else divCriandoTopico"
+            >
+              <div class="compartilhe-ideias">
+                <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
+                <div class="discussoes-icons">
+                  <img src="../assets/icone1.svg" />
+                  <img src="../assets/icone2.svg" />
+                  <img src="../assets/icone3.svg" />
+                </div>
+                <span
+                  >Sabia que o maior estímulo no desenvolvimento científico e
+                  cultural é a curiosidade? Deixe seus questionamentos ou
+                  sugestões para o autor!</span
+                >
               </div>
-              <span
-                >Sabia que o maior estímulo no desenvolvimento científico e
-                cultural é a curiosidade? Deixe seus questionamentos ou
-                sugestões para o autor!</span
-              >
-            </div>
-            <div class="barra-divisioria-criar-topico">
-              <div class="btn-criar-topico">
-                <fa-icon [icon]="faPlus" class="icon-white"></fa-icon>
-                <span>criar tópico</span>
+              <div class="barra-divisioria-criar-topico">
+                <div class="btn-criar-topico" (click)="criarTopicoDiscussao()">
+                  <fa-icon [icon]="faPlus" class="icon-white"></fa-icon>
+                  <span>criar tópico</span>
+                </div>
               </div>
             </div>
+
+            <ng-template #divCriandoTopico>
+              <div class="container-criando-topico">
+                <div class="title-criando-topico">
+                  <span>
+                    Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+                    autores!
+                  </span>
+                </div>
+                <div class="comments-container">
+                  <h2>Assunto</h2>
+                  <input
+                    placeholder="Defina um tópico sucinto para notificar os autores..."
+                    (change)="changeAssuntoTopico($any($event.target).value)"
+                  />
+                  <h2>Conteúdo</h2>
+                  <textarea
+                    rows="5"
+                    cols="60"
+                    (change)="changeConteudoTopico($any($event.target).value)"
+                  ></textarea>
+                  <div class="container-row-enviar-topico">
+                    <div class="btn-create-topic" (click)="enviarTopico()">
+                      <a>Enviar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="generic-barra-divisioria"></div>
+            </ng-template>
             <div class="topicos" *ngFor="let topico of discussoesTopicos">
               <div class="topico-assunto-autor">
                 <h3>{{ topico.assunto }}</h3>

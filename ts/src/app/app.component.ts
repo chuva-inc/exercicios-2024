@@ -181,12 +181,21 @@ export class AppComponent {
       'a comunidade científica, mantendo aceso o debate científico ' +
       'formentado pelos encontros e aumentando o impacto do evento.',
   ];
+  criandoTopico: boolean = false;
+  autorTopico: string = 'Carlos Henrique Santos';
+  assuntoTopico: string = '';
+  conteudoTopico: string = '';
 
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;
     this.textoResumoArray = this.textoResumo.split('\n');
     this.formatTextResumo(this.textoResumo);
+    this.sortDiscussoesTopicosDesc();
+  }
+
+  sortDiscussoesTopicosDesc() {
+    this.discussoesTopicos = this.discussoesTopicos.sort((a, b) => b.id - a.id);
   }
 
   formatTextResumo(text: string) {
@@ -233,5 +242,50 @@ export class AppComponent {
       parteParaDestacar,
       `<strong>${parteParaDestacar}</strong>`
     );
+  }
+
+  criarTopicoDiscussao() {
+    this.criandoTopico = !this.criandoTopico;
+  }
+
+  changeAssuntoTopico(assunto: string) {
+    this.assuntoTopico = assunto;
+  }
+
+  changeConteudoTopico(conteudo: string) {
+    this.conteudoTopico = conteudo;
+  }
+
+  enviarTopico() {
+    const newTopico: {
+      id: number;
+      assunto: string;
+      autorPergunta: string;
+      pergunta: string;
+      isLiked: boolean;
+      curtidas: number;
+      respostas: number;
+    } = {
+      id: this.discussoesTopicos.length + 1,
+      assunto: this.assuntoTopico,
+      autorPergunta: this.autorTopico,
+      pergunta: this.conteudoTopico,
+      isLiked: false,
+      curtidas: 0,
+      respostas: 0,
+    };
+    if (this.assuntoTopico !== '' && this.conteudoTopico !== '') {
+      this.discussoesTopicos.push(newTopico);
+      this.criandoTopico = !this.criandoTopico;
+      this.sortDiscussoesTopicosDesc();
+      this.limparCampos();
+    } else {
+      alert('Preencha os campos vazios');
+    }
+  }
+
+  limparCampos() {
+    this.assuntoTopico = '';
+    this.conteudoTopico = '';
   }
 }
