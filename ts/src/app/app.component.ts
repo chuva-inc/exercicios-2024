@@ -157,11 +157,11 @@ export class AppComponent {
     },
   ];
   textFooter = [
-    'Preservar a memória do evento e ampliar o acesso ao conhecimento' +
+    'Preservar a memória do evento e ampliar o acesso ao conhecimento ' +
       'científico gerado em eventos é a razão de ser da plataforma Galoá' +
-      'Proceedings.',
-    'Os trabalhos publicados aqui têm maior alcance e ficam disponíveis' +
-      'a comunidade científica, mantendo aceso o devate científico' +
+      ' Proceedings.',
+    'Os trabalhos publicados aqui têm maior alcance e ficam disponíveis ' +
+      'a comunidade científica, mantendo aceso o debate científico ' +
       'formentado pelos encontros e aumentando o impacto do evento.',
   ];
 
@@ -216,5 +216,12 @@ export class AppComponent {
       post.isLiked = !like;
       post.curtidas = like ? post.curtidas - 1 : post.curtidas + 1;
     }
+  }
+
+  strongParagrafoFooter(sentenca: string, parteParaDestacar: string) {
+    return sentenca.replace(
+      parteParaDestacar,
+      `<strong>${parteParaDestacar}</strong>`
+    );
   }
 }

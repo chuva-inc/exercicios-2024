@@ -677,16 +677,16 @@ h1 {
   font-size: 14px;
 }
 
-.container-footer {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
 .generic-barra-divisioria {
   width: 100%;
   border: 0.5px solid #e7e7e7;
   margin-bottom: 20px;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .logo-e-saiba-mais {
@@ -717,5 +717,4 @@ h1 {
 .text-footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }

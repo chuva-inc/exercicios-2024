@@ -209,7 +209,15 @@
           </div>
         </div>
         <div class="text-footer">
-          <p *ngFor="let paragrafo of textFooter">{{ paragrafo }}</p>
+          <p
+            *ngFor="let paragrafo of textFooter"
+            [innerHTML]="
+              strongParagrafoFooter(
+                paragrafo,
+                'Preservar a memória do evento e ampliar o acesso ao conhecimento científico'
+              )
+            "
+          ></p>
         </div>
       </div>
     </div>
