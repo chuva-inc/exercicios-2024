@@ -151,6 +151,7 @@ export class AppComponent {
     isLiked: boolean;
     curtidas: number;
     respostas: number;
+    aguardandoFeedback: boolean;
   }[] = [
     {
       id: 1,
@@ -161,6 +162,7 @@ export class AppComponent {
       isLiked: false,
       curtidas: 0,
       respostas: 1,
+      aguardandoFeedback: false,
     },
     {
       id: 2,
@@ -171,6 +173,7 @@ export class AppComponent {
       isLiked: true,
       curtidas: 1,
       respostas: 1,
+      aguardandoFeedback: false,
     },
   ];
   textFooter: string[] = [
@@ -265,6 +268,7 @@ export class AppComponent {
       isLiked: boolean;
       curtidas: number;
       respostas: number;
+      aguardandoFeedback: boolean;
     } = {
       id: this.discussoesTopicos.length + 1,
       assunto: this.assuntoTopico,
@@ -273,6 +277,7 @@ export class AppComponent {
       isLiked: false,
       curtidas: 0,
       respostas: 0,
+      aguardandoFeedback: true,
     };
     if (this.assuntoTopico !== '' && this.conteudoTopico !== '') {
       this.discussoesTopicos.push(newTopico);
