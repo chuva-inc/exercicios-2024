@@ -91,7 +91,14 @@ export class AppComponent {
       number: 4,
     },
   ];
+  textoResumo =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis feis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsass ' +
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis feis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsass ' +
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis feis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsant accumsass ';
 
+  textoResumoFormatado = '';
+  contResumo = 1;
+  MAXRESUMOFIELD = 923;
   universidades = [
     {
       id: 1,
@@ -114,9 +121,22 @@ export class AppComponent {
       universidadeNumber: 4,
     },
   ];
+
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;
+    this.formatTextResumo(this.textoResumo);
+  }
+
+  formatTextResumo(text: string) {
+    this.textoResumoFormatado = text.substring(
+      0,
+      this.MAXRESUMOFIELD * this.contResumo
+    );
+    if (text.length > this.MAXRESUMOFIELD * this.contResumo) {
+      this.textoResumoFormatado = this.textoResumoFormatado.concat('...');
+    }
+    return console.log(text.length);
   }
 
   selectLanguage(itemId: number) {
@@ -132,8 +152,18 @@ export class AppComponent {
   }
 
   handleFavoritarCitacao(citacao: boolean) {
-    this.citacaoFavorita = !this.citacaoFavorita;
+    this.citacaoFavorita = citacao;
   }
 
-  findData() {}
+  verMaisResumo() {
+    if (this.textoResumoFormatado.length < this.textoResumo.length) {
+      this.contResumo += 1;
+      this.formatTextResumo(this.textoResumo);
+    }
+    console.log('this.textoResumo :>> ', this.textoResumo.length);
+    console.log(
+      'this.textoResumoFormatado :>> ',
+      this.textoResumoFormatado.length
+    );
+  }
 }

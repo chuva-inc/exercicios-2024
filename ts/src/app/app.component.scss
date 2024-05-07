@@ -73,7 +73,7 @@ h1 {
 }
 
 .selected {
-  background-color: #fdf1eb;
+  background-color: $color-header;
   border-left: 5px solid #ee7b3a;
 }
 
@@ -88,11 +88,11 @@ h1 {
   padding-inline-start: 44px;
 }
 
-.header {
+.header-page {
   height: 68px;
   padding-inline-start: $padding-page;
   display: flex;
-  background-color: #fdf1eb;
+  background-color: $color-header;
   align-items: center;
   justify-content: space-between;
 }
@@ -312,6 +312,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   max-height: 600px;
+  margin-bottom: 20px;
 }
 
 .imagem-wrapper {
@@ -484,5 +485,57 @@ h1 {
 
   span {
     font-size: 12px;
+  }
+}
+
+.generic-card {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  position: relative;
+
+  .header-generic-card {
+    background-color: $color-header;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #cccccc;
+
+    h3 {
+      color: #4e4e4e;
+      font-family: $font-roboto;
+      font-size: 20px;
+      padding: 10px 0 0 15px;
+      font-weight: 500px;
+      line-height: 25px;
+    }
+  }
+
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 100%;
+    max-height: 550px;
+
+    span {
+      font-family: $font-quicksand;
+      font-size: 14px;
+      font-weight: 400px;
+      line-height: 20px;
+    }
+  }
+}
+
+.button-ver-mais {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+
+  span {
+    color: $orange-color;
+    cursor: pointer;
+  }
+  &:hover {
+    text-decoration: underline $orange-color;
   }
 }

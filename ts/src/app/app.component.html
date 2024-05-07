@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="content-area" role="main">
-    <div class="header">
+    <div class="header-page">
       <div class="header-content">
         <div class="header-titles">
           <span>{{ headerData["firstTitleHeader"] }}</span>
@@ -50,6 +50,7 @@
         </div>
       </div>
     </div>
+
     <div class="content-page">
       <div class="container-row-title-buttons">
         <div class="title-page">
@@ -126,33 +127,26 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- <div class="content-page">
-      <div class="container-titulo-citacao">
-        <div class="container-titulo-imagem">
-          <h2>{{ titlePage }}</h2>
-          <div class="imagem-video">
-            <div class="content-imagem-text">
-              <h2>{{ videoData.titleVideo }}</h2>
-              <div class="information-video">
-                <div class="information-video-border-image">
-                  <img src="../assets/author-image.png" />
-                </div>
-                <div class="information-video-user-data">
-                  <h1>{{ videoData.authorName }}</h1>
-                  <h3>{{ videoData.authorLocalization }}</h3>
-                </div>
-              </div>
-            </div>
-            <div class="imagem-wrapper">
-              <img src="../assets/video-image.png" />
-            </div>
+
+      <!-- Card de Resumo -->
+      <div class="generic-card">
+        <div class="header-generic-card">
+          <h3>Resumo</h3>
+        </div>
+        <div class="content-card">
+          <span maxlength="50">{{ textoResumoFormatado }}</span>
+          <div
+            class="button-ver-mais"
+            (click)="verMaisResumo()"
+            *ngIf="
+              textoResumo.length > MAXRESUMOFIELD &&
+              textoResumo.length !== textoResumoFormatado.length
+            "
+          >
+            <span>ver mais</span>
           </div>
         </div>
-        <div class="container-citacao">
-          <div class="action-buttons"></div>
-        </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
