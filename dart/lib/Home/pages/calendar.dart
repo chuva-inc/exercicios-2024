@@ -49,7 +49,7 @@ class _CalendarState extends State<Calendar>
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(120),
+        preferredSize: const Size.fromHeight(120),
         child: AppBar(
             backgroundColor: Theme.of(context).appBarTheme.foregroundColor,
             elevation: 10,
@@ -125,14 +125,17 @@ class _CalendarState extends State<Calendar>
                     } else if (snapshot.hasError) {
                       return const Center(
                           child: Text('Erro ao carregar as atividades'));
-                    } else if (snapshot.data == null ||
-                        activitiesStore.filterActivitiesByDay(day).isEmpty) {
-                      return const Center(
-                          child: Text(
-                              'Nenhuma atividade encontrada para este dia'));
-                    } else {
+                    }
+                    // else if (snapshot.data == null ||
+                    //     activitiesStore.filterActivitiesByDay(day).isEmpty) {
+                    //   return const Center(
+                    //       child: Text(
+                    //           'Nenhuma atividade encontrada para este dia'));
+                    // }
+                    else {
 
                       return ListView.separated(
+
                         separatorBuilder: (context, index) =>
                             Container(height: 3),
                         itemCount:

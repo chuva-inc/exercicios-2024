@@ -1,10 +1,17 @@
+
+
+import 'package:html/dom.dart';
+import 'package:html/parser.dart' show parse;
+
 import 'package:chuva_dart/data/exceptions/exceptions.dart';
 import 'dart:convert';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:dio/dio.dart';
+import 'package:html/parser.dart';
 import 'package:intl/intl.dart';
 
 import '../../data/repositories/activities_repository.dart';
+import '../models/person.dart';
 
 abstract class IActivitiesService{
   Future<List<Activities>> getActivities();
@@ -12,6 +19,10 @@ abstract class IActivitiesService{
   List<Activities> getFavorites();
   void toggleFavorite(int id);
   bool isEmpty();
+  String formatActivityTime(String start, String end);
+  String convertDate(String date);
+  String extractTextFromHtml(String htmlString);
+  String formatSpeakers(List<Person> people);
 }
 
 class ActivitiesService implements IActivitiesService {
@@ -37,6 +48,11 @@ class ActivitiesService implements IActivitiesService {
     var dio = Dio();
     String initialUrl = "https://raw.githubusercontent.com/chuva-inc/exercicios-2023/master/dart/assets/activities.json";
     return await _fetchActivities(dio, initialUrl);
+  }
+
+  @override
+  String formatSpeakers(List<Person> people){
+    return people.map((person) => person.name).join(", ");
   }
 
   @override
@@ -91,11 +107,34 @@ class ActivitiesService implements IActivitiesService {
 
   @override
   List<Activities> filterActivitiesByDay(int day){
-    return activities.where((activity) => (_convertDate(activity.start!)== "$day") && (_convertDate(activity.end!) == "$day")).toList();
+    return activities.where((activity) => (convertDate(activity.start!)== "$day") && (convertDate(activity.end!) == "$day")).toList();
   }
 
-  String _convertDate(String date){
+
+  @override
+  String convertDate(String date){
     return DateFormat.d().format(DateTime.parse(date).toUtc().subtract(const Duration(hours: 3)));
+  }
+
+
+  @override
+  String formatActivityTime(String start, String end) {
+    final startTime = DateTime.parse(start);
+
+    final dayOfWeek = toBeginningOfSentenceCase(DateFormat('EEEE', 'pt_BR').format(startTime));
+    String startTimeLocal = DateFormat.Hm().format(DateTime.parse(start).toUtc().subtract(const Duration(hours: 3)));
+    String endTimeLocal = DateFormat.Hm().format(DateTime.parse(end).toUtc().subtract(const Duration(hours: 3)));
+
+    return '$dayOfWeek ${startTimeLocal}h - ${endTimeLocal}h';
+  }
+
+  @override
+  String extractTextFromHtml(String htmlString) {
+    Document document = parse(htmlString);
+    List<Element> paragraphs = document.querySelectorAll('p');
+    String allText = paragraphs.map((paragraph) => paragraph.text).join('\n\n');
+
+    return allText;
   }
 
 

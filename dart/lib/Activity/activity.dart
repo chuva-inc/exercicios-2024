@@ -2,15 +2,15 @@ import 'package:chuva_dart/Activity/components/add_button.dart';
 import 'package:chuva_dart/Activity/components/info.dart';
 import 'package:chuva_dart/Activity/components/list_role.dart';
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
+import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:html/dom.dart' as html;
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:html/parser.dart' show parse;
-import 'package:provider/provider.dart';
 import '../data/models/activities.dart';
-import '../data/repositories/activities_repository.dart';
+
 
 class Activity extends StatefulWidget {
   const Activity({super.key, required this.items, required this.activities});
@@ -25,35 +25,29 @@ class Activity extends StatefulWidget {
 class _ActivityState extends State<Activity> {
   late String formattedTime;
   Activities get activities => widget.items;
+  late ActivitiesController controller;
 
   @override
   void initState() {
     super.initState();
     initializeDateFormatting('pt_BR', null);
-    formattedTime = formatActivityTime(activities.start!, activities.end!);
-  }
-
-  String formatActivityTime(String start, String end) {
-    final startTime = DateTime.parse(start);
-
-    final dayOfWeek = toBeginningOfSentenceCase(DateFormat('EEEE', 'pt_BR').format(startTime));
-    String startTimeLocal = DateFormat.Hm().format(DateTime.parse(start).toUtc().subtract(const Duration(hours: 3)));
-    String endTimeLocal = DateFormat.Hm().format(DateTime.parse(end).toUtc().subtract(const Duration(hours: 3)));
-
-    return '$dayOfWeek ${startTimeLocal}h - ${endTimeLocal}h';
-  }
-  String extractTextFromHtml(String htmlString) {
-    html.Document document = parse(htmlString);
-    List<html.Element> paragraphs = document.querySelectorAll('p');
-    String allText = paragraphs.map((paragraph) => paragraph.text).join('\n\n');
-
-    return allText;
+    controller = ActivitiesController();
+    formattedTime = controller.formatActivityTime(activities.start!, activities.end!);
   }
 
   @override
   Widget build(BuildContext context) {
 
-    String descriptionText = extractTextFromHtml(activities.description!.ptBr!);
+    String descriptionText = controller.extractTextFromHtml(activities.description!.ptBr!);
+    List<Widget> subActivitiesWidgets = [];
+    // print(activities.parent);
+    // if(activities.parent != 0 ){
+    //
+    //   subActivitiesWidgets.add(
+    //     Expanded(child: Text(activities.parent!))
+    //     // Expanded(child: ScheduleItems(items: widget.items, activities: widget.activities, data: "${widget.items.type.title.ptBr} de ${fomataData(widget.items.start!)} até ${fomataData(widget.items.end!)}"))
+    //   );
+    // }
     return Scaffold(
       appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),
@@ -112,7 +106,8 @@ class _ActivityState extends State<Activity> {
                   ListRole(activities: activities, listActivities: widget.activities,),
                 ],
               )
-          )
+          ),
+          ...subActivitiesWidgets
         ],
       ),
     );

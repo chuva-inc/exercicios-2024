@@ -1,13 +1,12 @@
 import 'package:chuva_dart/Activity/activity.dart';
+import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/models/activities.dart';
-import 'package:chuva_dart/data/models/person.dart';
 import 'package:chuva_dart/data/repositories/activities_repository.dart';
 
 import 'package:flutter/material.dart';
 
 import 'package:from_css_color/from_css_color.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class ScheduleItems extends StatelessWidget {
@@ -23,6 +22,7 @@ class ScheduleItems extends StatelessWidget {
   Widget build(BuildContext context) {
     ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();
     bool isActivityFavorite = activitiesRepository.favorites.any((fav) => fav.id == items.id);
+    ActivitiesController controller = ActivitiesController();
 
     return Column(
       children: [
@@ -68,7 +68,7 @@ class ScheduleItems extends StatelessWidget {
                               subtitle: Container(
                                 alignment: AlignmentDirectional.centerStart,
                                 child: Text(
-                                  formataPalestrantes(items.people),
+                                  controller.formatSpeakers(items.people),
                                 ),
                               ),
                               title: Column(
@@ -107,14 +107,5 @@ class ScheduleItems extends StatelessWidget {
         ),
       ],
     );
-  }
-
-
-  String formataPalestrantes(List<Person> people){
-    return people.map((person) => person.name).join(", ");
-  }
-
-  String fomataData(String data){
-    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
 }
