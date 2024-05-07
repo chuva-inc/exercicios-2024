@@ -136,16 +136,27 @@
           <h3>Resumo</h3>
         </div>
         <div class="content-card">
-          <span maxlength="50">{{ textoResumoFormatado }}</span>
-          <div
-            class="button-ver-mais"
-            (click)="verMaisResumo()"
-            *ngIf="
-              textoResumo.length > MAXRESUMOFIELD &&
-              textoResumo.length !== textoResumoFormatado.length
+          <p
+            *ngFor="
+              let paragrafo of textoResumoArray.slice(0, numParagrafosMostrados)
             "
           >
-            <span>ver mais</span>
+            {{ paragrafo }}
+          </p>
+
+          <div class="btn-ver-mais" (click)="verMaisResumo()">
+            <div
+              *ngIf="
+                this.numParagrafosMostrados !== this.textoResumoArray.length;
+                else todoTextoMostrado
+              "
+            >
+              <span>ver mais</span>
+            </div>
+
+            <ng-template #todoTextoMostrado>
+              <span>ver menos</span>
+            </ng-template>
           </div>
         </div>
       </div>
