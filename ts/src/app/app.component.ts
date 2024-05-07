@@ -203,11 +203,6 @@ export class AppComponent {
       this.contResumo += 1;
       this.formatTextResumo(this.textoResumo);
     }
-    console.log('this.textoResumo :>> ', this.textoResumo.length);
-    console.log(
-      'this.textoResumoFormatado :>> ',
-      this.textoResumoFormatado.length
-    );
   }
 
   likeUnlikePost(like: boolean, idPost: number) {
