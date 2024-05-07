@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
 import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
+import 'package:chuva_dart/Speaker/controller/speaker_controller.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
@@ -27,25 +28,15 @@ class Speaker extends StatefulWidget {
 class _SpeakerState extends State<Speaker> {
   Person get speaker => widget.speaker;
   late String dataFormatada;
+  late SpeakerController controller;
 
   @override
   void initState() {
     super.initState();
+    controller = SpeakerController();
     DateTime dataParsed = DateTime.parse(widget.activities.start!);
     dataFormatada = DateFormat("EEE, dd/MM/yyyy", "pt_BR").format(dataParsed);
   }
-
-  String gerarIniciais(String nomeCompleto) {
-    List<String> partesDoNome = nomeCompleto.split(' ');
-    if (partesDoNome.length >= 2) {
-      String iniciais =
-          partesDoNome[0][0].toUpperCase() + partesDoNome[1][0].toUpperCase();
-      return iniciais;
-    } else {
-      return nomeCompleto[0].toUpperCase();
-    }
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +99,7 @@ class _SpeakerState extends State<Speaker> {
                       child: Container(
                         color: Theme.of(context).colorScheme.primary,
                         child: Center(
-                            child: Text(gerarIniciais(speaker.name!),
+                            child: Text(controller.gerarIniciais(speaker.name!),
                                 style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 50,
@@ -161,23 +152,15 @@ class _SpeakerState extends State<Speaker> {
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) => Container(height: 3),
-              itemCount: filteraActivitiesByDay(widget.listActivities,speaker.name!).length,
+              itemCount: controller.filteraActivitiesByDay(widget.listActivities,speaker.name!).length,
               itemBuilder: (_, index) {
-                final item = filteraActivitiesByDay(widget.listActivities,speaker.name!)[index];
-               return ScheduleItems(items: item, activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${fomataData(widget.activities.start!)} até ${fomataData(widget.activities.end!)}",);
+                final item = controller.filteraActivitiesByDay(widget.listActivities,speaker.name!)[index];
+               return ScheduleItems(items: item, activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${controller.formatData(widget.activities.start!)} até ${controller.formatData(widget.activities.end!)}",);
               },
             ),
           )
         ],
       ),
     );
-  }
-
-  List<Activities> filteraActivitiesByDay(List<Activities> activities, String speaker){
-    return activities.where((activitie) => activitie.people.any((person) => person.name == speaker)).toList();
-  }
-
-  String fomataData(String data){
-    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
 }
