@@ -174,6 +174,25 @@
                 <span>criar tópico</span>
               </div>
             </div>
+            <div class="topicos" *ngFor="let topico of topicos">
+              <h3>{{ topico.assunto }}</h3>
+              <span>{{ topico.autorPergunta }}</span>
+              <h3>{{ topico.pergunta }}</h3>
+              <div class="actions-topico">
+                <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
+                <div
+                  class="btn-like-topico"
+                  (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                >
+                  <fa-icon
+                    [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                    class="icon-white"
+                  ></fa-icon>
+                </div>
+                <span>{{ topico.curtidas }} like</span>
+                <span>{{ topico.respostas }} resposta</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

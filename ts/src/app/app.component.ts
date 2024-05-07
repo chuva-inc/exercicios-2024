@@ -4,8 +4,13 @@ import {
   faDownload,
   faStar,
   faPlus,
+  faEllipsisV,
+  faHeart,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+import {
+  faStar as faStarRegular,
+  faHeart as faHeartRegular,
+} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +23,9 @@ export class AppComponent {
   faStar = faStar;
   faStarRegular = faStarRegular;
   faPlus = faPlus;
-
+  faEllipsisV = faEllipsisV;
+  faHeart = faHeart;
+  faHeartRegular = faHeartRegular;
   titleSideMenu = 'SLACA 2019';
   optionsSideMenu = [
     { id: 1, label: 'Apresentação' },
@@ -127,6 +134,28 @@ export class AppComponent {
       universidadeNumber: 4,
     },
   ];
+  topicos = [
+    {
+      id: 1,
+      assunto: 'Assunto da pergunta aparece aqui',
+      autorPergunta: 'Carlos Henrique Santos',
+      pergunta:
+        'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
+      isLiked: false,
+      curtidas: 0,
+      respostas: 1,
+    },
+    {
+      id: 2,
+      assunto: 'Assunto da pergunta aparece aqui',
+      autorPergunta: 'Carlos Henrique Santos',
+      pergunta:
+        'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
+      isLiked: true,
+      curtidas: 1,
+      respostas: 1,
+    },
+  ];
 
   ngOnInit() {
     this.notificationNumber();
@@ -171,5 +200,13 @@ export class AppComponent {
       'this.textoResumoFormatado :>> ',
       this.textoResumoFormatado.length
     );
+  }
+
+  likeUnlikePost(like: boolean, idPost: number) {
+    let post = this.topicos.find((topico) => topico.id === idPost);
+    if (post) {
+      post.isLiked = !like;
+      post.curtidas = like ? post.curtidas - 1 : post.curtidas + 1;
+    }
   }
 }

@@ -251,6 +251,10 @@ h1 {
   color: white;
 }
 
+.icon-orange {
+  color: $orange-color;
+}
+
 .button-large {
   width: 120px;
   height: 31px;
@@ -605,9 +609,8 @@ h1 {
   }
 
   fa-icon {
-    width: 17px;
-    height: 17px;
-    margin-bottom: 2px;
+    font-size: 17px;
+    margin-right: 5px;
   }
 
   &:hover {
@@ -616,4 +619,31 @@ h1 {
       background: linear-gradient(to top, #feb253, #ee7b3a);
     }
   }
+}
+
+.topicos {
+  width: 100%;
+}
+
+.actions-topico {
+  display: flex;
+  flex-direction: row;
+  // justify-content: center;
+  align-items: center;
+}
+
+.btn-like-topico {
+  box-shadow: 0px 2px 2px 0px #0000003d;
+  background-color: $orange-color;
+  border-radius: 2px;
+  width: 27px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-like-topico fa-icon {
+  font-size: 14px;
 }
