@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { faGlobe, faDownload, faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobe,
+  faDownload,
+  faStar,
+  faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -12,6 +17,7 @@ export class AppComponent {
   faDownload = faDownload;
   faStar = faStar;
   faStarRegular = faStarRegular;
+  faPlus = faPlus;
 
   titleSideMenu = 'SLACA 2019';
   optionsSideMenu = [
