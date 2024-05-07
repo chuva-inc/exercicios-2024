@@ -1,5 +1,7 @@
 
 
+import 'dart:collection';
+
 import 'package:html/dom.dart';
 import 'package:html/parser.dart' show parse;
 
@@ -17,17 +19,23 @@ abstract class IActivitiesService{
   Future<List<Activities>> getActivities();
   List<Activities> filterActivitiesByDay(int day);
   List<Activities> getFavorites();
+  Map<int, List<Activities>> getAllGroupedActivities ();
   void toggleFavorite(int id);
   bool isEmpty();
   String formatActivityTime(String start, String end);
   String convertDate(String date);
   String extractTextFromHtml(String htmlString);
   String formatSpeakers(List<Person> people);
+  String formatData(String data);
 }
 
 class ActivitiesService implements IActivitiesService {
   List<Activities> activities = [];
   ActivitiesRepository repository = ActivitiesRepository();
+
+  Map<int, List<Activities>> getAllGroupedActivities () {
+    return repository.subActivities;
+  }
 
   ActivitiesService();
 
@@ -82,25 +90,27 @@ class ActivitiesService implements IActivitiesService {
     Map<int, List<Activities>> groupedActivities = _groupActivitiesByParent(fetchedActivities);
 
     for (var parentId in groupedActivities.keys) {
-      activities.addAll(groupedActivities[parentId]!);
+      List<Activities> uniqueActivities = groupedActivities[parentId]!.where((activity) {
+        return !repository.activities.any((existingActivity) => existingActivity.id == activity.id);
+      }).toList();
+      activities.addAll(uniqueActivities);
     }
-
     repository.saveAll(activities);
   }
 
   Map<int, List<Activities>> _groupActivitiesByParent(List<Activities> activitiesList) {
-    Map<int, List<Activities>> groupedActivities = {};
-
     for (var activity in activitiesList) {
       if (activity.parent != null) {
-        if (!groupedActivities.containsKey(activity.parent)) {
-          groupedActivities[activity.parent!] = [];
+        if (!repository.groupedActivities.containsKey(activity.parent)) {
+          repository.groupedActivities[activity.parent!] = [];
         }
-        groupedActivities[activity.parent!]!.add(activity);
+        repository.groupedActivities[activity.parent!]!.add(activity);
       }
     }
-    return groupedActivities;
+    return repository.groupedActivities;
   }
+
+
 
   @override
   List<Activities> filterActivitiesByDay(int day){
@@ -113,6 +123,9 @@ class ActivitiesService implements IActivitiesService {
     return DateFormat.d().format(DateTime.parse(date).toUtc().subtract(const Duration(hours: 3)));
   }
 
+  String formatData(String data){
+    return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
+  }
 
   @override
   String formatActivityTime(String start, String end) {

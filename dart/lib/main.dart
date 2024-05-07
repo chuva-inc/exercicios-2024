@@ -30,21 +30,24 @@ class ChuvaDart extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: const TextTheme(
-          titleLarge: TextStyle(
+        textTheme: TextTheme(
+          titleLarge: const TextStyle(
             height: 1.2,
             fontSize: 18,
             fontWeight: FontWeight.w400,
           ),
           headlineLarge:
-              TextStyle(fontWeight: FontWeight.bold, fontSize: 22, height: 1),
-          bodyMedium: TextStyle(
+              const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, height: 1),
+          bodyMedium: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w500,
             color: Colors.black,
           ),
-          headlineMedium: TextStyle(fontSize: 27, height: 1.1),
-          headlineSmall: TextStyle(fontWeight: FontWeight.w300, fontSize: 22),
+          bodyLarge: TextStyle(
+            color: fromCssColor("#737373"),
+          ),
+          headlineMedium: const TextStyle(fontSize: 27, height: 1.1),
+          headlineSmall:  const TextStyle(fontWeight: FontWeight.w300, fontSize: 22),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(

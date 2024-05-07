@@ -9,7 +9,7 @@ import 'package:path_provider/path_provider.dart';
 class ActivitiesRepository extends ChangeNotifier {
   final List<Activities> _activities = [];
   final Map<int, bool> _favoritesMap = {};
-  Map<int, List<Activities>> groupedActivities = {};
+  final Map<int, List<Activities>> groupedActivities = {};
   LazyBox? box;
 
   static final ActivitiesRepository _singleton = ActivitiesRepository._internal();
@@ -24,6 +24,7 @@ class ActivitiesRepository extends ChangeNotifier {
 
   UnmodifiableListView<Activities> get activities => UnmodifiableListView(_activities);
   UnmodifiableListView<Activities> get favorites => UnmodifiableListView(_activities.where((activity) => _favoritesMap[activity.id] ?? false).toList());
+  Map<int, List<Activities>> get subActivities => UnmodifiableMapView(groupedActivities);
 
   _startRepository() async {
     if (!Hive.isBoxOpen('Activities')) {
@@ -72,18 +73,4 @@ class ActivitiesRepository extends ChangeNotifier {
     await box?.put(id, activity);
     notifyListeners();
   }
-
-  Map<int, List<Activities>> groupActivitiesByParent() {
-    for (var activity in _activities) {
-      if (activity.parent != null) {
-        if (!groupedActivities.containsKey(activity.parent)) {
-          groupedActivities[activity.parent!] = [];
-        }
-        groupedActivities[activity.parent!]!.add(activity);
-      }
-    }
-
-    return groupedActivities;
-  }
-
 }
