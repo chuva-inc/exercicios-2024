@@ -134,7 +134,7 @@ export class AppComponent {
       universidadeNumber: 4,
     },
   ];
-  topicos = [
+  discussoesTopicos = [
     {
       id: 1,
       assunto: 'Assunto da pergunta aparece aqui',
@@ -211,7 +211,7 @@ export class AppComponent {
   }
 
   likeUnlikePost(like: boolean, idPost: number) {
-    let post = this.topicos.find((topico) => topico.id === idPost);
+    let post = this.discussoesTopicos.find((topico) => topico.id === idPost);
     if (post) {
       post.isLiked = !like;
       post.curtidas = like ? post.curtidas - 1 : post.curtidas + 1;

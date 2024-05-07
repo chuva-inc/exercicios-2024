@@ -25,7 +25,7 @@ h1 {
   width: 220px;
   height: 100%;
   position: fixed;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px #00000040;
 }
 
 .side-menu img {
@@ -705,12 +705,19 @@ h1 {
   justify-content: center;
   border-radius: 5px;
   padding: calc(10px / 2);
-  a {
-    color: #fff;
-    cursor: pointer;
-    &:hover {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    a {
       text-decoration: underline;
     }
+  }
+
+  a {
+    color: #fff;
   }
 }
 

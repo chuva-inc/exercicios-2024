@@ -52,6 +52,7 @@
     </div>
 
     <div class="content-page">
+      <!-- Título e botões -->
       <div class="container-row-title-buttons">
         <div class="title-page">
           <h2>{{ titlePage }}</h2>
@@ -82,6 +83,7 @@
         </div>
       </div>
 
+      <!-- Vídeo e card de Detalhes do pôster -->
       <div class="container-row-imagem-video-detalhes">
         <div class="content-imagem-text">
           <h2>{{ videoData.titleVideo }}</h2>
@@ -174,7 +176,7 @@
                 <span>criar tópico</span>
               </div>
             </div>
-            <div class="topicos" *ngFor="let topico of topicos">
+            <div class="topicos" *ngFor="let topico of discussoesTopicos">
               <div class="topico-assunto-autor">
                 <h3>{{ topico.assunto }}</h3>
                 <span>{{ topico.autorPergunta }}</span>
