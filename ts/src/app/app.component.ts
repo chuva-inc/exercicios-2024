@@ -156,6 +156,14 @@ export class AppComponent {
       respostas: 1,
     },
   ];
+  textFooter = [
+    'Preservar a memória do evento e ampliar o acesso ao conhecimento' +
+      'científico gerado em eventos é a razão de ser da plataforma Galoá' +
+      'Proceedings.',
+    'Os trabalhos publicados aqui têm maior alcance e ficam disponíveis' +
+      'a comunidade científica, mantendo aceso o devate científico' +
+      'formentado pelos encontros e aumentando o impacto do evento.',
+  ];
 
   ngOnInit() {
     this.notificationNumber();

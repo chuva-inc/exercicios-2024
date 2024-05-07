@@ -175,9 +175,11 @@
               </div>
             </div>
             <div class="topicos" *ngFor="let topico of topicos">
-              <h3>{{ topico.assunto }}</h3>
-              <span>{{ topico.autorPergunta }}</span>
-              <h3>{{ topico.pergunta }}</h3>
+              <div class="topico-assunto-autor">
+                <h3>{{ topico.assunto }}</h3>
+                <span>{{ topico.autorPergunta }}</span>
+              </div>
+              <span>{{ topico.pergunta }}</span>
               <div class="actions-topico">
                 <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
                 <div
@@ -194,6 +196,20 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="generic-barra-divisioria"></div>
+      <div class="container-footer">
+        <div class="logo-e-saiba-mais">
+          <img src="../assets/galoa-logo.svg" />
+          <div class="btn-footer-saiba-mais">
+            <a>Saiba mais</a>
+          </div>
+        </div>
+        <div class="text-footer">
+          <p *ngFor="let paragrafo of textFooter">{{ paragrafo }}</p>
         </div>
       </div>
     </div>

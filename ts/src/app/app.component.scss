@@ -199,7 +199,7 @@ h1 {
 }
 
 .content-page {
-  padding: 22px $padding-page 0 $padding-page;
+  padding: 22px $padding-page 44px $padding-page;
 }
 
 .container-row-title-buttons {
@@ -469,21 +469,18 @@ h1 {
 }
 
 .poster-content {
-  // background-color: red;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
 .autores-content {
-  // background-color: blue;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
 .universidade-content {
-  // background-color: yellow;
   display: flex;
   flex-direction: column;
 
@@ -519,7 +516,7 @@ h1 {
     flex-direction: column;
     padding: 15px;
     height: 100%;
-    max-height: 550px;
+    // max-height: 550px;
 
     span {
       font-family: $font-quicksand;
@@ -596,7 +593,10 @@ h1 {
   width: 133px;
   height: 32px;
   background: linear-gradient(to top, #ee7b3a, #feb253);
-  box-shadow: 0px 2px 2px 0px #0000003d;
+  // box-shadow: 0px 2px 2px 0px #0000003d;
+
+  box-shadow: 0px 2px 2px 0px #0000003d, 0px 0px 2px 0px #0000001f;
+
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -623,17 +623,46 @@ h1 {
 
 .topicos {
   width: 100%;
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 8px 0px #0000001f;
+  border-radius: 4px;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.topico-assunto-autor {
+  h3 {
+    font-size: 16px;
+    color: $orange-color;
+    margin: 0;
+  }
+}
+
+.topico-assunto-autor > span {
+  font-size: 12px !important;
 }
 
 .actions-topico {
   display: flex;
   flex-direction: row;
-  // justify-content: center;
   align-items: center;
+  gap: 20px;
+
+  span {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  }
+}
+
+.actions-topico span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn-like-topico {
-  box-shadow: 0px 2px 2px 0px #0000003d;
+  box-shadow: 0px 2px 2px 0px #0000003d, 0px 0px 2px 0px #0000001f;
   background-color: $orange-color;
   border-radius: 2px;
   width: 27px;
@@ -646,4 +675,47 @@ h1 {
 
 .btn-like-topico fa-icon {
   font-size: 14px;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.generic-barra-divisioria {
+  width: 100%;
+  border: 0.5px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.logo-e-saiba-mais {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 200px;
+  }
+}
+
+.btn-footer-saiba-mais {
+  background-color: #71478e;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: calc(10px / 2);
+  a {
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.text-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
