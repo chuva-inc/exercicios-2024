@@ -50,7 +50,7 @@ class _ListRoleState extends State<ListRole> {
     if (hasModerator) {
       people.addAll(widget.activities.people.where((person) => person.role!.label.ptBr == 'Moderador'));
     } else {
-      people.addAll(widget.activities.people.where((person) => person.role!.label.ptBr == 'Palestrante'));
+      people.addAll(widget.activities.people.where((person) => person.role!.label.ptBr == 'Palestrante' || person.role!.label.ptBr == 'Coordenador'));
     }
   }
 

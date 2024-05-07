@@ -29,8 +29,6 @@ class ActivitiesService implements IActivitiesService {
   List<Activities> activities = [];
   ActivitiesRepository repository = ActivitiesRepository();
 
-
-
   ActivitiesService();
 
   @override
@@ -101,7 +99,6 @@ class ActivitiesService implements IActivitiesService {
         groupedActivities[activity.parent!]!.add(activity);
       }
     }
-
     return groupedActivities;
   }
 

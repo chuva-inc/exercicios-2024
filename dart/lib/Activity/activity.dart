@@ -40,14 +40,7 @@ class _ActivityState extends State<Activity> {
 
     String descriptionText = controller.extractTextFromHtml(activities.description!.ptBr!);
     List<Widget> subActivitiesWidgets = [];
-    // print(activities.parent);
-    // if(activities.parent != 0 ){
-    //
-    //   subActivitiesWidgets.add(
-    //     Expanded(child: Text(activities.parent!))
-    //     // Expanded(child: ScheduleItems(items: widget.items, activities: widget.activities, data: "${widget.items.type.title.ptBr} de ${fomataData(widget.items.start!)} até ${fomataData(widget.items.end!)}"))
-    //   );
-    // }
+
     return Scaffold(
       appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),

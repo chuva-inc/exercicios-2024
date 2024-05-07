@@ -10,7 +10,6 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../../data/models/activities.dart';
 import '../../data/stores/activities_store.dart';
 
 class Calendar extends StatefulWidget {
@@ -126,16 +125,8 @@ class _CalendarState extends State<Calendar>
                       return const Center(
                           child: Text('Erro ao carregar as atividades'));
                     }
-                    // else if (snapshot.data == null ||
-                    //     activitiesStore.filterActivitiesByDay(day).isEmpty) {
-                    //   return const Center(
-                    //       child: Text(
-                    //           'Nenhuma atividade encontrada para este dia'));
-                    // }
                     else {
-
                       return ListView.separated(
-
                         separatorBuilder: (context, index) =>
                             Container(height: 3),
                         itemCount:
@@ -150,7 +141,7 @@ class _CalendarState extends State<Calendar>
                                 activities:
                                     activitiesStore.filterActivitiesByDay(day),
                                 data:
-                                    "${items.type.title.ptBr} de ${fomataData(items.start!)} até ${fomataData(items.end!)}");
+                                    "${items.type.title.ptBr} de ${fomatDate(items.start!)} até ${fomatDate(items.end!)}");
                         },
                       );
                     }
@@ -163,8 +154,7 @@ class _CalendarState extends State<Calendar>
       ),
     );
   }
-
-  String fomataData(String data) {
+  String fomatDate(String data) {
     return DateFormat.Hm().format(
         DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }
