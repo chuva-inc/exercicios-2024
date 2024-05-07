@@ -86,14 +86,9 @@ class ActivitiesService implements IActivitiesService {
   void _addActivitiesToRepo(Map<String, dynamic> dataMap) {
     final dataList = dataMap['data'] as List;
     final List<Activities> fetchedActivities = dataList.map((dataItem) => Activities.fromJson(dataItem)).toList();
-
     Map<int, List<Activities>> groupedActivities = _groupActivitiesByParent(fetchedActivities);
-
     for (var parentId in groupedActivities.keys) {
-      List<Activities> uniqueActivities = groupedActivities[parentId]!.where((activity) {
-        return !repository.activities.any((existingActivity) => existingActivity.id == activity.id);
-      }).toList();
-      activities.addAll(uniqueActivities);
+      activities.addAll(groupedActivities[parentId]!);
     }
     repository.saveAll(activities);
   }
