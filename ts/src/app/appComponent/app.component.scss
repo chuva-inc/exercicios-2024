@@ -1,11 +1,13 @@
 .container{
   display: flex;
-  // margin-left: 220px;
   width: 100%;
 
     &__content{
       padding-left: 200px;
       width: 100%;
+      gap: 25px;
+      display: flex;
+      flex-direction: column;
     }
 }
 
