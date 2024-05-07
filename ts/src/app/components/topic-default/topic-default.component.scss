@@ -1,0 +1,58 @@
+.topicContainer{
+    width: 95%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .topicSubTitle {
+        color: #ed7839;
+        font-size: x-large;
+        margin-top: 1rem;
+      }
+      .imagesTopic {
+        display: flex;
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+      .topicSub {
+        margin-top: 2rem;
+        color: #4e4e4e;
+        text-align: center;
+        @media screen and (max-width: 1280px) and (max-height: 800px) {
+          margin-left: 1.5rem;
+          width: 41rem;
+        }
+      }
+      .btn-create-topic {
+        cursor: pointer;
+        margin-top: 2rem;
+        background: rgb(167, 91, 1);
+        @media screen and (max-width: 1280px) and (max-height: 800px) {
+          margin-top: 2rem;
+        }
+        background: linear-gradient(
+          0deg,
+          rgba(167, 91, 1, 1) 0%,
+          rgba(255, 174, 0, 1) 100%
+        );
+        color: white;
+        font-weight: bold;
+        font-size: x-large;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        border: none;
+        z-index: 10;
+        margin-top: 5rem;
+      }
+      .line {
+        color: red;
+        width: 70%;
+        height: 1px;
+        margin-left: 3rem;
+        background-color: #e7e7e7;
+        position: absolute;
+        top: 171%;
+      }
+}

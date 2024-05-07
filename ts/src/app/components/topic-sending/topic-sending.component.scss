@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 1rem;
+  .title {
+    text-align: center;
+  }
+  .mainTopic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    @media screen and (max-width: 1280px) and (max-height: 800px) {
+      width: 57rem;
+      margin-left: 1rem;
+    }
+    h3 {
+      color: #ed7839;
+    }
+    .subject {
+      padding: 0.5rem;
+      outline: none;
+      border: 1px solid #cccccc;
+    }
+    .content {
+      padding: 3rem;
+      display: flex;
+      border: 1px solid #cccccc;
+      outline: none;
+    }
+    .box {
+      display: flex;
+      justify-content: end;
+      background-color: #eaf1f2;
+      border: 1px solid #cccccc;
+      height: 2rem;
+      .btn-create-topic {
+        width: 12rem;
+        height: 2rem;
+        border: none;
+        background: rgb(167, 91, 1);
+        background: linear-gradient(
+          0deg,
+          rgba(167, 91, 1, 1) 0%,
+          rgba(255, 174, 0, 1) 100%
+        );
+        color: white;
+        font-size: large;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+  }
+}
