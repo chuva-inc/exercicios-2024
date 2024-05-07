@@ -18,16 +18,16 @@ import {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  faGlobe = faGlobe;
-  faDownload = faDownload;
-  faStar = faStar;
-  faStarRegular = faStarRegular;
-  faPlus = faPlus;
-  faEllipsisV = faEllipsisV;
-  faHeart = faHeart;
-  faHeartRegular = faHeartRegular;
-  titleSideMenu = 'SLACA 2019';
-  optionsSideMenu = [
+  faGlobe: any = faGlobe;
+  faDownload: any = faDownload;
+  faStar: any = faStar;
+  faStarRegular: any = faStarRegular;
+  faPlus: any = faPlus;
+  faEllipsisV: any = faEllipsisV;
+  faHeart: any = faHeart;
+  faHeartRegular: any = faHeartRegular;
+  titleSideMenu: string = 'SLACA 2019';
+  optionsSideMenu: { id: number; label: string }[] = [
     { id: 1, label: 'Apresentação' },
     { id: 2, label: 'Comitês' },
     { id: 3, label: 'Autores' },
@@ -35,32 +35,36 @@ export class AppComponent {
     { id: 5, label: 'Trabalhos' },
     { id: 6, label: 'Contato' },
   ];
-  headerData = {
+  headerData: { firstTitleHeader: string; titleHeader: string } = {
     firstTitleHeader:
       'Anais do Simpósio Latino Americano de Ciências de Alimentos',
     titleHeader:
       'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos',
   };
-  issn = '2526-4806';
-  languages = [
+  issn: string = '2526-4806';
+  languages: { id: number; label: string }[] = [
     { id: 1, label: 'PT, BR' },
     { id: 2, label: 'EN, US' },
     { id: 3, label: 'ES, ES' },
   ];
-  emailUser = 'alguem12@galoascience.com';
-  notificationNoRead = 0;
-  selectedItemMenu = 0;
-  selectedLanguages = 1;
-  titlePage =
+  emailUser: string = 'alguem12@galoascience.com';
+  notificationNoRead: number = 0;
+  selectedItemMenu: number = 0;
+  selectedLanguages: number = 1;
+  titlePage: string =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ';
-  videoData = {
+  videoData: {
+    titleVideo: string;
+    authorName: string;
+    authorLocalization: string;
+  } = {
     titleVideo:
       'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ',
     authorName: 'Beatriz Christiane Melo',
     authorLocalization: 'FCA / Universidade Estadual de Campinas',
   };
-  citacaoFavorita = true;
-  detalhesTrabalho = [
+  citacaoFavorita: boolean = true;
+  detalhesTrabalho: { id: number; label: string; response: string }[] = [
     {
       id: 1,
       label: 'Tipo de Apresentação',
@@ -77,7 +81,7 @@ export class AppComponent {
       response: 'Alimentos funcionais, alimentação escolar',
     },
   ];
-  autores = [
+  autores: { id: number; name: string; number: number }[] = [
     {
       id: 1,
       name: 'Galileo Galilei',
@@ -110,10 +114,14 @@ export class AppComponent {
     'Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio. \n' +
     'Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa. \n' +
     'Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';
-  textoResumoFormatado = '';
+  textoResumoFormatado: string = '';
   numParagrafosMostrados: number = 1;
-  MAXRESUMOFIELD = 922;
-  universidades = [
+  MAXRESUMOFIELD: number = 922;
+  universidades: {
+    id: number;
+    universidadeName: string;
+    universidadeNumber: number;
+  }[] = [
     {
       id: 1,
       universidadeName: 'Universidade Estadual de Campinas',
@@ -135,7 +143,15 @@ export class AppComponent {
       universidadeNumber: 4,
     },
   ];
-  discussoesTopicos = [
+  discussoesTopicos: {
+    id: number;
+    assunto: string;
+    autorPergunta: string;
+    pergunta: string;
+    isLiked: boolean;
+    curtidas: number;
+    respostas: number;
+  }[] = [
     {
       id: 1,
       assunto: 'Assunto da pergunta aparece aqui',
@@ -157,7 +173,7 @@ export class AppComponent {
       respostas: 1,
     },
   ];
-  textFooter = [
+  textFooter: string[] = [
     'Preservar a memória do evento e ampliar o acesso ao conhecimento ' +
       'científico gerado em eventos é a razão de ser da plataforma Galoá' +
       ' Proceedings.',
@@ -170,7 +186,6 @@ export class AppComponent {
     this.notificationNumber();
     this.selectedItemMenu = 5;
     this.textoResumoArray = this.textoResumo.split('\n');
-    console.log('this.textoResumoArray :>> ', this.textoResumoArray);
     this.formatTextResumo(this.textoResumo);
   }
 
