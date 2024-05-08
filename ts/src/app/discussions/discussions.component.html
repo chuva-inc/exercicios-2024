@@ -1,0 +1,73 @@
+<section class="discussions">
+
+    <div class="discussions__container">
+
+        <div class="discussions__container__top">
+            <h1>Discussões</h1>
+            <div class="discussions__container__top__box">
+                <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
+                <div class="discussions__container__top__box__imgs">
+                    <img src="../../assets/icone1.png" alt="">
+                    <img src="../../assets/icone2.png" alt="">
+                    <img src="../../assets/icone3.png" alt="">
+                </div>
+                <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+                <button class="btn-create-topic" (click)="expandCreateTopic()"><img src="../../assets/icon - criar.png" alt=""> criar tópico</button>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="discussions__container__middle">
+            <form action="submit" class="discussions__container__middle__form">
+                <label for="ass">Assunto: </label>
+                <input class="discussions__container__middle__ass" type="text" placeholder="Digite um Assunto" id="ass">
+
+                <label for="cont">Conteúdo: </label>
+                <input class="discussions__container__middle__cont subject" type="text" placeholder="Defina um tópico sucinto para notificar os autores..." id="cont">
+
+                <button type="submit" (click)="createTopic()">Enviar</button>
+            </form>
+        </div>
+
+        <div class="discussions__container__bottom">
+            <div class="discussions__container__bottom__card" *ngFor="let card of cards">
+                <div class="discussions__container__bottom__card__question answered-topic" (click)="expandAnswers(card)">
+                    <div class="discussions__container__bottom__card__question__title">
+                        <h1>{{card.title}}</h1>
+                        <p>{{card.author}}</p>
+                    </div>
+                    <p class="discussions__container__bottom__card__question__text ops-topic-subject">{{card.question}}</p>
+                    <div class="discussions__container__bottom__card__question__buttons">
+                        <button class="discussions__container__bottom__card__question__buttons__info"><img src="../../assets/mais informações.png" alt=""></button>
+                        <button class="discussions__container__bottom__card__question__buttons__fav"><img src="../../assets/favoritar.png" alt=""></button>
+                        <button class="discussions__container__bottom__card__question__buttons__like">{{card.like}} like</button>
+                        <button class="discussions__container__bottom__card__question__buttons__resp" >{{card.questions.length}} respostas</button>
+                    </div>
+                </div>
+                <div class="comments-container" *ngIf="card.isExpanded">
+                    <div class="discussions__container__bottom__card__answer" *ngFor="let answer of card.questions">
+                        <div *ngIf="answer.isAuthor || answer.isCoauthor" class="discussions__container__bottom__card__answer__autcout">
+                            <div class="discussions__container__bottom__card__answer__autcout__top">
+                                <h4>{{answer.author}}</h4>
+                                <div>
+                                    <h4 *ngIf="answer.isAuthor">Autor</h4>
+                                    <h4 *ngIf="answer.isCoauthor">Coautor</h4>
+                                    <img src="../../assets/author icon.png" alt="">
+                                </div>
+                            </div>
+                            <p>{{answer.answer}}</p>
+                        </div>
+    
+                        <div *ngIf="!answer.isAuthor && !answer.isCoauthor" class="discussions__container__bottom__card__answer__user">
+                            <h4>{{answer.author}}</h4>
+                            <p>{{answer.answer}}</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

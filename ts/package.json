@@ -22,6 +22,7 @@
     "cypress-visual-regression": "^3.0.0",
     "rxjs": "~7.5.0",
     "start-server-and-test": "^2.0.1",
+    "sweetalert2": "^11.10.8",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
