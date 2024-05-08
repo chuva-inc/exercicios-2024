@@ -6,6 +6,7 @@ import {
   faPlus,
   faEllipsisV,
   faHeart,
+  faCheckDouble,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faStar as faStarRegular,
@@ -26,6 +27,7 @@ export class AppComponent {
   faEllipsisV: any = faEllipsisV;
   faHeart: any = faHeart;
   faHeartRegular: any = faHeartRegular;
+  faCheckDouble: any = faCheckDouble;
   titleSideMenu: string = 'SLACA 2019';
   optionsSideMenu: { id: number; label: string }[] = [
     { id: 1, label: 'Apresentação' },

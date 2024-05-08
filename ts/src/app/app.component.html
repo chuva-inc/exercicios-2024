@@ -195,6 +195,7 @@
 
             <ng-template #divCriandoTopico>
               <div class="container-criando-topico">
+                <div></div>
                 <div class="title-criando-topico">
                   <span>
                     Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
@@ -222,26 +223,74 @@
               </div>
               <div class="generic-barra-divisioria"></div>
             </ng-template>
-            <div class="topicos" *ngFor="let topico of discussoesTopicos">
-              <div class="topico-assunto-autor">
-                <h3>{{ topico.assunto }}</h3>
-                <span>{{ topico.autorPergunta }}</span>
-              </div>
-              <span>{{ topico.pergunta }}</span>
-              <div class="actions-topico">
-                <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
-                <div
-                  class="btn-like-topico"
-                  (click)="likeUnlikePost(topico.isLiked, topico.id)"
-                >
-                  <fa-icon
-                    [icon]="topico.isLiked ? faHeart : faHeartRegular"
-                    class="icon-white"
-                  ></fa-icon>
+
+            <div
+              class="topicos-container"
+              *ngFor="let topico of discussoesTopicos"
+            >
+              <div
+                class="topicos"
+                *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
+              >
+                <div class="topico-assunto-autor">
+                  <h3>{{ topico.assunto }}</h3>
+                  <span>{{ topico.autorPergunta }}</span>
                 </div>
-                <span>{{ topico.curtidas }} like</span>
-                <span>{{ topico.respostas }} resposta</span>
+                <span>{{ topico.pergunta }}</span>
+                <div class="actions-topico">
+                  <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
+                  <div
+                    class="btn-like-topico"
+                    (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                  >
+                    <fa-icon
+                      [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                      class="icon-white"
+                    ></fa-icon>
+                  </div>
+                  <span>{{ topico.curtidas }} like</span>
+                  <span>{{ topico.respostas }} resposta</span>
+                </div>
               </div>
+
+              <ng-template #aguardandoFeedback>
+                <div class="topico-aguardando-feedback">
+                  <div class="agurdando-feedback-edit">
+                    <!-- <div class="agurdando-feedback-edit">
+                      <fa-icon [icon]="faCheckDouble"></fa-icon>
+                      <h2>Aguardando feedback dos autores</h2>
+                      <a>Editar tópico</a>
+                    </div> -->
+                    <fa-icon [icon]="faCheckDouble"></fa-icon>
+                    <h2>Aguardando feedback dos autores</h2>
+                    <a>Editar tópico</a>
+                  </div>
+                  <div class="background-desfocado-topico">
+                    <div class="topico-assunto-autor">
+                      <h3>{{ topico.assunto }}</h3>
+                      <span>{{ topico.autorPergunta }}</span>
+                    </div>
+                    <span>{{ topico.pergunta }}</span>
+                    <div class="actions-topico">
+                      <fa-icon
+                        [icon]="faEllipsisV"
+                        class="icon-orange"
+                      ></fa-icon>
+                      <div
+                        class="btn-like-topico"
+                        (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                      >
+                        <fa-icon
+                          [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                          class="icon-white"
+                        ></fa-icon>
+                      </div>
+                      <span>{{ topico.curtidas }} like</span>
+                      <span>{{ topico.respostas }} resposta</span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
             </div>
           </div>
         </div>

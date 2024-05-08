@@ -619,8 +619,16 @@ h1 {
   }
 }
 
+.topicos-container {
+  // width: 100%;
+  // border: 1px solid #cccccc;
+  // box-shadow: 0px 0px 8px 0px #0000001f;
+  // border-radius: 4px;
+  // padding: 20px 20px 20px 20px;
+  // margin-bottom: 20px;
+}
+
 .topicos {
-  width: 100%;
   border: 1px solid #cccccc;
   box-shadow: 0px 0px 8px 0px #0000001f;
   border-radius: 4px;
@@ -642,6 +650,56 @@ h1 {
 
 .topico-assunto-autor > span {
   font-size: 12px !important;
+}
+
+.topico-aguardando-feedback {
+  border: 1px solid #cccccc;
+  box-shadow: 0px 0px 8px 0px #0000001f;
+  border-radius: 4px;
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  background-color: #e7e7e7;
+  height: 100%;
+  position: relative;
+}
+
+.background-desfocado-topico {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  opacity: 0.5;
+  filter: blur(4px);
+}
+
+.agurdando-feedback-edit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  width: calc(100% - 80px);
+  height: calc(100% - 40px);
+  h2 {
+    color: #707070 !important;
+    font-family: $font-quicksand;
+    font-size: 16px !important;
+  }
+  fa-icon {
+    font-size: 20px;
+  }
+  a {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: $orange-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .actions-topico {
