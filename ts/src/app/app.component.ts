@@ -148,8 +148,8 @@ export class AppComponent {
   discussoesTopicos: {
     id: number;
     assunto: string;
-    autorPergunta: string;
-    pergunta: string;
+    autorTopico: string;
+    conteudo: string;
     isLiked: boolean;
     curtidas: number;
     respostas: number;
@@ -159,8 +159,8 @@ export class AppComponent {
     {
       id: 1,
       assunto: 'Assunto da pergunta aparece aqui',
-      autorPergunta: 'Carlos Henrique Santos',
-      pergunta:
+      autorTopico: 'Carlos Henrique Santos',
+      conteudo:
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       isLiked: false,
       curtidas: 0,
@@ -171,8 +171,8 @@ export class AppComponent {
     {
       id: 2,
       assunto: 'Assunto da pergunta aparece aqui',
-      autorPergunta: 'Carlos Henrique Santos',
-      pergunta:
+      autorTopico: 'Carlos Henrique Santos',
+      conteudo:
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       isLiked: true,
       curtidas: 1,
@@ -194,8 +194,8 @@ export class AppComponent {
   topicEdit: {
     id: number;
     assunto: string;
-    autorPergunta: string;
-    pergunta: string;
+    autorTopico: string;
+    conteudo: string;
     isLiked: boolean;
     curtidas: number;
     respostas: number;
@@ -204,8 +204,8 @@ export class AppComponent {
   } = {
     id: 0,
     assunto: '',
-    autorPergunta: '',
-    pergunta: '',
+    autorTopico: '',
+    conteudo: '',
     isLiked: false,
     curtidas: 0,
     respostas: 0,
@@ -317,7 +317,6 @@ export class AppComponent {
       this.editandoTopico = false;
       this.sortDiscussoesTopicosDesc();
       this.limparCampos();
-      console.log('this.user :>> ', this.user);
     } else {
       alert('Preencha os campos vazios');
     }
@@ -327,8 +326,8 @@ export class AppComponent {
     const newTopico: {
       id: number;
       assunto: string;
-      autorPergunta: string;
-      pergunta: string;
+      autorTopico: string;
+      conteudo: string;
       isLiked: boolean;
       curtidas: number;
       respostas: number;
@@ -337,8 +336,8 @@ export class AppComponent {
     } = {
       id: this.discussoesTopicos.length + 1,
       assunto: this.assuntoTopicoField,
-      autorPergunta: this.user.userName,
-      pergunta: this.conteudoTopicoField,
+      autorTopico: this.user.userName,
+      conteudo: this.conteudoTopicoField,
       isLiked: false,
       curtidas: 0,
       respostas: 0,
@@ -351,8 +350,8 @@ export class AppComponent {
   editTopicData(topic: {
     id: number;
     assunto: string;
-    autorPergunta: string;
-    pergunta: string;
+    autorTopico: string;
+    conteudo: string;
     isLiked: boolean;
     curtidas: number;
     respostas: number;
@@ -362,8 +361,8 @@ export class AppComponent {
     const editedTopic: {
       id: number;
       assunto: string;
-      autorPergunta: string;
-      pergunta: string;
+      autorTopico: string;
+      conteudo: string;
       isLiked: boolean;
       curtidas: number;
       respostas: number;
@@ -372,8 +371,8 @@ export class AppComponent {
     } = {
       id: topic?.id || 0,
       assunto: this.assuntoTopicoField || '',
-      autorPergunta: this.user.userName || '',
-      pergunta: this.conteudoTopicoField || '',
+      autorTopico: this.user.userName || '',
+      conteudo: this.conteudoTopicoField || '',
       isLiked: topic?.isLiked || false,
       curtidas: topic?.curtidas || 0,
       respostas: topic?.respostas || 0,
@@ -396,8 +395,8 @@ export class AppComponent {
     this.topicEdit = post as {
       id: number;
       assunto: string;
-      autorPergunta: string;
-      pergunta: string;
+      autorTopico: string;
+      conteudo: string;
       isLiked: boolean;
       curtidas: number;
       respostas: number;
@@ -406,7 +405,11 @@ export class AppComponent {
     };
     if (this.topicEdit) {
       this.assuntoTopicoField = this.topicEdit.assunto;
-      this.conteudoTopicoField = this.topicEdit.pergunta;
+      this.conteudoTopicoField = this.topicEdit.conteudo;
     }
+  }
+
+  itemSelectedMenu() {
+    return null;
   }
 }

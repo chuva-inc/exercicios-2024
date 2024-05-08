@@ -233,7 +233,6 @@
 
             <ng-template #divCriandoTopico>
               <div class="container-criando-topico">
-                <div></div>
                 <div class="title-criando-topico">
                   <span>
                     Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
@@ -270,14 +269,14 @@
 
             <div *ngFor="let topico of discussoesTopicos">
               <div
-                class="topicos"
+                class="anwswered-topic"
                 *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
               >
-                <div class="topico-assunto-autor">
+                <div class="ops-topic-subject">
                   <h3>{{ topico.assunto }}</h3>
-                  <span>{{ topico.autorPergunta }}</span>
+                  <span>{{ topico.autorTopico }}</span>
                 </div>
-                <span>{{ topico.pergunta }}</span>
+                <span>{{ topico.conteudo }}</span>
                 <div class="actions-topico">
                   <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
                   <div
@@ -306,9 +305,9 @@
                   <div class="background-desfocado-topico">
                     <div class="topico-assunto-autor">
                       <h3>{{ topico.assunto }}</h3>
-                      <span>{{ topico.autorPergunta }}</span>
+                      <span>{{ topico.autorTopico }}</span>
                     </div>
-                    <span>{{ topico.pergunta }}</span>
+                    <span>{{ topico.conteudo }}</span>
                     <div class="actions-topico">
                       <fa-icon
                         [icon]="faEllipsisV"

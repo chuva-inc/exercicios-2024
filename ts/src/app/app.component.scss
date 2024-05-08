@@ -64,6 +64,13 @@ h1 {
   height: 40px;
   padding: 10px 0;
   border-bottom: 2px solid #e7e7e7;
+  transition: padding 0.1s ease, background-color 0.1s ease,
+    border-left 0.1s ease;
+
+  &:hover {
+    padding: 10px;
+    background-color: $color-header;
+  }
 }
 
 .side-menu-item span {
@@ -73,8 +80,17 @@ h1 {
 }
 
 .selected {
-  background-color: $color-header;
-  border-left: 5px solid #ee7b3a;
+  position: relative;
+  padding: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    background: linear-gradient(180deg, #ffb455 0%, #ed7839 100%);
+  }
 }
 
 .content-area {
@@ -677,7 +693,7 @@ h1 {
   }
 }
 
-.topicos {
+.anwswered-topic {
   border: 1px solid #cccccc;
   box-shadow: 0px 0px 8px 0px #0000001f;
   border-radius: 4px;
@@ -689,7 +705,7 @@ h1 {
   align-items: flex-start;
 }
 
-.topico-assunto-autor {
+.ops-topic-subject {
   h3 {
     font-size: 16px;
     color: $orange-color;
@@ -697,7 +713,7 @@ h1 {
   }
 }
 
-.topico-assunto-autor > span {
+.ops-topic-subject > span {
   font-size: 12px !important;
 }
 
