@@ -619,15 +619,6 @@ h1 {
   }
 }
 
-.topicos-container {
-  // width: 100%;
-  // border: 1px solid #cccccc;
-  // box-shadow: 0px 0px 8px 0px #0000001f;
-  // border-radius: 4px;
-  // padding: 20px 20px 20px 20px;
-  // margin-bottom: 20px;
-}
-
 .topicos {
   border: 1px solid #cccccc;
   box-shadow: 0px 0px 8px 0px #0000001f;
@@ -677,14 +668,15 @@ h1 {
 }
 
 .agurdando-feedback-edit {
+  background-color: red;
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: absolute;
   z-index: 999;
-  width: calc(100% - 80px);
+  width: calc(100% - 40px);
   height: calc(100% - 40px);
   h2 {
     color: #707070 !important;

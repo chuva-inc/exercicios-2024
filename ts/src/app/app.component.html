@@ -224,13 +224,10 @@
               <div class="generic-barra-divisioria"></div>
             </ng-template>
 
-            <div
-              class="topicos-container"
-              *ngFor="let topico of discussoesTopicos"
-            >
+            <div *ngFor="let topico of discussoesTopicos">
               <div
                 class="topicos"
-                *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
+                *ngIf="topico.aguardandoFeedback; else aguardandoFeedback"
               >
                 <div class="topico-assunto-autor">
                   <h3>{{ topico.assunto }}</h3>
@@ -256,11 +253,6 @@
               <ng-template #aguardandoFeedback>
                 <div class="topico-aguardando-feedback">
                   <div class="agurdando-feedback-edit">
-                    <!-- <div class="agurdando-feedback-edit">
-                      <fa-icon [icon]="faCheckDouble"></fa-icon>
-                      <h2>Aguardando feedback dos autores</h2>
-                      <a>Editar tópico</a>
-                    </div> -->
                     <fa-icon [icon]="faCheckDouble"></fa-icon>
                     <h2>Aguardando feedback dos autores</h2>
                     <a>Editar tópico</a>
