@@ -144,7 +144,7 @@
             {{ paragrafo }}
           </p>
 
-          <div class="btn-ver-mais" (click)="verMaisResumo()">
+          <div class="btn-show-more" (click)="verMaisResumo()">
             <div
               *ngIf="
                 this.numParagrafosMostrados !== this.textoResumoArray.length;
@@ -172,27 +172,62 @@
               class="container-nao-criando-topico"
               *ngIf="!criandoTopico && !editandoTopico; else divCriandoTopico"
             >
-              <div class="compartilhe-ideias">
-                <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
-                <div class="discussoes-icons">
-                  <img src="../assets/icone1.svg" />
-                  <img src="../assets/icone2.svg" />
-                  <img src="../assets/icone3.svg" />
+              <div
+                *ngIf="
+                  user.topicsAguardandoFeedback <= 0;
+                  else hasTopicsAguardandoFeedback
+                "
+              >
+                <div class="compartilhe-ideias">
+                  <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
+                  <div class="discussoes-icons">
+                    <img src="../assets/icone1.svg" />
+                    <img src="../assets/icone2.svg" />
+                    <img src="../assets/icone3.svg" />
+                  </div>
+                  <span
+                    >Sabia que o maior estímulo no desenvolvimento científico e
+                    cultural é a curiosidade? Deixe seus questionamentos ou
+                    sugestões para o autor!</span
+                  >
                 </div>
-                <span
-                  >Sabia que o maior estímulo no desenvolvimento científico e
-                  cultural é a curiosidade? Deixe seus questionamentos ou
-                  sugestões para o autor!</span
-                >
               </div>
+
+              <ng-template #hasTopicsAguardandoFeedback>
+                <div class="container-criar-novo-topico">
+                  <div class="compartilhe-ideias">
+                    <h2>Seu tópico foi enviado com sucesso! :D</h2>
+                    <span
+                      >Agradecemos por sua contribuição, uma notificação será
+                      enviada ao seu email assim que seu tópico for
+                      respondido!</span
+                    >
+                    <a>Descubra outros trabalhos!</a>
+                  </div>
+                </div>
+              </ng-template>
+
               <div class="barra-divisioria-criar-topico">
                 <div
                   class="btn-criar-topico"
                   (click)="criarTopicoDiscussao(true)"
+                  *ngIf="
+                    user.topicsAguardandoFeedback <= 0;
+                    else criarNovoTopico
+                  "
                 >
                   <fa-icon [icon]="faPlus" class="icon-white"></fa-icon>
                   <span>criar tópico</span>
                 </div>
+
+                <ng-template #criarNovoTopico>
+                  <div
+                    class="btn-criar-novo-topico"
+                    (click)="criarTopicoDiscussao(true)"
+                  >
+                    <span>criar novo tópico</span>
+                  </div>
+                </ng-template>
               </div>
             </div>
 

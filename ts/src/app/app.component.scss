@@ -527,7 +527,7 @@ h1 {
   }
 }
 
-.btn-ver-mais {
+.btn-show-more {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -554,6 +554,37 @@ h1 {
     line-height: 19.25px;
     color: #595959;
     text-align: center;
+  }
+}
+
+.container-criar-novo-topico {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h2 {
+    font-family: $font-roboto;
+    font-size: 18px;
+    color: $orange-color;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 19.25px;
+    color: #595959;
+    text-align: center;
+    padding: 35px;
+  }
+
+  a {
+    font-size: 14px;
+    color: $orange-color;
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 
@@ -595,6 +626,33 @@ h1 {
 .btn-criar-topico {
   position: absolute;
   width: 133px;
+  height: 32px;
+  background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
+  box-shadow: 0px 2px 2px 0px #0000003d, 0px 0px 2px 0px #0000001f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  fa-icon {
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, #f0813d 0%, #feb254 100%);
+  }
+}
+
+.btn-criar-novo-topico {
+  position: absolute;
+  width: 235px;
   height: 32px;
   background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
   box-shadow: 0px 2px 2px 0px #0000003d, 0px 0px 2px 0px #0000001f;

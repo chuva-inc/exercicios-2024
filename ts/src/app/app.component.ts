@@ -215,9 +215,11 @@ export class AppComponent {
   user: {
     userId: number;
     userName: string;
+    topicsAguardandoFeedback: number;
   } = {
     userId: 1,
     userName: 'Carlos Henrique Santos',
+    topicsAguardandoFeedback: 0,
   };
   assuntoTopicoField: string = '';
   conteudoTopicoField: string = '';
@@ -300,16 +302,22 @@ export class AppComponent {
       if (this.criandoTopico) {
         const topic = this.newTopicData();
         this.discussoesTopicos.push(topic);
+        this.user.topicsAguardandoFeedback += 1;
       } else {
-        const indexEdit = this.discussoesTopicos.indexOf(this.topicEdit);
-        this.discussoesTopicos.splice(indexEdit, 1);
-        const topic = this.editTopicData(this.topicEdit);
-        this.discussoesTopicos.push(topic);
+        if (this.topicEdit) {
+          const indexEdit = this.discussoesTopicos.findIndex(
+            (topic) => topic.id === this.topicEdit.id
+          );
+          const topic = this.editTopicData(this.topicEdit);
+          this.discussoesTopicos.splice(indexEdit, 1);
+          this.discussoesTopicos.push(topic);
+        }
       }
       this.criandoTopico = false;
       this.editandoTopico = false;
       this.sortDiscussoesTopicosDesc();
       this.limparCampos();
+      console.log('this.user :>> ', this.user);
     } else {
       alert('Preencha os campos vazios');
     }
