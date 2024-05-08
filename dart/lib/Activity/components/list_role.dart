@@ -74,6 +74,7 @@ class _ListRoleState extends State<ListRole> {
         ),
         Flexible(
           child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemCount: people.length,
             itemBuilder: (context, index) {
