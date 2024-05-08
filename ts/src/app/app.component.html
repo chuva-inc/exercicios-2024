@@ -106,22 +106,38 @@
           </div>
           <div class="detalhes-content">
             <div class="poster-content">
-              <span *ngFor="let detalhe of detalhesTrabalho">
-                {{ detalhe.label }} :
-                <span class="detalhes-response">{{ detalhe.response }}</span>
+              <span
+                >Tipo de Apresentação:
+                <span class="detalhes-response">{{
+                  trabalho.tipoApresentacao
+                }}</span></span
+              >
+              <span
+                >Eixo Temático:
+                <span class="detalhes-response">{{
+                  trabalho.eixoTematico
+                }}</span>
+              </span>
+              <span
+                >Palavras Chaves:
+                <span class="detalhes-response">{{
+                  trabalho.palavrasChave
+                }}</span>
               </span>
             </div>
             <div class="autores-content">
               <span class="detalhes-response">Autores: </span>
               <span *ngFor="let autor of autores"
                 >{{ autor.name }}
-                <span class="small-number">{{ autor.number }} </span>
+                <span class="small-number"
+                  >{{ autor.instituicao?.instituicaoNumber }}
+                </span>
               </span>
             </div>
             <div class="universidade-content">
               <span *ngFor="let universidade of universidades">
                 <span class="small-number">{{
-                  universidade.universidadeNumber
+                  universidade.instituicaoNumber
                 }}</span>
                 {{ universidade.universidadeName }}
               </span>
@@ -209,7 +225,7 @@
 
               <div class="barra-divisioria-criar-topico">
                 <div
-                  class="btn-criar-topico"
+                  class="btn-create-topic"
                   (click)="criarTopicoDiscussao(true)"
                   *ngIf="
                     user.topicsAguardandoFeedback <= 0;
@@ -222,7 +238,7 @@
 
                 <ng-template #criarNovoTopico>
                   <div
-                    class="btn-criar-novo-topico"
+                    class="btn-create-new -topic"
                     (click)="criarTopicoDiscussao(true)"
                   >
                     <span>criar novo tópico</span>
@@ -255,7 +271,7 @@
                   ></textarea>
                   <div class="container-row-enviar-topico">
                     <div
-                      class="btn-create-topic"
+                      class="btn-save-new-topic"
                       (click)="enviarSalvarTopico()"
                     >
                       <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>

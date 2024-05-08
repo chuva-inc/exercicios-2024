@@ -19,7 +19,7 @@ export interface User {
 export interface Autor {
   id: number;
   name: string;
-  number: number;
+  instituicao: Universidade | undefined;
 }
 
 export interface DetalhesTrabalho {
@@ -52,5 +52,19 @@ export interface Language {
 export interface Universidade {
   id: number;
   universidadeName: string;
-  universidadeNumber: number;
+  instituicaoNumber: number;
+}
+
+export interface Trabalho {
+  id: number;
+  autor: Autor | undefined;
+  coautores: Autor[] | undefined;
+  tipoApresentacao: string;
+  eixoTematico: string;
+  palavrasChave: string;
+}
+
+export interface Resposta {
+  id: number;
+  dataResposta: string;
 }

@@ -19,6 +19,7 @@ import {
   Language,
   SideMenuOptions,
   Topico,
+  Trabalho,
   Universidade,
   User,
   VideoData,
@@ -73,6 +74,7 @@ export class AppComponent {
     authorLocalization: 'FCA / Universidade Estadual de Campinas',
   };
   citacaoFavorita: boolean = true;
+
   detalhesTrabalho: DetalhesTrabalho[] = [
     {
       id: 1,
@@ -90,33 +92,94 @@ export class AppComponent {
       response: 'Alimentos funcionais, alimentação escolar',
     },
   ];
+  universidades: Universidade[] = [
+    {
+      id: 1,
+      universidadeName: 'Universidade Estadual de Campinas',
+      instituicaoNumber: 1,
+    },
+    {
+      id: 2,
+      universidadeName: 'Universidade de São Paulo',
+      instituicaoNumber: 2,
+    },
+    {
+      id: 3,
+      universidadeName: 'Instituto Nacional de Pesquisas Espaciais',
+      instituicaoNumber: 3,
+    },
+    {
+      id: 4,
+      universidadeName: 'Universidade Federal do Rio de Janeiro',
+      instituicaoNumber: 4,
+    },
+  ];
   autores: Autor[] = [
     {
       id: 1,
       name: 'Galileo Galilei',
-      number: 1,
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 1
+      ),
     },
     {
       id: 2,
       name: 'Berta Lange de Morretes',
-      number: 2,
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 2
+      ),
     },
     {
       id: 3,
       name: 'Isaac Newton',
-      number: 3,
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 3
+      ),
     },
     {
       id: 4,
       name: 'Cesar Lattes',
-      number: 1,
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 1
+      ),
     },
     {
       id: 5,
       name: 'Stephen Hawking',
-      number: 4,
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 4
+      ),
+    },
+    {
+      id: 6,
+      name: 'Adriano da Silva',
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 4
+      ),
+    },
+    {
+      id: 7,
+      name: 'Carmila Ferreira Andrade',
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 3
+      ),
+    },
+    {
+      id: 8,
+      name: 'Ana Carolina',
+      instituicao: this.universidades?.find(
+        (universidade) => universidade.id === 3
+      ),
     },
   ];
+  trabalho: Trabalho = {
+    id: 1,
+    autor: this.autores?.find((autor) => autor.id === 6),
+    coautores: this.autores?.filter((autore) => autore.id !== 6),
+    tipoApresentacao: 'Pôster',
+    eixoTematico: 'Alimentação e saúde (AS) ',
+    palavrasChave: 'Alimentos funcionais, alimentação escolar',
+  };
   textoResumoArray: string[] = [];
   textoResumo: string =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum. \n' +
@@ -126,28 +189,7 @@ export class AppComponent {
   textoResumoFormatado: string = '';
   numParagrafosMostrados: number = 1;
   MAXRESUMOFIELD: number = 922;
-  universidades: Universidade[] = [
-    {
-      id: 1,
-      universidadeName: 'Universidade Estadual de Campinas',
-      universidadeNumber: 1,
-    },
-    {
-      id: 2,
-      universidadeName: 'Universidade de São Paulo',
-      universidadeNumber: 2,
-    },
-    {
-      id: 3,
-      universidadeName: 'Instituto Nacional de Pesquisas Espaciais',
-      universidadeNumber: 3,
-    },
-    {
-      id: 4,
-      universidadeName: 'Universidade Federal do Rio de Janeiro',
-      universidadeNumber: 4,
-    },
-  ];
+
   discussoesTopicos: Topico[] = [
     {
       id: 1,
