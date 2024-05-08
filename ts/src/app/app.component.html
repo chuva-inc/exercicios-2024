@@ -170,7 +170,7 @@
           <div class="container-criar-topico">
             <div
               class="container-nao-criando-topico"
-              *ngIf="!criandoTopico; else divCriandoTopico"
+              *ngIf="!criandoTopico && !editandoTopico; else divCriandoTopico"
             >
               <div class="compartilhe-ideias">
                 <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
@@ -186,7 +186,10 @@
                 >
               </div>
               <div class="barra-divisioria-criar-topico">
-                <div class="btn-criar-topico" (click)="criarTopicoDiscussao()">
+                <div
+                  class="btn-criar-topico"
+                  (click)="criarTopicoDiscussao(true)"
+                >
                   <fa-icon [icon]="faPlus" class="icon-white"></fa-icon>
                   <span>criar tópico</span>
                 </div>
@@ -206,17 +209,23 @@
                   <h2>Assunto</h2>
                   <input
                     placeholder="Defina um tópico sucinto para notificar os autores..."
+                    [value]="assuntoTopico"
                     (change)="changeAssuntoTopico($any($event.target).value)"
                   />
                   <h2>Conteúdo</h2>
                   <textarea
                     rows="5"
                     cols="60"
+                    [value]="conteudoTopico"
                     (change)="changeConteudoTopico($any($event.target).value)"
                   ></textarea>
                   <div class="container-row-enviar-topico">
-                    <div class="btn-create-topic" (click)="enviarTopico()">
-                      <a>Enviar</a>
+                    <div
+                      class="btn-create-topic"
+                      (click)="enviarSalvarTopico()"
+                    >
+                      <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
+                      <ng-template #salvarTopico><a>Salvar</a></ng-template>
                     </div>
                   </div>
                 </div>
@@ -255,7 +264,9 @@
                   <div class="agurdando-feedback-edit">
                     <fa-icon [icon]="faCheckDouble"></fa-icon>
                     <h2>Aguardando feedback dos autores</h2>
-                    <a>Editar tópico</a>
+                    <a (click)="editarTopicoDiscussoes(true, topico.id)"
+                      >Editar tópico</a
+                    >
                   </div>
                   <div class="background-desfocado-topico">
                     <div class="topico-assunto-autor">

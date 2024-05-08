@@ -154,6 +154,7 @@ export class AppComponent {
     curtidas: number;
     respostas: number;
     aguardandoFeedback: boolean;
+    dataCriacao: string;
   }[] = [
     {
       id: 1,
@@ -165,6 +166,7 @@ export class AppComponent {
       curtidas: 0,
       respostas: 1,
       aguardandoFeedback: false,
+      dataCriacao: '2024-01-01',
     },
     {
       id: 2,
@@ -176,6 +178,7 @@ export class AppComponent {
       curtidas: 1,
       respostas: 1,
       aguardandoFeedback: false,
+      dataCriacao: '2024-01-02',
     },
   ];
   textFooter: string[] = [
@@ -187,6 +190,28 @@ export class AppComponent {
       'formentado pelos encontros e aumentando o impacto do evento.',
   ];
   criandoTopico: boolean = false;
+  editandoTopico: boolean = false;
+  topicEdit: {
+    id: number;
+    assunto: string;
+    autorPergunta: string;
+    pergunta: string;
+    isLiked: boolean;
+    curtidas: number;
+    respostas: number;
+    aguardandoFeedback: boolean;
+    dataCriacao: string;
+  } = {
+    id: 0,
+    assunto: '',
+    autorPergunta: '',
+    pergunta: '',
+    isLiked: false,
+    curtidas: 0,
+    respostas: 0,
+    aguardandoFeedback: false,
+    dataCriacao: '',
+  };
   autorTopico: string = 'Carlos Henrique Santos';
   assuntoTopico: string = '';
   conteudoTopico: string = '';
@@ -200,7 +225,10 @@ export class AppComponent {
   }
 
   sortDiscussoesTopicosDesc() {
-    this.discussoesTopicos = this.discussoesTopicos.sort((a, b) => b.id - a.id);
+    this.discussoesTopicos = this.discussoesTopicos.sort(
+      (a, b) =>
+        new Date(b.dataCriacao).getTime() - new Date(a.dataCriacao).getTime()
+    );
   }
 
   formatTextResumo(text: string) {
@@ -249,8 +277,8 @@ export class AppComponent {
     );
   }
 
-  criarTopicoDiscussao() {
-    this.criandoTopico = !this.criandoTopico;
+  criarTopicoDiscussao(criandoTopico: boolean) {
+    this.criandoTopico = criandoTopico;
   }
 
   changeAssuntoTopico(assunto: string) {
@@ -261,7 +289,28 @@ export class AppComponent {
     this.conteudoTopico = conteudo;
   }
 
-  enviarTopico() {
+  enviarSalvarTopico() {
+    if (this.assuntoTopico !== '' && this.conteudoTopico !== '') {
+      if (this.criandoTopico) {
+        const topic = this.newTopicData();
+        this.discussoesTopicos.push(topic);
+      } else {
+        const indexEdit = this.discussoesTopicos.indexOf(this.topicEdit);
+        this.discussoesTopicos.splice(indexEdit, 1);
+        const topic = this.editTopicData(this.topicEdit);
+        this.discussoesTopicos.push(topic);
+      }
+      this.criandoTopico = false;
+      this.editandoTopico = false;
+      this.sortDiscussoesTopicosDesc();
+      this.limparCampos();
+    } else {
+      alert('Preencha os campos vazios');
+    }
+    console.log('this.discussoesTopicos :>> ', this.discussoesTopicos);
+  }
+
+  newTopicData() {
     const newTopico: {
       id: number;
       assunto: string;
@@ -271,6 +320,7 @@ export class AppComponent {
       curtidas: number;
       respostas: number;
       aguardandoFeedback: boolean;
+      dataCriacao: string;
     } = {
       id: this.discussoesTopicos.length + 1,
       assunto: this.assuntoTopico,
@@ -280,19 +330,67 @@ export class AppComponent {
       curtidas: 0,
       respostas: 0,
       aguardandoFeedback: true,
+      dataCriacao: new Date().toISOString(),
     };
-    if (this.assuntoTopico !== '' && this.conteudoTopico !== '') {
-      this.discussoesTopicos.push(newTopico);
-      this.criandoTopico = !this.criandoTopico;
-      this.sortDiscussoesTopicosDesc();
-      this.limparCampos();
-    } else {
-      alert('Preencha os campos vazios');
-    }
+    return newTopico;
+  }
+
+  editTopicData(topic: {
+    id: number;
+    assunto: string;
+    autorPergunta: string;
+    pergunta: string;
+    isLiked: boolean;
+    curtidas: number;
+    respostas: number;
+    aguardandoFeedback: boolean;
+    dataCriacao: string;
+  }) {
+    const editedTopic: {
+      id: number;
+      assunto: string;
+      autorPergunta: string;
+      pergunta: string;
+      isLiked: boolean;
+      curtidas: number;
+      respostas: number;
+      aguardandoFeedback: boolean;
+      dataCriacao: string;
+    } = {
+      id: topic?.id || 0,
+      assunto: this.assuntoTopico || '',
+      autorPergunta: this.autorTopico || '',
+      pergunta: this.conteudoTopico || '',
+      isLiked: topic?.isLiked || false,
+      curtidas: topic?.curtidas || 0,
+      respostas: topic?.respostas || 0,
+      aguardandoFeedback: topic?.aguardandoFeedback || false,
+      dataCriacao: new Date().toISOString(),
+    };
+    return editedTopic;
   }
 
   limparCampos() {
     this.assuntoTopico = '';
     this.conteudoTopico = '';
+  }
+
+  editarTopicoDiscussoes(editandoTopico: boolean, idTopico: number) {
+    console.log('this.discussoesTopicos :>> ', this.discussoesTopicos);
+    this.editandoTopico = editandoTopico;
+    const post = this.discussoesTopicos.find(
+      (topico) => topico.id === idTopico
+    );
+    this.topicEdit = post as {
+      id: number;
+      assunto: string;
+      autorPergunta: string;
+      pergunta: string;
+      isLiked: boolean;
+      curtidas: number;
+      respostas: number;
+      aguardandoFeedback: boolean;
+      dataCriacao: string;
+    };
   }
 }
