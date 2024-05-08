@@ -12,6 +12,17 @@ import {
   faStar as faStarRegular,
   faHeart as faHeartRegular,
 } from '@fortawesome/free-regular-svg-icons';
+import {
+  Autor,
+  DetalhesTrabalho,
+  HeaderData,
+  Language,
+  SideMenuOptions,
+  Topico,
+  Universidade,
+  User,
+  VideoData,
+} from './interfaces';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +40,7 @@ export class AppComponent {
   faHeartRegular: any = faHeartRegular;
   faCheckDouble: any = faCheckDouble;
   titleSideMenu: string = 'SLACA 2019';
-  optionsSideMenu: { id: number; label: string }[] = [
+  optionsSideMenu: SideMenuOptions[] = [
     { id: 1, label: 'Apresentação' },
     { id: 2, label: 'Comitês' },
     { id: 3, label: 'Autores' },
@@ -37,14 +48,14 @@ export class AppComponent {
     { id: 5, label: 'Trabalhos' },
     { id: 6, label: 'Contato' },
   ];
-  headerData: { firstTitleHeader: string; titleHeader: string } = {
+  headerData: HeaderData = {
     firstTitleHeader:
       'Anais do Simpósio Latino Americano de Ciências de Alimentos',
     titleHeader:
       'Anais do 13º Simpósio Latino Americano de Ciência de Alimentos',
   };
   issn: string = '2526-4806';
-  languages: { id: number; label: string }[] = [
+  languages: Language[] = [
     { id: 1, label: 'PT, BR' },
     { id: 2, label: 'EN, US' },
     { id: 3, label: 'ES, ES' },
@@ -55,18 +66,14 @@ export class AppComponent {
   selectedLanguages: number = 1;
   titlePage: string =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ';
-  videoData: {
-    titleVideo: string;
-    authorName: string;
-    authorLocalization: string;
-  } = {
+  videoData: VideoData = {
     titleVideo:
       'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP ',
     authorName: 'Beatriz Christiane Melo',
     authorLocalization: 'FCA / Universidade Estadual de Campinas',
   };
   citacaoFavorita: boolean = true;
-  detalhesTrabalho: { id: number; label: string; response: string }[] = [
+  detalhesTrabalho: DetalhesTrabalho[] = [
     {
       id: 1,
       label: 'Tipo de Apresentação',
@@ -83,7 +90,7 @@ export class AppComponent {
       response: 'Alimentos funcionais, alimentação escolar',
     },
   ];
-  autores: { id: number; name: string; number: number }[] = [
+  autores: Autor[] = [
     {
       id: 1,
       name: 'Galileo Galilei',
@@ -119,11 +126,7 @@ export class AppComponent {
   textoResumoFormatado: string = '';
   numParagrafosMostrados: number = 1;
   MAXRESUMOFIELD: number = 922;
-  universidades: {
-    id: number;
-    universidadeName: string;
-    universidadeNumber: number;
-  }[] = [
+  universidades: Universidade[] = [
     {
       id: 1,
       universidadeName: 'Universidade Estadual de Campinas',
@@ -145,17 +148,7 @@ export class AppComponent {
       universidadeNumber: 4,
     },
   ];
-  discussoesTopicos: {
-    id: number;
-    assunto: string;
-    autorTopico: string;
-    conteudo: string;
-    isLiked: boolean;
-    curtidas: number;
-    respostas: number;
-    aguardandoFeedback: boolean;
-    dataCriacao: string;
-  }[] = [
+  discussoesTopicos: Topico[] = [
     {
       id: 1,
       assunto: 'Assunto da pergunta aparece aqui',
@@ -191,17 +184,7 @@ export class AppComponent {
   ];
   criandoTopico: boolean = false;
   editandoTopico: boolean = false;
-  topicEdit: {
-    id: number;
-    assunto: string;
-    autorTopico: string;
-    conteudo: string;
-    isLiked: boolean;
-    curtidas: number;
-    respostas: number;
-    aguardandoFeedback: boolean;
-    dataCriacao: string;
-  } = {
+  topicEdit: Topico = {
     id: 0,
     assunto: '',
     autorTopico: '',
@@ -212,13 +195,9 @@ export class AppComponent {
     aguardandoFeedback: false,
     dataCriacao: '',
   };
-  user: {
-    userId: number;
-    userName: string;
-    topicsAguardandoFeedback: number;
-  } = {
-    userId: 1,
-    userName: 'Carlos Henrique Santos',
+  user: User = {
+    id: 1,
+    name: 'Carlos Henrique Santos',
     topicsAguardandoFeedback: 0,
   };
   assuntoTopicoField: string = '';
@@ -232,7 +211,7 @@ export class AppComponent {
     this.sortDiscussoesTopicosDesc();
   }
 
-  sortDiscussoesTopicosDesc() {
+  sortDiscussoesTopicosDesc(): void {
     this.discussoesTopicos = this.discussoesTopicos.sort(
       (a, b) =>
         new Date(b.dataCriacao).getTime() - new Date(a.dataCriacao).getTime()
@@ -262,7 +241,7 @@ export class AppComponent {
     this.citacaoFavorita = citacao;
   }
 
-  verMaisResumo() {
+  verMaisResumo(): void {
     if (this.numParagrafosMostrados !== this.textoResumoArray.length) {
       this.numParagrafosMostrados = this.textoResumoArray.length;
     } else {
@@ -297,7 +276,7 @@ export class AppComponent {
     this.conteudoTopicoField = conteudo;
   }
 
-  enviarSalvarTopico() {
+  enviarSalvarTopico(): void {
     if (this.assuntoTopicoField !== '' && this.conteudoTopicoField !== '') {
       if (this.criandoTopico) {
         const topic = this.newTopicData();
@@ -322,21 +301,11 @@ export class AppComponent {
     }
   }
 
-  newTopicData() {
-    const newTopico: {
-      id: number;
-      assunto: string;
-      autorTopico: string;
-      conteudo: string;
-      isLiked: boolean;
-      curtidas: number;
-      respostas: number;
-      aguardandoFeedback: boolean;
-      dataCriacao: string;
-    } = {
+  newTopicData(): Topico {
+    const newTopico: Topico = {
       id: this.discussoesTopicos.length + 1,
       assunto: this.assuntoTopicoField,
-      autorTopico: this.user.userName,
+      autorTopico: this.user.name,
       conteudo: this.conteudoTopicoField,
       isLiked: false,
       curtidas: 0,
@@ -347,17 +316,7 @@ export class AppComponent {
     return newTopico;
   }
 
-  editTopicData(topic: {
-    id: number;
-    assunto: string;
-    autorTopico: string;
-    conteudo: string;
-    isLiked: boolean;
-    curtidas: number;
-    respostas: number;
-    aguardandoFeedback: boolean;
-    dataCriacao: string;
-  }) {
+  editTopicData(topic: Topico): Topico {
     const editedTopic: {
       id: number;
       assunto: string;
@@ -371,7 +330,7 @@ export class AppComponent {
     } = {
       id: topic?.id || 0,
       assunto: this.assuntoTopicoField || '',
-      autorTopico: this.user.userName || '',
+      autorTopico: this.user.name || '',
       conteudo: this.conteudoTopicoField || '',
       isLiked: topic?.isLiked || false,
       curtidas: topic?.curtidas || 0,
@@ -382,12 +341,12 @@ export class AppComponent {
     return editedTopic;
   }
 
-  limparCampos() {
+  limparCampos(): void {
     this.assuntoTopicoField = '';
     this.conteudoTopicoField = '';
   }
 
-  editarTopicoDiscussoes(editandoTopico: boolean, idTopico: number) {
+  editarTopicoDiscussoes(editandoTopico: boolean, idTopico: number): void {
     this.editandoTopico = editandoTopico;
     const post = this.discussoesTopicos.find(
       (topico) => topico.id === idTopico
@@ -407,9 +366,5 @@ export class AppComponent {
       this.assuntoTopicoField = this.topicEdit.assunto;
       this.conteudoTopicoField = this.topicEdit.conteudo;
     }
-  }
-
-  itemSelectedMenu() {
-    return null;
   }
 }
