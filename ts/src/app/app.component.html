@@ -209,14 +209,14 @@
                   <h2>Assunto</h2>
                   <input
                     placeholder="Defina um tópico sucinto para notificar os autores..."
-                    [value]="assuntoTopico"
+                    [value]="assuntoTopicoField"
                     (change)="changeAssuntoTopico($any($event.target).value)"
                   />
                   <h2>Conteúdo</h2>
                   <textarea
                     rows="5"
                     cols="60"
-                    [value]="conteudoTopico"
+                    [value]="conteudoTopicoField"
                     (change)="changeConteudoTopico($any($event.target).value)"
                   ></textarea>
                   <div class="container-row-enviar-topico">
@@ -236,7 +236,7 @@
             <div *ngFor="let topico of discussoesTopicos">
               <div
                 class="topicos"
-                *ngIf="topico.aguardandoFeedback; else aguardandoFeedback"
+                *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
               >
                 <div class="topico-assunto-autor">
                   <h3>{{ topico.assunto }}</h3>

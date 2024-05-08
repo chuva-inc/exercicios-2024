@@ -212,9 +212,15 @@ export class AppComponent {
     aguardandoFeedback: false,
     dataCriacao: '',
   };
-  autorTopico: string = 'Carlos Henrique Santos';
-  assuntoTopico: string = '';
-  conteudoTopico: string = '';
+  user: {
+    userId: number;
+    userName: string;
+  } = {
+    userId: 1,
+    userName: 'Carlos Henrique Santos',
+  };
+  assuntoTopicoField: string = '';
+  conteudoTopicoField: string = '';
 
   ngOnInit() {
     this.notificationNumber();
@@ -282,15 +288,15 @@ export class AppComponent {
   }
 
   changeAssuntoTopico(assunto: string) {
-    this.assuntoTopico = assunto;
+    this.assuntoTopicoField = assunto;
   }
 
   changeConteudoTopico(conteudo: string) {
-    this.conteudoTopico = conteudo;
+    this.conteudoTopicoField = conteudo;
   }
 
   enviarSalvarTopico() {
-    if (this.assuntoTopico !== '' && this.conteudoTopico !== '') {
+    if (this.assuntoTopicoField !== '' && this.conteudoTopicoField !== '') {
       if (this.criandoTopico) {
         const topic = this.newTopicData();
         this.discussoesTopicos.push(topic);
@@ -307,7 +313,6 @@ export class AppComponent {
     } else {
       alert('Preencha os campos vazios');
     }
-    console.log('this.discussoesTopicos :>> ', this.discussoesTopicos);
   }
 
   newTopicData() {
@@ -323,9 +328,9 @@ export class AppComponent {
       dataCriacao: string;
     } = {
       id: this.discussoesTopicos.length + 1,
-      assunto: this.assuntoTopico,
-      autorPergunta: this.autorTopico,
-      pergunta: this.conteudoTopico,
+      assunto: this.assuntoTopicoField,
+      autorPergunta: this.user.userName,
+      pergunta: this.conteudoTopicoField,
       isLiked: false,
       curtidas: 0,
       respostas: 0,
@@ -358,9 +363,9 @@ export class AppComponent {
       dataCriacao: string;
     } = {
       id: topic?.id || 0,
-      assunto: this.assuntoTopico || '',
-      autorPergunta: this.autorTopico || '',
-      pergunta: this.conteudoTopico || '',
+      assunto: this.assuntoTopicoField || '',
+      autorPergunta: this.user.userName || '',
+      pergunta: this.conteudoTopicoField || '',
       isLiked: topic?.isLiked || false,
       curtidas: topic?.curtidas || 0,
       respostas: topic?.respostas || 0,
@@ -371,12 +376,11 @@ export class AppComponent {
   }
 
   limparCampos() {
-    this.assuntoTopico = '';
-    this.conteudoTopico = '';
+    this.assuntoTopicoField = '';
+    this.conteudoTopicoField = '';
   }
 
   editarTopicoDiscussoes(editandoTopico: boolean, idTopico: number) {
-    console.log('this.discussoesTopicos :>> ', this.discussoesTopicos);
     this.editandoTopico = editandoTopico;
     const post = this.discussoesTopicos.find(
       (topico) => topico.id === idTopico
@@ -392,5 +396,9 @@ export class AppComponent {
       aguardandoFeedback: boolean;
       dataCriacao: string;
     };
+    if (this.topicEdit) {
+      this.assuntoTopicoField = this.topicEdit.assunto;
+      this.conteudoTopicoField = this.topicEdit.pergunta;
+    }
   }
 }
