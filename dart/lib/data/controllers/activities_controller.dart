@@ -18,6 +18,7 @@ abstract class IActivitiesController{
   String formatSpeakers(List<Person> people);
   Map<int, List<Activities>> getAllGroupedActivities ();
   String formatData(String data);
+  Activities getActivityById(int id);
 }
 
 class ActivitiesController implements IActivitiesController{
@@ -68,6 +69,10 @@ class ActivitiesController implements IActivitiesController{
    return activitiesService.getAllGroupedActivities();
   }
 
+  @override
+  Activities getActivityById(int id){
+    return activitiesService.getActivityById(id);
+  }
   @override
   String formatData(String data) {
     return activitiesService.formatData(data);

@@ -17,8 +17,8 @@ class SubActivitieText extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                'Essa Atividade é parte de $title',
-                style: TextStyle(color: Colors.white),
+                'Essa Atividade é parte de "$title"',
+                style: const TextStyle(color: Colors.white),
               ),
             ),
           ),

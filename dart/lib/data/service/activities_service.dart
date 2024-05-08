@@ -27,6 +27,7 @@ abstract class IActivitiesService{
   String extractTextFromHtml(String htmlString);
   String formatSpeakers(List<Person> people);
   String formatData(String data);
+  Activities getActivityById(int id);
 }
 
 class ActivitiesService implements IActivitiesService {
@@ -86,11 +87,23 @@ class ActivitiesService implements IActivitiesService {
   void _addActivitiesToRepo(Map<String, dynamic> dataMap) {
     final dataList = dataMap['data'] as List;
     final List<Activities> fetchedActivities = dataList.map((dataItem) => Activities.fromJson(dataItem)).toList();
-    Map<int, List<Activities>> groupedActivities = _groupActivitiesByParent(fetchedActivities);
+
+    // Filtrar atividades que já existem no repositório antes de processar
+    final List<Activities> uniqueActivities = fetchedActivities.where((newActivity) {
+      return !activities.any((existingActivity) => existingActivity.id == newActivity.id);
+    }).toList();
+
+    Map<int, List<Activities>> groupedActivities = _groupActivitiesByParent(uniqueActivities);
     for (var parentId in groupedActivities.keys) {
       activities.addAll(groupedActivities[parentId]!);
     }
     repository.saveAll(activities);
+  }
+
+
+  @override
+  Activities getActivityById(int id){
+    return repository.activities.firstWhere((e) => e.id == id);
   }
 
   Map<int, List<Activities>> _groupActivitiesByParent(List<Activities> activitiesList) {
@@ -109,7 +122,10 @@ class ActivitiesService implements IActivitiesService {
 
   @override
   List<Activities> filterActivitiesByDay(int day){
-    return activities.where((activity) => (convertDate(activity.start!)== "$day") && (convertDate(activity.end!) == "$day")).toList();
+    final uniqueActivities = activities.toSet().toList();
+    return uniqueActivities.where((activity) =>
+    (convertDate(activity.start!) == "$day") &&
+        (convertDate(activity.end!) == "$day")).toList();
   }
 
 
@@ -118,6 +134,7 @@ class ActivitiesService implements IActivitiesService {
     return DateFormat.d().format(DateTime.parse(date).toUtc().subtract(const Duration(hours: 3)));
   }
 
+  @override
   String formatData(String data){
     return DateFormat.Hm().format(DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));
   }

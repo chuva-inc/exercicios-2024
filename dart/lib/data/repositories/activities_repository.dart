@@ -50,9 +50,9 @@ class ActivitiesRepository extends ChangeNotifier {
     }
   }
 
-  saveAll(List<Activities> activities) {
-    activities.forEach((activity) async {
-      if (!_activities.any((atual) => atual.id == activity.id)) {
+  saveAll(List<Activities> newActivities) {
+    newActivities.forEach((activity) async {
+      if (!_activities.any((existingActivity) => existingActivity.id == activity.id)) {
         _activities.add(activity);
         _favoritesMap[activity.id] = activity.favorite!;
         await box?.put(activity.id, activity);
@@ -60,6 +60,7 @@ class ActivitiesRepository extends ChangeNotifier {
     });
     notifyListeners();
   }
+
 
   bool isEmpty(){
     return _activities.isEmpty;

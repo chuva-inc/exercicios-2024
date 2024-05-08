@@ -24,6 +24,7 @@ class Activity extends StatefulWidget {
 class _ActivityState extends State<Activity> {
   late String formattedTime;
   String parentActivity = "";
+  int parent = 0;
 
   Activities get activity => widget.items;
   late ActivitiesController controller;
@@ -43,23 +44,15 @@ class _ActivityState extends State<Activity> {
     String descriptionText =
         controller.extractTextFromHtml(activity.description!.ptBr!);
     List<Widget> subActivitiesWidgets = [];
-
-    try {
-      int parent = activity.parent!;
-      if(parent != 0){
-      parentActivity = widget.activities.firstWhere(
-            (act) => act.id == parent,
-      ).title!.ptBr!;
-      }
-    } catch (e) {
-      e.toString();
-    }
-
     Map<int, List<Activities>> groupedSubActivities =
         controller.getAllGroupedActivities();
 
     List<Activities> subActivities = groupedSubActivities[activity.id] ?? [];
 
+    int parent = activity.parent!;
+    if (parent != 0) {
+      parentActivity = controller.getActivityById(parent).title!.ptBr!;
+    }
     if (subActivities.isNotEmpty) {
       subActivitiesWidgets.add(
         Row(
@@ -84,6 +77,7 @@ class _ActivityState extends State<Activity> {
         );
       }).toList());
     }
+
     // print(parentActivity);
     return Scaffold(
       appBar: const PreferredSize(
@@ -110,7 +104,9 @@ class _ActivityState extends State<Activity> {
             ],
           ),
           if (subActivities.isEmpty) ...[
-            SubActivitieText(title: parentActivity,)
+            SubActivitieText(
+              title: parentActivity,
+            )
           ],
           Container(
             padding: const EdgeInsetsDirectional.symmetric(vertical: 15),
