@@ -43,8 +43,6 @@ class _CalendarState extends State<Calendar>
 
   @override
   Widget build(BuildContext context) {
-    ActivitiesRepository activitiesRepository =
-        Provider.of<ActivitiesRepository>(context);
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: PreferredSize(

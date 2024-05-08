@@ -15,9 +15,6 @@ class ScheduleItems extends StatelessWidget {
   final List<Activities> activities;
   final String data;
 
-
-
-
   @override
   Widget build(BuildContext context) {
     ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();

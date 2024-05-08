@@ -14,9 +14,10 @@ final routes = GoRouter(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           Provider.debugCheckInvalidValueType = null;
+          Provider.of<ActivitiesRepository>(context);
           return Provider<ActivitiesRepository>(
             create: (context) => ActivitiesRepository(),
-            child: Calendar(),
+            child: const Calendar(),
           );
         },
       ),
