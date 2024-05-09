@@ -152,13 +152,23 @@
           <h3>Resumo</h3>
         </div>
         <div class="content-card">
-          <p
-            *ngFor="
-              let paragrafo of textoResumoArray.slice(0, numParagrafosMostrados)
-            "
-          >
-            {{ paragrafo }}
-          </p>
+          <div *ngIf="isResumoFormatado; else labelResumoNaoFormatado">
+            <p
+              *ngFor="
+                let paragrafo of textoResumoArray.slice(
+                  0,
+                  numParagrafosMostrados
+                )
+              "
+            >
+              {{ paragrafo }}
+            </p>
+          </div>
+          <ng-template #labelResumoNaoFormatado>
+            <div class="texto-resumo-first">
+              <span>{{ textoResumoFormatado }}</span>
+            </div>
+          </ng-template>
 
           <div class="btn-show-more" (click)="verMaisResumo()">
             <div

@@ -283,8 +283,9 @@ export class AppComponent {
     'Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa. \n' +
     'Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';
   textoResumoFormatado: string = '';
+  isResumoFormatado: boolean = false;
   numParagrafosMostrados: number = 1;
-  MAXRESUMOFIELD: number = 922;
+  MAXRESUMOFIELD: number = 224 * 5;
   textFooter: string[] = [
     'Preservar a memória do evento e ampliar o acesso ao conhecimento ' +
       'científico gerado em eventos é a razão de ser da plataforma Galoá' +
@@ -338,6 +339,7 @@ export class AppComponent {
   }
 
   verMaisResumo(): void {
+    this.isResumoFormatado = !this.isResumoFormatado;
     if (this.numParagrafosMostrados !== this.textoResumoArray.length) {
       this.numParagrafosMostrados = this.textoResumoArray.length;
     } else {
