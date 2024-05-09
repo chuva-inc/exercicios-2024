@@ -347,7 +347,8 @@ export class AppComponent {
     }
   }
 
-  likeUnlikePost(like: boolean, idPost: number) {
+  likeUnlikePost(event: Event, like: boolean, idPost: number) {
+    event.stopPropagation();
     let post = this.discussoesTopicos.find((topico) => topico.id === idPost);
     if (post) {
       post.isLiked = !like;

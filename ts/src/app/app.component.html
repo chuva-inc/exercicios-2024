@@ -281,13 +281,14 @@
                       (change)="changeConteudoTopico($any($event.target).value)"
                     ></textarea>
                     <div class="container-row-enviar-topico">
-                      <div
+                      <button
+                        type="submit"
                         class="btn-save-new-topic"
                         (click)="enviarSalvarTopico()"
                       >
                         <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
                         <ng-template #salvarTopico><a>Salvar</a></ng-template>
-                      </div>
+                      </button>
                     </div>
                   </form>
                 </form>
@@ -296,11 +297,12 @@
             </ng-template>
 
             <div
-              class="container-cards-discussoes"
+              class="answered-topic"
               *ngFor="let topico of discussoesTopicos"
             >
               <div
-                class="answered-topic"
+                (click)="expandirTopico(topico)"
+                class="container-cards-discussoes"
                 *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
               >
                 <div class="ops-topic-subject">
@@ -309,7 +311,7 @@
                 </div>
                 <span>{{ topico.conteudo }}</span>
                 <div class="actions-topico">
-                  <div (click)="expandirTopico(topico)">
+                  <div>
                     <fa-icon
                       [icon]="faEllipsisV"
                       class="icon-orange"
@@ -318,7 +320,7 @@
                   </div>
                   <div
                     class="btn-like-topico"
-                    (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                    (click)="likeUnlikePost($event, topico.isLiked, topico.id)"
                   >
                     <fa-icon
                       [icon]="topico.isLiked ? faHeart : faHeartRegular"
@@ -411,7 +413,9 @@
                       ></fa-icon>
                       <div
                         class="btn-like-topico"
-                        (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                        (click)="
+                          likeUnlikePost($event, topico.isLiked, topico.id)
+                        "
                       >
                         <fa-icon
                           [icon]="topico.isLiked ? faHeart : faHeartRegular"
