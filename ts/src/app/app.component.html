@@ -294,7 +294,13 @@
                 </div>
                 <span>{{ topico.conteudo }}</span>
                 <div class="actions-topico">
-                  <fa-icon [icon]="faEllipsisV" class="icon-orange"></fa-icon>
+                  <div (click)="expandirTopico(topico)">
+                    <fa-icon
+                      [icon]="faEllipsisV"
+                      class="icon-orange"
+                      title="Clique aqui para ver mais"
+                    ></fa-icon>
+                  </div>
                   <div
                     class="btn-like-topico"
                     (click)="likeUnlikePost(topico.isLiked, topico.id)"
@@ -302,10 +308,33 @@
                     <fa-icon
                       [icon]="topico.isLiked ? faHeart : faHeartRegular"
                       class="icon-white"
+                      [title]="
+                        topico.isLiked
+                          ? 'Clique aqui para descurtir'
+                          : 'Clique aqui para curtir'
+                      "
                     ></fa-icon>
                   </div>
                   <span>{{ topico.curtidas }} like</span>
-                  <span>{{ topico.respostas }} resposta</span>
+                  <span>{{ topico.respostas?.length }} resposta</span>
+                </div>
+              </div>
+              <div
+                class="container-topico-expandido"
+                *ngIf="topico.isExpandido"
+              >
+                <div
+                  *ngFor="let resposta of topico.respostas"
+                  class="card-respostas"
+                >
+                  <h3>{{ resposta.authorResponse?.name }}</h3>
+                  <p
+                    *ngFor="
+                      let paragrafo of resposta.contentResponse.split('\n')
+                    "
+                  >
+                    {{ paragrafo }}
+                  </p>
                 </div>
               </div>
 

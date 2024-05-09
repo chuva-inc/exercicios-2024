@@ -5,9 +5,17 @@ export interface Topico {
   conteudo: string;
   isLiked: boolean;
   curtidas: number;
-  respostas: number;
   aguardandoFeedback: boolean;
   dataCriacao: string;
+  respostas: Resposta[] | undefined;
+  isExpandido: boolean;
+}
+
+export interface Resposta {
+  id: number;
+  authorResponse: Autor | undefined;
+  contentResponse: String;
+  dataResposta: string;
 }
 
 export interface User {
@@ -62,9 +70,4 @@ export interface Trabalho {
   tipoApresentacao: string;
   eixoTematico: string;
   palavrasChave: string;
-}
-
-export interface Resposta {
-  id: number;
-  dataResposta: string;
 }

@@ -188,9 +188,10 @@ export class AppComponent {
     conteudo: '',
     isLiked: false,
     curtidas: 0,
-    respostas: 0,
+    respostas: undefined,
     aguardandoFeedback: false,
     dataCriacao: '',
+    isExpandido: false,
   };
 
   discussoesTopicos: Topico[] = [
@@ -201,10 +202,40 @@ export class AppComponent {
       conteudo:
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       isLiked: false,
-      curtidas: 0,
-      respostas: 1,
+      curtidas: 4,
+      respostas: [
+        {
+          id: 1,
+          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          contentResponse:
+            'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+          dataResposta: '2022-01-01',
+        },
+        {
+          id: 2,
+          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          contentResponse:
+            'Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.\n Obrigada pela resposta, muito interessante o seu trabalho!',
+          dataResposta: '2022-01-01',
+        },
+        {
+          id: 3,
+          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          contentResponse:
+            'Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.\n Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+          dataResposta: '2022-01-01',
+        },
+        {
+          id: 4,
+          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          contentResponse:
+            'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+          dataResposta: '2022-01-01',
+        },
+      ],
       aguardandoFeedback: false,
       dataCriacao: '2024-01-01',
+      isExpandido: false,
     },
     {
       id: 2,
@@ -214,9 +245,18 @@ export class AppComponent {
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       isLiked: true,
       curtidas: 1,
-      respostas: 1,
+      respostas: [
+        {
+          id: 1,
+          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          contentResponse:
+            'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
+          dataResposta: '2022-01-01',
+        },
+      ],
       aguardandoFeedback: false,
       dataCriacao: '2024-01-02',
+      isExpandido: false,
     },
   ];
 
@@ -256,6 +296,7 @@ export class AppComponent {
   editandoTopico: boolean = false;
   assuntoTopicoField: string = '';
   conteudoTopicoField: string = '';
+  topicoExpandido: boolean = true;
 
   ngOnInit() {
     this.notificationNumber();
@@ -363,34 +404,26 @@ export class AppComponent {
       conteudo: this.conteudoTopicoField,
       isLiked: false,
       curtidas: 0,
-      respostas: 0,
+      respostas: undefined,
       aguardandoFeedback: true,
       dataCriacao: new Date().toISOString(),
+      isExpandido: false,
     };
     return newTopico;
   }
 
   editTopicData(topic: Topico): Topico {
-    const editedTopic: {
-      id: number;
-      assunto: string;
-      autorTopico: string;
-      conteudo: string;
-      isLiked: boolean;
-      curtidas: number;
-      respostas: number;
-      aguardandoFeedback: boolean;
-      dataCriacao: string;
-    } = {
+    const editedTopic: Topico = {
       id: topic?.id || 0,
       assunto: this.assuntoTopicoField || '',
       autorTopico: this.user.name || '',
       conteudo: this.conteudoTopicoField || '',
       isLiked: topic?.isLiked || false,
       curtidas: topic?.curtidas || 0,
-      respostas: topic?.respostas || 0,
+      respostas: undefined,
       aguardandoFeedback: topic?.aguardandoFeedback || false,
       dataCriacao: new Date().toISOString(),
+      isExpandido: false,
     };
     return editedTopic;
   }
@@ -412,13 +445,23 @@ export class AppComponent {
       conteudo: string;
       isLiked: boolean;
       curtidas: number;
-      respostas: number;
+      respostas: undefined;
       aguardandoFeedback: boolean;
       dataCriacao: string;
+      isExpandido: boolean;
     };
     if (this.topicEdit) {
       this.assuntoTopicoField = this.topicEdit.assunto;
       this.conteudoTopicoField = this.topicEdit.conteudo;
     }
+  }
+
+  expandirTopico(topico: Topico) {
+    this.discussoesTopicos = this.discussoesTopicos.map((topic) => {
+      if (topic.id === topico.id) {
+        topic.isExpandido = !topic.isExpandido;
+      }
+      return topic;
+    });
   }
 }

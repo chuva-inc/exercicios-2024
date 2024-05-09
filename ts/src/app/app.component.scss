@@ -703,6 +703,7 @@ h1 {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+  // background-color: blue;
 }
 
 .ops-topic-subject {
@@ -715,6 +716,26 @@ h1 {
 
 .ops-topic-subject > span {
   font-size: 12px !important;
+}
+
+.container-topico-expandido {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  // background-color: red;
+}
+
+.card-respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  border: 1px solid #cccccc;
+  // margin-bottom: 20px;
+  span {
+    text-align: start !important;
+  }
+  padding: 20px 20px 20px 20px;
 }
 
 .topico-aguardando-feedback {
@@ -776,6 +797,10 @@ h1 {
   span {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   }
+
+  fa-icon {
+    cursor: pointer;
+  }
 }
 
 .actions-topico span {
@@ -790,7 +815,6 @@ h1 {
   height: 19px;
   display: flex;
   justify-content: center;
-  cursor: pointer;
 }
 
 .btn-like-topico fa-icon {
