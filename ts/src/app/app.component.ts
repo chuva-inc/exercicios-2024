@@ -245,15 +245,7 @@ export class AppComponent {
         'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
       isLiked: true,
       curtidas: 1,
-      respostas: [
-        {
-          id: 1,
-          authorResponse: this.autoresTrabalho?.find((autor) => autor.id === 6),
-          contentResponse:
-            'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
-          dataResposta: '2022-01-01',
-        },
-      ],
+      respostas: [],
       aguardandoFeedback: false,
       dataCriacao: '2024-01-02',
       isExpandido: false,

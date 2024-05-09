@@ -266,43 +266,207 @@
                   </span>
                 </div>
                 <form class="form-container">
-                  <form>
-                    <h2>Assunto</h2>
-                    <input
-                      placeholder="Defina um tópico sucinto para notificar os autores..."
-                      [value]="assuntoTopicoField"
-                      (change)="changeAssuntoTopico($any($event.target).value)"
-                    />
-                    <h2>Conteúdo</h2>
-                    <textarea
-                      rows="5"
-                      cols="60"
-                      [value]="conteudoTopicoField"
-                      (change)="changeConteudoTopico($any($event.target).value)"
-                    ></textarea>
-                    <div class="container-row-enviar-topico">
-                      <button
-                        type="submit"
-                        class="btn-save-new-topic"
-                        (click)="enviarSalvarTopico()"
-                      >
-                        <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
-                        <ng-template #salvarTopico><a>Salvar</a></ng-template>
-                      </button>
-                    </div>
-                  </form>
+                  <h2>Assunto</h2>
+                  <input
+                    class="subject"
+                    placeholder="Defina um tópico sucinto para notificar os autores..."
+                    [value]="assuntoTopicoField"
+                    (change)="changeAssuntoTopico($any($event.target).value)"
+                  />
+                  <h2>Conteúdo</h2>
+                  <textarea
+                    rows="5"
+                    cols="60"
+                    [value]="conteudoTopicoField"
+                    (change)="changeConteudoTopico($any($event.target).value)"
+                  ></textarea>
+                  <div class="container-row-enviar-topico">
+                    <button
+                      type="submit"
+                      class="btn-save-new-topic"
+                      (click)="enviarSalvarTopico()"
+                    >
+                      <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
+                      <ng-template #salvarTopico><a>Salvar</a></ng-template>
+                    </button>
+                  </div>
                 </form>
               </div>
               <div class="generic-barra-divisioria"></div>
             </ng-template>
 
             <div
-              class="answered-topic"
+              class="container-cards-discussoes"
               *ngFor="let topico of discussoesTopicos"
             >
               <div
+                *ngIf="
+                  (topico.respostas?.length ?? 0) > 0;
+                  else cardsRespondidos
+                "
+              >
+                <div class="answered-topic" (click)="expandirTopico(topico)">
+                  <div
+                    class="ops-topic-subject"
+                    (click)="$event.stopPropagation()"
+                  >
+                    <h3>{{ topico.assunto }}</h3>
+                    <span>{{ topico.autorTopico }}</span>
+                  </div>
+                  <span (click)="$event.stopPropagation()">{{
+                    topico.conteudo
+                  }}</span>
+                  <div class="actions-topico">
+                    <div (click)="$event.stopPropagation()">
+                      <fa-icon
+                        [icon]="faEllipsisV"
+                        class="icon-orange"
+                        title="Clique aqui para ver mais"
+                      ></fa-icon>
+                    </div>
+                    <div
+                      class="btn-like-topico"
+                      (click)="
+                        likeUnlikePost($event, topico.isLiked, topico.id);
+                        $event.stopPropagation()
+                      "
+                    >
+                      <fa-icon
+                        [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                        class="icon-white"
+                        [title]="
+                          topico.isLiked
+                            ? 'Clique aqui para descurtir'
+                            : 'Clique aqui para curtir'
+                        "
+                      ></fa-icon>
+                    </div>
+                    <span (click)="$event.stopPropagation()"
+                      >{{ topico.curtidas }}
+                      {{ topico.curtidas > 1 ? "likes" : "like" }}</span
+                    >
+                    <span (click)="$event.stopPropagation()">
+                      {{ topico.respostas?.length }}
+                      {{
+                        (topico.respostas?.length ?? 0) > 1
+                          ? "respostas"
+                          : "resposta"
+                      }}
+                    </span>
+                  </div>
+                </div>
+                <div class="comments-container">
+                  <div *ngIf="topico.isExpandido">
+                    <div
+                      *ngFor="let resposta of topico.respostas"
+                      class="card-respostas"
+                      [class.autor-coautores]="
+                        isAutor(resposta, trabalho) ||
+                        isCoautor(resposta, trabalho)
+                      "
+                    >
+                      <div
+                        class="container-autor-coautor-resposta"
+                        *ngIf="
+                          isAutor(resposta, trabalho) ||
+                            isCoautor(resposta, trabalho);
+                          else labelResponseName
+                        "
+                      >
+                        <h3>{{ resposta.authorResponse?.name }}</h3>
+                        <div class="icon-and-class-resposta">
+                          <span
+                            *ngIf="
+                              isAutor(resposta, trabalho);
+                              else coautorLabel
+                            "
+                            >Autor</span
+                          >
+                          <ng-template #coautorLabel>
+                            <span>Coautor</span>
+                          </ng-template>
+                          <fa-icon
+                            [icon]="faCheckDouble"
+                            class="icon-orange-discussao"
+                          ></fa-icon>
+                        </div>
+                      </div>
+
+                      <ng-template #labelResponseName>
+                        <div>
+                          <h3>{{ resposta.authorResponse?.name }}</h3>
+                        </div>
+                      </ng-template>
+                      <p
+                        *ngFor="
+                          let paragrafo of convertSringToParagrafo(
+                            resposta.contentResponse
+                          )
+                        "
+                      >
+                        {{ paragrafo }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <ng-template #cardsRespondidos>
+                <div>
+                  <div
+                    class="unanswered-topic"
+                    *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
+                  >
+                    <div class="ops-topic-subject">
+                      <h3>{{ topico.assunto }}</h3>
+                      <span>{{ topico.autorTopico }}</span>
+                    </div>
+                    <span>{{ topico.conteudo }}</span>
+                    <div class="actions-topico">
+                      <div (click)="$event.stopPropagation()">
+                        <fa-icon
+                          [icon]="faEllipsisV"
+                          class="icon-orange"
+                          title="Clique aqui para ver mais"
+                        ></fa-icon>
+                      </div>
+                      <div
+                        class="btn-like-topico"
+                        (click)="
+                          likeUnlikePost($event, topico.isLiked, topico.id);
+                          $event.stopPropagation()
+                        "
+                      >
+                        <fa-icon
+                          [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                          class="icon-white"
+                          [title]="
+                            topico.isLiked
+                              ? 'Clique aqui para descurtir'
+                              : 'Clique aqui para curtir'
+                          "
+                        ></fa-icon>
+                      </div>
+                      <span (click)="$event.stopPropagation()"
+                        >{{ topico.curtidas }}
+                        {{ topico.curtidas > 1 ? "likes" : "like" }}</span
+                      >
+                      <span (click)="$event.stopPropagation()">
+                        {{ topico.respostas?.length }}
+                        {{
+                          (topico.respostas?.length ?? 0) > 1
+                            ? "respostas"
+                            : "resposta"
+                        }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+
+              <!-- <div
                 (click)="expandirTopico(topico)"
-                class="container-cards-discussoes"
+                class="answered-topic"
                 *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
               >
                 <div class="ops-topic-subject">
@@ -389,7 +553,7 @@
                     {{ paragrafo }}
                   </p>
                 </div>
-              </div>
+              </div> -->
 
               <ng-template #aguardandoFeedback>
                 <div class="topico-aguardando-feedback">
