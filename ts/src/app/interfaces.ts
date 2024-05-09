@@ -13,8 +13,8 @@ export interface Topico {
 
 export interface Resposta {
   id: number;
-  authorResponse: Autor | undefined;
-  contentResponse: String;
+  authorResponse: Autor | User | undefined;
+  contentResponse: string;
   dataResposta: string;
 }
 

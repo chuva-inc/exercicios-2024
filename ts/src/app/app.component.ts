@@ -17,6 +17,7 @@ import {
   DetalhesTrabalho,
   HeaderData,
   Language,
+  Resposta,
   SideMenuOptions,
   Topico,
   Trabalho,
@@ -41,7 +42,6 @@ export class AppComponent {
   faHeart: any = faHeart;
   faHeartRegular: any = faHeartRegular;
   faCheckDouble: any = faCheckDouble;
-  titleSideMenu: string = 'SLACA 2019';
 
   // entidades
   detalhesTrabalho: DetalhesTrabalho[] = [
@@ -85,7 +85,7 @@ export class AppComponent {
     },
   ];
 
-  autores: Autor[] = [
+  autoresTrabalho: Autor[] = [
     {
       id: 1,
       name: 'Galileo Galilei',
@@ -146,8 +146,8 @@ export class AppComponent {
 
   trabalho: Trabalho = {
     id: 1,
-    autor: this.autores?.find((autor) => autor.id === 6),
-    coautores: this.autores?.filter((autore) => autore.id !== 6),
+    autor: this.autoresTrabalho?.find((autor) => autor.id === 6),
+    coautores: this.autoresTrabalho?.filter((autor) => autor.id !== 6),
     tipoApresentacao: 'Pôster',
     eixoTematico: 'Alimentação e saúde (AS) ',
     palavrasChave: 'Alimentos funcionais, alimentação escolar',
@@ -206,28 +206,28 @@ export class AppComponent {
       respostas: [
         {
           id: 1,
-          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          authorResponse: this.autoresTrabalho?.find((autor) => autor.id === 6),
           contentResponse:
             'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
           dataResposta: '2022-01-01',
         },
         {
           id: 2,
-          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          authorResponse: this.user,
           contentResponse:
             'Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.\n Obrigada pela resposta, muito interessante o seu trabalho!',
           dataResposta: '2022-01-01',
         },
         {
           id: 3,
-          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          authorResponse: this.autoresTrabalho?.find((autor) => autor.id === 7),
           contentResponse:
             'Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.\n Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
           dataResposta: '2022-01-01',
         },
         {
           id: 4,
-          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          authorResponse: this.autoresTrabalho?.find((autor) => autor.id === 8),
           contentResponse:
             'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
           dataResposta: '2022-01-01',
@@ -235,7 +235,7 @@ export class AppComponent {
       ],
       aguardandoFeedback: false,
       dataCriacao: '2024-01-01',
-      isExpandido: true,
+      isExpandido: false,
     },
     {
       id: 2,
@@ -248,7 +248,7 @@ export class AppComponent {
       respostas: [
         {
           id: 1,
-          authorResponse: this.autores?.find((autor) => autor.id === 6),
+          authorResponse: this.autoresTrabalho?.find((autor) => autor.id === 6),
           contentResponse:
             'Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.',
           dataResposta: '2022-01-01',
@@ -261,6 +261,7 @@ export class AppComponent {
   ];
 
   // variáveis
+  titleSideMenu: string = 'SLACA 2019';
   issn: string = '2526-4806';
   emailUser: string = 'alguem12@galoascience.com';
   notificationNoRead: number = 0;
@@ -301,7 +302,7 @@ export class AppComponent {
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;
-    this.textoResumoArray = this.textoResumo.split('\n');
+    this.textoResumoArray = this.convertSringToParagrafo(this.textoResumo);
     this.formatTextResumo(this.textoResumo);
     this.sortDiscussoesTopicosDesc();
   }
@@ -463,5 +464,19 @@ export class AppComponent {
       }
       return topic;
     });
+  }
+
+  isAutor(resposta: Resposta, trabalho: Trabalho) {
+    return resposta.authorResponse?.id === trabalho.autor?.id;
+  }
+
+  isCoautor(resposta: Resposta, trabalho: Trabalho) {
+    return trabalho.coautores?.some(
+      (coautor) => coautor === resposta.authorResponse
+    );
+  }
+
+  convertSringToParagrafo(texto: string) {
+    return texto.split('\n');
   }
 }

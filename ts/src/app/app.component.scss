@@ -532,7 +532,6 @@ h1 {
     flex-direction: column;
     padding: 15px;
     height: 100%;
-    // max-height: 550px;
 
     span {
       font-family: $font-quicksand;
@@ -720,18 +719,49 @@ h1 {
 
 .ops-topic-subject > span {
   font-size: 12px !important;
+  font-weight: bold;
 }
 
 .card-respostas {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #e7e7e7;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
-  span {
-    text-align: start !important;
+  h3 {
+    font-size: 12px !important;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
   }
   padding: 20px 20px 20px 20px;
+}
+
+.card-respostas.autor-coautores {
+  background-color: #f8f8f8;
+}
+
+.container-autor-coautor-resposta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon-and-class-resposta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  span {
+    color: $orange-color !important;
+    font-weight: bold;
+  }
+  fa-icon {
+    color: $orange-color;
+    font-size: 20px;
+  }
 }
 
 .topico-aguardando-feedback {

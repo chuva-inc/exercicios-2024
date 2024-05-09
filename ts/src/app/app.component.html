@@ -127,7 +127,7 @@
             </div>
             <div class="autores-content">
               <span class="detalhes-response">Autores: </span>
-              <span *ngFor="let autor of autores"
+              <span *ngFor="let autor of autoresTrabalho"
                 >{{ autor.name }}
                 <span class="small-number"
                   >{{ autor.instituicao?.instituicaoNumber }}
@@ -318,8 +318,18 @@
                       "
                     ></fa-icon>
                   </div>
-                  <span>{{ topico.curtidas }} like</span>
-                  <span>{{ topico.respostas?.length }} resposta</span>
+                  <span
+                    >{{ topico.curtidas }}
+                    {{ topico.curtidas > 1 ? "likes" : "like" }}</span
+                  >
+                  <span>
+                    {{ topico.respostas?.length }}
+                    {{
+                      (topico.respostas?.length ?? 0) > 1
+                        ? "respostas"
+                        : "resposta"
+                    }}
+                  </span>
                 </div>
               </div>
 
@@ -327,11 +337,39 @@
                 <div
                   *ngFor="let resposta of topico.respostas"
                   class="card-respostas"
+                  [class.autor-coautores]="
+                    isAutor(resposta, trabalho) || isCoautor(resposta, trabalho)
+                  "
                 >
-                  <h3>{{ resposta.authorResponse?.name }}</h3>
+                  <div
+                    class="container-autor-coautor-resposta"
+                    *ngIf="
+                      isAutor(resposta, trabalho) ||
+                      isCoautor(resposta, trabalho)
+                    "
+                  >
+                    <h3>
+                      {{ resposta.authorResponse?.name }}
+                    </h3>
+                    <div class="icon-and-class-resposta">
+                      <span
+                        *ngIf="isAutor(resposta, trabalho); else coautorLabel"
+                        >Autor</span
+                      >
+                      <ng-template #coautorLabel>
+                        <span>Coautor</span>
+                      </ng-template>
+                      <fa-icon
+                        [icon]="faCheckDouble"
+                        class="icon-orange-discussao"
+                      ></fa-icon>
+                    </div>
+                  </div>
                   <p
                     *ngFor="
-                      let paragrafo of resposta.contentResponse.split('\n')
+                      let paragrafo of convertSringToParagrafo(
+                        resposta.contentResponse
+                      )
                     "
                   >
                     {{ paragrafo }}
