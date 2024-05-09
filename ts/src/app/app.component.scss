@@ -694,7 +694,7 @@ h1 {
 }
 
 .anwswered-topic {
-  border: 1px solid #cccccc;
+  // border: 1px solid #cccccc;
   box-shadow: 0px 0px 8px 0px #0000001f;
   border-radius: 4px;
   padding: 20px 20px 20px 20px;
@@ -703,7 +703,23 @@ h1 {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
-  // background-color: blue;
+}
+
+.anwswered-topic.expandido {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  margin-bottom: 0;
+  box-shadow: 0 -8px 8px -8px #0000001f;
+}
+
+.card-respostas.ultimo-topico {
+  border-end-end-radius: 4px;
+  border-end-start-radius: 4px;
+  // box-shadow: 0 8px 8px -8px #0000001f;
+}
+
+.card-respostas.outros-topicos {
+  // box-shadow: -8px 0 8px -8px #0000001f, 8px 0 8px -8px #0000001f;
 }
 
 .ops-topic-subject {
@@ -722,7 +738,9 @@ h1 {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  // background-color: red;
+  border-end-end-radius: 4px;
+  border-end-start-radius: 4px;
+  box-shadow: -8px 0 8px -8px #0000001f, 8px 0 8px -8px #0000001f;
 }
 
 .card-respostas {
@@ -730,8 +748,6 @@ h1 {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
-  border: 1px solid #cccccc;
-  // margin-bottom: 20px;
   span {
     text-align: start !important;
   }

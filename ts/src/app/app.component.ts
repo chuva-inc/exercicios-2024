@@ -235,7 +235,7 @@ export class AppComponent {
       ],
       aguardandoFeedback: false,
       dataCriacao: '2024-01-01',
-      isExpandido: false,
+      isExpandido: true,
     },
     {
       id: 2,

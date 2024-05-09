@@ -284,57 +284,68 @@
             </ng-template>
 
             <div *ngFor="let topico of discussoesTopicos">
-              <div
-                class="anwswered-topic"
-                *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
-              >
-                <div class="ops-topic-subject">
-                  <h3>{{ topico.assunto }}</h3>
-                  <span>{{ topico.autorTopico }}</span>
-                </div>
-                <span>{{ topico.conteudo }}</span>
-                <div class="actions-topico">
-                  <div (click)="expandirTopico(topico)">
-                    <fa-icon
-                      [icon]="faEllipsisV"
-                      class="icon-orange"
-                      title="Clique aqui para ver mais"
-                    ></fa-icon>
-                  </div>
-                  <div
-                    class="btn-like-topico"
-                    (click)="likeUnlikePost(topico.isLiked, topico.id)"
-                  >
-                    <fa-icon
-                      [icon]="topico.isLiked ? faHeart : faHeartRegular"
-                      class="icon-white"
-                      [title]="
-                        topico.isLiked
-                          ? 'Clique aqui para descurtir'
-                          : 'Clique aqui para curtir'
-                      "
-                    ></fa-icon>
-                  </div>
-                  <span>{{ topico.curtidas }} like</span>
-                  <span>{{ topico.respostas?.length }} resposta</span>
-                </div>
-              </div>
-              <div
-                class="container-topico-expandido"
-                *ngIf="topico.isExpandido"
-              >
+              <div [class.expandido]="topico.isExpandido">
                 <div
-                  *ngFor="let resposta of topico.respostas"
-                  class="card-respostas"
+                  class="anwswered-topic"
+                  *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
                 >
-                  <h3>{{ resposta.authorResponse?.name }}</h3>
-                  <p
-                    *ngFor="
-                      let paragrafo of resposta.contentResponse.split('\n')
+                  <div class="ops-topic-subject">
+                    <h3>{{ topico.assunto }}</h3>
+                    <span>{{ topico.autorTopico }}</span>
+                  </div>
+                  <span>{{ topico.conteudo }}</span>
+                  <div class="actions-topico">
+                    <div (click)="expandirTopico(topico)">
+                      <fa-icon
+                        [icon]="faEllipsisV"
+                        class="icon-orange"
+                        title="Clique aqui para ver mais"
+                      ></fa-icon>
+                    </div>
+                    <div
+                      class="btn-like-topico"
+                      (click)="likeUnlikePost(topico.isLiked, topico.id)"
+                    >
+                      <fa-icon
+                        [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                        class="icon-white"
+                        [title]="
+                          topico.isLiked
+                            ? 'Clique aqui para descurtir'
+                            : 'Clique aqui para curtir'
+                        "
+                      ></fa-icon>
+                    </div>
+                    <span>{{ topico.curtidas }} like</span>
+                    <span>{{ topico.respostas?.length }} resposta</span>
+                  </div>
+                </div>
+
+                <div
+                  class="container-topico-expandido"
+                  *ngIf="topico.isExpandido"
+                >
+                  <div
+                    *ngFor="let resposta of topico.respostas"
+                    class="card-respostas"
+                    [class.ultimo-topico]="
+                      topico.respostas &&
+                      resposta === topico.respostas[topico.respostas.length - 1]
+                    "
+                    [class.outros-topicos]="
+                      topico.respostas &&
+                      resposta !== topico.respostas[topico.respostas.length - 1]
                     "
                   >
-                    {{ paragrafo }}
-                  </p>
+                    <h3>{{ resposta.authorResponse?.name }}</h3>
+                    <p
+                      *ngFor="
+                        let paragrafo of resposta.contentResponse.split('\n')
+                      "
+                    >
+                      {{ paragrafo }}
+                    </p>
+                  </div>
                 </div>
               </div>
 
