@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { card } from '../models/card.model';
+import { card } from '../../models/card.model';
 import Swal from 'sweetalert2';
 
 @Component({

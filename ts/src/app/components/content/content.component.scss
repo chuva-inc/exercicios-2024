@@ -19,12 +19,12 @@
 
             &__back {
                 position: absolute;
-
+                height: 439px;
             }
 
             &__front {
                 position: absolute;
-
+                height: 439px;
             }
 
             &__info {
@@ -180,3 +180,34 @@
     }
 
 }
+
+@media only screen and (max-width: 1300px){
+    .container {
+    
+        &__left {
+    
+            &__video {
+    
+                &__back {
+                    height: 420px;
+                }
+    
+                &__front {
+                    height: 420px;
+                    
+                }
+            }
+        }
+
+        &__rigth {
+    
+            
+    
+            &__box {
+               
+                height: 420px;
+            }
+    
+        }
+    }
+  }

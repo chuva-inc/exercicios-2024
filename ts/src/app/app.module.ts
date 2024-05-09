@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './appComponent/app.component';
-import { MenuComponent } from './menu/menu.component';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { SummaryComponent } from './summary/summary.component';
-import { DiscussionsComponent } from './discussions/discussions.component';
+import { AppComponent } from './components/app/app.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { DiscussionsComponent } from './components/discussions/discussions.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DiscussionsComponent } from './discussions/discussions.component';
     HeaderComponent,
     ContentComponent,
     SummaryComponent,
-    DiscussionsComponent
+    DiscussionsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

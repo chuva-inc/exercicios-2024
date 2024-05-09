@@ -36,7 +36,7 @@
         }
 
         select > option{
-            background-image: url('../../assets/globo (1).png');
+            background-image: url('../../../assets/globo (1).png');
         }
     }
 
@@ -59,6 +59,28 @@
         &__text__email{
             font-size: 12px;
         }
+
+        &__img{
+            position: relative;
+        
+
+            &::before{
+                content: "2";
+                background-color: red;
+                color: white;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                font-size: 10px;
+                top: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+        }
+        
 
     }
 }

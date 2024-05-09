@@ -44,10 +44,33 @@
                 font-size: 14px;
                 border-bottom: 1.5px solid rgb(0, 0, 0,0.1);
 
+                p{
+                    margin-left: 20px;
+                }
+
+                span{
+                    height: 100%;
+                    width: 5px;
+                   
+                    margin-left: -20px;
+
+                }
+
                 &:hover{
                     background-color: rgb(255, 165, 0, 0.1);
                     cursor: pointer;
+                    span{
+                        background-color:  rgb(255,179,84);
+                    }
                 }
+            }
+        }
+
+        &__trabalho{
+            background-color: rgb(255, 165, 0, 0.1);
+
+            span{
+                background-color:  rgb(255,179,84);
             }
         }
     }
