@@ -368,28 +368,24 @@ export class AppComponent {
   }
 
   enviarSalvarTopico(): void {
-    if (this.assuntoTopicoField !== '' && this.conteudoTopicoField !== '') {
-      if (this.criandoTopico) {
-        const topic = this.newTopicData();
-        this.discussoesTopicos.push(topic);
-        this.user.topicsAguardandoFeedback += 1;
-      } else {
-        if (this.topicEdit) {
-          const indexEdit = this.discussoesTopicos.findIndex(
-            (topic) => topic.id === this.topicEdit.id
-          );
-          const topic = this.editTopicData(this.topicEdit);
-          this.discussoesTopicos.splice(indexEdit, 1);
-          this.discussoesTopicos.push(topic);
-        }
-      }
-      this.criandoTopico = false;
-      this.editandoTopico = false;
-      this.sortDiscussoesTopicosDesc();
-      this.limparCampos();
+    if (this.criandoTopico) {
+      const topic = this.newTopicData();
+      this.discussoesTopicos.push(topic);
+      this.user.topicsAguardandoFeedback += 1;
     } else {
-      alert('Preencha os campos vazios');
+      if (this.topicEdit) {
+        const indexEdit = this.discussoesTopicos.findIndex(
+          (topic) => topic.id === this.topicEdit.id
+        );
+        const topic = this.editTopicData(this.topicEdit);
+        this.discussoesTopicos.splice(indexEdit, 1);
+        this.discussoesTopicos.push(topic);
+      }
     }
+    this.criandoTopico = false;
+    this.editandoTopico = false;
+    this.sortDiscussoesTopicosDesc();
+    this.limparCampos();
   }
 
   newTopicData(): Topico {

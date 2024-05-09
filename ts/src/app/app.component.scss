@@ -103,7 +103,7 @@ h1 {
 .spacePage {
   padding-inline-start: 44px;
 }
-
+// Header
 .header-page {
   height: 68px;
   padding-inline-start: $padding-page;
@@ -1009,5 +1009,22 @@ h1 {
 
   &:hover {
     background: linear-gradient(180deg, #f1833e 0%, #feb154 100%);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .title-page {
+    width: 100%;
+
+    h2 {
+      font-family: $font-roboto;
+      font-size: 20px;
+      font-weight: 900;
+      color: $orange-color;
+      line-height: 25px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      // padding-right: 100px;
+    }
   }
 }

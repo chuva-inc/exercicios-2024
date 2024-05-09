@@ -306,10 +306,7 @@
                 "
               >
                 <div class="answered-topic" (click)="expandirTopico(topico)">
-                  <div
-                    class="ops-topic-subject"
-                    (click)="$event.stopPropagation()"
-                  >
+                  <div class="ops-topic-subject">
                     <h3>{{ topico.assunto }}</h3>
                     <span>{{ topico.autorTopico }}</span>
                   </div>
@@ -355,6 +352,7 @@
                     </span>
                   </div>
                 </div>
+
                 <div class="comments-container">
                   <div *ngIf="topico.isExpandido">
                     <div
@@ -463,97 +461,6 @@
                   </div>
                 </div>
               </ng-template>
-
-              <!-- <div
-                (click)="expandirTopico(topico)"
-                class="answered-topic"
-                *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
-              >
-                <div class="ops-topic-subject">
-                  <h3>{{ topico.assunto }}</h3>
-                  <span>{{ topico.autorTopico }}</span>
-                </div>
-                <span>{{ topico.conteudo }}</span>
-                <div class="actions-topico">
-                  <div>
-                    <fa-icon
-                      [icon]="faEllipsisV"
-                      class="icon-orange"
-                      title="Clique aqui para ver mais"
-                    ></fa-icon>
-                  </div>
-                  <div
-                    class="btn-like-topico"
-                    (click)="likeUnlikePost($event, topico.isLiked, topico.id)"
-                  >
-                    <fa-icon
-                      [icon]="topico.isLiked ? faHeart : faHeartRegular"
-                      class="icon-white"
-                      [title]="
-                        topico.isLiked
-                          ? 'Clique aqui para descurtir'
-                          : 'Clique aqui para curtir'
-                      "
-                    ></fa-icon>
-                  </div>
-                  <span
-                    >{{ topico.curtidas }}
-                    {{ topico.curtidas > 1 ? "likes" : "like" }}</span
-                  >
-                  <span>
-                    {{ topico.respostas?.length }}
-                    {{
-                      (topico.respostas?.length ?? 0) > 1
-                        ? "respostas"
-                        : "resposta"
-                    }}
-                  </span>
-                </div>
-              </div>
-
-              <div *ngIf="topico.isExpandido">
-                <div
-                  *ngFor="let resposta of topico.respostas"
-                  class="card-respostas"
-                  [class.autor-coautores]="
-                    isAutor(resposta, trabalho) || isCoautor(resposta, trabalho)
-                  "
-                >
-                  <div
-                    class="container-autor-coautor-resposta"
-                    *ngIf="
-                      isAutor(resposta, trabalho) ||
-                      isCoautor(resposta, trabalho)
-                    "
-                  >
-                    <h3>
-                      {{ resposta.authorResponse?.name }}
-                    </h3>
-                    <div class="icon-and-class-resposta">
-                      <span
-                        *ngIf="isAutor(resposta, trabalho); else coautorLabel"
-                        >Autor</span
-                      >
-                      <ng-template #coautorLabel>
-                        <span>Coautor</span>
-                      </ng-template>
-                      <fa-icon
-                        [icon]="faCheckDouble"
-                        class="icon-orange-discussao"
-                      ></fa-icon>
-                    </div>
-                  </div>
-                  <p
-                    *ngFor="
-                      let paragrafo of convertSringToParagrafo(
-                        resposta.contentResponse
-                      )
-                    "
-                  >
-                    {{ paragrafo }}
-                  </p>
-                </div>
-              </div> -->
 
               <ng-template #aguardandoFeedback>
                 <div class="topico-aguardando-feedback">
