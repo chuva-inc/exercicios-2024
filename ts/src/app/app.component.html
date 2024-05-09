@@ -265,30 +265,32 @@
                     autores!
                   </span>
                 </div>
-                <div class="comments-container">
-                  <h2>Assunto</h2>
-                  <input
-                    placeholder="Defina um tópico sucinto para notificar os autores..."
-                    [value]="assuntoTopicoField"
-                    (change)="changeAssuntoTopico($any($event.target).value)"
-                  />
-                  <h2>Conteúdo</h2>
-                  <textarea
-                    rows="5"
-                    cols="60"
-                    [value]="conteudoTopicoField"
-                    (change)="changeConteudoTopico($any($event.target).value)"
-                  ></textarea>
-                  <div class="container-row-enviar-topico">
-                    <div
-                      class="btn-save-new-topic"
-                      (click)="enviarSalvarTopico()"
-                    >
-                      <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
-                      <ng-template #salvarTopico><a>Salvar</a></ng-template>
+                <form class="form-container">
+                  <form>
+                    <h2>Assunto</h2>
+                    <input
+                      placeholder="Defina um tópico sucinto para notificar os autores..."
+                      [value]="assuntoTopicoField"
+                      (change)="changeAssuntoTopico($any($event.target).value)"
+                    />
+                    <h2>Conteúdo</h2>
+                    <textarea
+                      rows="5"
+                      cols="60"
+                      [value]="conteudoTopicoField"
+                      (change)="changeConteudoTopico($any($event.target).value)"
+                    ></textarea>
+                    <div class="container-row-enviar-topico">
+                      <div
+                        class="btn-save-new-topic"
+                        (click)="enviarSalvarTopico()"
+                      >
+                        <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
+                        <ng-template #salvarTopico><a>Salvar</a></ng-template>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </form>
+                </form>
               </div>
               <div class="generic-barra-divisioria"></div>
             </ng-template>
