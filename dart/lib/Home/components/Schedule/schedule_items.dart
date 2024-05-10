@@ -1,4 +1,5 @@
 import 'package:chuva_dart/Activity/activity.dart';
+import 'package:chuva_dart/Home/components/sub_activities.dart';
 import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:chuva_dart/data/repositories/activities_repository.dart';
@@ -21,7 +22,9 @@ class ScheduleItems extends StatelessWidget {
     bool isActivityFavorite = activitiesRepository.favorites.any((fav) => fav.id == items.id);
     ActivitiesController controller = ActivitiesController();
 
-    return Column(
+    final subActivities = activitiesRepository.subActivities;
+
+    return Stack(
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
@@ -55,6 +58,7 @@ class ScheduleItems extends StatelessWidget {
                         ),
                       ),
                     ),
+                    ...buildMultipleSubActivities(items.category.color!, subActivities[items.id]?.length ?? 0),
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Row(
@@ -79,7 +83,10 @@ class ScheduleItems extends StatelessWidget {
                                   ),
                                   Container(
                                     alignment: AlignmentDirectional.centerStart,
-                                    child: Text("${items.title?.ptBr}",
+                                    child: Text(
+                                      "${items.title?.ptBr}",
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                       style: Theme.of(context).textTheme.titleLarge,
                                     ),
                                   ),

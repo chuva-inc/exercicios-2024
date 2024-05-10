@@ -11,6 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/stores/activities_store.dart';
+import '../components/sub_activities.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({super.key});
@@ -43,7 +44,7 @@ class _CalendarState extends State<Calendar>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<ActivitiesRepository>();
+    ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: PreferredSize(
@@ -101,7 +102,6 @@ class _CalendarState extends State<Calendar>
               ),
               Expanded(
                 child: Container(
-                    // width: 200,
                     color: Theme.of(context).tabBarTheme.labelColor,
                     child: Tab_Bar(
                       currentDate: _currentDate,
@@ -125,9 +125,9 @@ class _CalendarState extends State<Calendar>
                           child: Text('Erro ao carregar as atividades'));
                     }
                     else {
-                      return ListView.separated(
-                        separatorBuilder: (context, index) =>
-                            Container(height: 3),
+                      return ListView.builder(
+                        // separatorBuilder: (context, index) =>
+                        //     Container(height: 3),
                         itemCount:
                             activitiesStore.filterActivitiesByDay(day).length,
                         itemBuilder: (_, index) {
