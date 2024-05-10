@@ -26,6 +26,7 @@ class ScheduleItems extends StatelessWidget {
 
     return Stack(
       children: [
+        ...buildMultipleSubActivities(items.category.color!, subActivities[items.id]?.length ?? 0),
         Padding(
           padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
           child: Material(
@@ -58,7 +59,7 @@ class ScheduleItems extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ...buildMultipleSubActivities(items.category.color!, subActivities[items.id]?.length ?? 0),
+
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Row(
