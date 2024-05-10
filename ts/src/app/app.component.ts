@@ -277,7 +277,7 @@ export class AppComponent {
   textoResumoFormatado: string = '';
   isResumoFormatado: boolean = false;
   numParagrafosMostrados: number = 1;
-  MAXRESUMOFIELD: number = 224 * 5;
+  MAXRESUMOFIELD: number = 0;
   textFooter: string[] = [
     'Preservar a memória do evento e ampliar o acesso ao conhecimento ' +
       'científico gerado em eventos é a razão de ser da plataforma Galoá' +
@@ -295,6 +295,7 @@ export class AppComponent {
   ngOnInit() {
     this.notificationNumber();
     this.selectedItemMenu = 5;
+    this.fieldMaxResumo();
     this.textoResumoArray = this.convertSringToParagrafo(this.textoResumo);
     this.formatTextResumo(this.textoResumo);
     this.sortDiscussoesTopicosDesc();
@@ -469,5 +470,21 @@ export class AppComponent {
 
   convertSringToParagrafo(texto: string) {
     return texto.split('\n');
+  }
+
+  getScreenSize(): {
+    width: number;
+    height: number;
+  } {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  fieldMaxResumo(): void {
+    this.getScreenSize().width === 1280
+      ? (this.MAXRESUMOFIELD = 200 * 4)
+      : (this.MAXRESUMOFIELD = 224 * 5);
   }
 }

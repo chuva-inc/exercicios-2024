@@ -295,6 +295,7 @@
               <div class="generic-barra-divisioria"></div>
             </ng-template>
 
+            <!-- Cards discussão -->
             <div
               class="container-cards-discussoes"
               *ngFor="let topico of discussoesTopicos"
@@ -310,9 +311,7 @@
                     <h3>{{ topico.assunto }}</h3>
                     <span>{{ topico.autorTopico }}</span>
                   </div>
-                  <span (click)="$event.stopPropagation()">{{
-                    topico.conteudo
-                  }}</span>
+                  <span>{{ topico.conteudo }}</span>
                   <div class="actions-topico">
                     <div (click)="$event.stopPropagation()">
                       <fa-icon
