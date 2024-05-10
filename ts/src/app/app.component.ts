@@ -200,7 +200,7 @@ export class AppComponent {
       assunto: 'Assunto da pergunta aparece aqui',
       autorTopico: 'Carlos Henrique Santos',
       conteudo:
-        'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...',
+        'Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo?',
       isLiked: false,
       curtidas: 4,
       respostas: [
@@ -290,7 +290,6 @@ export class AppComponent {
   editandoTopico: boolean = false;
   assuntoTopicoField: string = '';
   conteudoTopicoField: string = '';
-  topicoExpandido: boolean = true;
 
   ngOnInit() {
     this.notificationNumber();
@@ -486,5 +485,14 @@ export class AppComponent {
     this.getScreenSize().width === 1280
       ? (this.MAXRESUMOFIELD = 200 * 4)
       : (this.MAXRESUMOFIELD = 224 * 5);
+  }
+
+  formatConteudoAnsweredTopic(
+    conteudo: string,
+    topicoExpandido: boolean
+  ): string {
+    return topicoExpandido
+      ? conteudo
+      : conteudo.substring(0, 172).concat('...');
   }
 }
