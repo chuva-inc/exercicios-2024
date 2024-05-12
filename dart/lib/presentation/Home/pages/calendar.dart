@@ -1,17 +1,14 @@
-import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
-import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
-import 'package:chuva_dart/Home/components/TabBar/tab_bar.dart';
 import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/repositories/activities_repository.dart';
+import 'package:chuva_dart/presentation/Home/components/Schedule/schedule_items.dart';
+import 'package:chuva_dart/presentation/Home/components/TabBar/tab_bar.dart';
 import 'package:chuva_dart/shared/button_app_bar.dart';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../../data/stores/activities_store.dart';
-import '../components/sub_activities.dart';
+import '../../../data/stores/activities_store.dart';
 
 class Calendar extends StatefulWidget {
   const Calendar({super.key});
@@ -44,7 +41,8 @@ class _CalendarState extends State<Calendar>
 
   @override
   Widget build(BuildContext context) {
-    ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();
+    ActivitiesRepository activitiesRepository =
+        context.watch<ActivitiesRepository>();
     String formattedMonth = DateFormat('MMM').format(_currentDate);
     return Scaffold(
       appBar: PreferredSize(
@@ -123,8 +121,7 @@ class _CalendarState extends State<Calendar>
                     } else if (snapshot.hasError) {
                       return const Center(
                           child: Text('Erro ao carregar as atividades'));
-                    }
-                    else {
+                    } else {
                       return ListView.builder(
                         // separatorBuilder: (context, index) =>
                         //     Container(height: 3),
@@ -134,13 +131,12 @@ class _CalendarState extends State<Calendar>
                           final items = activitiesStore
                               .filterActivitiesByDay(day)
                               .elementAt(index);
-                          return
-                            ScheduleItems(
-                                items: items,
-                                activities:
-                                    activitiesStore.filterActivitiesByDay(day),
-                                data:
-                                    "${items.type.title.ptBr} de ${fomatDate(items.start!)} até ${fomatDate(items.end!)}");
+                          return ScheduleItems(
+                              items: items,
+                              activities:
+                                  activitiesStore.filterActivitiesByDay(day),
+                              data:
+                                  "${items.type.title.ptBr} de ${fomatDate(items.start!)} até ${fomatDate(items.end!)}");
                         },
                       );
                     }
@@ -153,6 +149,7 @@ class _CalendarState extends State<Calendar>
       ),
     );
   }
+
   String fomatDate(String data) {
     return DateFormat.Hm().format(
         DateTime.parse(data).toUtc().subtract(const Duration(hours: 3)));

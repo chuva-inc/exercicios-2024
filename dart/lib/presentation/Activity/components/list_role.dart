@@ -1,7 +1,6 @@
-
-import 'package:chuva_dart/Speaker/speaker.dart';
-import 'package:chuva_dart/data/models/activities.dart';
-import 'package:chuva_dart/data/models/person.dart';
+import 'package:chuva_dart/presentation/Speaker/pages/speaker.dart';
+import 'package:chuva_dart/domain/models/activities.dart';
+import 'package:chuva_dart/domain/models/person.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
@@ -9,7 +8,8 @@ import 'package:from_css_color/from_css_color.dart';
 import 'package:go_router/go_router.dart';
 
 class ListRole extends StatefulWidget {
-  const ListRole({super.key, required this.activities, required this.listActivities});
+  const ListRole(
+      {super.key, required this.activities, required this.listActivities});
   final Activities activities;
   final List<Activities> listActivities;
 
@@ -29,11 +29,12 @@ class _ListRoleState extends State<ListRole> {
     speakerActivities = getActivitiesBySpeaker();
   }
 
-  List<Activities> getActivitiesBySpeaker(){
+  List<Activities> getActivitiesBySpeaker() {
     List<Activities> matchedActivities = [];
     for (var activity in widget.listActivities) {
       for (var person in activity.people) {
-        if (people.any((p) => p.name == person.name) && !uniqueActivityIds.contains(activity.id)) {
+        if (people.any((p) => p.name == person.name) &&
+            !uniqueActivityIds.contains(activity.id)) {
           matchedActivities.add(activity);
           uniqueActivityIds.add(activity.id);
           break;
@@ -43,18 +44,18 @@ class _ListRoleState extends State<ListRole> {
     return matchedActivities;
   }
 
-
-
   void extractTitles() {
-    bool hasModerator = widget.activities.people.any((person) => person.role!.label.ptBr == 'Moderador');
+    bool hasModerator = widget.activities.people
+        .any((person) => person.role!.label.ptBr == 'Moderador');
     if (hasModerator) {
-      people.addAll(widget.activities.people.where((person) => person.role!.label.ptBr == 'Moderador'));
+      people.addAll(widget.activities.people
+          .where((person) => person.role!.label.ptBr == 'Moderador'));
     } else {
-      people.addAll(widget.activities.people.where((person) => person.role!.label.ptBr == 'Palestrante' || person.role!.label.ptBr == 'Coordenador'));
+      people.addAll(widget.activities.people.where((person) =>
+          person.role!.label.ptBr == 'Palestrante' ||
+          person.role!.label.ptBr == 'Coordenador'));
     }
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -80,14 +81,20 @@ class _ListRoleState extends State<ListRole> {
             itemBuilder: (context, index) {
               return ListTile(
                 onTap: () {
-                  context.push('/palestrantes', extra: Speaker(speaker: people[index], activities: widget.activities, listActivities: speakerActivities));
+                  context.push('/palestrantes',
+                      extra: Speaker(
+                          speaker: people[index],
+                          activities: widget.activities,
+                          listActivities: speakerActivities));
                 },
                 leading: ClipRRect(
                   borderRadius: BorderRadius.circular(50),
                   child: CachedNetworkImage(
                     imageUrl: "${people.elementAt(index).picture}",
-                    placeholder: (context, url) => const CircularProgressIndicator(),
-                    errorWidget: (context, url, error) => Icon(Icons.person, size: 35, color: fromCssColor("#898989")),
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) => Icon(Icons.person,
+                        size: 35, color: fromCssColor("#898989")),
                   ),
                 ),
                 title: Text(people[index].name!),
@@ -100,5 +107,4 @@ class _ListRoleState extends State<ListRole> {
       ],
     );
   }
-
 }

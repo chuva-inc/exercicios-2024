@@ -1,5 +1,5 @@
-import 'package:chuva_dart/Activity/activity.dart';
-import 'package:chuva_dart/Home/components/sub_activities.dart';
+import 'package:chuva_dart/application/Home/pages/sub_activities.dart';
+import 'package:chuva_dart/application/Activity/pages/activity.dart';
 import 'package:chuva_dart/data/controllers/activities_controller.dart';
 import 'package:chuva_dart/data/models/activities.dart';
 import 'package:chuva_dart/data/repositories/activities_repository.dart';
@@ -11,22 +11,29 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class ScheduleItems extends StatelessWidget {
-  const ScheduleItems({super.key, required this.items, required this.activities, required this.data});
+  const ScheduleItems(
+      {super.key,
+      required this.items,
+      required this.activities,
+      required this.data});
   final Activities items;
   final List<Activities> activities;
   final String data;
 
   @override
   Widget build(BuildContext context) {
-    ActivitiesRepository activitiesRepository = context.watch<ActivitiesRepository>();
-    bool isActivityFavorite = activitiesRepository.favorites.any((fav) => fav.id == items.id);
+    ActivitiesRepository activitiesRepository =
+        context.watch<ActivitiesRepository>();
+    bool isActivityFavorite =
+        activitiesRepository.favorites.any((fav) => fav.id == items.id);
     ActivitiesController controller = ActivitiesController();
 
     final subActivities = activitiesRepository.subActivities;
 
     return Stack(
       children: [
-        ...buildMultipleSubActivities(items.category.color!, subActivities[items.id]?.length ?? 0),
+        ...buildMultipleSubActivities(
+            items.category.color!, subActivities[items.id]?.length ?? 0),
         Padding(
           padding: const EdgeInsets.only(left: 10, right: 10, top: 10),
           child: Material(
@@ -34,7 +41,10 @@ class ScheduleItems extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: InkWell(
               onTap: () {
-                context.push('/activities', extra: Activity(items: items, activities: activitiesRepository.activities));
+                context.push('/activities',
+                    extra: Activity(
+                        items: items,
+                        activities: activitiesRepository.activities));
               },
               child: Ink(
                 padding: const EdgeInsets.only(left: 0),
@@ -59,7 +69,6 @@ class ScheduleItems extends StatelessWidget {
                         ),
                       ),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Row(
@@ -79,7 +88,9 @@ class ScheduleItems extends StatelessWidget {
                                     alignment: AlignmentDirectional.centerStart,
                                     child: Text(
                                       data,
-                                      style: Theme.of(context).textTheme.labelLarge,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .labelLarge,
                                     ),
                                   ),
                                   Container(
@@ -88,7 +99,9 @@ class ScheduleItems extends StatelessWidget {
                                       "${items.title?.ptBr}",
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
-                                      style: Theme.of(context).textTheme.titleLarge,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleLarge,
                                     ),
                                   ),
                                 ],
@@ -102,7 +115,8 @@ class ScheduleItems extends StatelessWidget {
                       Positioned(
                         right: 0,
                         top: 0,
-                        child: Icon(Icons.bookmark, color: fromCssColor("#7c90ac")),
+                        child: Icon(Icons.bookmark,
+                            color: fromCssColor("#7c90ac")),
                       ),
                   ],
                 ),

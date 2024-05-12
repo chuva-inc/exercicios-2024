@@ -1,15 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
-import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
-import 'package:chuva_dart/Speaker/controller/speaker_controller.dart';
-import 'package:flutter/cupertino.dart';
-
+import 'package:chuva_dart/presentation/Home/components/AppBar/app_bar.dart';
+import 'package:chuva_dart/presentation/Home/components/Schedule/schedule_items.dart';
+import 'package:chuva_dart/presentation/Speaker/controller/speaker_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
-import '../data/models/activities.dart';
-import '../data/models/person.dart';
+import '../../../data/models/activities.dart';
+import '../../../data/models/person.dart';
 
 class Speaker extends StatefulWidget {
   const Speaker(
@@ -104,7 +101,8 @@ class _SpeakerState extends State<Speaker> {
                         child: Container(
                           color: Theme.of(context).colorScheme.primary,
                           child: Center(
-                              child: Text(controller.gerarIniciais(speaker.name!),
+                              child: Text(
+                                  controller.gerarIniciais(speaker.name!),
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 50,
@@ -150,7 +148,7 @@ class _SpeakerState extends State<Speaker> {
               alignment: AlignmentDirectional.centerStart,
               padding: const EdgeInsetsDirectional.only(start: 20),
               child: Text(
-                  dataFormatada,
+                dataFormatada,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
@@ -159,10 +157,19 @@ class _SpeakerState extends State<Speaker> {
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => Container(height: 3),
-                itemCount: controller.filteraActivitiesByDay(widget.listActivities,speaker.name!).length,
+                itemCount: controller
+                    .filteraActivitiesByDay(
+                        widget.listActivities, speaker.name!)
+                    .length,
                 itemBuilder: (_, index) {
-                  final item = controller.filteraActivitiesByDay(widget.listActivities,speaker.name!)[index];
-                 return ScheduleItems(items: item, activities: widget.listActivities,data: "${widget.activities.type.title.ptBr} de ${controller.formatData(widget.activities.start!)} até ${controller.formatData(widget.activities.end!)}",);
+                  final item = controller.filteraActivitiesByDay(
+                      widget.listActivities, speaker.name!)[index];
+                  return ScheduleItems(
+                    items: item,
+                    activities: widget.listActivities,
+                    data:
+                        "${widget.activities.type.title.ptBr} de ${controller.formatData(widget.activities.start!)} até ${controller.formatData(widget.activities.end!)}",
+                  );
                 },
               ),
             )

@@ -1,17 +1,15 @@
-import 'package:chuva_dart/Activity/components/add_button.dart';
-import 'package:chuva_dart/Activity/components/info.dart';
-import 'package:chuva_dart/Activity/components/list_role.dart';
-import 'package:chuva_dart/Home/components/AppBar/app_bar.dart';
-import 'package:chuva_dart/Home/components/Schedule/schedule_items.dart';
+import 'package:chuva_dart/application/Home/components/AppBar/app_bar.dart';
+import 'package:chuva_dart/application/Home/components/Schedule/schedule_items.dart';
+import 'package:chuva_dart/application/Activity/components/add_button.dart';
+import 'package:chuva_dart/application/Activity/components/info.dart';
+import 'package:chuva_dart/application/Activity/components/list_role.dart';
 import 'package:chuva_dart/data/controllers/activities_controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:chuva_dart/data/models/activities.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import '../data/models/activities.dart';
-import 'components/sub_activitie_text.dart';
+import '../components/sub_activitie_text.dart';
 
 class Activity extends StatefulWidget {
   const Activity({super.key, required this.items, required this.activities});
@@ -141,11 +139,9 @@ class _ActivityState extends State<Activity> {
                 ),
               ),
             ),
-
             ...subActivitiesWidgets,
             const SizedBox(height: 30),
             Flexible(
-
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.min,

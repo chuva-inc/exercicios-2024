@@ -1,5 +1,5 @@
 import 'package:chuva_dart/adapters/activities_hive_adapter.dart';
-import 'package:chuva_dart/data/models/activities.dart';
+import 'package:chuva_dart/domain/models/activities.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'dart:collection';
@@ -12,7 +12,8 @@ class ActivitiesRepository extends ChangeNotifier {
   final Map<int, List<Activities>> groupedActivities = {};
   LazyBox? box;
 
-  static final ActivitiesRepository _singleton = ActivitiesRepository._internal();
+  static final ActivitiesRepository _singleton =
+      ActivitiesRepository._internal();
 
   factory ActivitiesRepository() {
     return _singleton;
@@ -22,9 +23,14 @@ class ActivitiesRepository extends ChangeNotifier {
     _startRepository();
   }
 
-  UnmodifiableListView<Activities> get activities => UnmodifiableListView(_activities);
-  UnmodifiableListView<Activities> get favorites => UnmodifiableListView(_activities.where((activity) => _favoritesMap[activity.id] ?? false).toList());
-  Map<int, List<Activities>> get subActivities => UnmodifiableMapView(groupedActivities);
+  UnmodifiableListView<Activities> get activities =>
+      UnmodifiableListView(_activities);
+  UnmodifiableListView<Activities> get favorites =>
+      UnmodifiableListView(_activities
+          .where((activity) => _favoritesMap[activity.id] ?? false)
+          .toList());
+  Map<int, List<Activities>> get subActivities =>
+      UnmodifiableMapView(groupedActivities);
 
   _startRepository() async {
     if (!Hive.isBoxOpen('Activities')) {
@@ -52,7 +58,8 @@ class ActivitiesRepository extends ChangeNotifier {
 
   saveAll(List<Activities> newActivities) {
     newActivities.forEach((activity) async {
-      if (!_activities.any((existingActivity) => existingActivity.id == activity.id)) {
+      if (!_activities
+          .any((existingActivity) => existingActivity.id == activity.id)) {
         _activities.add(activity);
         _favoritesMap[activity.id] = activity.favorite!;
         await box?.put(activity.id, activity);
@@ -61,8 +68,7 @@ class ActivitiesRepository extends ChangeNotifier {
     notifyListeners();
   }
 
-
-  bool isEmpty(){
+  bool isEmpty() {
     return _activities.isEmpty;
   }
 

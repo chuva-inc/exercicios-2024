@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:chuva_dart/Home/pages/calendar.dart';
+import 'package:chuva_dart/application/Home/pages/calendar.dart';
 import 'package:chuva_dart/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
@@ -21,7 +21,9 @@ void main() {
       expect(find.text('Mesa redonda de 07:00 até 08:00'), findsOneWidget);
     });
 
-    testWidgets('Seleciona dia 28 e verifica que a mesa redonda foi renderizada', (WidgetTester tester) async {
+    testWidgets(
+        'Seleciona dia 28 e verifica que a mesa redonda foi renderizada',
+        (WidgetTester tester) async {
       await tester.pumpWidget(const ChuvaDart());
       await tester.pumpAndSettle();
 
