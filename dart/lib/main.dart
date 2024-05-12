@@ -1,6 +1,18 @@
+import 'package:chuva_dart/configs/hive_config.dart';
+import 'package:chuva_dart/data/repositories/activities_repository.dart';
+import 'package:chuva_dart/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
-void main() {
+import 'package:provider/provider.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await HiveConfig.start();
+  } catch (e) {
+    print('Error initializing Hive: $e');
+  }
   runApp(const ChuvaDart());
 }
 
@@ -10,134 +22,53 @@ class ChuvaDart extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const Calendar(),
-    );
-  }
-}
-
-class Calendar extends StatefulWidget {
-  const Calendar({super.key});
-
-  @override
-  State<Calendar> createState() => _CalendarState();
-}
-
-class _CalendarState extends State<Calendar> {
-  DateTime _currentDate = DateTime(2023, 11, 26);
-  bool _clicked = false;
-
-  void _changeDate(DateTime newDate) {
-    setState(() {
-      _currentDate = newDate;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Chuva ❤️ Flutter'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Programação',
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => ActivitiesRepository()),
+        ],
+      child: MaterialApp.router(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          textTheme: TextTheme(
+            titleLarge: const TextStyle(
+              height: 1.2,
+              fontSize: 18,
+              fontWeight: FontWeight.w400,
             ),
-            const Text(
-              'Nov',
+            headlineLarge:
+            const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, height: 1),
+            bodyMedium: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
             ),
-            const Text(
-              '2023',
+            bodyLarge: TextStyle(
+              color: fromCssColor("#737373"),
             ),
-            OutlinedButton(
-              onPressed: () {
-                _changeDate(DateTime(2023, 11, 26));
-              },
-              child: Text(
-                '26',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
+            headlineMedium: const TextStyle(fontSize: 27, height: 1.1),
+            headlineSmall:  const TextStyle(fontWeight: FontWeight.w300, fontSize: 22),
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ButtonStyle(
+              shape: MaterialStatePropertyAll(
+                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
+              iconColor: const MaterialStatePropertyAll(Colors.white),
+              backgroundColor: MaterialStateProperty.all(fromCssColor("#306dc3")),
             ),
-            OutlinedButton(
-              onPressed: () {
-                _changeDate(DateTime(2023, 11, 28));
-              },
-              child: Text(
-                '28',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
-            if (_currentDate.day == 26)
-              OutlinedButton(
-                  onPressed: () {
-                    setState(() {
-                      _clicked = true;
-                    });
-                  },
-                  child: const Text('Mesa redonda de 07:00 até 08:00')),
-            if (_currentDate.day == 28)
-              OutlinedButton(
-                  onPressed: () {
-                    setState(() {
-                      _clicked = true;
-                    });
-                  },
-                  child: const Text('Palestra de 09:30 até 10:00')),
-            if (_currentDate.day == 26 && _clicked) const Activity(),
-          ],
+          ),
+          appBarTheme: const AppBarTheme(
+              foregroundColor: Color.fromARGB(255, 69, 97, 137)),
+          tabBarTheme: TabBarTheme(labelColor: fromCssColor("#306dc3")),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 69, 97, 137),
+          ),
+          useMaterial3: true,
         ),
+        routerDelegate: routes.routerDelegate,
+        routeInformationParser: routes.routeInformationParser,
+        routeInformationProvider: routes.routeInformationProvider,
       ),
-    );
-  }
-}
-
-class Activity extends StatefulWidget {
-  const Activity({super.key});
-
-  @override
-  State<Activity> createState() => _ActivityState();
-}
-
-class _ActivityState extends State<Activity> {
-  bool _favorited = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).colorScheme.inversePrimary,
-      child: Column(children: [
-        Text(
-          'Activity title',
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
-        const Text('A Física dos Buracos Negros Supermassivos'),
-        const Text('Mesa redonda'),
-        const Text('Domingo 07:00h - 08:00h'),
-        const Text('Sthepen William Hawking'),
-        const Text('Maputo'),
-        const Text('Astrofísica e Cosmologia'),
-        ElevatedButton.icon(
-          onPressed: () {
-            setState(() {
-              _favorited = !_favorited;
-            });
-          },
-          icon: _favorited
-              ? const Icon(Icons.star)
-              : const Icon(Icons.star_outline),
-          label: Text(
-              _favorited ? 'Remover da sua agenda' : 'Adicionar à sua agenda'),
-        )
-      ]),
     );
   }
 }
