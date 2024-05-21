@@ -1,90 +1,534 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img src="data:image/png;base64,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" alt="" />
-  <span>Seu ambiente de dev para o exercício da chuva está rodando!</span>
-  <div class="spacer"></div>
-</div>
-
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-    <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
-      <title>Rocket Ship</title>
-      <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
-        <circle id="Ellipse_8" data-name="Ellipse 8" cx="50.839" cy="50.839" r="50.839" transform="translate(141 696)" fill="#dd0031"/>
-        <g id="Group_47" data-name="Group 47" transform="translate(165.185 720.185)">
-          <path id="Path_33" data-name="Path 33" d="M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z" transform="translate(0.371 3.363)" fill="#fff"/>
-          <path id="Path_34" data-name="Path 34" d="M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z" transform="translate(0 0.005)" fill="#fff"/>
-        </g>
-      </g>
-    </svg>
-
-    <span>{{ title }} está rodando!</span>
-
-    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-      <title>Rocket Ship Smoke</title>
-      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-    </svg>
-
-  </div>
-
-  <!-- Next Steps -->
-  <h2>Próximos passos</h2>
-  <p>O que voce deve fazer agora?</p>
-
-  <input type="hidden" #selection>
-
-  <!-- Terminal -->
-  <div class="terminal">
-    <pre>npx cypress open --env type=base</pre>
-  </div>
-
-  <!-- Resources -->
-  <h2>Informações importantes</h2>
-  <p>Os seguintes elementos devem existir no seu aplicativo renderizado (use o inspect):</p>
-  <div id="required-elements">
-    <h3>O título do trabalho deve ser um h2: </h3>
-    <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP'</h2>
-
-    <h3>O elemento de expandir resumo precisa ter a classe .btn-show-more</h3>
-    <a href="#" class="btn-show-more">ver mais</a>
-
-    <h3>O elemento de criar tópico precisa ter a classe .btn-create-topic</h3>
-    <a href="#" class="btn-create-topic">criar tópico</a>
-
-    <h3>O card que contém um tópico respondido precisa ter a classe .answered-topic, o assunto do tópico deve ter a classe .ops-topic-subject</h3>
-    <div class="answered-topic">
-      <h4 class="ops-topic-subject">Título do tópico</h4>
+<div class="layout">
+  <div class="side-menu" role="banner">
+    <div class="slaca">
+      <h1>{{ titleSideMenu }}</h1>
     </div>
-    <div class="comments-container">
-      Os comentários de um tópico devem estar encapsulados num elemento com a classe .comments-container
+    <div>
+      <img src="../assets/13-slaca.png" alt="" />
+      <div class="side-menu-container">
+        <div
+          class="side-menu-item"
+          *ngFor="let option of optionsSideMenu; let i = index"
+          (click)="selectItemMenu(i + 1)"
+          [class.selected]="selectedItemMenu === i + 1"
+        >
+          <span>{{ option.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-area" role="main">
+    <div class="header-page">
+      <div class="header-content">
+        <div class="header-titles">
+          <span>{{ headerData["firstTitleHeader"] }}</span>
+          <h2>
+            {{ headerData["titleHeader"] }}
+          </h2>
+          <span>ISSN: {{ issn }}</span>
+        </div>
+      </div>
+      <div class="container-user-data-language">
+        <div class="select-language">
+          <fa-icon [icon]="faGlobe"></fa-icon>
+          <select (change)="selectLanguage($any($event.target).value)">
+            <option *ngFor="let language of languages" [value]="language.id">
+              {{ language.label }}
+            </option>
+          </select>
+        </div>
+        <div class="user-data">
+          <span>Bem vindo!</span>
+          <span>{{ emailUser }}</span>
+        </div>
+        <div class="user-photo">
+          <img src="../assets/user-photo.jpeg" />
+          <div class="notification">
+            <span>{{ notificationNoRead }}</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <form>
-      Assunto:
-      <input class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
-      Conteúdo:
-      <!-- <input> -->
-      <button>Enviar</button>
-    </form>
+    <div class="content-page">
+      <!-- Título e botões -->
+      <div class="container-row-title-buttons">
+        <div class="title-page">
+          <h2>{{ titlePage }}</h2>
+        </div>
 
-    <h3>Após submeter o formulário, a seguinte mensagem deve ser exibida: Aguardando feedback dos autores</h3>
+        <div class="container-action-buttons">
+          <div class="action-buttons">
+            <div class="button-large">
+              <fa-icon [icon]="faDownload" class="icon-white"></fa-icon>
+              <span>Download</span>
+            </div>
+            <div
+              class="button-small"
+              (click)="handleFavoritarCitacao(!citacaoFavorita)"
+            >
+              <fa-icon
+                [icon]="citacaoFavorita ? faStar : faStarRegular"
+                class="icon-white"
+              ></fa-icon>
+            </div>
+            <div class="button-small">
+              <div class="icon-doi">
+                <img src="../assets/doi-icon.png" />
+              </div>
+            </div>
+          </div>
+          <a>COMO CITAR ESSE TRABALHO?</a>
+        </div>
+      </div>
+
+      <!-- Vídeo e card de Detalhes do pôster -->
+      <div class="container-row-imagem-video-detalhes">
+        <div class="content-imagem-text">
+          <h2>{{ videoData.titleVideo }}</h2>
+          <div class="information-video">
+            <div class="information-video-border-image">
+              <img src="../assets/author-image.png" />
+            </div>
+            <div class="information-video-user-data">
+              <h1>{{ videoData.authorName }}</h1>
+              <h3>{{ videoData.authorLocalization }}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="imagem-wrapper">
+          <img src="../assets/video-image.png" />
+        </div>
+        <div class="container-detalhes-trabalho">
+          <div class="header-detalhes">
+            <h3>Detalhes</h3>
+          </div>
+          <div class="detalhes-content">
+            <div class="poster-content">
+              <span
+                >Tipo de Apresentação:
+                <span class="detalhes-response">{{
+                  trabalho.tipoApresentacao
+                }}</span></span
+              >
+              <span
+                >Eixo Temático:
+                <span class="detalhes-response">{{
+                  trabalho.eixoTematico
+                }}</span>
+              </span>
+              <span
+                >Palavras Chaves:
+                <span class="detalhes-response">{{
+                  trabalho.palavrasChave
+                }}</span>
+              </span>
+            </div>
+            <div class="autores-content">
+              <span class="detalhes-response">Autores: </span>
+              <span *ngFor="let autor of autoresTrabalho"
+                >{{ autor.name }}
+                <span class="small-number"
+                  >{{ autor.instituicao?.instituicaoNumber }}
+                </span>
+              </span>
+            </div>
+            <div class="universidade-content">
+              <span *ngFor="let universidade of universidades">
+                <span class="small-number">{{
+                  universidade.instituicaoNumber
+                }}</span>
+                {{ universidade.universidadeName }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card de Resumo -->
+      <div class="generic-card">
+        <div class="header-generic-card">
+          <h3>Resumo</h3>
+        </div>
+        <div class="content-card">
+          <div *ngIf="isResumoFormatado; else labelResumoNaoFormatado">
+            <p
+              *ngFor="
+                let paragrafo of textoResumoArray.slice(
+                  0,
+                  numParagrafosMostrados
+                )
+              "
+            >
+              {{ paragrafo }}
+            </p>
+          </div>
+          <ng-template #labelResumoNaoFormatado>
+            <div class="texto-resumo-first">
+              <span>{{ textoResumoFormatado }}</span>
+            </div>
+          </ng-template>
+
+          <div class="btn-show-more" (click)="verMaisResumo()">
+            <div
+              *ngIf="
+                this.numParagrafosMostrados !== this.textoResumoArray.length;
+                else todoTextoMostrado
+              "
+            >
+              <span>ver mais</span>
+            </div>
+
+            <ng-template #todoTextoMostrado>
+              <span>ver menos</span>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card de  Discussões-->
+      <div class="generic-card">
+        <div class="header-generic-card">
+          <h3>Discussões</h3>
+        </div>
+        <div class="content-card">
+          <div class="container-criar-topico">
+            <div
+              class="container-nao-criando-topico"
+              *ngIf="!criandoTopico && !editandoTopico; else divCriandoTopico"
+            >
+              <div
+                *ngIf="
+                  user.topicsAguardandoFeedback <= 0;
+                  else hasTopicsAguardandoFeedback
+                "
+              >
+                <div class="compartilhe-ideias">
+                  <h2>Compartilhe suas ideias ou dúvidas com os autores!</h2>
+                  <div class="discussoes-icons">
+                    <img src="../assets/icone1.svg" />
+                    <img src="../assets/icone2.svg" />
+                    <img src="../assets/icone3.svg" />
+                  </div>
+                  <span
+                    >Sabia que o maior estímulo no desenvolvimento científico e
+                    cultural é a curiosidade? Deixe seus questionamentos ou
+                    sugestões para o autor!</span
+                  >
+                </div>
+              </div>
+
+              <ng-template #hasTopicsAguardandoFeedback>
+                <div class="container-criar-novo-topico">
+                  <div class="compartilhe-ideias">
+                    <h2>Seu tópico foi enviado com sucesso! :D</h2>
+                    <span
+                      >Agradecemos por sua contribuição, uma notificação será
+                      enviada ao seu email assim que seu tópico for
+                      respondido!</span
+                    >
+                    <a>Descubra outros trabalhos!</a>
+                  </div>
+                </div>
+              </ng-template>
+
+              <div class="barra-divisioria-criar-topico">
+                <div
+                  class="btn-create-topic"
+                  (click)="criarTopicoDiscussao(true)"
+                  *ngIf="
+                    user.topicsAguardandoFeedback <= 0;
+                    else criarNovoTopico
+                  "
+                >
+                  <fa-icon [icon]="faPlus" class="icon-white"></fa-icon>
+                  <span>criar tópico</span>
+                </div>
+
+                <ng-template #criarNovoTopico>
+                  <div
+                    class="btn-create-new-topic"
+                    (click)="criarTopicoDiscussao(true)"
+                  >
+                    <span>criar novo tópico</span>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+
+            <ng-template #divCriandoTopico>
+              <div class="container-criando-topico">
+                <div class="title-criando-topico">
+                  <span>
+                    Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+                    autores!
+                  </span>
+                </div>
+                <form class="form-container">
+                  <h2>Assunto</h2>
+                  <input
+                    class="subject"
+                    placeholder="Defina um tópico sucinto para notificar os autores..."
+                    [value]="assuntoTopicoField"
+                    (change)="changeAssuntoTopico($any($event.target).value)"
+                  />
+                  <h2>Conteúdo</h2>
+                  <textarea
+                    rows="5"
+                    cols="60"
+                    [value]="conteudoTopicoField"
+                    (change)="changeConteudoTopico($any($event.target).value)"
+                  ></textarea>
+                  <div class="container-row-enviar-topico">
+                    <button
+                      type="submit"
+                      class="btn-save-new-topic"
+                      (click)="enviarSalvarTopico()"
+                    >
+                      <a *ngIf="criandoTopico; else salvarTopico">Enviar</a>
+                      <ng-template #salvarTopico><a>Salvar</a></ng-template>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="generic-barra-divisioria"></div>
+            </ng-template>
+
+            <!-- Cards discussão -->
+            <div
+              class="container-cards-discussoes"
+              *ngFor="let topico of discussoesTopicos"
+            >
+              <div
+                *ngIf="
+                  (topico.respostas?.length ?? 0) > 0;
+                  else cardsRespondidos
+                "
+              >
+                <div class="answered-topic" (click)="expandirTopico(topico)">
+                  <div class="ops-topic-subject">
+                    <h3>{{ topico.assunto }}</h3>
+                    <span>{{ topico.autorTopico }}</span>
+                  </div>
+                  <span>{{
+                    formatConteudoAnsweredTopic(
+                      topico.conteudo,
+                      topico.isExpandido
+                    )
+                  }}</span>
+                  <div class="actions-topico">
+                    <div (click)="$event.stopPropagation()">
+                      <fa-icon
+                        [icon]="faEllipsisV"
+                        class="icon-orange"
+                        title="Clique aqui para ver mais"
+                      ></fa-icon>
+                    </div>
+                    <div
+                      class="btn-like-topico"
+                      (click)="
+                        likeUnlikePost($event, topico.isLiked, topico.id);
+                        $event.stopPropagation()
+                      "
+                    >
+                      <fa-icon
+                        [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                        class="icon-white"
+                        [title]="
+                          topico.isLiked
+                            ? 'Clique aqui para descurtir'
+                            : 'Clique aqui para curtir'
+                        "
+                      ></fa-icon>
+                    </div>
+                    <span (click)="$event.stopPropagation()"
+                      >{{ topico.curtidas }}
+                      {{ topico.curtidas > 1 ? "likes" : "like" }}</span
+                    >
+                    <span (click)="$event.stopPropagation()">
+                      {{ topico.respostas?.length }}
+                      {{
+                        (topico.respostas?.length ?? 0) > 1
+                          ? "respostas"
+                          : "resposta"
+                      }}
+                    </span>
+                  </div>
+                </div>
+
+                <div class="comments-container">
+                  <div *ngIf="topico.isExpandido">
+                    <div
+                      *ngFor="let resposta of topico.respostas"
+                      class="card-respostas"
+                      [class.autor-coautores]="
+                        isAutor(resposta, trabalho) ||
+                        isCoautor(resposta, trabalho)
+                      "
+                    >
+                      <div
+                        class="container-autor-coautor-resposta"
+                        *ngIf="
+                          isAutor(resposta, trabalho) ||
+                            isCoautor(resposta, trabalho);
+                          else labelResponseName
+                        "
+                      >
+                        <h3>{{ resposta.authorResponse?.name }}</h3>
+                        <div class="icon-and-class-resposta">
+                          <span
+                            *ngIf="
+                              isAutor(resposta, trabalho);
+                              else coautorLabel
+                            "
+                            >Autor</span
+                          >
+                          <ng-template #coautorLabel>
+                            <span>Coautor</span>
+                          </ng-template>
+                          <fa-icon
+                            [icon]="faCheckDouble"
+                            class="icon-orange-discussao"
+                          ></fa-icon>
+                        </div>
+                      </div>
+
+                      <ng-template #labelResponseName>
+                        <div>
+                          <h3>{{ resposta.authorResponse?.name }}</h3>
+                        </div>
+                      </ng-template>
+                      <p
+                        *ngFor="
+                          let paragrafo of convertSringToParagrafo(
+                            resposta.contentResponse
+                          )
+                        "
+                      >
+                        {{ paragrafo }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <ng-template #cardsRespondidos>
+                <div>
+                  <div
+                    class="unanswered-topic"
+                    *ngIf="!topico.aguardandoFeedback; else aguardandoFeedback"
+                  >
+                    <div class="ops-topic-subject">
+                      <h3>{{ topico.assunto }}</h3>
+                      <span>{{ topico.autorTopico }}</span>
+                    </div>
+                    <span>{{ topico.conteudo }}</span>
+                    <div class="actions-topico">
+                      <div (click)="$event.stopPropagation()">
+                        <fa-icon
+                          [icon]="faEllipsisV"
+                          class="icon-orange"
+                          title="Clique aqui para ver mais"
+                        ></fa-icon>
+                      </div>
+                      <div
+                        class="btn-like-topico"
+                        (click)="
+                          likeUnlikePost($event, topico.isLiked, topico.id);
+                          $event.stopPropagation()
+                        "
+                      >
+                        <fa-icon
+                          [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                          class="icon-white"
+                          [title]="
+                            topico.isLiked
+                              ? 'Clique aqui para descurtir'
+                              : 'Clique aqui para curtir'
+                          "
+                        ></fa-icon>
+                      </div>
+                      <span (click)="$event.stopPropagation()"
+                        >{{ topico.curtidas }}
+                        {{ topico.curtidas > 1 ? "likes" : "like" }}</span
+                      >
+                      <span (click)="$event.stopPropagation()">
+                        {{ topico.respostas?.length }}
+                        {{
+                          (topico.respostas?.length ?? 0) > 1
+                            ? "respostas"
+                            : "resposta"
+                        }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+
+              <ng-template #aguardandoFeedback>
+                <div class="topico-aguardando-feedback">
+                  <div class="agurdando-feedback-edit">
+                    <fa-icon [icon]="faCheckDouble"></fa-icon>
+                    <h2>Aguardando feedback dos autores</h2>
+                    <a (click)="editarTopicoDiscussoes(true, topico.id)"
+                      >Editar tópico</a
+                    >
+                  </div>
+                  <div class="background-desfocado-topico">
+                    <div class="topico-assunto-autor">
+                      <h3>{{ topico.assunto }}</h3>
+                      <span>{{ topico.autorTopico }}</span>
+                    </div>
+                    <span>{{ topico.conteudo }}</span>
+                    <div class="actions-topico">
+                      <fa-icon
+                        [icon]="faEllipsisV"
+                        class="icon-orange"
+                      ></fa-icon>
+                      <div
+                        class="btn-like-topico"
+                        (click)="
+                          likeUnlikePost($event, topico.isLiked, topico.id)
+                        "
+                      >
+                        <fa-icon
+                          [icon]="topico.isLiked ? faHeart : faHeartRegular"
+                          class="icon-white"
+                        ></fa-icon>
+                      </div>
+                      <span>{{ topico.curtidas }} like</span>
+                      <span>{{ topico.respostas }} resposta</span>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="generic-barra-divisioria"></div>
+      <div class="container-footer">
+        <div class="logo-e-saiba-mais">
+          <img src="../assets/galoa-logo.svg" />
+          <div class="btn-footer-saiba-mais">
+            <a>Saiba mais</a>
+          </div>
+        </div>
+        <div class="text-footer">
+          <p
+            *ngFor="let paragrafo of textFooter"
+            [innerHTML]="
+              strongParagrafoFooter(
+                paragrafo,
+                'Preservar a memória do evento e ampliar o acesso ao conhecimento científico'
+              )
+            "
+          ></p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-    <title>Gray Clouds Background</title>
-    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-  </svg>
-
 </div>
