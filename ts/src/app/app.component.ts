@@ -43,7 +43,7 @@ export class AppComponent {
   faHeartRegular: any = faHeartRegular;
   faCheckDouble: any = faCheckDouble;
 
-  // entidades
+  // entidades.
   detalhesTrabalho: DetalhesTrabalho[] = [
     {
       id: 1,
