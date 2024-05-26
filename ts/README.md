@@ -31,7 +31,7 @@ Para rodar desenvolver, rode os seguintes comandos:
 
 Para ligar o ambiente
 ```
-ng serve
+npm run test
 ```
 
 Para rodar a UI de testes
